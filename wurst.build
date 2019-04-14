@@ -1,0 +1,6 @@
+---
+projectName: cf
+buildMapData:
+  name: MyMapName
+  fileName: MyMapFile
+  author: voix

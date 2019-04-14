@@ -1,0 +1,11 @@
+package GameEnd
+
+import Results
+
+function sendResults()
+  Results.setDataManually(Gd mod 2)
+  Results.send()
+
+init
+  gameEndTrigger..addCondition(Condition(function sendResults))
+  

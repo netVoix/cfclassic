@@ -1,0 +1,55 @@
+package GameStart
+
+import LinkedList
+import HCLDecoder
+
+function getHandicaps() returns LinkedList<real>
+  let handicaps = new LinkedList<real>()
+  for i = 0 to 11
+    if players[i].getSlotState() == PLAYER_SLOT_STATE_PLAYING
+      handicaps.add(GetPlayerHandicap(players[i]))
+    else
+      handicaps.add(0.0)
+  return handicaps
+
+function setHCL()
+  HCLDecoder.initialize()
+  let hclString = HCLDecoder.getStringFromHandicaps(getHandicaps())
+  if hclString == "1"
+    resolveMode("-rr2-fow-slt-ca-ban-mp2-gld40-skip")
+  else if hclString == "2"
+    resolveMode("-rr2-fow-slt-ca-ban-gld40-skip")
+  restoreHandicaps()
+
+function resolveMode(string xr)
+  string s = StringCase(xr,false)
+  integer yr = 0
+  integer zr = 0
+  integer id = GetPlayerId(GetTriggerPlayer())
+  string ch
+  oh("CE: "+xr)
+  rh()
+  for i = 0 to s.length()
+    ch=SubString(s, i, i+1)
+    if ch=="-"
+      if yr!=i 
+        if zr>0 
+          sr(SubString(s,yr,zr)+SubString(xr,zr,i),id)
+        else
+          sr(SubString(s,yr,i),id)
+      yr=i
+      zr=0
+    else if zr==0 and ch==" "
+      zr=i
+  if zr>0
+    sr(SubString(s,yr,zr)+SubString(xr,zr,s.length()),id)
+  else
+    sr(SubString(s,yr,s.length()),id)
+
+function restoreHandicaps()
+  for i = 0 to 11
+    if players[i].getSlotState() == PLAYER_SLOT_STATE_PLAYING
+      SetPlayerHandicap(players[i], 1.)
+
+init
+  gameStartTrigger..addCondition(Condition(function setHCL))
