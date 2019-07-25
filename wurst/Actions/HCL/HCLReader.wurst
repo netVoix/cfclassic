@@ -1,0 +1,25 @@
+package HCLReader
+
+import LinkedList
+import HCLDecoder
+
+public class HCLReader
+  static function read() returns string    
+    HCLDecoder.initialize()
+    let hclString = HCLDecoder.getStringFromHandicaps(getHandicaps())
+    restoreHandicaps()
+    return hclString
+
+  private static function getHandicaps() returns LinkedList<real>
+    let handicaps = new LinkedList<real>()
+    for i = 0 to 11
+      if players[i].getSlotState() == PLAYER_SLOT_STATE_PLAYING
+        handicaps.add(GetPlayerHandicap(players[i]))
+      else
+        handicaps.add(0.0)
+    return handicaps
+
+  private static function restoreHandicaps()
+    for i = 0 to 11
+      if players[i].getSlotState() == PLAYER_SLOT_STATE_PLAYING
+        SetPlayerHandicap(players[i], 1.)

@@ -1,4 +1,4 @@
-package GameEnd
+package ResultsConnector
 
 import Results
 
@@ -7,5 +7,7 @@ function sendResults()
   Results.send()
 
 init
+  InitGameCache("dr.x").flush()
+  Results.setCache(InitGameCache("dr.x"))
+
   gameEndTrigger..addCondition(Condition(function sendResults))
-  

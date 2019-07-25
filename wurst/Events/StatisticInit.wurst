@@ -1,9 +1,0 @@
-package StatisticInit
-
-import Results
-
-
-init
-  InitGameCache("dr.x").flush()
-  Results.setCache(InitGameCache("dr.x"))
-  
