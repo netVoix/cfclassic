@@ -4,3 +4,29 @@ buildMapData:
   name: MyMapName
   fileName: MyMapFile
   author: voix
+  players:
+  - id: 0
+    name: Player 1
+    race: HUMAN
+    controller: USER
+  - id: 1
+    name: Player 2
+    race: HUMAN
+    controller: USER
+  - id: 6
+    name: Player 7
+    race: HUMAN
+    controller: USER
+  - id: 7
+    name: Player 8
+    race: HUMAN
+    controller: USER
+  forces:
+  - name: West
+    playerIds:
+    - 0
+    - 1
+  - name: East
+    playerIds:
+    - 5
+    - 6

@@ -1,0 +1,50 @@
+package HumanShrine
+
+import Soundsets
+import UnitObjEditing
+import UnitIds
+import Icons
+import Buildings
+
+public let HUMAN_SHRINE_ID = 'h05G'
+
+@compiletime function humanShrine()
+	new BuildingDefinition(HUMAN_SHRINE_ID, UnitIds.farm)
+		..setNormalAbilities("A06V,A06M")
+		..setAcquisitionRange(99999)
+		..setRequiredAnimationNames("work")
+		..setIconGameInterface(Icons.bTNAltarOfKings)
+		..setBuildTime(2)
+		..setGoldBountyAwardedNumberofDice(1)
+		..setGoldBountyAwardedSidesperDie(1)
+		..setGoldBountyAwardedBase(139)
+		..setButtonPositionX(1)
+		..setButtonPositionY(2)
+		..setDeathTimeseconds(0.1)
+		..setModelFile(Buildings.altarOfKings1)
+		..setFoodProduced(0)
+		..setFoodCost(1)
+		..setGoldCost(600)
+		..setRepairGoldCost(0)
+		..setRepairLumberCost(0)
+		..setHotkey("X")
+		..setHitPointsMaximumBase(1000)
+		..setLumberCost(1600)
+		..setMaximumPitchAngledegrees(0)
+		..setMaximumRollAngledegrees(0)
+		..setScalingValue(0.75)
+		..setName("Heroic Shrine")
+		..setSightRadiusDay(1000)
+		..setSightRadiusNight(1000)
+		..setPointValue(67)
+		..setPriority(4)
+		..setHitPointsRegenerationRate(4)
+		..setHitPointsRegenerationType("always")
+		..setRepairTime(70)
+		..setRequirements("tec3")
+		..setRequirementsLevels("1")
+		..setSelectionScale(2.4)
+		..setTooltipBasic("Build Heroic Shrine [|cffffcc00X|r]")
+		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Call to Arms|r|nWhenever an allied structure trains a unit, there is a 19% chance that an additional unit of this type will be instantly trained, fighting for the Shrine owner. Cannot train legendary units.")
+		..setUnitSoundSet(Soundsets.blacksmith)
+		..setUpgradesUsed("")

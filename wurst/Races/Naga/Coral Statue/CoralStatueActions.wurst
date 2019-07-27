@@ -1,0 +1,11 @@
+package CoralStatueActions
+
+import RegisterEvents
+import CoralStatue
+
+init
+  registerPlayerUnitEvent(EVENT_PLAYER_UNIT_CONSTRUCT_FINISH) ->
+    let u = GetTriggerUnit()
+    if u.getTypeId() == CORAL_STATUE_ID
+      u.addAbility(CORAL_STATUE_REGEN_BUILDINGS_ID)
+      u.addAbility(CORAL_STATUE_REGEN_UNITS_ID)

@@ -1,0 +1,15 @@
+package WurstExportedObjects_w3q
+import ObjEditingNatives
+
+// Modified Table (contains all custom objects)
+
+// Original Table (contains all modified default objects)
+// Wurst does not support modifying default objects
+// but you can copy these functions and replace 'xxxx' with a new, custom id.
+
+@compiletime function create_w3q_Renb()
+	createObjectDefinition("w3q", 'Renb', 'Renb')
+	..setLvlDataString("gnam", 1, 0, "Nature's Blessing'")
+	..setLvlDataString("gtp1", 1, 0, "Research |cffffcc00N|rature's Blessing'")
+
+

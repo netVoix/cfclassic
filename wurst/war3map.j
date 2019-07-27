@@ -9259,9 +9259,6 @@ elseif(Sg=='h05G')then
 call bn(p)
 elseif(Sg=='h059')then
 call jn(p)
-elseif(Sg=='h00G')then
-call UnitAddAbility(u,'A008')
-call UnitAddAbility(u,'A007')
 elseif(Sg=='h056' or Sg=='h03L' or Sg=='h01W' or Sg=='h01X' or Sg=='h05R')then
 call IssueImmediateOrderById(u,$D027A)
 call TriggerSleepAction(1.)

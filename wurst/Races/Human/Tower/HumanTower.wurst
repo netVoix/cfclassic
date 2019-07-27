@@ -1,0 +1,41 @@
+package HumanTower
+
+import UnitObjEditing
+import UnitIds
+
+public let HUMAN_TOWER_ID = 'h006'
+
+@compiletime function humanTower()
+	new BuildingDefinition(HUMAN_TOWER_ID, UnitIds.guardtower)
+		..setNormalAbilities("A09A")
+		..setAcquisitionRange(1000)
+		..setBuildTime(20)
+		..setGoldBountyAwardedNumberofDice(1)
+		..setGoldBountyAwardedSidesperDie(1)
+		..setGoldBountyAwardedBase(36)
+		..setAttack1CooldownTime(0.5)
+		..setDefenseBase(8)
+		..setArmorType(ArmorType.Fortified)
+		..setAttack1DamageBase(39)
+		..setAttack1DamageSidesperDie(11)
+		..setGoldCost(180)
+		..setRepairGoldCost(0)
+		..setHotkey("Y")
+		..setHitPointsMaximumBase(1500)
+		..setLumberCost(300)
+		..setRepairLumberCost(0)
+		..setScalingValue(0.8)
+		..setName("Watch Tower")
+		..setTooltipBasic("Build Watch Tower [|cffffcc00Y|r]")
+		..setSightRadiusNight(1000)
+		..setSightRadiusDay(1000)
+		..setPointValue(150)
+		..setAttack1Range(950)
+		..setHitPointsRegenerationRate(2.0)
+		..setHitPointsRegenerationType("always")
+		..setRepairTime(110)
+		..setRequirements("tec1")
+		..setRequirementsLevels("1")
+		..setTooltipExtended("|cffFFAC00Base Defense|r:|nThis is a tower to protect key positions.|n|n|cffFFFF80Attack Type:|cffFFFF00 Pierce|n|cffFFFF80Range:|cffFFFF00 950|n|cffFFFF80Average DPS:|cffFFFF00 90|r")
+		..setUpgradesUsed("")
+  

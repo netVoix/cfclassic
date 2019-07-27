@@ -1,0 +1,44 @@
+package Lobster
+
+import UnitObjEditing
+import UnitIds
+import Icons
+
+public let LOBSTER_ID = 'n00W'
+
+@compiletime function lobster()
+	new UnitDefinition(LOBSTER_ID, UnitIds.lobstrokktidecaller)
+		..setNormalAbilities("A07G,A02R,A02Q")
+		..setAcquisitionRange(800)
+		..setIconGameInterface(Icons.bTNLobstrokkBlue)
+		..setDefaultActiveAbility("")
+		..setGoldBountyAwardedBase(2)
+		..setGoldBountyAwardedSidesperDie(1)
+		..setCategorizationCampaign(true)
+		..setCollisionSize(16)
+		..setAttack1CooldownTime(1.4)
+		..setArmorType(ArmorType.Large)
+		..setAttack1DamageBase(34)
+		..setFoodCost(0)
+		..setGoldCost(0)
+		..setHitPointsMaximumBase(300)
+		..setLevel(1)
+		..setAttack1ProjectileArt("")
+		..setAttack1ProjectileSpeed(0)
+		..setScalingValue(0.4)
+		..setName("Summoned Lobster")
+		..setSightRadiusDay(300)
+		..setSightRadiusNight(300)
+		..setRace(Race.Naga)
+		..setAttack1Range(90)
+		..setSelectionScale(1)
+		..setAttack1DamageSidesperDie(16)
+		..setSpeedBase(300)
+		..setCategorizationSpecial(true)
+		..setAttack1TargetsAllowed("{0},{1},{2},{3},{4}".format(
+			TargetsAllowed.debris, TargetsAllowed.ground,TargetsAllowed.item_t, TargetsAllowed.structure, TargetsAllowed.ward
+		))
+		..setUnitClassification("{0},{1}".format(TargetsAllowed.sapper, TargetsAllowed.ward))
+		..setTooltipExtended("Melee unit with damage absorption and critical strike.")
+		..setAttack1WeaponType(WeaponType.Normal)
+		..setAttack1WeaponSound(WeaponSound.MetalHeavyChop)

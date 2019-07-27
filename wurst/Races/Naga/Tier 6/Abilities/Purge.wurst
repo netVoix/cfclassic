@@ -1,0 +1,41 @@
+package Purge
+
+import AbilityObjEditing
+
+public let PURGE_ID = 'A02U'
+public let PURGE_DUMMY_ID = 'A02T'
+
+@compiletime function purge()
+  new AbilityDefinitionParasite(PURGE_ID)
+    ..presetBuffs(lvl -> "B019")
+    ..presetCooldown(lvl -> 25)
+    ..presetManaCost(lvl -> 20)
+    ..presetDurationNormal(lvl -> 0.1)
+    ..presetDurationHero(lvl -> 0.1)
+    ..setMissileArt("")
+    ..setName("NAG: Siren (Purge (cd))")
+    ..setRace(Race.Human)
+    ..presetCastRange(lvl -> 400)
+    ..presetTargetsAllowed(lvl -> "".format(
+      TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
+      TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
+    ))
+    ..presetUnitType(lvl -> "nfbr")
+    ..presetSummonedUnitDuration(lvl -> 0.01)
+    ..presetDamageperSecond(lvl -> 0)
+    ..presetStackingType(lvl -> "0")
+
+@compiletime function purgeDummy()
+  new AbilityDefinitionPurgeCreep(PURGE_DUMMY_ID)
+    ..setDummyAbility()
+    ..presetDurationNormal(lvl -> 12)
+    ..presetDurationHero(lvl -> 3)
+    ..setEditorSuffix("")
+    ..setName("NAG: Siren (Purge)")
+    ..setRace(Race.Human)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4}".format(
+      TargetsAllowed.air, TargetsAllowed.ground, TargetsAllowed.tree, TargetsAllowed.vulnerable, TargetsAllowed.ward
+    ))
+    ..presetAttackUpdateFrequency(lvl -> 2)
+    ..presetUnitPauseDuration(lvl -> 1.5)
+    ..presetManaLoss(lvl -> 200)

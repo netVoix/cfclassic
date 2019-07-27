@@ -1,0 +1,722 @@
+package WurstExportedObjects_w3h
+import ObjEditingNatives
+
+// Modified Table (contains all custom objects)
+
+@compiletime function create_w3h_B025()
+	createObjectDefinition("w3h", 'B025', 'Binf')
+	..setString("fart", "ui\\widgets\\escmenu\\human\\blank-background.blp")
+	..setString("ftip", "Nothing")
+	..setString("fube", "Nothing -.-")
+	..setInt("fspd", 0)
+	..setString("ftat", "")
+	..setInt("ftac", 0)
+
+
+@compiletime function create_w3h_B024()
+	createObjectDefinition("w3h", 'B024', 'BUau')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNRegeneration.blp")
+	..setString("ftip", "Natures Aura")
+	..setString("fube", "This unit is under the effect of Natures Aura; it has an increased hit point regeneration.")
+	..setString("fnam", "Natures Aura")
+
+
+@compiletime function create_w3h_B023()
+	createObjectDefinition("w3h", 'B023', 'Basl')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNCorrosiveBreath.blp")
+	..setString("ftip", "Corrosive Breath")
+	..setString("fube", "Armor of this unit is decreased.")
+	..setString("fnsf", "")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B022()
+	createObjectDefinition("w3h", 'B022', 'BNpa')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNSpiderBlue.blp")
+	..setString("ftat", "Abilities\\Weapons\\CryptFiendMissile\\CryptFiendMissile.mdl")
+
+
+@compiletime function create_w3h_B021()
+	createObjectDefinition("w3h", 'B021', 'BOsf')
+	..setString("ftip", "Summoned Treant")
+	..setString("fube", "This unit is summoned.")
+	..setString("feat", "Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl")
+
+
+@compiletime function create_w3h_B020()
+	createObjectDefinition("w3h", 'B020', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNOrbOfDarkness.blp")
+	..setString("ftip", "Curse of Nature")
+	..setString("fube", "Mana regeneration of this unit has been decreased.")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01Z()
+	createObjectDefinition("w3h", 'B01Z', 'BOae')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNTornado.blp")
+	..setString("ftip", "Cyclone")
+	..setString("fube", "This unit is under the effects of Cyclone. Its movement and attack speed rate are decreased.")
+	..setString("fnam", "NAT: Ancient of Gale (cyclone buff)")
+	..setString("ftat", "Abilities\\Spells\\Other\\Tornado\\TornadoElementalSmall.mdl")
+
+
+@compiletime function create_w3h_B01Y()
+	createObjectDefinition("w3h", 'B01Y', 'BHtc')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNDizzy.blp")
+	..setString("ftip", "Astral Grenade")
+	..setString("fube", "This unit stunned by Astral Grenade. It's reduced attack and movements speed.")
+
+
+@compiletime function create_w3h_B01X()
+	createObjectDefinition("w3h", 'B01X', 'Bphx')
+	..setString("fart", "ui\\widgets\\escmenu\\human\\blank-background.blp")
+	..setString("ftip", "Nothing")
+	..setString("fube", "Nothing -.-")
+
+
+@compiletime function create_w3h_B01W()
+	createObjectDefinition("w3h", 'B01W', 'BHtc')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNEarthquake.blp")
+	..setString("ftip", "Earthquake")
+	..setString("fube", "This unit is slowed by earthquake.")
+
+
+@compiletime function create_w3h_B01V()
+	createObjectDefinition("w3h", 'B01V', 'Bphx')
+	..setString("ftip", "Nothing")
+
+
+@compiletime function create_w3h_B01U()
+	createObjectDefinition("w3h", 'B01U', 'Basl')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNHumanMissileUpTwo.blp")
+	..setString("ftip", "Explosive Shells")
+	..setString("fube", "This unit deals splash damage")
+	..setString("fnsf", "")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B01T()
+	createObjectDefinition("w3h", 'B01T', 'BNpa')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNSkillz.tga")
+	..setString("ftip", "Targeted")
+	..setString("fube", "This unit is targeted by a spell")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01S()
+	createObjectDefinition("w3h", 'B01S', 'BUim')
+	..setString("fube", "This unit is stunned")
+
+
+@compiletime function create_w3h_B01R()
+	createObjectDefinition("w3h", 'B01R', 'BNht')
+	..setString("ftip", "Howl")
+	..setString("fube", "This unit has its damage and armor decreased")
+
+
+@compiletime function create_w3h_B01Q()
+	createObjectDefinition("w3h", 'B01Q', 'BIcb')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNWandOfNeutralization.blp")
+	..setString("ftip", "Fragrance of Shadows")
+	..setString("fube", "This unit has its armor reduced")
+
+
+@compiletime function create_w3h_B01P()
+	createObjectDefinition("w3h", 'B01P', 'Bslo')
+	..setString("ftip", "Astral Chains")
+	..setString("fube", "This unit is slowed")
+
+
+@compiletime function create_w3h_B01O()
+	createObjectDefinition("w3h", 'B01O', 'Bpxf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNWandOfNeutralization.blp")
+	..setString("ftip", "Blasted")
+	..setString("fube", "This unit is hit by a blast staff")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B01N()
+	createObjectDefinition("w3h", 'B01N', 'Bpxf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNClusterRockets.blp")
+	..setString("ftip", "Rocket")
+	..setString("fube", "This unit is hit by a rocket")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B01M()
+	createObjectDefinition("w3h", 'B01M', 'Bpxf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNResurrection.blp")
+	..setString("ftip", "Ray of Light")
+	..setString("fube", "This unit is hit by a ray of light")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B01L()
+	createObjectDefinition("w3h", 'B01L', 'Bakb')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNStaffOfTeleportation.blp")
+	..setString("ftip", "Power Ammo")
+	..setString("fube", "This unit has its damage increased")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01K()
+	createObjectDefinition("w3h", 'B01K', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNImbuedMasonry.blp")
+	..setString("ftip", "Power Armor")
+	..setString("fube", "This building has its armor increased and spawns stronger units")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01J()
+	createObjectDefinition("w3h", 'B01J', 'BOac')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNControlMagic.blp")
+	..setString("ftip", "Empowered")
+	..setString("fube", "This unit has increased health")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01I()
+	createObjectDefinition("w3h", 'B01I', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNControlMagic.blp")
+	..setString("ftip", "Powered")
+	..setString("fube", "This building has its ability cooldown reduced")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01H()
+	createObjectDefinition("w3h", 'B01H', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNNeutralManaShield.blp")
+	..setString("ftip", "Energy Shield")
+	..setString("fube", "This unit is shielded")
+	..setString("ftat", "Abilities\\Spells\\Human\\ManaShield\\ManaShieldCaster.mdl")
+
+
+@compiletime function create_w3h_B01G()
+	createObjectDefinition("w3h", 'B01G', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNOrbofSlowness.blp")
+	..setString("ftip", "Red Energy Shield")
+	..setString("ftat", "Abilities\\Spells\\Orc\\Voodoo\\VoodooAuraTarget.mdl")
+
+
+@compiletime function create_w3h_B01F()
+	createObjectDefinition("w3h", 'B01F', 'BHds')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNAntiMagicShell.blp")
+	..setString("ftip", "Spell Protection")
+	..setString("fube", "This unit receives less damage from spells.")
+	..setString("frac", "other")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B01E()
+	createObjectDefinition("w3h", 'B01E', 'Basl')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNOrbOfLightning.blp")
+	..setString("ftip", "Lightning")
+	..setString("fube", "This unit has a chance on each attack to release a chainlightning onto its target.")
+	..setString("fnsf", "")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B01D()
+	createObjectDefinition("w3h", 'B01D', 'Bpxf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNFireForTheCannon.blp")
+	..setString("ftip", "Firebolt")
+	..setString("fube", "This unit was hit by a firebolt and receives damage over time.")
+
+
+@compiletime function create_w3h_B01C()
+	createObjectDefinition("w3h", 'B01C', 'Bdef')
+	..setString("ftip", "Scroll of Stone")
+	..setString("fube", "This unit has its armor increased.")
+
+
+@compiletime function create_w3h_B01B()
+	createObjectDefinition("w3h", 'B01B', 'BHad')
+	..setString("fube", "This unit has its armor increased.")
+
+
+@compiletime function create_w3h_B01A()
+	createObjectDefinition("w3h", 'B01A', 'Bphx')
+	..setString("ftip", "Nothing")
+
+
+@compiletime function create_w3h_B019()
+	createObjectDefinition("w3h", 'B019', 'Bphx')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNAuraOfDarkness.blp")
+	..setString("ftip", "Targeted")
+	..setString("fube", "A spell is cast onto this unit")
+	..setString("fnam", "Default")
+
+
+@compiletime function create_w3h_B018()
+	createObjectDefinition("w3h", 'B018', 'BNcs')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNUnholyFrenzy.blp")
+	..setString("ftip", "Solar Attack")
+	..setString("fube", "This unit is paralysed")
+	..setString("ftat", "Abilities\\Spells\\Items\\PotionOfOmniscience\\CrystalBallCaster.mdl")
+	..setString("fta0", "head")
+
+
+@compiletime function create_w3h_B017()
+	createObjectDefinition("w3h", 'B017', 'Bbar')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNBearForm.blp")
+	..setString("ftip", "Blessing of the Wilderness")
+	..setString("fube", "This unit is resistant to spells and attacks.")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B016()
+	createObjectDefinition("w3h", 'B016', 'Bdef')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNElunesBlessing.blp")
+	..setString("ftip", "Moonshine Blessing")
+	..setString("fube", "This unit has its armor increased.")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B015()
+	createObjectDefinition("w3h", 'B015', 'Bcri')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNFrost.blp")
+	..setString("ftip", "Frozen")
+	..setString("fube", "This unit is stunned")
+	..setString("ftat", "Abilities\\Weapons\\ZigguratFrostMissile\\ZigguratFrostMissile.mdl")
+	..setString("fta0", "chest")
+
+
+@compiletime function create_w3h_B014()
+	createObjectDefinition("w3h", 'B014', 'Bcri')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNLament.blp")
+	..setString("ftip", "Freezing Cold")
+	..setString("fube", "This unit acts very slowly.")
+	..setString("ftat", "Abilities\\Spells\\Undead\\FrostArmor\\FrostArmorDamage.mdl")
+	..setString("fta0", "chest")
+
+
+@compiletime function create_w3h_B013()
+	createObjectDefinition("w3h", 'B013', 'BUau')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNHealthStone.blp")
+	..setString("ftip", "Vitality Aura")
+	..setString("fube", "This unit regenerates faster.")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B012()
+	createObjectDefinition("w3h", 'B012', 'BOwk')
+	..setString("ftip", "Stealth")
+	..setString("fube", "This unit is stealthed. It is invisible and will deal bonus damage on its first hit.")
+
+
+@compiletime function create_w3h_B011()
+	createObjectDefinition("w3h", 'B011', 'BHab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNOrbOfDarkness.blp")
+	..setString("ftip", "Chamber of Darkness")
+	..setString("fube", "This unit can release a burst of magic damaging all units around him.")
+	..setString("ftat", "")
+	..setString("fta0", "")
+
+
+@compiletime function create_w3h_B010()
+	createObjectDefinition("w3h", 'B010', 'BOae')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNEvasion.blp")
+	..setString("ftip", "Tribal Blessing: Evasion")
+	..setString("fube", "This unit got buffed by a Ceremonial Totem. It evades some attacks.")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B00Z()
+	createObjectDefinition("w3h", 'B00Z', 'BOae')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNCriticalStrike.blp")
+	..setString("ftip", "Tribal Blessing: Critical Strike")
+	..setString("fube", "This unit got buffed by a Ceremonial Totem. It deals critical damage from time to time.")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B00Y()
+	createObjectDefinition("w3h", 'B00Y', 'BOae')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNDemolish.blp")
+	..setString("ftip", "Tribal Blessing: Demolish")
+	..setString("fube", "This unit got buffed by a Ceremonial Totem. It does increased damage to buildings.")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B00X()
+	createObjectDefinition("w3h", 'B00X', 'Bens')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNFrostBolt.blp")
+	..setString("ftip", "Frozen")
+	..setString("fube", "This unit is frozen to the ground and cannot move")
+	..setString("fnam", "Shroom Frozen")
+	..setString("ftat", "Abilities\\Weapons\\ZigguratFrostMissile\\ZigguratFrostMissile.mdl")
+
+
+@compiletime function create_w3h_B00W()
+	createObjectDefinition("w3h", 'B00W', 'BHfs')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNDoom.blp")
+	..setString("ftip", "Inner Void")
+	..setString("fube", "This unit has its armor reduced.")
+	..setString("frac", "other")
+	..setString("ftat", "Abilities\\Spells\\NightElf\\FaerieDragonInvis\\FaerieDragon_Invis.mdl")
+	..setString("fta0", "origin")
+
+
+@compiletime function create_w3h_B00V()
+	createObjectDefinition("w3h", 'B00V', 'BEah')
+	..setString("ftip", "Quill Aura")
+	..setString("fube", "This unit is under the effect of quill aura. Melee attackers receive damage.")
+
+
+@compiletime function create_w3h_B00U()
+	createObjectDefinition("w3h", 'B00U', 'Bapl')
+	..setString("ftip", "Greater Plague")
+	..setString("fube", "This unit is plagued. It is slowed and takes damage over time.")
+	..setString("fta1", "chest")
+	..setInt("ftac", 2)
+
+
+@compiletime function create_w3h_B00T()
+	createObjectDefinition("w3h", 'B00T', 'Bphx')
+	..setString("ftip", "Nothing")
+
+
+@compiletime function create_w3h_B00S()
+	createObjectDefinition("w3h", 'B00S', 'BNpi')
+	..setString("fnam", "Corrupted: Void Walker")
+	..setString("fnsf", "")
+	..setString("frac", "undead")
+	..setString("fsat", "Abilities\\Spells\\Human\\Heal\\HealTarget.mdl")
+	..setString("fspt", "origin")
+
+
+@compiletime function create_w3h_B00R()
+	createObjectDefinition("w3h", 'B00R', 'Bcri')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNUpgradeRegenerationAura.blp")
+	..setString("ftip", "Broken Weapon")
+	..setString("fube", "The damage of this unit is decreased.")
+	..setString("fnam", "Corrupted: Ent")
+
+
+@compiletime function create_w3h_B00Q()
+	createObjectDefinition("w3h", 'B00Q', 'Bhea')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNImprovedUnholyArmor.blp")
+	..setString("ftip", "|c00ff0000Corrupt Armor|r")
+	..setString("fube", "This unit has major problems with its defense.")
+	..setString("fnam", "Corrupted: Eye of Corruption")
+	..setString("frac", "undead")
+	..setString("ftat", "Abilities\\Spells\\Undead\\Possession\\PossessionTarget.mdl")
+	..setString("fta0", "chest")
+
+
+@compiletime function create_w3h_B00P()
+	createObjectDefinition("w3h", 'B00P', 'Bcri')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNCurse.blp")
+	..setString("ftip", "Corrupted Speed")
+	..setString("fube", "The attackspeed of this unit is increased.")
+	..setString("fnam", "Corrupted: Felhound")
+	..setString("ftat", "Abilities\\Spells\\Other\\GeneralAuraTarget\\GeneralAuraTarget.mdl")
+
+
+@compiletime function create_w3h_B00O()
+	createObjectDefinition("w3h", 'B00O', 'BNic')
+	..setString("ftip", "Burning Soul")
+	..setString("fube", "This unit will damage units aroud")
+	..setString("fnam", "Corrupted: Void Walker")
+	..setString("frac", "undead")
+
+
+@compiletime function create_w3h_B00N()
+	createObjectDefinition("w3h", 'B00N', 'BHab')
+	..setString("ftip", "Crystal Aura")
+	..setString("fube", "This unit is under the effect of Crystal Aura. It has increased mana regeneration.")
+
+
+@compiletime function create_w3h_B00M()
+	createObjectDefinition("w3h", 'B00M', 'BEer')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNFreezingBreath.blp")
+	..setString("ftip", "Frozen")
+	..setString("fube", "This unit is frozen to the ground. It can't move and receives damage over time.")
+	..setString("ftat", "Abilities\\Spells\\Undead\\FreezingBreath\\FreezingBreathTargetArt.mdl")
+
+
+@compiletime function create_w3h_B00L()
+	createObjectDefinition("w3h", 'B00L', 'BOac')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNHornOfFog.blp")
+	..setString("ftip", "Drum'n'Bass Bassline")
+	..setString("fube", "This unit is listening to a Drum'n'Bass bassline. The powerful basses boost its movement and attackspeed.")
+
+
+@compiletime function create_w3h_B00K()
+	createObjectDefinition("w3h", 'B00K', 'Broa')
+	..setString("ftip", "Battle Cry")
+	..setString("fube", "This unit has its damage increased.")
+	..setString("ftat", "Environment\\SmallBuildingFire\\SmallBuildingFire2.mdl")
+
+
+@compiletime function create_w3h_B00J()
+	createObjectDefinition("w3h", 'B00J', 'Binf')
+	..setString("ftip", "Blessing")
+	..setString("fube", "This unit is blessed. It has insane health regeneration and increased armor.")
+
+
+@compiletime function create_w3h_B00I()
+	createObjectDefinition("w3h", 'B00I', 'BNbr')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNHeartOfSearinox.blp")
+	..setString("ftip", "Quad Damage")
+	..setString("fube", "WTF?!")
+	..setString("ftat", "Abilities\\Spells\\Human\\ManaFlare\\ManaFlareBase.mdl")
+
+
+@compiletime function create_w3h_B00H()
+	createObjectDefinition("w3h", 'B00H', 'BNbr')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNOrbOfVenom.blp")
+	..setString("ftip", "Double Damage")
+	..setString("fube", "This unit is dealing freaking wicked damage.")
+	..setString("ftat", "Abilities\\Spells\\Other\\Parasite\\ParasiteTarget.mdl")
+
+
+@compiletime function create_w3h_B00G()
+	createObjectDefinition("w3h", 'B00G', 'Bcri')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNEnvenomedSpear.blp")
+	..setString("ftip", "Poison")
+	..setString("fube", "This unit is poisoned. It has its attack- and movementspeed reduced and takes damage over time.")
+	..setString("ftat", "Abilities\\Weapons\\PoisonSting\\PoisonStingTarget.mdl")
+
+
+@compiletime function create_w3h_B00F()
+	createObjectDefinition("w3h", 'B00F', 'BHad')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNThoriumMelee.blp")
+	..setString("ftip", "Aggressive Warsong")
+	..setString("fube", "This unit has increased damage.")
+
+
+@compiletime function create_w3h_B00E()
+	createObjectDefinition("w3h", 'B00E', 'BHad')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNHumanArmorUpThree.blp")
+	..setString("ftip", "Song of Shields")
+	..setString("fube", "This unit has increased armor.")
+
+
+@compiletime function create_w3h_B00D()
+	createObjectDefinition("w3h", 'B00D', 'BPSE')
+	..setString("ftip", "Stasis")
+	..setString("fube", "This unit can't move.")
+	..setString("fnsf", "")
+	..setString("ftat", "Abilities\\Spells\\Other\\Incinerate\\IncinerateBuff.mdl")
+	..setString("fta0", "head")
+
+
+@compiletime function create_w3h_B00C()
+	createObjectDefinition("w3h", 'B00C', 'BNab')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNBanish.blp")
+	..setString("ftip", "Serpent Rock Poison")
+	..setString("fube", "This unit is poisoned.")
+
+
+@compiletime function create_w3h_B00B()
+	createObjectDefinition("w3h", 'B00B', 'BPSE')
+	..setString("ftip", "Dummy insta kill")
+	..setString("fnsf", "")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B00A()
+	createObjectDefinition("w3h", 'B00A', 'BOsf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNLobstrokkBlue.blp")
+	..setString("ftip", "Summoned Lobster")
+	..setString("fube", "This unit is summoned.")
+	..setString("feat", "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")
+
+
+@compiletime function create_w3h_B009()
+	createObjectDefinition("w3h", 'B009', 'Binf')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNMetamorphosis.blp")
+	..setString("ftip", "Shaman's Buff")
+	..setString("fube", "This unit is buffed by a shaman. It has increased armor and damage.")
+	..setString("ftat", "Abilities\\Spells\\Orc\\Bloodlust\\BloodlustTarget.mdl")
+	..setString("fta0", "head")
+
+
+@compiletime function create_w3h_B008()
+	createObjectDefinition("w3h", 'B008', 'BOac')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNDrum.blp")
+	..setString("ftip", "Drum'n'Bass Beats")
+	..setString("fube", "This unit is listening to Drum'n'Bass beats. The powerful basses boost its attack damage.")
+
+
+@compiletime function create_w3h_B007()
+	createObjectDefinition("w3h", 'B007', 'Bblo')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNBerserkForTrolls.blp")
+	..setString("ftip", "Berserk")
+	..setString("fube", "This unit has its attack and movement speed increased but receives more damage.")
+	..setString("ftat", "Abilities\\Spells\\Orc\\TrollBerserk\\HeadhunterWEAPONSLeft.mdl,Abilities\\Spells\\Orc\\TrollBerserk\\HeadhunterWEAPONSLeft.mdl")
+
+
+@compiletime function create_w3h_B006()
+	createObjectDefinition("w3h", 'B006', 'Bbsk')
+	..setString("ftat", "Abilities\\Weapons\\VengeanceMissile\\VengeanceMissile.mdl,Abilities\\Spells\\Orc\\TrollBerserk\\HeadhunterWEAPONSLeft.mdl")
+
+
+@compiletime function create_w3h_B005()
+	createObjectDefinition("w3h", 'B005', 'BPSE')
+	..setString("ftip", "Soul Taken")
+	..setString("fnsf", "")
+	..setString("ftat", "Abilities\\Spells\\NightElf\\shadowstrike\\shadowstrike.mdl")
+
+
+@compiletime function create_w3h_B004()
+	createObjectDefinition("w3h", 'B004', 'Bbof')
+	..setString("fart", "ReplaceableTextures\\PassiveButtons\\PASBTNRegenerationAura.blp")
+	..setString("ftip", "Weaken Soul")
+	..setString("fube", "This units soul is weakened. It has reduced armor.")
+	..setString("frac", "human")
+	..setInt("fspd", 2)
+	..setString("ftat", "Abilities\\Spells\\Orc\\SpiritLink\\SpiritLinkTarget.mdl")
+	..setString("fta0", "origin")
+
+
+@compiletime function create_w3h_B003()
+	createObjectDefinition("w3h", 'B003', 'Bapl')
+	..setString("ftip", "Plague")
+	..setString("fube", "This unit is plagued. It is slowed and takes damage over time.")
+
+
+@compiletime function create_w3h_B002()
+	createObjectDefinition("w3h", 'B002', 'BHfs')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNPossession.blp")
+	..setString("ftip", "Fear of the Banshee")
+	..setString("fube", "The presence of a banshee decreases the damage of this unit.")
+	..setString("frac", "other")
+	..setString("ftat", "")
+
+
+@compiletime function create_w3h_B001()
+	createObjectDefinition("w3h", 'B001', 'Bapl')
+	..setString("ftip", "Rot")
+	..setString("fube", "This unit is rotting.")
+	..setString("fta0", "chest")
+
+
+@compiletime function create_w3h_B000()
+	createObjectDefinition("w3h", 'B000', 'Bblo')
+	..setString("fart", "ReplaceableTextures\\CommandButtons\\BTNTransmute.blp")
+	..setString("ftip", "Holy Power")
+	..setString("fube", "This unit has its attackspeed increased.")
+	..setString("ftat", "Abilities\\Spells\\Undead\\DevourMagic\\DevourMagicBirthMissile.mdl,Abilities\\Spells\\Items\\ClarityPotion\\ClarityTarget")
+
+
+// Original Table (contains all modified default objects)
+// Wurst does not support modifying default objects
+// but you can copy these functions and replace 'xxxx' with a new, custom id.
+
+@compiletime function create_w3h_Bweb()
+	createObjectDefinition("w3h", 'Bweb', 'Bweb')
+	..setString("fnsf", "")
+	..setString("ftat", "mdx\\sfx\\Web.mdx")
+
+
+@compiletime function create_w3h_Bwea()
+	createObjectDefinition("w3h", 'Bwea', 'Bwea')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bssd()
+	createObjectDefinition("w3h", 'Bssd', 'Bssd')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bspo()
+	createObjectDefinition("w3h", 'Bspo', 'Bspo')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bpsd()
+	createObjectDefinition("w3h", 'Bpsd', 'Bpsd')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bpoi()
+	createObjectDefinition("w3h", 'Bpoi', 'Bpoi')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bpig()
+	createObjectDefinition("w3h", 'Bpig', 'Bpig')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bmfa()
+	createObjectDefinition("w3h", 'Bmfa', 'Bmfa')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Beng()
+	createObjectDefinition("w3h", 'Beng', 'Beng')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bena()
+	createObjectDefinition("w3h", 'Bena', 'Bena')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bcy2()
+	createObjectDefinition("w3h", 'Bcy2', 'Bcy2')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bbof()
+	createObjectDefinition("w3h", 'Bbof', 'Bbof')
+	..setString("ftip", "Burning")
+	..setString("fube", "This unit is burning")
+
+
+@compiletime function create_w3h_Basl()
+	createObjectDefinition("w3h", 'Basl', 'Basl')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_Bam2()
+	createObjectDefinition("w3h", 'Bam2', 'Bam2')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BPSE()
+	createObjectDefinition("w3h", 'BPSE', 'BPSE')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BNto()
+	createObjectDefinition("w3h", 'BNto', 'BNto')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BNpi()
+	createObjectDefinition("w3h", 'BNpi', 'BNpi')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BNic()
+	createObjectDefinition("w3h", 'BNic', 'BNic')
+	..setString("fube", "This unit will explode upon death")
+
+
+@compiletime function create_w3h_BIrg()
+	createObjectDefinition("w3h", 'BIrg', 'BIrg')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BIpd()
+	createObjectDefinition("w3h", 'BIpd', 'BIpd')
+	..setString("fnsf", "")
+
+
+@compiletime function create_w3h_BIpb()
+	createObjectDefinition("w3h", 'BIpb', 'BIpb')
+	..setString("fnsf", "")
+
+
