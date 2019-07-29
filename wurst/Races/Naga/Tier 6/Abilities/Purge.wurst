@@ -10,8 +10,8 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..presetBuffs(lvl -> "B019")
     ..presetCooldown(lvl -> 25)
     ..presetManaCost(lvl -> 20)
-    ..presetDurationNormal(lvl -> 0.1)
-    ..presetDurationHero(lvl -> 0.1)
+    ..presetDurationNormal(lvl -> 0.01)
+    ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
     ..setName("NAG: Siren (Purge (cd))")
     ..setRace(Race.Human)
@@ -34,7 +34,8 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..setName("NAG: Siren (Purge)")
     ..setRace(Race.Human)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4}".format(
-      TargetsAllowed.air, TargetsAllowed.ground, TargetsAllowed.tree, TargetsAllowed.vulnerable, TargetsAllowed.ward
+      TargetsAllowed.air, TargetsAllowed.ground, TargetsAllowed.tree,
+      TargetsAllowed.vulnerable, TargetsAllowed.ward
     ))
     ..presetAttackUpdateFrequency(lvl -> 2)
     ..presetUnitPauseDuration(lvl -> 1.5)

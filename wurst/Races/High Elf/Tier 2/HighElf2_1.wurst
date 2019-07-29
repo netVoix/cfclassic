@@ -1,0 +1,75 @@
+package HighElf2_1
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import ObjectIds
+import Icons
+import Buildings
+import HighElf2_2
+
+public let HIGHELF2_1_UNIT_ID = 'n006'
+public let HIGHELF2_1_BUILDING_ID = 'h00T'
+
+let UPGRADES_TO = HIGHELF2_2_BUILDING_ID
+let GOLD_COST = 200
+
+@compiletime function highElf2_1Unit()
+  new UnitDefinition(HIGHELF2_1_UNIT_ID, UnitIds.bloodelflieutenant)
+    ..setNormalParams("Blademaster")
+    ..setNormalAbilities("A0AL,A00U,A00V")
+    ..setIconGameInterface(Icons.bTNTheCaptain)
+    ..setBuildTime(getBuildTime(GOLD_COST))
+    ..setGoldBountyAwardedBase(6)
+    ..setCollisionSize(16)
+    ..setAttack1CooldownTime(0.7)
+    ..setDefenseBase(7)
+    ..setAttack1DamageBase(19)
+    ..setAttack1DamageNumberofDice(1)
+    ..setAttack1DamageSidesperDie(16)
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(400)
+    ..setPointValue(110)
+    ..setAttack1Range(100)
+    ..setHitPointsRegenerationRate(1)
+    ..setAttack1WeaponType(WeaponType.Normal)
+    ..setAttack1WeaponSound(WeaponSound.MetalLightSlice)
+    ..setSpeedBase(300)
+    ..setPropulsionWindowdegrees(90)
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
+                          "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                          "|cffFFFF80Abilities:|r|n|n|cff80FF00Evade|r|n15% chance to evade an attack|n|n" + 
+                          "|cff80FF00Critical Strike|r|n25% chance on each attack to hit for 2.5 times of the normal damage|n|n" + 
+                          "|cff80FF00Spell Resistance|r|nSpell damage done to this unit is reduced by 15%")
+
+@compiletime function highElfTier2Building()
+  new BuildingDefinition(HIGHELF2_1_BUILDING_ID, UnitIds.blacksmith)
+    ..setNormalParams("Hall of Honor")
+    ..setIconGameInterface(Icons.bTNElvenFarm)
+    ..setGoldBountyAwardedBase(40)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setCollisionSize(72)
+    ..setModelFile(Buildings.elvenFarm1)
+    ..setGoldCost(GOLD_COST)
+    ..setHotkey("W")
+    ..setHitPointsMaximumBase(1300)
+    ..setMaximumPitchAngledegrees(0)
+    ..setMaximumRollAngledegrees(0)
+    ..setScalingValue(0.6)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(127)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(HIGHELF2_1_UNIT_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setUpgradesTo(UPGRADES_TO.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Blademaster|n" + 
+                          "|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                          "|cffFFAC00Blademaster:|r|n" + 
+                          "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
+                          "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n" + 
+                          "|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                          "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF0015%|r)|n-Critical Strike (|cffFFFF0025%, 2.5x|r)|n" + 
+                          "-Spell Resist (|cffFFFF0015%|r)")

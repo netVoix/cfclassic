@@ -4,6 +4,7 @@ import Icons
 import Buildings
 import Soundsets
 import AbilityObjEditing
+import ObjHelpers
 
 public let CORAL_STATUE_ID = 'h00G'
 public let CORAL_STATUE_REGEN_UNITS_ID = 'A007'
@@ -11,18 +12,13 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 
 @compiletime function coralStatue()
 	new BuildingDefinition(CORAL_STATUE_ID, 'hhou')
+		..setNormalParams("Coral Statue")
 		..setNormalAbilities("A07V,A09A")
 		..setIconGameInterface(Icons.bTNCoralBed)
-		..setBuildTime(2)
-		..setGoldBountyAwardedNumberofDice(1)
-		..setGoldBountyAwardedSidesperDie(1)
 		..setGoldBountyAwardedBase(49)
 		..setButtonPositionY(2)
 		..setModelFile(Buildings.coralBed1)
-		..setFoodProduced(0)
 		..setGoldCost(250)
-		..setRepairGoldCost(0)
-		..setRepairLumberCost(0)
 		..setHotkey("Y")
 		..setHitPointsMaximumBase(1000)
 		..setLumberCost(480)
@@ -30,8 +26,6 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setMaximumRollAngledegrees(0)
 		..setScalingValue(0.7)
 		..setName("Coral Statue")
-		..setSightRadiusDay(1000)
-		..setSightRadiusNight(1000)
 		..setPointValue(141)
 		..setPriority(4)
 		..setHitPointsRegenerationRate(0.5)
@@ -40,10 +34,10 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setRequirements("tec2")
 		..setRequirementsLevels("1")
 		..setSelectionScale(2.4)
-		..setTooltipBasic("Build Coral Statue [|cffffcc00Y|r]")
-		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Restore Area|r|nIncreases the hitpoint regeneration of nearby friendly units by 7.5 hp/sec and of nearby buildings by 2.5 hp/sec. Coral Statues stack with each other.")
+		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Restore Area|r|n" + 
+													"Increases the hitpoint regeneration of nearby friendly units by 7.5 hp/sec and of nearby buildings by 2.5 hp/sec. " + 
+													"Coral Statues stack with each other.")
 		..setGroundTexture("OSMA")
-		..setUpgradesUsed("")
 		..setUnitSoundSet(Soundsets.blacksmith)
 
 @compiletime function buildingsRegenAura()

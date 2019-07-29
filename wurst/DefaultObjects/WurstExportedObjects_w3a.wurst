@@ -4949,26 +4949,6 @@ import ObjEditingNatives
 	..setLvlDataString("arac", 0, 0, "human")
 
 
-@compiletime function create_w3a_A01E()
-	createObjectDefinition("w3a", 'A01E', 'ACpa')
-	..setLvlDataString("aart", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp")
-	..setLvlDataString("abuf", 1, 0, "")
-	..setLvlDataUnreal("Npa6", 1, 0, 0.01)
-	..setLvlDataUnreal("acdn", 1, 0, 0.0)
-	..setLvlDataInt("amcs", 1, 0, 35)
-	..setLvlDataUnreal("Poi1", 1, 1, 0.0)
-	..setLvlDataInt("Poi4", 1, 4, 0)
-	..setLvlDataUnreal("adur", 1, 0, 0.01)
-	..setLvlDataString("amat", 0, 0, "")
-	..setLvlDataString("arac", 0, 0, "orc")
-	..setLvlDataUnreal("aran", 1, 0, 99999.0)
-	..setLvlDataString("atar", 1, 0, "enemies,ground,invulnerable,mechanical,neutral,structure")
-	..setLvlDataString("atp1", 1, 0, "Hell's Fist")
-	..setLvlDataString("aub1", 1, 0, "Destroys a random enemy building. Cannot destroy legendary buildings or the Main Castle. You don't gain bounty for the destroyed building.|n|n|cffFFFF80Cooldown:|cffFFFF00 35 |rseconds")
-	..setLvlDataString("auar", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNImmolationOn.blp")
-	..setLvlDataString("ipmu", 1, 0, "nfbr")
-
-
 @compiletime function create_w3a_A01D()
 	createObjectDefinition("w3a", 'A01D', 'ACtb')
 	..setLvlDataUnreal("acdn", 1, 0, 0.0)
