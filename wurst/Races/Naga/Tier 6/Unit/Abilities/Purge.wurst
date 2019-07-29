@@ -16,7 +16,7 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..setName("NAG: Siren (Purge (cd))")
     ..setRace(Race.Human)
     ..presetCastRange(lvl -> 400)
-    ..presetTargetsAllowed(lvl -> "".format(
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
       TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
       TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
     ))
