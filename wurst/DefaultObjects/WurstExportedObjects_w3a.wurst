@@ -4328,20 +4328,6 @@ import ObjEditingNatives
 	..setLvlDataString("arac", 0, 0, "human")
 
 
-@compiletime function create_w3a_A02S()
-	createObjectDefinition("w3a", 'A02S', 'AOsf')
-	..setLvlDataString("abuf", 1, 0, "B00A")
-	..setLvlDataUnreal("acdn", 1, 0, 60.0)
-	..setLvlDataInt("amcs", 1, 0, 70)
-	..setLvlDataUnreal("adur", 1, 0, 45.0)
-	..setLvlDataInt("aher", 0, 0, 0)
-	..setLvlDataUnreal("ahdu", 1, 0, 45.0)
-	..setLvlDataInt("alev", 0, 0, 1)
-	..setLvlDataString("arac", 0, 0, "human")
-	..setLvlDataString("asat", 0, 0, "Objects\\Spawnmodels\\Naga\\NagaDeath\\NagaDeath.mdl")
-	..setLvlDataString("Osf1", 1, 0, "n00W")
-
-
 @compiletime function create_w3a_A02R()
 	createObjectDefinition("w3a", 'A02R', 'ACct')
 	..setLvlDataUnreal("Ocr1", 1, 1, 10.0)

@@ -1,10 +1,26 @@
 package Lobster
 
-import UnitObjEditing
 import UnitIds
 import Icons
+import AbilityObjEditing
+import Objects
+import ObjectIds
 
+public let SUMMON_LOBSTERS_ID = 'A02S'
 public let LOBSTER_ID = 'n00W'
+
+@compiletime function summonLobsters()
+	new AbilityDefinitionFarseerSpiritWolf(SUMMON_LOBSTERS_ID)
+		..presetBuffs(lvl -> "B00A")
+		..presetCooldown(lvl -> 60)
+		..presetManaCost(lvl -> 70)
+		..presetDurationNormal(lvl -> 45)
+		..presetDurationHero(lvl -> 45)
+		..setHeroAbility(false)
+		..setLevels(1)
+		..setArtSpecial(Objects.nagaDeath)
+		..presetSummonedUnit(lvl -> LOBSTER_ID.toRawCode())
+		..presetNumberofSummonedUnits(lvl -> 2)
 
 @compiletime function lobster()
 	new UnitDefinition(LOBSTER_ID, UnitIds.lobstrokktidecaller)

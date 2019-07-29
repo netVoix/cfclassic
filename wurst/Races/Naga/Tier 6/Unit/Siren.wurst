@@ -1,0 +1,44 @@
+package Siren
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Abilities
+import ObjectIds
+import Purge
+import Lobster
+import initlater NagaSpring
+
+public let SIREN_ID = 'n00S'
+
+@compiletime function siren()
+  new UnitDefinition(SIREN_ID, UnitIds.summoner)
+    ..setNormalParams("Naga Siren")
+    ..setNormalAbilities(commaList(PURGE_ID, SUMMON_LOBSTERS_ID))
+    ..setDefaultActiveAbility(PURGE_ID.toRawCode())
+    ..setAttack1AttackType(AttackType.Chaos)
+    ..setBuildTime(getBuildTime(NAGA_SPRING_GOLD_COST))
+    ..setGoldBountyAwardedBase(10)
+    ..setAnimationCastBackswing(0.26)
+    ..setAnimationCastPoint(0.25)
+    ..setAttack1DamageBase(59)
+    ..setAttack1DamageSidesperDie(41)
+    ..setAttack1Range(400)
+    ..setAttack1CooldownTime(1.6)
+    ..setDefenseBase(3)
+    ..setHitPointsMaximumBase(550)
+    ..setManaMaximum(300)
+    ..setManaInitialAmount(225)
+    ..setAttack1ProjectileArt(Abilities.murgulMagicMissile)
+    ..setScalingValue(0.85)
+    ..setMovementType(MovementType.Foot)
+    ..setPointValue(99)
+    ..setHitPointsRegenerationRate(2)
+    ..setManaRegeneration(2)
+    ..setSpeedBase(290)
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                          "|cffFFFF80Abilities:|r|n|n|cff80FF00Purge|r|nPurges an enemy removing all buffs from it and slowing it " + 
+                          "down for some seconds|n|cff8080FFCooldown: |r25|n|cff8080FFMana cost: |r20|n|n|cff80FF00Summon Lobsters|r|n" + 
+                          "Summons 2 Lobsters which last for 45 seconds. Lobsters have Critical Strike (10%, x3) and the Hard Shell ability " + 
+                          "which grants a 50% chance to reduce incoming attack damage by 35|n|cff8080FFCooldown: |r60|n|cff8080FFMana cost: |r70")

@@ -1,0 +1,7 @@
+package Naga6_1
+
+import Siren
+import NagaSpring
+
+public let NAGA6_1_UNIT_ID = SIREN_ID
+public let NAGA6_1_BUILDING_ID = NAGA_SPRING_ID

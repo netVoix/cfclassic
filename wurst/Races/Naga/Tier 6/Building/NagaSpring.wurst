@@ -1,0 +1,40 @@
+package NagaSpring
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Icons
+import Siren
+import ObjectIds
+import Soundsets
+import Buildings
+
+public let NAGA_SPRING_ID = 'h01Z'
+public let NAGA_SPRING_GOLD_COST = 350
+
+@compiletime function nagaSpring()
+  new BuildingDefinition(NAGA_SPRING_ID, UnitIds.farm)
+    ..setNormalParams("Naga Spring")
+    ..setIconGameInterface(Icons.bTNFountainOfLifeDefiled)
+    ..setModelFile(Buildings.fountainOfLifeDefiled1)
+    ..setGoldBountyAwardedBase(69)
+    ..setButtonPositionX(1)
+    ..setGoldCost(NAGA_SPRING_GOLD_COST)
+    ..setHotkey("S")
+    ..setHitPointsMaximumBase(1400)
+    ..setScalingValue(0.5)
+    ..setPointValue(43)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setRepairTime(70)
+    ..setRequirements("tec2")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(SIREN_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setUnitSoundSet(Soundsets.blacksmith)
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
+                          "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                          "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters")
+    
