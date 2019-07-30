@@ -2552,17 +2552,6 @@ import ObjEditingNatives
 	..setLvlDataString("atar", 1, 0, "self")
 
 
-@compiletime function create_w3a_A06V()
-	createObjectDefinition("w3a", 'A06V', 'Asp1')
-	..setLvlDataString("ansf", 0, 0, "")
-	..setLvlDataString("amat", 0, 0, "")
-	..setLvlDataString("anam", 0, 0, "Legendary Unit")
-	..setLvlDataString("arac", 0, 0, "human")
-	..setLvlDataString("atat", 0, 0, "")
-	..setLvlDataString("ata0", 0, 0, "")
-	..setLvlDataInt("atac", 0, 0, 0)
-
-
 @compiletime function create_w3a_A06U()
 	createObjectDefinition("w3a", 'A06U', 'AIat')
 	..setLvlDataInt("Iatt", 1, 1, 25)

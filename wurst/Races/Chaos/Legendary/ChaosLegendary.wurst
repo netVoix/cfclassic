@@ -1,0 +1,6 @@
+package ChaosLegendary
+
+import ShrineOfDestruction
+
+public let CHAOS_LEGENDARY_ID = SHRINE_OF_DESTRUCTION_ID
+

@@ -12,7 +12,7 @@ public let HUMAN_TOWER_ID = 'h006'
 		..setNormalAbilities("A09A")
 		..setAcquisitionRange(1000)
 		..setBuildTime(20)
-		..setGoldBountyAwardedBase(36)
+		..setGoldBountyReward(37)
 		..setDefenseBase(8)
 		..setArmorType(ArmorType.Fortified)
 		..setAttack1CooldownTime(0.5)

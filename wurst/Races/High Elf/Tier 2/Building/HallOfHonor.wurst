@@ -1,0 +1,48 @@
+package HallOfHonor
+
+import UnitObjEditing
+import ObjHelpers
+import Icons
+import Buildings
+import UnitIds
+import ObjectIds
+import HallOfTheEldest
+import initlater Blademaster
+
+public let HALL_OF_HONOR_ID = 'h00T'
+public let HALL_OF_HONOR_COST = 200
+
+let TRAINED_UNIT = BLADEMASTER_ID
+let UPGRADES_TO = HALL_OF_THE_ELDEST_ID
+
+@compiletime function hallOfHonor()
+  new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)
+    ..setNormalParams("Hall of Honor")
+    ..setIconGameInterface(Icons.bTNElvenFarm)
+    ..setGoldBountyAwardedBase(40)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setCollisionSize(72)
+    ..setModelFile(Buildings.elvenFarm1)
+    ..setGoldCost(HALL_OF_HONOR_COST)
+    ..setHotkey("W")
+    ..setHitPointsMaximumBase(1300)
+    ..setMaximumPitchAngledegrees(0)
+    ..setMaximumRollAngledegrees(0)
+    ..setScalingValue(0.6)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(127)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(TRAINED_UNIT.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setUpgradesTo(UPGRADES_TO.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Blademaster|n" + 
+                          "|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                          "|cffFFAC00Blademaster:|r|n" + 
+                          "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
+                          "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n" + 
+                          "|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                          "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF0015%|r)|n-Critical Strike (|cffFFFF0025%, 2.5x|r)|n" + 
+                          "-Spell Resist (|cffFFFF0015%|r)")

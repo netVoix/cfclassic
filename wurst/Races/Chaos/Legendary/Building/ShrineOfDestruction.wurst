@@ -1,0 +1,48 @@
+package ShrineOfDestruction
+
+import UnitObjEditing
+import UnitIds
+import LegendaryUnitFlag
+import ObjectIds
+import HellsFist
+import Icons
+import ObjHelpers
+import Buildings
+import Soundsets
+
+public let SHRINE_OF_DESTRUCTION_ID = 'h01E'
+
+@compiletime function shrineOfDestruction()
+  new BuildingDefinition(SHRINE_OF_DESTRUCTION_ID, UnitIds.farm)
+    ..setNormalParams("Shrine of Destruction")
+    ..setNormalAbilities(commaList(LEGENDARY_UNIT_FLAG, HELLS_FIST_ID))
+    ..setAcquisitionRange(99999)
+    ..setIconGameInterface(Icons.bTNUndeadShrine)
+    ..setDefaultActiveAbility(HELLS_FIST_ID.toRawCode())
+    ..setTintingColorBlue(100)
+    ..setTintingColorGreen(100)
+    ..setGoldBountyReward(170)
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(2)
+    ..setModelFile(Buildings.sacrificialAltar1)
+    ..setFoodCost(1)
+    ..setGoldCost(850)
+    ..setHotkey("X")
+    ..setHitPointsMaximumBase(1300)
+    ..setLumberCost(1800)
+    ..setManaInitialAmount(10)
+    ..setManaMaximum(50)
+    ..setMaximumPitchAngledegrees(0)
+    ..setMaximumRollAngledegrees(0)
+    ..setScalingValue(0.55)
+    ..setPointValue(111)
+    ..setHitPointsRegenerationRate(4.0)
+    ..setRepairTime(70)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setGroundTexture("OSMA")
+    ..setUnitSoundSet(Soundsets.blacksmith)
+    ..setTooltipExtended("|cffFF8204Legendary Building|r|n|n|cffFFFF80Ability:|cffFFFF00 Hell's Fist|r|n" + 
+                        "Destroys a random enemy building. Cannot destroy legendary buildings or the Main Castle. " + 
+                        "You don't gain bounty for the destroyed building.|n|n|cffFFFF80Cooldown:|cffFFFF00 45 |rseconds")

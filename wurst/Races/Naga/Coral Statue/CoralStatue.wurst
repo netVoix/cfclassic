@@ -35,7 +35,7 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setRequirementsLevels("1")
 		..setSelectionScale(2.4)
 		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Restore Area|r|n" + 
-													"Increases the hitpoint regeneration of nearby friendly units by 7.5 hp/sec and of nearby buildings by 2.5 hp/sec. " + 
+													"Increases the hitpoint regeneration of nearby friendly units by 3.5 hp/sec and of nearby buildings by 2.5 hp/sec. " + 
 													"Coral Statues stack with each other.")
 		..setGroundTexture("OSMA")
 		..setUnitSoundSet(Soundsets.blacksmith)

@@ -1,12 +1,12 @@
-package ChaosShrine
+package HellsFist
 
 import AbilityObjEditing
 import Icons
 
-public let CHAOS_SHRINE_ABILITY_ID = 'A01E'
+public let HELLS_FIST_ID = 'A01E'
 
 @compiletime function chaosShrineAbility()
-  new AbilityDefinitionParasite(CHAOS_SHRINE_ABILITY_ID)
+  new AbilityDefinitionParasite(HELLS_FIST_ID)
     ..presetIcon(Icons.bTNImmolationOn)
     ..setIconTurnOff(Icons.bTNImmolationOn)
     ..presetBuffs(lvl -> "")

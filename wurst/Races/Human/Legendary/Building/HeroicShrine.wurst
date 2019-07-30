@@ -1,4 +1,4 @@
-package HumanShrine
+package HeroicShrine
 
 import Soundsets
 import UnitObjEditing
@@ -6,13 +6,15 @@ import UnitIds
 import Icons
 import Buildings
 import ObjHelpers
+import LegendaryUnitFlag
+import ObjectIds
 
-public let HUMAN_SHRINE_ID = 'h05G'
+public let HEROIC_SHRINE_ID = 'h05G'
 
 @compiletime function humanShrine()
-	new BuildingDefinition(HUMAN_SHRINE_ID, UnitIds.farm)
+	new BuildingDefinition(HEROIC_SHRINE_ID, UnitIds.farm)
 		..setNormalParams("Heroic Shrine")
-		..setNormalAbilities("A06V,A06M")
+		..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode() + ",A06M")
 		..setAcquisitionRange(99999)
 		..setRequiredAnimationNames("work")
 		..setIconGameInterface(Icons.bTNAltarOfKings)
@@ -32,7 +34,6 @@ public let HUMAN_SHRINE_ID = 'h05G'
 		..setPointValue(67)
 		..setPriority(4)
 		..setHitPointsRegenerationRate(4)
-		..setHitPointsRegenerationType("always")
 		..setRepairTime(70)
 		..setRequirements("tec3")
 		..setRequirementsLevels("1")
@@ -41,4 +42,4 @@ public let HUMAN_SHRINE_ID = 'h05G'
 		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Call to Arms|r|n" + 
 														"Whenever an allied structure trains a unit, there is a 19% chance that " + 
 														"an additional unit of this type will be instantly trained, fighting for the Shrine owner. " + 
-														"Cannot train legendary units.")
+                            "Cannot train legendary units.")

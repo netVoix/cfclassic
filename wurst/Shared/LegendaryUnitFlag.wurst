@@ -1,0 +1,13 @@
+package LegendaryUnitFlag
+import AbilityObjEditing
+
+public let LEGENDARY_UNIT_FLAG = 'A06V'
+
+@compiletime function legendaryUnitFlag()
+  new AbilityDefinition(LEGENDARY_UNIT_FLAG, 'Asp1')
+    ..setEditorSuffix("")
+    ..setMissileArt("")
+    ..setName("Legendary Unit")
+    ..setArtTarget("")
+    ..setTargetAttachmentPoint("")
+    ..setTargetAttachments(0)

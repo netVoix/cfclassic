@@ -17,7 +17,7 @@ public let SIREN_ID = 'n00S'
     ..setNormalAbilities(commaList(PURGE_ID, SUMMON_LOBSTERS_ID))
     ..setDefaultActiveAbility(PURGE_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)
-    ..setBuildTime(getBuildTime(NAGA_SPRING_GOLD_COST))
+    ..setValueByCost(NAGA_SPRING_GOLD_COST)
     ..setGoldBountyAwardedBase(10)
     ..setAnimationCastBackswing(0.26)
     ..setAnimationCastPoint(0.25)

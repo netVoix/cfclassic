@@ -1,0 +1,40 @@
+package DragonCemetery
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Icons
+import Buildings
+import FrostWyrm
+import ObjectIds
+import Soundsets
+
+public let DRAGON_CEMETERY_ID = 'h01S'
+public let DRAGON_CEMETERY_COST = 500
+
+@compiletime function dragonCemetery()
+  new BuildingDefinition(DRAGON_CEMETERY_ID, UnitIds.farm)
+    ..setNormalParams("Dragon Cemetery")
+    ..setNormalAbilities("")
+    ..setIconGameInterface(Icons.bTNBoneYard)
+    ..setGoldBountyReward(100)
+    ..setButtonPositionX(1)
+    ..setModelFile(Buildings.boneYard)
+    ..setGoldCost(DRAGON_CEMETERY_COST)
+    ..setHotkey("S")
+    ..setHitPointsMaximumBase(1600)
+    ..setMaximumPitchAngledegrees(0)
+    ..setMaximumRollAngledegrees(0)
+    ..setScalingValue(0.45)
+    ..setPointValue(38)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(FROST_WYRM_ID.toRawCode())
+    ..setUnitSoundSet(Soundsets.blacksmith)
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Frost Wyrm|n|n|cffFFAC00Frost Wyrm:|r|n" + 
+                        "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 77|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
+                        "|cffFFFF80Abilities:|r|n-Flying|n-Splash Damage|n-Chilling Attack")
