@@ -1,0 +1,39 @@
+package TempleOfBone
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Icons
+import Buildings
+import Necromancer
+import ObjectIds
+
+public let TEMPLE_OF_BONE_ID = 'h01K'
+public let TEMPLE_OF_BONE_COST = 210
+
+@compiletime function templeOfBone()
+  new BuildingDefinition(TEMPLE_OF_BONE_ID, UnitIds.blacksmith)
+    ..setNormalParams("Temple of Bone")
+    ..setNormalAbilities("")
+    ..setIconGameInterface(Icons.bTNCrypt)
+    ..setGoldBountyReward(42)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setCollisionSize(72)
+    ..setModelFile(Buildings.crypt)
+    ..setGoldCost(TEMPLE_OF_BONE_COST)
+    ..setHotkey("W")
+    ..setHitPointsMaximumBase(1300)
+    ..setMaximumPitchAngledegrees(0)
+    ..setMaximumRollAngledegrees(0)
+    ..setScalingValue(0.4)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(30)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setSelectionScale(2.4)    
+    ..setUnitsTrained(NECROMANCER_ID.toRawCode())
+    ..setUpgradesTo("h04B")
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Necromancer|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
+                      "|cffFFAC00Necromancer:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
+                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
+                      "|cffFFFF80Abilities:|r|n-Raise Dead")
