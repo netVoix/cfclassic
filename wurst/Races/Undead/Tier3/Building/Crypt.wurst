@@ -1,0 +1,41 @@
+package Crypt
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Vampire
+import ObjectIds
+
+public let CRYPT_ID = 'h01N'
+public let CRYPT_COST = 200
+
+@compiletime function crypt()
+	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)
+		..setNormalParams("Crypt")
+		..setNormalAbilities("")
+		..setRequiredAnimationNames("fifth")
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
+		..setGoldBountyAwardedBase(46)
+		..setShadowTextureBuilding("ShadowHouse")
+		..setCollisionSize(72.0)
+		..setModelFile("Doodads\\Northrend\\Structures\\NorthrendCrypt\\NorthrendCrypt")
+		..setGoldCost(CRYPT_COST)
+		..setHotkey("E")
+		..setHitPointsMaximumBase(1300)
+		..setProjectileImpactZ(120.0)
+		..setMaximumPitchAngledegrees(0.0)
+		..setMaximumRollAngledegrees(0.0)
+		..setScalingValue(0.4)
+		..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+		..setPointValue(27)
+		..setHitPointsRegenerationRate(0.5)
+		..setRepairTime(70)
+		..setRequirements("tec1")
+		..setRequirementsLevels("1")
+		..setSelectionScale(2.4)
+		..setUnitsTrained(VAMPIRE_ID.toRawCode())
+		..setUnitSoundSet("Blacksmith")
+		..setUpgradesTo("h054")
+		..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Vampire|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+											"|cffFFAC00Vampire:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 35|r dps)|n" + 
+											"|cffFFFF80Armor:|r Hero (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00425|r|n" + 
+											"|cffFFFF80Abilities:|r|n-Raise Lesser Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF0070%|r)")

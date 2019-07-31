@@ -1,0 +1,39 @@
+package Vampire
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater Crypt
+
+public let VAMPIRE_ID = 'h01U'
+
+@compiletime function vampire()
+	new UnitDefinition(VAMPIRE_ID, UnitIds.footman)
+		..setNormalParams("Vampire")
+		..setNormalAbilities("A07K,A01O,A01P")
+		..setArmorSoundType(ArmorSoundType.Flesh)
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHeroDreadLord.blp")
+		..setAttack1AttackType(AttackType.Pierce)
+		..setValueByCost(CRYPT_COST)
+		..setGoldBountyReward(7)
+		..setCollisionSize(16.0)
+		..setDefenseBase(3)
+		..setArmorType(ArmorType.Hero)
+		..setAttack1DamageBase(39)
+		..setModelFile("units\\undead\\HeroDreadLord\\HeroDreadLord")
+		..setHitPointsMaximumBase(425)
+		..setScalingValue(0.65)
+		..setPointValue(103)
+		..setAttack1Range(110)
+		..setHitPointsRegenerationRate(1.0)
+		..setAttack1DamageSidesperDie(16)
+		..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+		..setUnitClassification("sapper,undead,ward")
+		..setUnitSoundSet("HeroDreadLord")
+		..setAttack1WeaponSound(WeaponSound.MetalMediumChop)
+		..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 35|r dps)|n" + 
+												"|cffFFFF80Armor:|r Hero (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00425|r|n" + 
+												"|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Lesser Vampire|r|nWhenever the Vampire kills " + 
+												"a living unit it will spawn a Lesser Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee " + 
+												"units in 900 range gain 30% life steal|n|n|cff80FF00Vampire Attack|r|nRegains 70% of its attack damage")
+  
