@@ -1,0 +1,47 @@
+package MightyNecromancer
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Icons
+import Units
+import Soundsets
+
+public let MIGHTY_NECROMANCER_ID = 'u009'
+
+@compiletime function mightyNecromancer()
+  new UnitDefinition(MIGHTY_NECROMANCER_ID, UnitIds.kelthuzadnecro)
+    ..setNormalParams("Mighty Necromancer")
+    ..setNormalAbilities("A05O,A05N,A05L")
+    ..setIconGameInterface(Icons.bTNGhostOfKelThuzad)
+    ..setAttack1AttackType(AttackType.Magic)
+    ..setDefaultActiveAbility("A05L")
+    ..setBuildTime(34)
+    ..setTintingColorBlue(255)
+    ..setTintingColorRed(255)
+    ..setGoldBountyReward(12)
+    ..setAttack1CooldownTime(1.6)
+    ..setDeathType(0)
+    ..setDefenseBase(3)
+    ..setArmorType(ArmorType.Unarmored)
+    ..setAttack1DamageBase(74)
+    ..setAttack1DamageSidesperDie(1)
+    ..setModelFile(Units.kelthuzadGhost)
+    ..setHitPointsMaximumBase(550)
+    ..setManaInitialAmount(175)
+    ..setManaMaximum(250)
+    ..setScalingValue(0.9)
+    ..setPointValue(115)
+    ..setAttack1Range(400)
+    ..setHitPointsRegenerationRate(1.5)
+    ..setManaRegeneration(1.75)
+    ..setSpeedBase(270)
+    ..setArtSpecial("")
+    ..setUnitClassification("sapper,undead,ward")
+    ..setUnitSoundSet(Soundsets.kelThuzadLich)
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Carrion Swarm|r|nGrants a 25% chance on each attack to release a " + 
+                        "carrion swarm that deals 70 damage to all enemies in a cone|n|n|cff80FF00Raise Greater Dead|r|n" + 
+                        "Raises a skeleton. Can also raise greater skeletons and Heros but no Generals|n|cff8080FFCooldown: |r30|n" + 
+                        "|cff8080FFMana cost: |r75")
