@@ -6,7 +6,7 @@ import Vampire
 import ObjectIds
 
 public let CRYPT_ID = 'h01N'
-public let CRYPT_COST = 200
+public let CRYPT_COST = 230
 
 @compiletime function crypt()
 	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)

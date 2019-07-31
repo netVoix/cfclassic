@@ -1,0 +1,40 @@
+package Graveyard
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import ObjectIds
+import initlater VampireLord
+
+public let GRAVEYARD_ID = 'h054'
+public let GRAVEYARD_COST = 210
+
+@compiletime function graveyard()
+  new BuildingDefinition(GRAVEYARD_ID, UnitIds.blacksmith)
+    ..setNormalParams("Graveyard")
+    ..setNormalAbilities("")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
+    ..setGoldBountyAwardedBase(98)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setDeathTimeseconds(0.1)
+    ..setModelFile("buildings\\undead\\Graveyard\\Graveyard")
+    ..setGoldCost(GRAVEYARD_COST)
+    ..setHotkey("R")
+    ..setHitPointsMaximumBase(1500)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.55)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(54)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirements("tec1")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(VAMPIRE_LORD_ID.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Vampire Lord|n|n" + 
+                      "|cffFFAC00Vampire Lord:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n|cffFFFF80Abilities:|r|n" + 
+                      "-Raise Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF00100%|r)|n|n" + 
+                      "|cffFF0000You must turn off unit production before you can upgrade!|r")
+  

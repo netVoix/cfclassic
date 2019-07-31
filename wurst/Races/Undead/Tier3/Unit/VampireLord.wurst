@@ -1,0 +1,41 @@
+package VampireLord
+
+import UnitObjEditing
+import UnitIds
+import Graveyard
+import Crypt
+import ObjHelpers
+
+public let VAMPIRE_LORD_ID = 'h05H'
+
+@compiletime function vampireLord()
+  new UnitDefinition(VAMPIRE_LORD_ID, UnitIds.footman)
+    ..setNormalParams("Vampire Lord")
+    ..setNormalAbilities("A07K,A06O,A01O,A06N")
+    ..setArmorSoundType(ArmorSoundType.Flesh)
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp")
+    ..setAttack1AttackType(AttackType.Pierce)
+    ..setBuildTime(CRYPT_COST + GRAVEYARD_COST)
+    ..setGoldBountyAwardedBase(15)
+    ..setCollisionSize(16.0)
+    ..setDefenseBase(4)
+    ..setArmorType(ArmorType.Hero)
+    ..setAttack1DamageBase(64)
+    ..setModelFile("units\\undead\\Tichondrius\\Tichondrius")
+    ..setHitPointsMaximumBase(650)
+    ..setScalingValue(0.85)
+    ..setAttack1Range(110)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setAttack1DamageSidesperDie(16)
+    ..setSpeedBase(310)
+    ..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+    ..setTurnRate(0.9)
+    ..setUnitClassification("sapper,undead,ward")
+    ..setUnitSoundSet("HeroDreadLord")
+    ..setAttack1WeaponSound(WeaponSound.MetalMediumChop)
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Vampire|r|nWhenever the Vampire Lord kills a living unit " + 
+                        "it will spawn a Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee units in 900 range gain 30% " + 
+                        "life steal|n|n|cff80FF00Vampire Attack|r|nRegains 100% of its attack damage")
+                        
