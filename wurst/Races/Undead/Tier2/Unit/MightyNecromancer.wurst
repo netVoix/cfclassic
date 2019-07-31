@@ -6,6 +6,7 @@ import ObjHelpers
 import Icons
 import Units
 import Soundsets
+import initlater TempleOfNecromancy
 
 public let MIGHTY_NECROMANCER_ID = 'u009'
 
@@ -16,7 +17,7 @@ public let MIGHTY_NECROMANCER_ID = 'u009'
     ..setIconGameInterface(Icons.bTNGhostOfKelThuzad)
     ..setAttack1AttackType(AttackType.Magic)
     ..setDefaultActiveAbility("A05L")
-    ..setBuildTime(34)
+    ..setValueByCost(TEMPLE_OF_NECROMANCY_COST)
     ..setTintingColorBlue(255)
     ..setTintingColorRed(255)
     ..setGoldBountyReward(12)
