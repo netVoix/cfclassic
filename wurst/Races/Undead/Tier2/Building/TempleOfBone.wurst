@@ -36,5 +36,5 @@ public let TEMPLE_OF_BONE_COST = 210
     ..setUpgradesTo(TEMPLE_OF_NECROMANCY_ID.toRawCode())
     ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Necromancer|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
                       "|cffFFAC00Necromancer:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
+                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
                       "|cffFFFF80Abilities:|r|n-Raise Dead")

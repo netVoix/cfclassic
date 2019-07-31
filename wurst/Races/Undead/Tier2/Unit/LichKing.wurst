@@ -15,7 +15,7 @@ public let LICH_KING_ID = 'u00D'
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
 		..setGoldBountyReward(23)
 		..setModelFile("units\\undead\\HeroLich\\HeroLich_V1")
-		..setHitPointsMaximumBase(900)
+		..setHitPointsMaximumBase(1000)
 		..setHitPointsRegenerationRate(3.0)
 		..setDefaultActiveAbility("A085")
 		..setValueByCost(TEMPLE_OF_BONE_COST + TEMPLE_OF_NECROMANCY_COST + HIGH_CITADEL_OF_NECROMANCY_COST)
@@ -34,7 +34,7 @@ public let LICH_KING_ID = 'u00D'
 		..setUnitClassification("sapper,undead,ward")
 		..setUnitSoundSet("KelThuzadLich")
 		..setTooltipExtended("|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
                         "|cffFFFF80Abilities:|r|n|n|cff80FF00Legendary Spell Resistance|r|nSpell damage done to this unit is " + 
                         "reduced by 70%|n|n|cff80FF00Immune|r|nThis unit is immune to certain negative effects|n|n" + 
                         "|cff80FF00Decaying Attack|r|nHas a 15% chance on attack to soul steal its target, killing it " + 

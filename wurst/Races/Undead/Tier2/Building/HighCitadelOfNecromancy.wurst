@@ -37,6 +37,6 @@ public let HIGH_CITADEL_OF_NECROMANCY_COST = 370
     ..setUnitsTrained(LICH_KING_ID.toRawCode())
     ..setTooltipExtended("|cffFF8204Legendary Building|r|n|cffFFFF80Trains: |cffFFFF00Lich King|n|n" + 
                       "|cffFFAC00Lich King:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
                       "|cffFFFF80Abilities:|r|n-Legendary Spell Resistance (|cffFFFF0070%|r)|n-Immune|n-Decaying Attack|n-Raise Ultimate Dead|n|n" + 
                       "|cffFF0000You must turn off unit production before you can upgrade!|r")

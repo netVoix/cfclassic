@@ -38,6 +38,6 @@ public let TEMPLE_OF_NECROMANCY_COST = 170
   ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Mighty Necromancer|n" + 
                     "|cffFFFF80Upgrades: |cffFFFF001|n|n|cffFFAC00Mighty Necromancer:|r|n" + 
                     "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
-                    "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                    "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
                     "|cffFFFF80Abilities:|r|n-Carrion Swarm (|cffFFFF0025%, 70dmg|r)|n-Raise Greater Dead|n|n" + 
                     "|cffFF0000You must turn off unit production before you can upgrade!|r")

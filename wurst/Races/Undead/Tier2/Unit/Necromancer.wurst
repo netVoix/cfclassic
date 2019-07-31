@@ -17,7 +17,7 @@ public let NECROMANCER_ID = 'u005'
     ..setCasterUpgradeNames("")
     ..setDefenseBase(1)
     ..setAttack1DamageBase(54)
-    ..setHitPointsMaximumBase(300)
+    ..setHitPointsMaximumBase(400)
     ..setManaInitialAmount(150)
     ..setScalingValue(0.9)
     ..setPointValue(114)
@@ -27,6 +27,6 @@ public let NECROMANCER_ID = 'u005'
     ..setAttack1DamageSidesperDie(1)
     ..setUnitClassification("sapper,undead,ward")
     ..setTooltipExtended("|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
+                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
                         "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Dead|r|nRaises a skeleton|n|cff8080FFCooldown: |r45|n" + 
                         "|cff8080FFMana cost: |r75")
