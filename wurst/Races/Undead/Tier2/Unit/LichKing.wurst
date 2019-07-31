@@ -1,0 +1,45 @@
+package LichKing
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import TempleOfBone
+import TempleOfNecromancy
+import HighCitadelOfNecromancy
+
+public let LICH_KING_ID = 'u00D'
+
+@compiletime function lichKing()
+	new UnitDefinition(LICH_KING_ID, UnitIds.necromancer)
+		..setNormalParams("Lich King")
+		..setNormalAbilities("A06V,A0AH,A070,A086,A03Q,A08X,A07H,A085")
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
+		..setGoldBountyReward(23)
+		..setModelFile("units\\undead\\HeroLich\\HeroLich_V1")
+		..setHitPointsMaximumBase(900)
+		..setHitPointsRegenerationRate(3.0)
+		..setDefaultActiveAbility("A085")
+		..setValueByCost(TEMPLE_OF_BONE_COST + TEMPLE_OF_NECROMANCY_COST + HIGH_CITADEL_OF_NECROMANCY_COST)
+		..setDeathType(2)
+		..setDefenseBase(5)
+		..setAttack1DamageBase(119)
+		..setLevel(6)
+		..setManaInitialAmount(250)
+		..setManaMaximum(400)
+		..setAttack1ProjectileArt("Abilities\\Spells\\Undead\\DeathCoil\\DeathCoilMissile.mdl")
+		..setPointValue(116)
+		..setAttack1Range(500)
+		..setManaRegeneration(2.5)
+		..setAttack1DamageSidesperDie(1)
+		..setSpeedBase(300)
+		..setUnitClassification("sapper,undead,ward")
+		..setUnitSoundSet("KelThuzadLich")
+		..setTooltipExtended("|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Legendary Spell Resistance|r|nSpell damage done to this unit is " + 
+                        "reduced by 70%|n|n|cff80FF00Immune|r|nThis unit is immune to certain negative effects|n|n" + 
+                        "|cff80FF00Decaying Attack|r|nHas a 15% chance on attack to soul steal its target, killing it " + 
+                        "instantly and gaining 50% of its health or a 10% chance to cast Death and Decay onto a 300 AoE around its target. " + 
+                        "Death and Decay lasts 5 seconds, draining 8% of enemy's max life per second|n|n|cff80FF00Raise Ultimate Dead|r|n" + 
+                        "Raises 2 greater skeletons. Skeletons raised this way have 3 bonus armor and 12 bonus damage|n|cff8080FFCooldown: |r25|n" + 
+												"|cff8080FFMana cost: |r100")
+												

@@ -1,0 +1,42 @@
+package HighCitadelOfNecromancy
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import LegendaryUnitFlag
+import ObjectIds
+import initlater LichKing
+
+public let HIGH_CITADEL_OF_NECROMANCY_ID = 'h055'
+public let HIGH_CITADEL_OF_NECROMANCY_COST = 370
+
+@compiletime function highCitadelOfNecromancy()
+  new BuildingDefinition(HIGH_CITADEL_OF_NECROMANCY_ID, UnitIds.blacksmith)
+    ..setNormalParams("High Citadel of Necromancy")
+    ..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode())
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHallOfTheDead.blp")
+    ..setGoldBountyReward(150)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setDeathTimeseconds(0.1)
+    ..setModelFile("buildings\\undead\\Necropolis\\Necropolis")
+    ..setFoodCost(1)
+    ..setGoldCost(HIGH_CITADEL_OF_NECROMANCY_COST)
+    ..setRequiredAnimationNames("upgrade,second")
+    ..setHotkey("R")
+    ..setHitPointsMaximumBase(1900)
+    ..setLumberCost(375)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.52)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(59)
+    ..setHitPointsRegenerationRate(4.0)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(LICH_KING_ID.toRawCode())
+    ..setTooltipExtended("|cffFF8204Legendary Building|r|n|cffFFFF80Trains: |cffFFFF00Lich King|n|n" + 
+                      "|cffFFAC00Lich King:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
+                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                      "|cffFFFF80Abilities:|r|n-Legendary Spell Resistance (|cffFFFF0070%|r)|n-Immune|n-Decaying Attack|n-Raise Ultimate Dead|n|n" + 
+                      "|cffFF0000You must turn off unit production before you can upgrade!|r")
