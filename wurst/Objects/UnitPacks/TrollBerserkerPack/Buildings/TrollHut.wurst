@@ -1,0 +1,40 @@
+package TrollHut
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater TrollBerserker
+import ObjectIds
+import TrapperHut
+
+public let TROLL_HUT_ID = 'h02H'
+public let TROLL_HUT_COST = 200
+
+
+@compiletime function trollHut()
+  new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)
+    ..setNormalParams("Troll Hut")
+    ..setNormalAbilities("")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
+    ..setGoldBountyAwardedBase(40)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setModelFile("buildings\\other\\ForestTrollHut1\\ForestTrollHut1")
+    ..setGoldCost(TROLL_HUT_COST)
+    ..setHotkey("E")
+    ..setHitPointsMaximumBase(1300)
+    ..setProjectileImpactZ(120.0)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.55)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(44)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(TROLL_BERSERKER_ID.toRawCode())
+    ..setUnitSoundSet("Blacksmith")
+    ..setUpgradesTo(TRAPPER_HUT_ID.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Troll Berserker|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                        "|cffFFAC00Troll Berserker:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
+                        "|cffFFFF80Abilities:|r|n-Berserk (|cffFFFF00+200%|r)")

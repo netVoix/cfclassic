@@ -2696,35 +2696,6 @@ import ObjEditingNatives
 	..setLvlDataString("arac", 0, 0, "human")
 
 
-@compiletime function create_w3a_A06I()
-	createObjectDefinition("w3a", 'A06I', 'ACpa')
-	..setLvlDataString("abuf", 1, 0, "B00T")
-	..setLvlDataUnreal("Npa6", 1, 0, 0.01)
-	..setLvlDataUnreal("acdn", 1, 0, 8.0)
-	..setLvlDataInt("amcs", 1, 0, 0)
-	..setLvlDataUnreal("Poi1", 1, 1, 0.0)
-	..setLvlDataInt("Poi4", 1, 4, 0)
-	..setLvlDataUnreal("adur", 1, 0, 0.01)
-	..setLvlDataUnreal("ahdu", 1, 0, 0.01)
-	..setLvlDataString("amat", 0, 0, "")
-	..setLvlDataString("arac", 0, 0, "human")
-	..setLvlDataUnreal("aran", 1, 0, 600.0)
-	..setLvlDataString("atar", 1, 0, "air,enemies,neutral")
-	..setLvlDataString("ipmu", 1, 0, "nfbr")
-
-
-@compiletime function create_w3a_A06H()
-	createObjectDefinition("w3a", 'A06H', 'ANen')
-	..setLvlDataUnreal("acdn", 1, 0, 7.0)
-	..setLvlDataUnreal("adur", 1, 0, 12.5)
-	..setLvlDataUnreal("ahdu", 1, 0, 3.13)
-	..setLvlDataInt("amsp", 0, 0, 1200)
-	..setLvlDataString("arac", 0, 0, "human")
-	..setLvlDataString("areq", 0, 0, "")
-	..setLvlDataUnreal("aran", 1, 0, 800.0)
-	..setLvlDataString("atar", 1, 0, "air,enemies,neutral")
-
-
 @compiletime function create_w3a_A06G()
 	createObjectDefinition("w3a", 'A06G', 'Aasl')
 	..setLvlDataUnreal("aare", 1, 0, 0.0)

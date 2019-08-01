@@ -13,8 +13,6 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
-    ..setName("NAG: Siren (Purge (cd))")
-    ..setRace(Race.Human)
     ..presetCastRange(lvl -> 400)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
       TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
@@ -31,8 +29,6 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..presetDurationNormal(lvl -> 12)
     ..presetDurationHero(lvl -> 3)
     ..setEditorSuffix("")
-    ..setName("NAG: Siren (Purge)")
-    ..setRace(Race.Human)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4}".format(
       TargetsAllowed.air, TargetsAllowed.ground, TargetsAllowed.tree,
       TargetsAllowed.vulnerable, TargetsAllowed.ward

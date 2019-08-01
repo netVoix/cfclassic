@@ -1,5 +1,0 @@
-package HumanLegendary
-
-import HeroicShrine
-
-public let HUMAN_LEGENDARY_ID = HEROIC_SHRINE_ID

@@ -1,0 +1,34 @@
+package Ensnare
+import AbilityObjEditing
+
+public let ENSNARE_ID = 'A06I'
+public let ENSNARE_DUMMY_ID = 'A06H'
+
+@compiletime function ensnare()
+	new AbilityDefinitionParasite(ENSNARE_ID)
+		..presetBuffs(lvl -> "B00T")
+		..presetSummonedUnitDuration(lvl -> 0.01)
+		..presetCooldown(lvl -> 8)
+		..presetManaCost(lvl -> 0)
+		..presetDamageperSecond(lvl -> 0)
+		..presetStackingType(lvl -> "0")
+		..presetDurationNormal(lvl -> 0.01)
+		..presetDurationHero(lvl -> 0.01)
+		..setMissileArt("")
+		..presetCastRange(lvl -> 600)
+		..presetTargetsAllowed(lvl -> "{0},{1},{2}".format(
+      TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.neutral
+		))	
+		..presetUnitType(lvl -> "nfbr")
+
+@compiletime function ensnareDummy()
+	new AbilityDefinitionEnsnareCreep(ENSNARE_DUMMY_ID)
+		..presetCooldown(lvl -> 0)
+		..presetDurationNormal(lvl -> 16) 
+		..presetDurationHero(lvl -> 3.5) 
+		..setMissileSpeed(1200)
+		..setRequirements("")
+		..presetCastRange(lvl -> 800)
+		..presetTargetsAllowed(lvl -> "{0},{1},{2}".format(
+      TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.neutral
+		))

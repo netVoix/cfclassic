@@ -1,13 +1,13 @@
-package HumanTower
+package WatchTower
 
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
 
-public let HUMAN_TOWER_ID = 'h006'
+public let WATCH_TOWER_ID = 'h006'
 
-@compiletime function humanTower()
-	new BuildingDefinition(HUMAN_TOWER_ID, UnitIds.guardtower)
+@compiletime function watchTower()
+	new BuildingDefinition(WATCH_TOWER_ID, UnitIds.guardtower)
 		..setNormalParams("Watch Tower")
 		..setNormalAbilities("A09A")
 		..setAcquisitionRange(1000)
