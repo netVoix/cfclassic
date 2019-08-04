@@ -1,0 +1,40 @@
+package CeremonialTotem
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import CeremonialTotemBuff
+import ObjectIds
+
+public let CEREMONIAL_TOTEM_ID = 'h02R'
+public let CEREMONIAL_TOTEM_COST = 250
+
+@compiletime function ceremonialTotem()
+  new BuildingDefinition(CEREMONIAL_TOTEM_ID, UnitIds.farm)
+  ..setNormalParams("Ceremonial Totem")
+  ..setNormalAbilities(CEREMONIAL_TOTEM_BUFF_ID.toRawCode())
+  ..setAcquisitionRange(25000.0)
+  ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTaurenTotem.blp")
+  ..setDefaultActiveAbility(CEREMONIAL_TOTEM_BUFF_ID.toRawCode())
+  ..setGoldBountyReward(50)
+  ..setButtonPositionX(3)
+  ..setModelFile("buildings\\orc\\TaurenTotem\\TaurenTotem")
+  ..setGoldCost(CEREMONIAL_TOTEM_COST)
+  ..setHitPointsMaximumBase(800)
+  ..setLumberCost(540)
+  ..setManaMaximum(11)
+  ..setMaximumPitchAngledegrees(0.0)
+  ..setMaximumRollAngledegrees(0.0)
+  ..setScalingValue(0.6)
+  ..setPointValue(10)
+  ..setHitPointsRegenerationRate(0.5)
+  ..setManaRegeneration(1.0)
+  ..setRepairTime(70)
+  ..setRequirements("tec2")
+  ..setRequirementsLevels("1")
+  ..setSelectionScale(2.4)
+  ..setUnitSoundSet("Blacksmith")
+  ..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Tribal Blessing|r|nGives a random friendly " + 
+                      "unit permanently +20 damage, +20% attackspeed, 3 armor and 200 hitpoints. " + 
+                      "Also gives one of the following:|n- Demolish (x1.5)|n- Critical Strike (25%, x2)|n" + 
+                      "- Evasion (30%)|n|n|cffFFFF80Cooldown:|cffFFFF00 10 |rseconds")

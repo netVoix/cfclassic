@@ -4081,27 +4081,6 @@ import ObjEditingNatives
 	..setLvlDataString("arac", 0, 0, "orc")
 
 
-@compiletime function create_w3a_A039()
-	createObjectDefinition("w3a", 'A039', 'ACpa')
-	..setLvlDataString("aart", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNBloodLustOn.blp")
-	..setLvlDataString("abuf", 1, 0, "")
-	..setLvlDataUnreal("Npa6", 1, 0, 0.01)
-	..setLvlDataUnreal("acdn", 1, 0, 1.0)
-	..setLvlDataInt("amcs", 1, 0, 10)
-	..setLvlDataUnreal("Poi1", 1, 1, 0.0)
-	..setLvlDataInt("Poi4", 1, 4, 0)
-	..setLvlDataUnreal("adur", 1, 0, 0.01)
-	..setLvlDataString("amat", 0, 0, "")
-	..setLvlDataString("anam", 0, 0, "ORC: Ceremonial Totem")
-	..setLvlDataString("arac", 0, 0, "orc")
-	..setLvlDataUnreal("aran", 1, 0, 99999.0)
-	..setLvlDataString("atar", 1, 0, "enemies,ground,invulnerable,mechanical,neutral,structure")
-	..setLvlDataString("atp1", 1, 0, "Tribal Blessing")
-	..setLvlDataString("aub1", 1, 0, "Gives a random friendly unit permanently +20 damage, +20% attackspeed, 3 armor and 200 hitpoints. Also gives one of the following:|n- Demolish (x1.5)|n- Critical Strike (25%, x2)|n- Evasion (30%)|n|n|cffFFFF80Cooldown:|cffFFFF00 10 |rseconds")
-	..setLvlDataString("auar", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNBloodLustOff.blp")
-	..setLvlDataString("ipmu", 1, 0, "nfbr")
-
-
 @compiletime function create_w3a_A038()
 	createObjectDefinition("w3a", 'A038', 'Aven')
 	..setLvlDataString("abuf", 1, 0, "B00G")

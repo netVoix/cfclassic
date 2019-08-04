@@ -1,0 +1,30 @@
+package CeremonialTotemBuff
+import AbilityObjEditing
+import Icons
+
+public let CEREMONIAL_TOTEM_BUFF_ID = 'A039'
+
+@compiletime function ceremonialTotemBuff()
+  new AbilityDefinitionParasite(CEREMONIAL_TOTEM_BUFF_ID)
+    ..setIconNormal(Icons.bTNBloodLustOn)
+    ..setIconTurnOff(Icons.bTNBloodLustOff)
+    ..presetBuffs(lvl -> "")
+    ..presetCooldown(lvl -> 1.0)
+    ..presetManaCost(lvl -> 9)
+    ..presetDurationNormal(lvl -> 0.01)
+    ..presetDurationHero(lvl -> 0.01)
+    ..setMissileArt("")
+    ..presetCastRange(lvl -> 99999)
+    ..presetTooltipNormal(lvl -> "Tribal Blessing")
+    ..presetUnitType(lvl -> "nfbr")
+    ..presetSummonedUnitDuration(lvl -> 0.01)
+    ..presetDamageperSecond(lvl -> 0)
+    ..presetStackingType(lvl -> "0")
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
+      TargetsAllowed.enemies, TargetsAllowed.ground, TargetsAllowed.invulnerable,
+      TargetsAllowed.mechanical, TargetsAllowed.neutral, TargetsAllowed.structure
+    ))
+    ..presetTooltipNormalExtended(lvl -> "Gives a random friendly unit permanently +20 damage, " + 
+                                          "+20% attackspeed, 3 armor and 200 hitpoints. Also gives one of the following:|n" + 
+                                          "- Demolish (x1.5)|n- Critical Strike (25%, x2)|n- Evasion (30%)|n|n" + 
+                                          "|cffFFFF80Cooldown:|cffFFFF00 10 |rseconds")
