@@ -8,7 +8,7 @@ import TrapperHut
 
 public let TROLL_HUT_ID = 'h02H'
 public let TROLL_HUT_COST = 200
-public let TROLL_HUT_TOTAL_COST = 200
+public let TROLL_HUT_TOTAL_COST = TROLL_HUT_COST
 
 @compiletime function trollHut()
   new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)
@@ -34,7 +34,4 @@ public let TROLL_HUT_TOTAL_COST = 200
     ..setUnitsTrained(TROLL_BERSERKER_ID.toRawCode())
     ..setUnitSoundSet("Blacksmith")
     ..setUpgradesTo(TRAPPER_HUT_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Troll Berserker|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
-                        "|cffFFAC00Troll Berserker:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
-                        "|cffFFFF80Abilities:|r|n-Berserk (|cffFFFF00+200%|r)")
+    ..setTooltipExtended(TROLL_BERSERKER_SHORT_DESCRIPTION)

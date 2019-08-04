@@ -30,7 +30,4 @@ public let IGLOO_TOTAL_COST = IGLOO_COST
     ..setHitPointsRegenerationRate(0.5)
     ..setSelectionScale(2.4)
     ..setUnitsTrained(HRIMTHRUSA_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Hrimthrusa|n|n|cffFFAC00Hrimthrusa:|r|n" + 
-                        "|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
-                        "|cffFFFF80Abilities:|r|n-Frost Attack (|cffFFFF005%, 7sec, 15dps|r)|n-Spell Resist (|cffFFFF0050%|r)")
+    ..setTooltipExtended(HRIMTHRUSA_SHORT_DESCRIPTION)

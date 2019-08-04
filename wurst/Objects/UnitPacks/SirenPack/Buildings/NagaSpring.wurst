@@ -10,7 +10,8 @@ import Soundsets
 import Buildings
 
 public let NAGA_SPRING_ID = 'h01Z'
-public let NAGA_SPRING_GOLD_COST = 350
+public let NAGA_SPRING_COST = 350
+public let NAGA_SPRING_TOTAL_COST = NAGA_SPRING_COST
 
 @compiletime function nagaSpring()
   new BuildingDefinition(NAGA_SPRING_ID, UnitIds.farm)
@@ -19,7 +20,7 @@ public let NAGA_SPRING_GOLD_COST = 350
     ..setModelFile(Buildings.fountainOfLifeDefiled1)
     ..setGoldBountyReward(70)
     ..setButtonPositionX(1)
-    ..setGoldCost(NAGA_SPRING_GOLD_COST)
+    ..setGoldCost(NAGA_SPRING_COST)
     ..setHotkey("S")
     ..setHitPointsMaximumBase(1400)
     ..setScalingValue(0.5)
@@ -33,8 +34,5 @@ public let NAGA_SPRING_GOLD_COST = 350
     ..setUnitsTrained(SIREN_ID.toRawCode())
     ..setGroundTexture("OSMA")
     ..setUnitSoundSet(Soundsets.blacksmith)
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
-                          "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
-                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
-                          "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters")
+    ..setTooltipExtended(SIREN_SHORT_DESCRIPTION)
     

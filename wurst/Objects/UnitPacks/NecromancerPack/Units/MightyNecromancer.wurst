@@ -7,9 +7,20 @@ import Icons
 import Units
 import Soundsets
 import initlater TempleOfNecromancy
-import initlater TempleOfBone
 
 public let MIGHTY_NECROMANCER_ID = 'u009'
+public let MIGHTY_NECROMANCER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                                                  "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                                  "|cffFFFF80Abilities:|r|n|n|cff80FF00Carrion Swarm|r|nGrants a 25% chance on each attack to release a " + 
+                                                  "carrion swarm that deals 70 damage to all enemies in a cone|n|n|cff80FF00Raise Greater Dead|r|n" + 
+                                                  "Raises a skeleton. Can also raise greater skeletons and Heros but no Generals|n|cff8080FFCooldown: |r30|n" + 
+                                                  "|cff8080FFMana cost: |r75"
+public let MIGHTY_NECROMANCER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Mighty Necromancer|n" + 
+                                                  "|cffFFFF80Upgrades: |cffFFFF001|n|n|cffFFAC00Mighty Necromancer:|r|n" + 
+                                                  "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                                                  "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                                  "|cffFFFF80Abilities:|r|n-Carrion Swarm (|cffFFFF0025%, 70dmg|r)|n-Raise Greater Dead|n|n" + 
+                                                  "|cffFF0000You must turn off unit production before you can upgrade!|r"
 
 @compiletime function mightyNecromancer()
   new UnitDefinition(MIGHTY_NECROMANCER_ID, UnitIds.kelthuzadnecro)
@@ -18,7 +29,7 @@ public let MIGHTY_NECROMANCER_ID = 'u009'
     ..setIconGameInterface(Icons.bTNGhostOfKelThuzad)
     ..setAttack1AttackType(AttackType.Magic)
     ..setDefaultActiveAbility("A05L")
-    ..setValueByCost(TEMPLE_OF_BONE_COST + TEMPLE_OF_NECROMANCY_COST)
+    ..setValueByCost(TEMPLE_OF_NECROMANCY_TOTAL_COST)
     ..setTintingColorBlue(255)
     ..setTintingColorRed(255)
     ..setGoldBountyReward(12)
@@ -41,9 +52,4 @@ public let MIGHTY_NECROMANCER_ID = 'u009'
     ..setArtSpecial("")
     ..setUnitClassification("sapper,undead,ward")
     ..setUnitSoundSet(Soundsets.kelThuzadLich)
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
-                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Carrion Swarm|r|nGrants a 25% chance on each attack to release a " + 
-                        "carrion swarm that deals 70 damage to all enemies in a cone|n|n|cff80FF00Raise Greater Dead|r|n" + 
-                        "Raises a skeleton. Can also raise greater skeletons and Heros but no Generals|n|cff8080FFCooldown: |r30|n" + 
-                        "|cff8080FFMana cost: |r75")
+    ..setTooltipExtended(MIGHTY_NECROMANCER_FULL_DESCRIPTION)

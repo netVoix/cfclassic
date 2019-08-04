@@ -1,0 +1,29 @@
+package CoralStatueRegenAuras
+
+import AbilityObjEditing
+
+public let CORAL_STATUE_REGEN_UNITS_ID = 'A007'
+public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
+public let CORAL_STATUE_REGEN_UNITS_VALUE = 3.5
+public let CORAL_STATUE_REGEN_BUILDINGS_VALUE = 2.5
+	
+@compiletime function buildingsRegenAura()
+	new AbilityDefinitionNeutralRegenhealthonly(CORAL_STATUE_REGEN_BUILDINGS_ID)
+		..presetAreaofEffect(lvl -> 700)
+		..presetAmountofHitPointsRegenerated(lvl -> CORAL_STATUE_REGEN_BUILDINGS_VALUE)
+		..presetPercentage(lvl -> false)
+		..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
+			TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground, TargetsAllowed.invulnerable,
+			TargetsAllowed.nonsapper, TargetsAllowed.self, TargetsAllowed.structure, TargetsAllowed.vulnerable
+		))
+		
+
+@compiletime function unitsRegenAura()
+	new AbilityDefinitionNeutralRegenhealthonly(CORAL_STATUE_REGEN_UNITS_ID)
+		..presetAreaofEffect(lvl -> 700)
+		..presetAmountofHitPointsRegenerated(lvl -> CORAL_STATUE_REGEN_UNITS_VALUE)
+		..presetPercentage(lvl -> false)
+		..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
+			TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground, TargetsAllowed.invulnerable,
+			TargetsAllowed.vulnerable
+		))

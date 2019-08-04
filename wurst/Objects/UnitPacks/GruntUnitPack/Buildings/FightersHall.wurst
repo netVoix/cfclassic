@@ -33,7 +33,5 @@ public let FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_COST
     ..setSelectionScale(2.4)
     ..setUnitsTrained(GRUNT_ID.toRawCode())
     ..setUpgradesTo(ADVANCED_FIGHTERS_HALL_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFFF80Upgrades: |cffFFFF002|n|n|cffFFAC00Grunt:|r|n" + 
-                        "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r")
+    ..setTooltipExtended(GRUNT_SHORT_DESCRIPTION)
                         

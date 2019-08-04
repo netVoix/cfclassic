@@ -2154,16 +2154,6 @@ import ObjEditingNatives
 	..setLvlDataString("atp1", 1, 0, "Ray of Light")
 	..setLvlDataString("aub1", 1, 0, "Deals 160 damage to a random enemy unit. Immune to most building magic like Frost Launcher or Power Plant. Can even damage most magic immune units. Hits only visible units.|n|n|cffFFFF80Cooldown:|cffFFFF00 3.33 |rseconds")
 
-
-@compiletime function create_w3a_A07V()
-	createObjectDefinition("w3a", 'A07V', 'Amgl')
-	..setLvlDataString("aart", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNNagaWeaponUp2.blp")
-	..setLvlDataString("arac", 0, 0, "orc")
-	..setLvlDataString("areq", 0, 0, "")
-	..setLvlDataString("atp1", 1, 0, "Restoration Aura")
-	..setLvlDataString("aub1", 1, 0, "Increases regeneration of buildings and friendly units in 700 range. Buildings regain 2.5 hp/sec, units regain 7.5 hp/sec. Stacks with other coral statues.")
-
-
 @compiletime function create_w3a_A07U()
 	createObjectDefinition("w3a", 'A07U', 'ACpa')
 	..setLvlDataString("aart", 0, 0, "ReplaceableTextures\\CommandButtons\\BTNStarfall.blp")

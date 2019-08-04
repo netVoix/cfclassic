@@ -33,8 +33,4 @@ public let OFFENSIVE_KODO_FARM_COST = 100
   ..setRequirementsLevels("1")
   ..setSelectionScale(2.4)
   ..setUnitsTrained(OFFENSIVE_KODO_RIDER_ID.toRawCode())
-  ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Offensive Kodo Rider|n|n" + 
-                      "|cffFFAC00Offensive Kodo Rider:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
-                      "|cffFFFF80Abilities:|r|n-Melee Damage Aura (|cffFFFF00+30%|r)|n|n" + 
-                      "|cffFF0000You must turn off unit production before you can upgrade!|r")
+  ..setTooltipExtended(OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION)

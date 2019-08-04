@@ -5,6 +5,12 @@ import UnitIds
 import ObjHelpers
 
 public let WATCH_TOWER_ID = 'h006'
+public let WATCH_TOWER_RANGE = 950
+public let WATCH_TOWER_DESCRIPTION = "|cffFFAC00Base Defense|r:|n" + 
+																			"This is a tower to protect key positions.|n|n" + 
+																			"|cffFFFF80Attack Type:|cffFFFF00 Pierce|n" + 
+																			"|cffFFFF80Range:|cffFFFF00 " + WATCH_TOWER_RANGE.toString() + "|n" + 
+																			"|cffFFFF80Average DPS:|cffFFFF00 90|r"
 
 @compiletime function watchTower()
 	new BuildingDefinition(WATCH_TOWER_ID, UnitIds.guardtower)
@@ -18,7 +24,7 @@ public let WATCH_TOWER_ID = 'h006'
 		..setAttack1CooldownTime(0.5)
 		..setAttack1DamageBase(39)
 		..setAttack1DamageSidesperDie(11)
-		..setAttack1Range(950)
+		..setAttack1Range(WATCH_TOWER_RANGE)
 		..setGoldCost(180)
 		..setLumberCost(300)
 		..setHotkey("Y")
@@ -32,9 +38,5 @@ public let WATCH_TOWER_ID = 'h006'
 		..setRepairTime(110)
 		..setRequirements("tec1")
 		..setRequirementsLevels("1")
-		..setTooltipExtended("|cffFFAC00Base Defense|r:|n" + 
-													"This is a tower to protect key positions.|n|n" + 
-													"|cffFFFF80Attack Type:|cffFFFF00 Pierce|n" + 
-													"|cffFFFF80Range:|cffFFFF00 950|n" + 
-													"|cffFFFF80Average DPS:|cffFFFF00 90|r")
+		..setTooltipExtended(WATCH_TOWER_DESCRIPTION)
   

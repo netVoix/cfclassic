@@ -41,8 +41,5 @@ public let SHRINE_OF_DESTRUCTION_ID = 'h01E'
     ..setRequirements("tec3")
     ..setRequirementsLevels("1")
     ..setSelectionScale(2.4)
-    ..setGroundTexture("OSMA")
     ..setUnitSoundSet(Soundsets.blacksmith)
-    ..setTooltipExtended("|cffFF8204Legendary Building|r|n|n|cffFFFF80Ability:|cffFFFF00 Hell's Fist|r|n" + 
-                        "Destroys a random enemy building. Cannot destroy legendary buildings or the Main Castle. " + 
-                        "You don't gain bounty for the destroyed building.|n|n|cffFFFF80Cooldown:|cffFFFF00 45 |rseconds")
+    ..setTooltipExtended("|cffFF8204Legendary Building|r|n|n|cffFFFF80Ability:|cffFFFF00 Hell's Fist|r|n" + HELLS_FIST_SHORT_DESCRIPTION)

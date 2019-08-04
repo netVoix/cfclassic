@@ -7,6 +7,15 @@ import OffensiveKodoAura
 import ObjectIds
 
 public let OFFENSIVE_KODO_RIDER_ID = 'o008'
+public let OFFENSIVE_KODO_RIDER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
+                                                    "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                                                    "|cffFFFF80Abilities:|r|n|n|cff80FF00Damage Aura|r|n" + 
+                                                    "Increases the damage of allied units in 900 range by 10%"
+public let OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Offensive Kodo Rider|n|n" + 
+                                                    "|cffFFAC00Offensive Kodo Rider:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
+                                                    "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                                                    "|cffFFFF80Abilities:|r|n-Melee Damage Aura (|cffFFFF00+30%|r)|n|n" + 
+                                                    "|cffFF0000You must turn off unit production before you can upgrade!|r"
 
 @compiletime function offensiveKodoRider()
   new UnitDefinition(OFFENSIVE_KODO_RIDER_ID, UnitIds.chaoskotobeast)
@@ -33,8 +42,5 @@ public let OFFENSIVE_KODO_RIDER_ID = 'o008'
     ..setShadowImageCenterX(90.0)
     ..setShadowImageCenterY(70.0)
     ..setArtSpecial("Objects\\Spawnmodels\\Orc\\OrcLargeDeathExplode\\OrcLargeDeathExplode.mdl")
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
-                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Damage Aura|r|n" + 
-                        "Increases the damage of allied units in 900 range by 10%")
+    ..setTooltipExtended(OFFENSIVE_KODO_RIDER_FULL_DESCRIPTION)
   

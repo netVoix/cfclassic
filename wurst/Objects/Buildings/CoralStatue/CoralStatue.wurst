@@ -5,15 +5,15 @@ import Buildings
 import Soundsets
 import AbilityObjEditing
 import ObjHelpers
+import ObjectIds
+import CoralStatueRegenAuraInfoIcon
 
 public let CORAL_STATUE_ID = 'h00G'
-public let CORAL_STATUE_REGEN_UNITS_ID = 'A007'
-public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 
 @compiletime function coralStatue()
 	new BuildingDefinition(CORAL_STATUE_ID, 'hhou')
 		..setNormalParams("Coral Statue")
-		..setNormalAbilities("A07V,A09A")
+		..setNormalAbilities(CORAL_STATUE_REGEN_AURA_INFO_ICON_ID.toRawCode() + ",A09A")
 		..setIconGameInterface(Icons.bTNCoralBed)
 		..setGoldBountyReward(50)
 		..setButtonPositionY(2)
@@ -25,7 +25,6 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setMaximumPitchAngledegrees(0)
 		..setMaximumRollAngledegrees(0)
 		..setScalingValue(0.7)
-		..setName("Coral Statue")
 		..setPointValue(141)
 		..setPriority(4)
 		..setHitPointsRegenerationRate(0.5)
@@ -34,30 +33,6 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setRequirements("tec2")
 		..setRequirementsLevels("1")
 		..setSelectionScale(2.4)
-		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Restore Area|r|n" + 
-													"Increases the hitpoint regeneration of nearby friendly units by 3.5 hp/sec and of nearby buildings by 2.5 hp/sec. " + 
-													"Coral Statues stack with each other.")
-		..setGroundTexture("OSMA")
+		..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Restore Area|r|n" + CORAL_STATUE_REGEN_AURA_SHORT_DESCRIPTION)
 		..setUnitSoundSet(Soundsets.blacksmith)
-
-@compiletime function buildingsRegenAura()
-	new AbilityDefinitionNeutralRegenhealthonly(CORAL_STATUE_REGEN_BUILDINGS_ID)
-		..presetAreaofEffect(lvl -> 700)
-		..presetAmountofHitPointsRegenerated(lvl -> 2.5)
-		..presetPercentage(lvl -> false)
-		..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
-			TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground, TargetsAllowed.invulnerable,
-			TargetsAllowed.nonsapper, TargetsAllowed.self, TargetsAllowed.structure, TargetsAllowed.vulnerable
-		))
-		
-
-@compiletime function unitsRegenAura()
-	new AbilityDefinitionNeutralRegenhealthonly(CORAL_STATUE_REGEN_UNITS_ID)
-		..presetAreaofEffect(lvl -> 700)
-		..presetAmountofHitPointsRegenerated(lvl -> 3.5)
-		..presetPercentage(lvl -> false)
-		..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
-			TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground, TargetsAllowed.invulnerable,
-			TargetsAllowed.vulnerable
-		))
   

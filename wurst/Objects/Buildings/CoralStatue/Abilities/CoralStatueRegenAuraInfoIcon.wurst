@@ -1,0 +1,20 @@
+package CoralStatueRegenAuraInfoIcon
+
+import AbilityObjEditing
+import Icons
+import CoralStatueRegenAuras
+
+public let CORAL_STATUE_REGEN_AURA_INFO_ICON_ID = 'A07V'
+public let CORAL_STATUE_REGEN_AURA_FULL_DESCRIPTION = "Increases regeneration of buildings and friendly units in 700 range. " + 
+                              "Buildings regain " + CORAL_STATUE_REGEN_BUILDINGS_VALUE.toString() + " hp/sec, " + 
+                              "units regain " + CORAL_STATUE_REGEN_UNITS_VALUE.toString() + " hp/sec. " + 
+                              "Stacks with other coral statues."
+public let CORAL_STATUE_REGEN_AURA_SHORT_DESCRIPTION = CORAL_STATUE_REGEN_AURA_FULL_DESCRIPTION
+
+@compiletime function regenAuraInfoIcon()
+  new AbilityDefinition(CORAL_STATUE_REGEN_AURA_INFO_ICON_ID, 'Amgl')
+    ..setIconNormal(Icons.bTNNagaWeaponUp2)
+    ..setRequirements("")
+    ..presetTooltipNormal(lvl -> "Restoration Aura")
+    ..presetTooltipNormalExtended(lvl -> CORAL_STATUE_REGEN_AURA_FULL_DESCRIPTION)
+    

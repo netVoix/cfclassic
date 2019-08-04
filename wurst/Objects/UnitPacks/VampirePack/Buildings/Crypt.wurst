@@ -7,6 +7,7 @@ import ObjectIds
 
 public let CRYPT_ID = 'h01N'
 public let CRYPT_COST = 230
+public let CRYPT_TOTAL_COST = CRYPT_COST
 
 @compiletime function crypt()
 	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)
@@ -35,7 +36,4 @@ public let CRYPT_COST = 230
 		..setUnitsTrained(VAMPIRE_ID.toRawCode())
 		..setUnitSoundSet("Blacksmith")
 		..setUpgradesTo("h054")
-		..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Vampire|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
-											"|cffFFAC00Vampire:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 35|r dps)|n" + 
-											"|cffFFFF80Armor:|r Hero (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00425|r|n" + 
-											"|cffFFFF80Abilities:|r|n-Raise Lesser Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF0070%|r)")
+		..setTooltipExtended(VAMPIRE_SHORT_DESCRIPTION)

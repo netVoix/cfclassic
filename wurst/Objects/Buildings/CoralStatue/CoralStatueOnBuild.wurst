@@ -1,7 +1,8 @@
-package CoralStatueActions
+package CoralStatueOnBuild
 
 import RegisterEvents
 import CoralStatue
+import CoralStatueRegenAuras
 
 init
   registerPlayerUnitEvent(EVENT_PLAYER_UNIT_CONSTRUCT_FINISH) ->

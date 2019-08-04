@@ -11,9 +11,7 @@ import initlater Blademaster
 
 public let HALL_OF_HONOR_ID = 'h00T'
 public let HALL_OF_HONOR_COST = 200
-
-let TRAINED_UNIT = BLADEMASTER_ID
-let UPGRADES_TO = HALL_OF_THE_ELDEST_ID
+public let HALL_OF_HONOR_TOTAL_COST = HALL_OF_HONOR_COST
 
 @compiletime function hallOfHonor()
   new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)
@@ -35,14 +33,7 @@ let UPGRADES_TO = HALL_OF_THE_ELDEST_ID
     ..setHitPointsRegenerationRate(0.5)
     ..setHitPointsRegenerationType("always")
     ..setSelectionScale(2.4)
-    ..setUnitsTrained(TRAINED_UNIT.toRawCode())
+    ..setUnitsTrained(BLADEMASTER_ID.toRawCode())
     ..setGroundTexture("OSMA")
-    ..setUpgradesTo(UPGRADES_TO.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Blademaster|n" + 
-                          "|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
-                          "|cffFFAC00Blademaster:|r|n" + 
-                          "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
-                          "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n" + 
-                          "|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
-                          "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF0015%|r)|n-Critical Strike (|cffFFFF0025%, 2.5x|r)|n" + 
-                          "-Spell Resist (|cffFFFF0015%|r)")
+    ..setUpgradesTo(HALL_OF_THE_ELDEST_ID.toRawCode())
+    ..setTooltipExtended(BLADEMASTER_SHORT_DESCRIPTION)

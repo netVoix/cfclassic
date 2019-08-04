@@ -37,8 +37,4 @@ public let TRAPPER_HUT_TOTAL_COST = TROLL_HUT_TOTAL_COST + TRAPPER_HUT_COST
     ..setRequirementsLevels("1")
     ..setSelectionScale(2.4)
     ..setUnitsTrained(TROLL_TRAPPER_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Troll Trapper|n|n|cffFFAC00Troll Trapper:|r|n" + 
-                        "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 38|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
-                        "|cffFFFF80Abilities:|r|n-Ensnare|n-Berserk (|cffFFFF00+200%|r)|n|n" + 
-                        "|cffFF0000You must turn off unit production before you can upgrade!|r")
+    ..setTooltipExtended(TROLL_TRAPPER_SHORT_DESCRIPTION)

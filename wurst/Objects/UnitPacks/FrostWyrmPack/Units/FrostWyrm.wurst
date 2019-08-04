@@ -6,13 +6,24 @@ import ObjHelpers
 import initlater DragonCemetery
 
 public let FROST_WYRM_ID = 'u000'
+public let FROST_WYRM_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 77|r dps)|n" + 
+                                        "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
+                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Flying|r|nThis unit is flying|n|n" + 
+                                        "|cff80FF00Splash Damage|r|nThis unit's attacks hit all units in a 225 AoE around its target. " + 
+                                        "Units farther away from the target receive less damage|n|n|cff80FF00Chilling Attack|r|n" + 
+                                        "All units hit get chilled for 5 seconds"
+public let FROST_WYRM_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Frost Wyrm|n|n|cffFFAC00Frost Wyrm:|r|n" + 
+                                          "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 77|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n-Flying|n-Splash Damage|n-Chilling Attack"
+
 
 @compiletime function frostWyrm()
   new UnitDefinition(FROST_WYRM_ID, UnitIds.frostwyrm)
     ..setNormalParams("Frost Wyrm")
     ..setNormalAbilities("A064")
     ..setAttack1WeaponType(WeaponType.Normal)
-    ..setValueByCost(DRAGON_CEMETERY_COST)
+    ..setValueByCost(DRAGON_CEMETERY_TOTAL_COST)
     ..setGoldBountyReward(16)
     ..setAttack1CooldownTime(1.8)
     ..setDefenseBase(5)
@@ -33,10 +44,5 @@ public let FROST_WYRM_ID = 'u000'
       TargetsAllowed.air, TargetsAllowed.debris, TargetsAllowed.ward
     ))
     ..setUnitClassification("sapper,undead,ward")
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 77|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
-                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Flying|r|nThis unit is flying|n|n" + 
-                        "|cff80FF00Splash Damage|r|nThis unit's attacks hit all units in a 225 AoE around its target. " + 
-                        "Units farther away from the target receive less damage|n|n|cff80FF00Chilling Attack|r|n" + 
-                        "All units hit get chilled for 5 seconds")
+    ..setTooltipExtended(FROST_WYRM_FULL_DESCRIPTION)
     

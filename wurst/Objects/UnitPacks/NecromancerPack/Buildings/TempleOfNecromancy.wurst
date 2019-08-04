@@ -5,9 +5,11 @@ import UnitIds
 import ObjHelpers
 import MightyNecromancer
 import ObjectIds
+import initlater TempleOfBone
 
 public let TEMPLE_OF_NECROMANCY_ID = 'h04B'
 public let TEMPLE_OF_NECROMANCY_COST = 170
+public let TEMPLE_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_BONE_TOTAL_COST + TEMPLE_OF_NECROMANCY_COST
 
 @compiletime function templeOfNecromancy()
   new BuildingDefinition(TEMPLE_OF_NECROMANCY_ID, UnitIds.blacksmith)
@@ -35,9 +37,4 @@ public let TEMPLE_OF_NECROMANCY_COST = 170
   ..setSelectionScale(2.4)
   ..setUnitsTrained(MIGHTY_NECROMANCER_ID.toRawCode())
   ..setUpgradesTo("h055")
-  ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Mighty Necromancer|n" + 
-                    "|cffFFFF80Upgrades: |cffFFFF001|n|n|cffFFAC00Mighty Necromancer:|r|n" + 
-                    "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
-                    "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
-                    "|cffFFFF80Abilities:|r|n-Carrion Swarm (|cffFFFF0025%, 70dmg|r)|n-Raise Greater Dead|n|n" + 
-                    "|cffFF0000You must turn off unit production before you can upgrade!|r")
+  ..setTooltipExtended(MIGHTY_NECROMANCER_SHORT_DESCRIPTION)

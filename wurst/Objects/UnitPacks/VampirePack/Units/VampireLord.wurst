@@ -7,6 +7,16 @@ import Crypt
 import ObjHelpers
 
 public let VAMPIRE_LORD_ID = 'h05H'
+public let VAMPIRE_LORD_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Vampire|r|nWhenever the Vampire Lord kills a living unit " + 
+                                            "it will spawn a Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee units in 900 range gain 30% " + 
+                                            "life steal|n|n|cff80FF00Vampire Attack|r|nRegains 100% of its attack damage"
+public let VAMPIRE_LORD_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Vampire Lord|n|n" + 
+                                            "|cffFFAC00Vampire Lord:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n|cffFFFF80Abilities:|r|n" + 
+                                            "-Raise Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF00100%|r)|n|n" + 
+                                            "|cffFF0000You must turn off unit production before you can upgrade!|r"
 
 @compiletime function vampireLord()
   new UnitDefinition(VAMPIRE_LORD_ID, UnitIds.footman)
@@ -33,9 +43,5 @@ public let VAMPIRE_LORD_ID = 'h05H'
     ..setUnitClassification("sapper,undead,ward")
     ..setUnitSoundSet("HeroDreadLord")
     ..setAttack1WeaponSound(WeaponSound.MetalMediumChop)
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
-                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Vampire|r|nWhenever the Vampire Lord kills a living unit " + 
-                        "it will spawn a Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee units in 900 range gain 30% " + 
-                        "life steal|n|n|cff80FF00Vampire Attack|r|nRegains 100% of its attack damage")
+    ..setTooltipExtended(VAMPIRE_LORD_FULL_DESCRIPTION)
                         

@@ -11,6 +11,7 @@ import TempleOfNecromancy
 
 public let TEMPLE_OF_BONE_ID = 'h01K'
 public let TEMPLE_OF_BONE_COST = 210
+public let TEMPLE_OF_BONE_TOTAL_COST = TEMPLE_OF_BONE_COST
 
 @compiletime function templeOfBone()
   new BuildingDefinition(TEMPLE_OF_BONE_ID, UnitIds.blacksmith)
@@ -34,7 +35,4 @@ public let TEMPLE_OF_BONE_COST = 210
     ..setSelectionScale(2.4)    
     ..setUnitsTrained(NECROMANCER_ID.toRawCode())
     ..setUpgradesTo(TEMPLE_OF_NECROMANCY_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Necromancer|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
-                      "|cffFFAC00Necromancer:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
-                      "|cffFFFF80Abilities:|r|n-Raise Dead")
+    ..setTooltipExtended(NECROMANCER_SHORT_DESCRIPTION)

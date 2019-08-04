@@ -4,6 +4,11 @@ import AbilityObjEditing
 import Icons
 
 public let HELLS_FIST_ID = 'A01E'
+public let HELLS_FIST_MANACOST = 45
+public let HELLS_FIST_FULL_DESCRIPTION = "Destroys a random enemy building. Cannot destroy legendary buildings or the Main Castle. " + 
+                                          "You don't gain bounty for the destroyed building.|n|n" + 
+                                          "|cffFFFF80Manacost:|cffFFFF00 " + HELLS_FIST_MANACOST.toString() + " |rseconds"
+public let HELLS_FIST_SHORT_DESCRIPTION = HELLS_FIST_FULL_DESCRIPTION
 
 @compiletime function chaosShrineAbility()
   new AbilityDefinitionParasite(HELLS_FIST_ID)
@@ -11,7 +16,7 @@ public let HELLS_FIST_ID = 'A01E'
     ..setIconTurnOff(Icons.bTNImmolationOn)
     ..presetBuffs(lvl -> "")
     ..presetCooldown(lvl -> 0)
-    ..presetManaCost(lvl -> 45)
+    ..presetManaCost(lvl -> HELLS_FIST_MANACOST)
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
@@ -26,5 +31,4 @@ public let HELLS_FIST_ID = 'A01E'
     ..presetDamageperSecond(lvl -> 0)
     ..presetStackingType(lvl -> "0")
     ..presetTooltipNormal(lvl -> "Hell's Fist")
-    ..presetTooltipNormalExtended(lvl -> "Destroys a random enemy building. Cannot destroy legendary buildings or the Main Castle. " + 
-                                          "You don't gain bounty for the destroyed building.|n|n|cffFFFF80Cooldown:|cffFFFF00 45 |rseconds")
+    ..presetTooltipNormalExtended(lvl -> HELLS_FIST_FULL_DESCRIPTION)

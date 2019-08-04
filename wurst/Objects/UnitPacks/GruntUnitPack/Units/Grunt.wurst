@@ -6,6 +6,13 @@ import ObjHelpers
 import initlater FightersHall
 
 public let GRUNT_ID = 'o002'
+public let GRUNT_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"
+public let GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFFF80Upgrades: |cffFFFF002|n|n|cffFFAC00Grunt:|r|n" + 
+                                  "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
+                                  "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"
+
+
 
 @compiletime function grunt()
   new UnitDefinition(GRUNT_ID, UnitIds.garthok)
@@ -26,5 +33,4 @@ public let GRUNT_ID = 'o002'
     ..setAttack1DamageSidesperDie(6)
     ..setSpeedBase(300)
     ..setArtSpecial("Objects\\Spawnmodels\\Orc\\OrcSmallDeathExplode\\OrcSmallDeathExplode.mdl")
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r")
+    ..setTooltipExtended(GRUNT_FULL_DESCRIPTION)

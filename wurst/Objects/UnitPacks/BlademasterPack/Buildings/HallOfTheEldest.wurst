@@ -10,8 +10,7 @@ import initlater ElderBlademaster
 
 public let HALL_OF_THE_ELDEST_ID = 'h03F'
 public let HALL_OF_THE_ELDEST_COST = 200
-
-let TRAINED_UNIT = ELDER_BLADEMASTER_ID
+public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_THE_ELDEST_COST
 
 @compiletime function hallOfTheEldest()
   new BuildingDefinition(HALL_OF_THE_ELDEST_ID, UnitIds.blacksmith)
@@ -34,12 +33,5 @@ let TRAINED_UNIT = ELDER_BLADEMASTER_ID
     ..setRequirements("tec2")
     ..setRequirementsLevels("1")
     ..setSelectionScale(2.4)
-    ..setUnitsTrained(TRAINED_UNIT.toRawCode())
-    ..setGroundTexture("OSMA")
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Elder Blademaster|n|n|" + 
-                          "cffFFAC00Elder Blademaster:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 90|r dps)|n" + 
-                          "|cffFFFF80Armor:|r Heavy (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
-                          "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0030%, 3x|r)|n" + 
-                          "-Evade (|cffFFFF0025%|r)|n-Feedback (|cffFFFF0040 mana|r)|n" + 
-                          "-Spell Resist (|cffFFFF0025%|r)|n-Spell Steal|n|n" + 
-                          "|cffFF0000You must turn off unit production before you can upgrade!|r")    
+    ..setUnitsTrained(ELDER_BLADEMASTER_ID.toRawCode())
+    ..setTooltipExtended(ELDER_BLADEMASTER_SHORT_DESCRIPTION)    

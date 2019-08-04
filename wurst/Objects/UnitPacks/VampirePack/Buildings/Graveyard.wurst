@@ -5,9 +5,11 @@ import UnitIds
 import ObjHelpers
 import ObjectIds
 import initlater VampireLord
+import Crypt
 
 public let GRAVEYARD_ID = 'h054'
 public let GRAVEYARD_COST = 210
+public let GRAVEYARD_TOTAL_COST = CRYPT_TOTAL_COST + GRAVEYARD_COST
 
 @compiletime function graveyard()
   new BuildingDefinition(GRAVEYARD_ID, UnitIds.blacksmith)
@@ -32,9 +34,5 @@ public let GRAVEYARD_COST = 210
     ..setRequirementsLevels("1")
     ..setSelectionScale(2.4)
     ..setUnitsTrained(VAMPIRE_LORD_ID.toRawCode())
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Vampire Lord|n|n" + 
-                      "|cffFFAC00Vampire Lord:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
-                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n|cffFFFF80Abilities:|r|n" + 
-                      "-Raise Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF00100%|r)|n|n" + 
-                      "|cffFF0000You must turn off unit production before you can upgrade!|r")
+    ..setTooltipExtended(VAMPIRE_LORD_SHORT_DESCRIPTION)
   

@@ -10,6 +10,16 @@ import Lobster
 import initlater NagaSpring
 
 public let SIREN_ID = 'n00S'
+public let SIREN_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                                    "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                    "|cffFFFF80Abilities:|r|n|n|cff80FF00Purge|r|nPurges an enemy removing all buffs from it and slowing it " + 
+                                    "down for some seconds|n|cff8080FFCooldown: |r25|n|cff8080FFMana cost: |r20|n|n|cff80FF00Summon Lobsters|r|n" + 
+                                    "Summons 2 Lobsters which last for 45 seconds. Lobsters have Critical Strike (10%, x3) and the Hard Shell ability " + 
+                                    "which grants a 50% chance to reduce incoming attack damage by 35|n|cff8080FFCooldown: |r60|n|cff8080FFMana cost: |r70"
+public let SIREN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
+                                      "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters"
 
 @compiletime function siren()
   new UnitDefinition(SIREN_ID, UnitIds.summoner)
@@ -17,7 +27,7 @@ public let SIREN_ID = 'n00S'
     ..setNormalAbilities(commaList(PURGE_ID, SUMMON_LOBSTERS_ID))
     ..setDefaultActiveAbility(PURGE_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)
-    ..setValueByCost(NAGA_SPRING_GOLD_COST)
+    ..setValueByCost(NAGA_SPRING_TOTAL_COST)
     ..setGoldBountyReward(11)
     ..setAnimationCastBackswing(0.26)
     ..setAnimationCastPoint(0.25)
@@ -36,9 +46,4 @@ public let SIREN_ID = 'n00S'
     ..setHitPointsRegenerationRate(2)
     ..setManaRegeneration(2)
     ..setSpeedBase(290)
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
-                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
-                          "|cffFFFF80Abilities:|r|n|n|cff80FF00Purge|r|nPurges an enemy removing all buffs from it and slowing it " + 
-                          "down for some seconds|n|cff8080FFCooldown: |r25|n|cff8080FFMana cost: |r20|n|n|cff80FF00Summon Lobsters|r|n" + 
-                          "Summons 2 Lobsters which last for 45 seconds. Lobsters have Critical Strike (10%, x3) and the Hard Shell ability " + 
-                          "which grants a 50% chance to reduce incoming attack damage by 35|n|cff8080FFCooldown: |r60|n|cff8080FFMana cost: |r70")
+    ..setTooltipExtended(SIREN_FULL_DESCRIPTION)

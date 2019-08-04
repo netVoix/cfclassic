@@ -11,6 +11,7 @@ import Soundsets
 
 public let DRAGON_CEMETERY_ID = 'h01S'
 public let DRAGON_CEMETERY_COST = 500
+public let DRAGON_CEMETERY_TOTAL_COST = DRAGON_CEMETERY_COST
 
 @compiletime function dragonCemetery()
   new BuildingDefinition(DRAGON_CEMETERY_ID, UnitIds.farm)
@@ -34,7 +35,4 @@ public let DRAGON_CEMETERY_COST = 500
     ..setSelectionScale(2.4)
     ..setUnitsTrained(FROST_WYRM_ID.toRawCode())
     ..setUnitSoundSet(Soundsets.blacksmith)
-    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Frost Wyrm|n|n|cffFFAC00Frost Wyrm:|r|n" + 
-                        "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 77|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
-                        "|cffFFFF80Abilities:|r|n-Flying|n-Splash Damage|n-Chilling Attack")
+    ..setTooltipExtended(FROST_WYRM_SHORT_DESCRIPTION)

@@ -6,6 +6,15 @@ import ObjHelpers
 import TrollHut
 
 public let TROLL_BERSERKER_ID = 'n00V'
+public let TROLL_BERSERKER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
+                                              "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
+                                              "|cffFFFF80Abilities:|r|n|n|cff80FF00Berserk|r|nWhenever this unit kills an enemy it goes into a " + 
+                                              "rampage, gaining 200% attack speed, 25% movement speed, but also takes 10% more damage. " + 
+                                              "Rampage lasts 6 seconds"
+public let TROLL_BERSERKER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll Berserker|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                                "|cffFFAC00Troll Berserker:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
+                                                "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
+                                                "|cffFFFF80Abilities:|r|n-Berserk (|cffFFFF00+200%|r)"
 
 @compiletime function trollBerserker()
   new UnitDefinition(TROLL_BERSERKER_ID, UnitIds.darktrollberserker)
@@ -26,8 +35,4 @@ public let TROLL_BERSERKER_ID = 'n00V'
     ..setAttack1Range(300)
     ..setTintingColorRed(255)
     ..setAttack1DamageSidesperDie(11)
-    ..setTooltipExtended("|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
-                        "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
-                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Berserk|r|nWhenever this unit kills an enemy it goes into a " + 
-                        "rampage, gaining 200% attack speed, 25% movement speed, but also takes 10% more damage. " + 
-                        "Rampage lasts 6 seconds")    
+    ..setTooltipExtended(TROLL_BERSERKER_FULL_DESCRIPTION)    
