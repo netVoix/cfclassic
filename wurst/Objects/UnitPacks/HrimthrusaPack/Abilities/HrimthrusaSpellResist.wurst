@@ -1,0 +1,12 @@
+package HrimthrusaSpellResist
+
+import AbilityObjEditing
+import ObjectIdGenerator
+
+public let HRIMTHRUSA_SPELL_RESIST_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function hrimthrusaSpellResist()
+  new AbilityDefinitionRunedBracers(HRIMTHRUSA_SPELL_RESIST_ID)
+    ..setItemAbility(false)
+    ..presetDamageReduction(lvl -> 0.5)
+      

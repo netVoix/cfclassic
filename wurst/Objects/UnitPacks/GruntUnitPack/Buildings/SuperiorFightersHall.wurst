@@ -1,0 +1,43 @@
+package SuperiorFightersHall
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import ObjectIds
+import initlater AdvancedFightersHall
+import FightersHall
+import Axemaster
+
+public let SUPERIOR_FIGHTERS_HALL_ID = 'h031'
+public let SUPERIOR_FIGHTERS_HALL_COST = 240
+public let SUPERIOR_FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_COST + ADVANCED_FIGHTERS_HALL_COST + SUPERIOR_FIGHTERS_HALL_COST
+
+@compiletime function fightersHall()
+  new BuildingDefinition(FIGHTERS_HALL_ID, UnitIds.blacksmith)
+    ..setNormalAbilities("")
+    ..setRequiredAnimationNames("upgrade,second")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNFortress.blp")
+    ..setGoldBountyReward(90)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setModelFile("buildings\\orc\\GreatHall\\GreatHall")
+    ..setGoldCost(SUPERIOR_FIGHTERS_HALL_COST)
+    ..setHotkey("R")
+    ..setHitPointsMaximumBase(1500)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.35)
+    ..setNormalParams("Superior Fighters' Hall")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(4)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(AXEMASTER_ID.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Axemaster|n|n|cffFFAC00Axemaster:|r|n" + 
+                        "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 65|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Hero (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00670|r|n" + 
+                        "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0030%, 3x|r)|n-Pulverize (|cffFFFF0035%, 130 dmg|r)|n|n" + 
+                        "|cffFF0000You must turn off unit production before you can upgrade!|r")
+    

@@ -1,0 +1,38 @@
+package Hrimthrusa
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater Igloo
+import HrimthrusaSpellResist
+import ObjectIds
+
+public let HRIMTHRUSA_ID = 'n011'
+
+@compiletime function hrimthrusa()
+  new UnitDefinition(HRIMTHRUSA_ID, UnitIds.tuskarrspearman)
+    ..setNormalAbilities("A03X," + HRIMTHRUSA_SPELL_RESIST_ID.toRawCode())
+    ..setValueByCost(IGLOO_TOTAL_COST)
+    ..setGoldBountyReward(5)
+    ..setCollisionSize(16.0)
+    ..setAttack1CooldownTime(0.65)
+    ..setDefenseBase(2)
+    ..setAttack1DamageBase(16)
+    ..setTintingColorGreen(160)
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(325)
+    ..setAttack1ProjectileArc(0.1)
+    ..setAttack1ProjectileSpeed(900)
+    ..setNormalParams("Hrimthrusa")
+    ..setAttack1Range(380)
+    ..setTintingColorRed(160)
+    ..setHitPointsRegenerationRate(0.75)
+    ..setScaleProjectiles(false)
+    ..setAttack1DamageSidesperDie(11)
+    ..setSpeedBase(300)
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+                        "|cffFFFF80Abilities:|r|n|n" + 
+                        "|cff80FF00Frost Attack|r|nEach attack against ground units has a " + 
+                        "5% chance to freeze the target to the ground for 7 seconds, dealing 15 damage per second|n" +
+                        "|cff80FF00Spell Resist|r|n50% spell damage reduction")

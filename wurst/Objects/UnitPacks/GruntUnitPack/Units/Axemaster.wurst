@@ -1,0 +1,35 @@
+package Axemaster
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater SuperiorFightersHall
+
+public let AXEMASTER_ID = 'o005'
+
+@compiletime function axemaster()
+  new UnitDefinition(AXEMASTER_ID, UnitIds.garthok)
+    ..setNormalParams("Axemaster")
+    ..setNormalAbilities("A02W,A02P")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHellScream.blp")
+    ..setValueByCost(SUPERIOR_FIGHTERS_HALL_TOTAL_COST)
+    ..setGoldBountyReward(14)
+    ..setCollisionSize(16.0)
+    ..setAttack1CooldownTime(1.0)
+    ..setDefenseBase(10)
+    ..setAttack1DamageBase(59)
+    ..setModelFile("units\\orc\\Hellscream\\Hellscream")
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(670)
+    ..setArmorType(ArmorType.Hero)    
+    ..setScalingValue(0.9)
+    ..setHitPointsRegenerationRate(2.25)
+    ..setAttack1DamageSidesperDie(11)
+    ..setSpeedBase(300)
+    ..setArtSpecial("Objects\\Spawnmodels\\Orc\\OrcSmallDeathExplode\\OrcSmallDeathExplode.mdl")
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 65|r dps)|n" + 
+                      "|cffFFFF80Armor:|r Hero (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00670|r|n" + 
+                      "|cffFFFF80Abilities:|r|n|n|cff80FF00Critical Strike|r|n" + 
+                      "30% chance on each attack to hit for 3 times of the normal damage|n|n" + 
+                      "|cff80FF00Pulverize|r|nGrants a 35% chance on each attack to hit all enemies in 200 range for 130 damage")
+                      

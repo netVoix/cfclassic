@@ -1,0 +1,36 @@
+package Igloo
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import Hrimthrusa
+import ObjectIds
+
+public let IGLOO_ID = 'h03U'
+public let IGLOO_COST = 160
+public let IGLOO_TOTAL_COST = IGLOO_COST
+
+@compiletime function igloo()
+  new BuildingDefinition(IGLOO_ID, UnitIds.blacksmith)
+    ..setNormalAbilities("")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPebble.blp")
+    ..setGoldBountyReward(32)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setCollisionSize(72.0)
+    ..setModelFile("Doodads\\Icecrown\\Structures\\Igloo\\Igloo")
+    ..setGoldCost(IGLOO_COST)
+    ..setHotkey("W")
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.6)
+    ..setNormalParams("Igloo")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(78)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(HRIMTHRUSA_ID.toRawCode())
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Hrimthrusa|n|n|cffFFAC00Hrimthrusa:|r|n" + 
+                        "|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+                        "|cffFFFF80Abilities:|r|n-Frost Attack (|cffFFFF005%, 7sec, 15dps|r)|n-Spell Resist (|cffFFFF0050%|r)")

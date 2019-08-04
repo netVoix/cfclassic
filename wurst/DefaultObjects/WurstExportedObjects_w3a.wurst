@@ -946,7 +946,7 @@ import ObjEditingNatives
 	..setLvlDataString("abuf", 1, 0, "B00X")
 	..setLvlDataUnreal("acdn", 1, 0, 0.0)
 	..setLvlDataInt("amcs", 1, 0, 0)
-	..setLvlDataUnreal("Htb1", 1, 1, 200.0)
+	..setLvlDataUnreal("Htb1", 1, 1, 250.0)
 	..setLvlDataUnreal("ahdu", 1, 0, 2.5)
 	..setLvlDataString("ahky", 0, 0, "T")
 	..setLvlDataUnreal("amac", 0, 0, 0.1)
@@ -3762,7 +3762,7 @@ import ObjEditingNatives
 
 @compiletime function create_w3a_A043()
 	createObjectDefinition("w3a", 'A043', 'ACfn')
-	..setLvlDataUnreal("aare", 1, 0, 300.0)
+	..setLvlDataUnreal("aare", 1, 0, 350.0)
 	..setLvlDataUnreal("acdn", 1, 0, 0.0)
 	..setLvlDataInt("amcs", 1, 0, 0)
 	..setLvlDataUnreal("Ufn1", 1, 1, 75.0)
