@@ -1,5 +1,8 @@
 package Ensnare
 import AbilityObjEditing
+import RegisterEvents
+import InstantDummyCaster
+import Orders
 
 public let ENSNARE_ID = 'A06I'
 public let ENSNARE_DUMMY_ID = 'A06H'
@@ -32,3 +35,12 @@ public let ENSNARE_DUMMY_ID = 'A06H'
 		..presetTargetsAllowed(lvl -> "{0},{1},{2}".format(
       TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.neutral
 		))
+
+init
+	registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
+		let sid = GetSpellAbilityId()
+		let uid = GetTriggerUnit()
+		let lvl = uid.getAbilityLevel(sid)
+		let t = GetSpellTargetUnit()
+		if GetSpellAbilityId() == ENSNARE_ID
+			InstantDummyCaster.castTarget(uid.getOwner(), ENSNARE_DUMMY_ID, lvl, Orders.ensnare, t)

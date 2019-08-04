@@ -14,7 +14,7 @@ public let GRAVEYARD_COST = 210
     ..setNormalParams("Graveyard")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
-    ..setGoldBountyAwardedBase(98)
+    ..setGoldBountyReward(99)
     ..setShadowTextureBuilding("ShadowHouse")
     ..setCollisionSize(72.0)
     ..setDeathTimeseconds(0.1)

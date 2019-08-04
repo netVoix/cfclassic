@@ -16,7 +16,7 @@ public let VAMPIRE_LORD_ID = 'h05H'
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp")
     ..setAttack1AttackType(AttackType.Pierce)
     ..setBuildTime(CRYPT_COST + GRAVEYARD_COST)
-    ..setGoldBountyAwardedBase(15)
+    ..setGoldBountyReward(16)
     ..setCollisionSize(16.0)
     ..setDefenseBase(4)
     ..setArmorType(ArmorType.Hero)

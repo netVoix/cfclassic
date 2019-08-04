@@ -4,7 +4,6 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import TrapperHut
-import TrollHut
 
 public let TROLL_TRAPPER_ID = 'n01O'
 
@@ -15,7 +14,7 @@ public let TROLL_TRAPPER_ID = 'n01O'
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkTrollTrapper.blp")
     ..setAttack1AttackType(AttackType.Normal)
     ..setDefaultActiveAbility("A06I")
-    ..setValueByCost(TROLL_HUT_COST + TRAPPER_HUT_COST)
+    ..setValueByCost(TRAPPER_HUT_TOTAL_COST)
     ..setGoldBountyReward(9)
     ..setAnimationCastBackswing(0.31)
     ..setAnimationCastPoint(0.3)

@@ -19,7 +19,7 @@ let UPGRADES_TO = HALL_OF_THE_ELDEST_ID
   new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)
     ..setNormalParams("Hall of Honor")
     ..setIconGameInterface(Icons.bTNElvenFarm)
-    ..setGoldBountyAwardedBase(40)
+    ..setGoldBountyReward(41)
     ..setShadowTextureBuilding("ShadowHouse")
     ..setButtonPositionX(1)
     ..setCollisionSize(72)

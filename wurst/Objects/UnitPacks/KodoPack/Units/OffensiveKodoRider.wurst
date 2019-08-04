@@ -1,0 +1,40 @@
+package OffensiveKodoRider
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import OffensiveKodoAura
+import ObjectIds
+
+public let OFFENSIVE_KODO_RIDER_ID = 'o008'
+
+@compiletime function offensiveKodoRider()
+  new UnitDefinition(OFFENSIVE_KODO_RIDER_ID, UnitIds.chaoskotobeast)
+    ..setNormalParams("Offensive Kodo Rider")
+    ..setNormalAbilities(OFFENSIVE_KODO_AURA_ID.toRawCode())
+    ..setAttack1AttackType(AttackType.Chaos)
+    
+    ..setBuildTime(33)
+  
+    ..setGoldBountyReward(13)
+    ..setCollisionSize(16.0)
+    ..setDefenseBase(7)
+    ..setAttack1DamageBase(29)
+    ..setHitPointsMaximumBase(1200)
+    ..setScalingValue(0.75)
+    ..setPointValue(130)
+    ..setAttack1Range(200)
+    ..setRepairTime(30)
+    ..setAttack1DamageSidesperDie(21)
+    ..setSpeedBase(250)
+    ..setButtonPositionX(0)
+    ..setShadowImageHeight(200.0)
+    ..setShadowImageWidth(200.0)
+    ..setShadowImageCenterX(90.0)
+    ..setShadowImageCenterY(70.0)
+    ..setArtSpecial("Objects\\Spawnmodels\\Orc\\OrcLargeDeathExplode\\OrcLargeDeathExplode.mdl")
+    ..setTooltipExtended("|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
+                        "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Damage Aura|r|n" + 
+                        "Increases the damage of allied units in 900 range by 10%")
+  

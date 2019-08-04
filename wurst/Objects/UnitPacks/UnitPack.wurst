@@ -1,0 +1,35 @@
+package UnitPack
+
+import LinkedList
+
+public class UnitTier
+  private int bid
+  private int uid
+  private int cost
+
+  function getBuildingId() returns int
+    return bid
+
+  function getUnitId() returns int
+    return uid
+
+  function getCost() returns int
+    return cost
+
+  construct(int buildingId, int unitId, int bcost)
+    bid = buildingId
+    uid = unitId
+    cost = bcost
+
+
+public class UnitPack
+  LinkedList<UnitTier> utiers
+
+  construct(LinkedList<UnitTier> unitTiers)
+    utiers = unitTiers.copy()
+
+  function getTier(int num) returns UnitTier
+    return utiers.size() < num ? utiers.get(num) : null
+
+  function getList() returns LinkedList<UnitTier>
+    return utiers.copy()

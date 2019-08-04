@@ -1,0 +1,17 @@
+package OffensiveKodoAura
+
+import AbilityObjEditing
+import Icons
+
+public let OFFENSIVE_KODO_AURA_ID = 'A035'
+
+@compiletime function offensiveKodoAura()
+  new AbilityDefinitionItemAuraTrueshot(OFFENSIVE_KODO_AURA_ID)
+    ..presetIcon(Icons.bTNJanggo)
+    ..presetBuffs(lvl -> "B00F")
+    ..presetAreaofEffect(lvl -> 900)
+    ..setItemAbility(false)
+    ..presetDamageBonus(lvl -> 0.1)
+    ..presetMeleeBonus(lvl -> true)
+    ..presetRangedBonus(lvl -> true)
+  

@@ -18,7 +18,7 @@ public let SIREN_ID = 'n00S'
     ..setDefaultActiveAbility(PURGE_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)
     ..setValueByCost(NAGA_SPRING_GOLD_COST)
-    ..setGoldBountyAwardedBase(10)
+    ..setGoldBountyReward(11)
     ..setAnimationCastBackswing(0.26)
     ..setAnimationCastPoint(0.25)
     ..setAttack1DamageBase(59)

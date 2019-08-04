@@ -15,7 +15,7 @@ public let CORAL_STATUE_REGEN_BUILDINGS_ID = 'A008'
 		..setNormalParams("Coral Statue")
 		..setNormalAbilities("A07V,A09A")
 		..setIconGameInterface(Icons.bTNCoralBed)
-		..setGoldBountyAwardedBase(49)
+		..setGoldBountyReward(50)
 		..setButtonPositionY(2)
 		..setModelFile(Buildings.coralBed1)
 		..setGoldCost(250)

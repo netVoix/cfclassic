@@ -16,7 +16,7 @@ let BLADEMASTER_COST = HALL_OF_HONOR_COST
     ..setNormalAbilities("A0AL,A00U,A00V")
     ..setIconGameInterface(Icons.bTNTheCaptain)
     ..setValueByCost(BLADEMASTER_COST)
-    ..setGoldBountyAwardedBase(6)
+    ..setGoldBountyReward(7)
     ..setCollisionSize(16)
     ..setAttack1CooldownTime(0.7)
     ..setDefenseBase(7)

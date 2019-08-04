@@ -5,6 +5,7 @@ import Icons
 import AbilityObjEditing
 import Objects
 import ObjectIds
+import ObjHelpers
 
 public let SUMMON_LOBSTERS_ID = 'A02S'
 public let LOBSTER_ID = 'n00W'
@@ -28,8 +29,7 @@ public let LOBSTER_ID = 'n00W'
 		..setAcquisitionRange(800)
 		..setIconGameInterface(Icons.bTNLobstrokkBlue)
 		..setDefaultActiveAbility("")
-		..setGoldBountyAwardedBase(2)
-		..setGoldBountyAwardedSidesperDie(1)
+		..setGoldBountyReward(3)
 		..setCategorizationCampaign(true)
 		..setCollisionSize(16)
 		..setAttack1CooldownTime(1.4)

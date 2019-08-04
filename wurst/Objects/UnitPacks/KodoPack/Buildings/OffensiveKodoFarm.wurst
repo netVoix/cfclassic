@@ -1,0 +1,40 @@
+package OffensiveKodoFarm
+
+import ObjHelpers
+import UnitObjEditing
+import UnitIds
+import OffensiveKodoRider
+import ObjectIds
+
+public let OFFENSIVE_KODO_FARM_ID = 'h035'
+public let OFFENSIVE_KODO_FARM_COST = 100
+
+@compiletime function offensiveKodoFarm()
+  new BuildingDefinition(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
+  ..setNormalParams("Offensive Kodo Farm")
+  ..setNormalAbilities("A036")
+  ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp")
+  ..setGoldBountyReward(72)
+  ..setShadowTextureBuilding("ShadowHouse")
+  ..setButtonPositionX(1)
+  ..setCollisionSize(72.0)
+  ..setModelFile("buildings\\other\\PigFarm\\PigFarm")
+  ..setGoldCost(OFFENSIVE_KODO_FARM_COST)
+  ..setHotkey("W")
+  ..setHitPointsMaximumBase(1500)
+  ..setMaximumPitchAngledegrees(0.0)
+  ..setMaximumRollAngledegrees(0.0)
+  ..setScalingValue(0.75)
+  ..setSightRadiusNight(1000)
+  ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+  ..setPointValue(13)
+  ..setHitPointsRegenerationRate(0.5)
+  ..setRequirements("tec2")
+  ..setRequirementsLevels("1")
+  ..setSelectionScale(2.4)
+  ..setUnitsTrained(OFFENSIVE_KODO_RIDER_ID.toRawCode())
+  ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Offensive Kodo Rider|n|n" + 
+                      "|cffFFAC00Offensive Kodo Rider:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
+                      "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                      "|cffFFFF80Abilities:|r|n-Melee Damage Aura (|cffFFFF00+30%|r)|n|n" + 
+                      "|cffFF0000You must turn off unit production before you can upgrade!|r")

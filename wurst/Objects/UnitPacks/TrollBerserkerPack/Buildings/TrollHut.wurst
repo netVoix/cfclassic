@@ -8,14 +8,14 @@ import TrapperHut
 
 public let TROLL_HUT_ID = 'h02H'
 public let TROLL_HUT_COST = 200
-
+public let TROLL_HUT_TOTAL_COST = 200
 
 @compiletime function trollHut()
   new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)
     ..setNormalParams("Troll Hut")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
-    ..setGoldBountyAwardedBase(40)
+    ..setGoldBountyReward(41)
     ..setShadowTextureBuilding("ShadowHouse")
     ..setCollisionSize(72.0)
     ..setModelFile("buildings\\other\\ForestTrollHut1\\ForestTrollHut1")

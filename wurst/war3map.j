@@ -1292,13 +1292,6 @@ call TriggerSleepAction(1.)
 call SetUnitAnimation(c,"stand")
 set c=null
 endfunction
-function Ih takes nothing returns nothing
-local unit c=CreateUnit(GetOwningPlayer(u4),'e008',GetUnitX(u4),GetUnitY(u4),.0)
-call UnitAddAbility(c,'A06H')
-call IssueTargetOrderById(c,$D008A,v4)
-call UnitApplyTimedLife(c,'BTLF',2.)
-set c=null
-endfunction
 function lh takes nothing returns nothing
 call gh('h02R',function Fh)
 call Qg('h02P','o009')
@@ -1385,13 +1378,9 @@ set h4[id]=270
 set i4[id]=270*.09/100.
 set j4[id]=false
 endfunction
-function Orc__RegisterUnitCasts takes nothing returns nothing
-call jh('n01O','A06I',function Ih)
-endfunction
 function Kh takes nothing returns nothing
 call lh()
 call Jh()
-call jh('n01O','A06I',function Ih)
 set G4=Filter(function Dh)
 endfunction
 function Lh takes nothing returns nothing

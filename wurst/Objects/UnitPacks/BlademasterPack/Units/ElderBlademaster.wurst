@@ -19,7 +19,7 @@ let ELDER_BLADEMASTER_COST = HALL_OF_HONOR_COST + HALL_OF_THE_ELDEST_COST
     ..setDefaultActiveAbility("A0A6")
     ..setValueByCost(ELDER_BLADEMASTER_COST)
     ..setTintingColorBlue(70)
-    ..setGoldBountyAwardedBase(13)
+    ..setGoldBountyReward(13)
     ..setCollisionSize(16)
     ..setAttack1CooldownTime(0.5)
     ..setDefenseBase(10)

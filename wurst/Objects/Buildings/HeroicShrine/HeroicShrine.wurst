@@ -18,7 +18,7 @@ public let HEROIC_SHRINE_ID = 'h05G'
 		..setAcquisitionRange(99999)
 		..setRequiredAnimationNames("work")
 		..setIconGameInterface(Icons.bTNAltarOfKings)
-		..setGoldBountyAwardedBase(139)
+		..setGoldBountyReward(140)
 		..setButtonPositionX(1)
 		..setButtonPositionY(2)
 		..setDeathTimeseconds(0.1)

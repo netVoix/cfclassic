@@ -14,7 +14,7 @@ public let CRYPT_COST = 230
 		..setNormalAbilities("")
 		..setRequiredAnimationNames("fifth")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
-		..setGoldBountyAwardedBase(46)
+		..setGoldBountyReward(47)
 		..setShadowTextureBuilding("ShadowHouse")
 		..setCollisionSize(72.0)
 		..setModelFile("Doodads\\Northrend\\Structures\\NorthrendCrypt\\NorthrendCrypt")

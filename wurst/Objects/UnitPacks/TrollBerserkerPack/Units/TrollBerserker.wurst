@@ -12,7 +12,7 @@ public let TROLL_BERSERKER_ID = 'n00V'
     ..setNormalParams("Troll Berserker")
     ..setNormalAbilities("A07K,A02I")
     ..setAttack1AttackType(AttackType.Normal)
-    ..setValueByCost(TROLL_HUT_COST)
+    ..setValueByCost(TROLL_HUT_TOTAL_COST)
     ..setGoldBountyReward(7)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.5)

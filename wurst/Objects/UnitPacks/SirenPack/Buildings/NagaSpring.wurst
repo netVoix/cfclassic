@@ -17,7 +17,7 @@ public let NAGA_SPRING_GOLD_COST = 350
     ..setNormalParams("Naga Spring")
     ..setIconGameInterface(Icons.bTNFountainOfLifeDefiled)
     ..setModelFile(Buildings.fountainOfLifeDefiled1)
-    ..setGoldBountyAwardedBase(69)
+    ..setGoldBountyReward(70)
     ..setButtonPositionX(1)
     ..setGoldCost(NAGA_SPRING_GOLD_COST)
     ..setHotkey("S")
