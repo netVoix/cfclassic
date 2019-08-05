@@ -18,7 +18,7 @@ public let TROLL_BERSERKER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Trol
 
 @compiletime function trollBerserker()
   new UnitDefinition(TROLL_BERSERKER_ID, UnitIds.darktrollberserker)
-    ..setNormalParams("Troll Berserker")
+    ..presetBaseCFUnit("Troll Berserker")
     ..setNormalAbilities("A07K,A02I")
     ..setAttack1AttackType(AttackType.Normal)
     ..setValueByCost(TROLL_HUT_TOTAL_COST)

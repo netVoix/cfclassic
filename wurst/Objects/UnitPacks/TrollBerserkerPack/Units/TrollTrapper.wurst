@@ -20,7 +20,7 @@ public let TROLL_TRAPPER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll 
 
 @compiletime function trollTRapper()
   new UnitDefinition(TROLL_TRAPPER_ID, UnitIds.darktrollberserker)
-    ..setNormalParams("Troll Trapper")
+    ..presetBaseCFUnit("Troll Trapper")
     ..setNormalAbilities("A07K,A06I,A02I")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkTrollTrapper.blp")
     ..setAttack1AttackType(AttackType.Normal)

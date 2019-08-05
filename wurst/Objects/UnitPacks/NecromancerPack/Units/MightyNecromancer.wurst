@@ -24,7 +24,7 @@ public let MIGHTY_NECROMANCER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00M
 
 @compiletime function mightyNecromancer()
   new UnitDefinition(MIGHTY_NECROMANCER_ID, UnitIds.kelthuzadnecro)
-    ..setNormalParams("Mighty Necromancer")
+    ..presetBaseCFUnit("Mighty Necromancer")
     ..setNormalAbilities("A05O,A05N,A05L")
     ..setIconGameInterface(Icons.bTNGhostOfKelThuzad)
     ..setAttack1AttackType(AttackType.Magic)

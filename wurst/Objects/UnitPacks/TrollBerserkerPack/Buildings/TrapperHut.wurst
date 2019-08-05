@@ -16,7 +16,7 @@ public let TRAPPER_HUT_TOTAL_COST = TROLL_HUT_TOTAL_COST + TRAPPER_HUT_COST
 
 @compiletime function trapperHut()
   new BuildingDefinition(TRAPPER_HUT_ID, UnitIds.blacksmith)
-    ..setNormalParams("Trapper Hut")
+    ..presetBaseCFBuilding("Trapper Hut")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
     ..setGoldBountyReward(57)

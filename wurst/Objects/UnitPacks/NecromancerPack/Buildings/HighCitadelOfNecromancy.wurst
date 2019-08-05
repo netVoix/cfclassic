@@ -13,7 +13,7 @@ public let HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_NECROMANCY_TOTAL_CO
 
 @compiletime function highCitadelOfNecromancy()
   new BuildingDefinition(HIGH_CITADEL_OF_NECROMANCY_ID, UnitIds.blacksmith)
-    ..setNormalParams("High Citadel of Necromancy")
+    ..presetBaseCFBuilding("High Citadel of Necromancy")
     ..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode())
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHallOfTheDead.blp")
     ..setGoldBountyReward(150)

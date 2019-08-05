@@ -15,7 +15,7 @@ public let HALL_OF_HONOR_TOTAL_COST = HALL_OF_HONOR_COST
 
 @compiletime function hallOfHonor()
   new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)
-    ..setNormalParams("Hall of Honor")
+    ..presetBaseCFBuilding("Hall of Honor")
     ..setIconGameInterface(Icons.bTNElvenFarm)
     ..setGoldBountyReward(41)
     ..setShadowTextureBuilding("ShadowHouse")

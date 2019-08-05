@@ -24,7 +24,7 @@ public let BLADEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Blademas
 
 @compiletime function blademaster()
   new UnitDefinition(BLADEMASTER_ID, UnitIds.bloodelflieutenant)
-    ..setNormalParams("Blademaster")
+    ..presetBaseCFUnit("Blademaster")
     ..setNormalAbilities("A0AL,A00U,A00V")
     ..setIconGameInterface(Icons.bTNTheCaptain)
     ..setValueByCost(HALL_OF_HONOR_TOTAL_COST)

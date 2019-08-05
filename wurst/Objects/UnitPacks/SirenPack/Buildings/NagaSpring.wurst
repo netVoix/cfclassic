@@ -15,7 +15,7 @@ public let NAGA_SPRING_TOTAL_COST = NAGA_SPRING_COST
 
 @compiletime function nagaSpring()
   new BuildingDefinition(NAGA_SPRING_ID, UnitIds.farm)
-    ..setNormalParams("Naga Spring")
+    ..presetBaseCFBuilding("Naga Spring")
     ..setIconGameInterface(Icons.bTNFountainOfLifeDefiled)
     ..setModelFile(Buildings.fountainOfLifeDefiled1)
     ..setGoldBountyReward(70)

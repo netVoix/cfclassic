@@ -17,7 +17,7 @@ public let NECROMANCER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Necroman
 
 @compiletime function necromancer()
   new UnitDefinition(NECROMANCER_ID, UnitIds.necromancer)
-    ..setNormalParams("Necromancer")
+    ..presetBaseCFUnit("Necromancer")
     ..setNormalAbilities("A01Y")
     ..setDefaultActiveAbility("A01Y")
     ..setValueByCost(TEMPLE_OF_BONE_TOTAL_COST)

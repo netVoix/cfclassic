@@ -14,7 +14,7 @@ public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_THE_ELDEST_COST
 
 @compiletime function hallOfTheEldest()
   new BuildingDefinition(HALL_OF_THE_ELDEST_ID, UnitIds.blacksmith)
-    ..setNormalParams("Hall of the Eldest")
+    ..presetBaseCFBuilding("Hall of the Eldest")
     ..setIconGameInterface(Icons.bTNElvenFarm)
     ..setGoldBountyReward(90)
     ..setShadowTextureBuilding("ShadowHouse")

@@ -13,7 +13,7 @@ public let TEMPLE_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_BONE_TOTAL_COST + TEMPLE_
 
 @compiletime function templeOfNecromancy()
   new BuildingDefinition(TEMPLE_OF_NECROMANCY_ID, UnitIds.blacksmith)
-  ..setNormalParams("Temple of Necromancy")
+  ..presetBaseCFBuilding("Temple of Necromancy")
   ..setNormalAbilities("")
   ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNBlackCitadel.blp")
   ..setTintingColorBlue(150)

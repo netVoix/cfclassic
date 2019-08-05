@@ -13,7 +13,7 @@ public let HEROIC_SHRINE_ID = 'h05G'
 
 @compiletime function humanShrine()
 	new BuildingDefinition(HEROIC_SHRINE_ID, UnitIds.farm)
-		..setNormalParams("Heroic Shrine")
+		..presetBaseCFBuilding("Heroic Shrine")
 		..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode() + ",A06M")
 		..setAcquisitionRange(99999)
 		..setRequiredAnimationNames("work")

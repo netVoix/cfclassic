@@ -18,7 +18,7 @@ public let VETERAN_GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Vetera
 
 @compiletime function veteranGrunt()
   new UnitDefinition(VETERAN_GRUNT_ID, UnitIds.garthok)
-    ..setNormalParams("Veteran Grunt")
+    ..presetBaseCFUnit("Veteran Grunt")
     ..setNormalAbilities("A02V")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp")
     ..setValueByCost(FIGHTERS_HALL_TOTAL_COST)

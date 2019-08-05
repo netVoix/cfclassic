@@ -1,0 +1,28 @@
+package OrcBuilder
+import UnitObjEditing
+import UnitIds
+
+public let ORC_BUILDER_ID = 'h019'
+
+@compiletime function orcBuilder()
+  new UnitDefinition(ORC_BUILDER_ID, UnitIds.peasant)
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPeon.blp")
+    ..setDefaultActiveAbility("Ahrp")
+    ..setStructuresBuilt("h02R,h02P,h02K,h02O,h02N,h029,h02B,h02I,o000,h008,h02H")
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(1)
+    ..setCollisionSize(0.0)
+    ..setModelFile("units\\orc\\Peon\\Peon")
+    ..setFoodCost(0)
+    ..setGoldCost(0)
+    ..setName("Orc Builder")
+    ..setPointValue(5)
+    ..setSpeedBase(550)
+    ..setCategorizationSpecial(true)
+    ..setTooltipBasic("|cffFFD900Choose the Orcish Horde|r")
+    ..setTooltipExtended("The Orcish Horde trains tough fighters and supports them with shamanic magic. Their axe masters are feared all over the battlefield. An anti-air tower is available to Orcs.")
+    ..setUnitSoundSet("Peon")
+    ..setAnimationWalkSpeed(300.0)
+    ..setAttacksEnabled(0)
+    

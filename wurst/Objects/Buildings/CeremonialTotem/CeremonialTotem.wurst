@@ -11,7 +11,7 @@ public let CEREMONIAL_TOTEM_COST = 250
 
 @compiletime function ceremonialTotem()
   new BuildingDefinition(CEREMONIAL_TOTEM_ID, UnitIds.farm)
-  ..setNormalParams("Ceremonial Totem")
+  ..presetBaseCFBuilding("Ceremonial Totem")
   ..setNormalAbilities(CEREMONIAL_TOTEM_BUFF_ID.toRawCode())
   ..setAcquisitionRange(25000.0)
   ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTaurenTotem.blp")

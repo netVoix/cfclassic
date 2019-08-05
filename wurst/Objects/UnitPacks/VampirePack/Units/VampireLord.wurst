@@ -20,7 +20,7 @@ public let VAMPIRE_LORD_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Vampire
 
 @compiletime function vampireLord()
   new UnitDefinition(VAMPIRE_LORD_ID, UnitIds.footman)
-    ..setNormalParams("Vampire Lord")
+    ..presetBaseCFUnit("Vampire Lord")
     ..setNormalAbilities("A07K,A06O,A01O,A06N")
     ..setArmorSoundType(ArmorSoundType.Flesh)
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp")

@@ -20,7 +20,7 @@ public let FROST_WYRM_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Frost Wyr
 
 @compiletime function frostWyrm()
   new UnitDefinition(FROST_WYRM_ID, UnitIds.frostwyrm)
-    ..setNormalParams("Frost Wyrm")
+    ..presetBaseCFUnit("Frost Wyrm")
     ..setNormalAbilities("A064")
     ..setAttack1WeaponType(WeaponType.Normal)
     ..setValueByCost(DRAGON_CEMETERY_TOTAL_COST)

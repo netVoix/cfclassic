@@ -27,7 +27,7 @@ public let SUPERIOR_FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_COST + ADVANCED_FIG
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)
     ..setScalingValue(0.35)
-    ..setNormalParams("Superior Fighters' Hall")
+    ..presetBaseCFBuilding("Superior Fighters' Hall")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
     ..setPointValue(4)
     ..setHitPointsRegenerationRate(0.5)

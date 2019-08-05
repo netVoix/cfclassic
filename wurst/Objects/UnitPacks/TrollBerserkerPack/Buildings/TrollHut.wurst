@@ -12,7 +12,7 @@ public let TROLL_HUT_TOTAL_COST = TROLL_HUT_COST
 
 @compiletime function trollHut()
   new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)
-    ..setNormalParams("Troll Hut")
+    ..presetBaseCFBuilding("Troll Hut")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
     ..setGoldBountyReward(41)

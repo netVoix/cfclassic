@@ -15,7 +15,7 @@ public let DRAGON_CEMETERY_TOTAL_COST = DRAGON_CEMETERY_COST
 
 @compiletime function dragonCemetery()
   new BuildingDefinition(DRAGON_CEMETERY_ID, UnitIds.farm)
-    ..setNormalParams("Dragon Cemetery")
+    ..presetBaseCFBuilding("Dragon Cemetery")
     ..setNormalAbilities("")
     ..setIconGameInterface(Icons.bTNBoneYard)
     ..setGoldBountyReward(100)

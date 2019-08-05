@@ -22,7 +22,7 @@ public let LICH_KING_SHORT_DESCRIPTION = "|cffFF8204Legendary Building|r|n|cffFF
 
 @compiletime function lichKing()
 	new UnitDefinition(LICH_KING_ID, UnitIds.necromancer)
-		..setNormalParams("Lich King")
+		..presetBaseCFUnit("Lich King")
 		..setNormalAbilities("A06V,A0AH,A070,A086,A03Q,A08X,A07H,A085")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
 		..setGoldBountyReward(23)

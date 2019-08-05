@@ -11,7 +11,7 @@ public let OFFENSIVE_KODO_FARM_COST = 100
 
 @compiletime function offensiveKodoFarm()
   new BuildingDefinition(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
-  ..setNormalParams("Offensive Kodo Farm")
+  ..presetBaseCFBuilding("Offensive Kodo Farm")
   ..setNormalAbilities("A036")
   ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp")
   ..setGoldBountyReward(72)

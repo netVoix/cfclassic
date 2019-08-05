@@ -14,7 +14,7 @@ public let SHRINE_OF_DESTRUCTION_ID = 'h01E'
 
 @compiletime function shrineOfDestruction()
   new BuildingDefinition(SHRINE_OF_DESTRUCTION_ID, UnitIds.farm)
-    ..setNormalParams("Shrine of Destruction")
+    ..presetBaseCFBuilding("Shrine of Destruction")
     ..setNormalAbilities(commaList(LEGENDARY_UNIT_FLAG, HELLS_FIST_ID))
     ..setAcquisitionRange(99999)
     ..setIconGameInterface(Icons.bTNUndeadShrine)

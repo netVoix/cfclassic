@@ -28,7 +28,7 @@ public let ELDER_BLADEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00El
 
 @compiletime function elderBladeMaster()
   new UnitDefinition(ELDER_BLADEMASTER_ID, UnitIds.bloodelflieutenant)
-    ..setNormalParams("Elder Blademaster")
+    ..presetBaseCFUnit("Elder Blademaster")
     ..setNormalAbilities("A0AN,A0A6,A05Y,A03P,A014")
     ..setIconGameInterface(Icons.bTNTheCaptain)
     ..setDefaultActiveAbility("A0A6")

@@ -11,7 +11,7 @@ public let CRYPT_TOTAL_COST = CRYPT_COST
 
 @compiletime function crypt()
 	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)
-		..setNormalParams("Crypt")
+		..presetBaseCFBuilding("Crypt")
 		..setNormalAbilities("")
 		..setRequiredAnimationNames("fifth")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")

@@ -2,7 +2,7 @@ package ObjHelpers
 import UnitObjEditing
 
 
-public function BuildingDefinition.setNormalParams(string name)
+public function BuildingDefinition.presetBaseCFBuilding(string name)
   this..setAcquisitionRange(800)
       ..setNormalAbilities("")
       ..setBuildTime(2)
@@ -23,7 +23,7 @@ public function BuildingDefinition.setNormalParams(string name)
       ..setHitPointsRegenerationType("always")
       ..setGroundTexture("OSMA")
 
-public function UnitDefinition.setNormalParams(string name)
+public function UnitDefinition.presetBaseCFUnit(string name)
   this..setAcquisitionRange(800)
       ..setCategorizationCampaign(false)
       ..setCategorizationSpecial(false)
@@ -47,6 +47,9 @@ public function UnitDefinition.setNormalParams(string name)
       ..setCasterUpgradeTips("")
       ..setHotkey("Q")
       ..setHitPointsRegenerationType("always")
+
+public function UnitDefinition.presetBaseCfBuilder(string name)
+  this..setName(name)
 
 public function UnitOrBuildingOrHeroDefinition.setGoldBountyReward(int reward)
   this..setGoldBountyAwardedNumberofDice(1)

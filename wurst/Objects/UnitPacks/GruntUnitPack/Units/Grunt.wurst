@@ -16,7 +16,7 @@ public let GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFF
 
 @compiletime function grunt()
   new UnitDefinition(GRUNT_ID, UnitIds.garthok)
-    ..setNormalParams("Grunt")
+    ..presetBaseCFUnit("Grunt")
     ..setNormalAbilities("")
     ..setValueByCost(FIGHTERS_HALL_TOTAL_COST)
     ..setGoldBountyReward(4)

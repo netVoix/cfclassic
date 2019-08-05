@@ -13,7 +13,7 @@ public let GRAVEYARD_TOTAL_COST = CRYPT_TOTAL_COST + GRAVEYARD_COST
 
 @compiletime function graveyard()
   new BuildingDefinition(GRAVEYARD_ID, UnitIds.blacksmith)
-    ..setNormalParams("Graveyard")
+    ..presetBaseCFBuilding("Graveyard")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
     ..setGoldBountyReward(99)

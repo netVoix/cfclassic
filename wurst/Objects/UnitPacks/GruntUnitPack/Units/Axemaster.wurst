@@ -19,7 +19,7 @@ public let AXEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Axemaster|
 
 @compiletime function axemaster()
   new UnitDefinition(AXEMASTER_ID, UnitIds.garthok)
-    ..setNormalParams("Axemaster")
+    ..presetBaseCFUnit("Axemaster")
     ..setNormalAbilities("A02W,A02P")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHellScream.blp")
     ..setValueByCost(SUPERIOR_FIGHTERS_HALL_TOTAL_COST)

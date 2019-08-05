@@ -23,7 +23,7 @@ public let SIREN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n
 
 @compiletime function siren()
   new UnitDefinition(SIREN_ID, UnitIds.summoner)
-    ..setNormalParams("Naga Siren")
+    ..presetBaseCFUnit("Naga Siren")
     ..setNormalAbilities(commaList(PURGE_ID, SUMMON_LOBSTERS_ID))
     ..setDefaultActiveAbility(PURGE_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)

@@ -24,7 +24,7 @@ public let IGLOO_TOTAL_COST = IGLOO_COST
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)
     ..setScalingValue(0.6)
-    ..setNormalParams("Igloo")
+    ..presetBaseCFBuilding("Igloo")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
     ..setPointValue(78)
     ..setHitPointsRegenerationRate(0.5)

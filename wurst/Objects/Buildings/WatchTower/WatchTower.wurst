@@ -14,7 +14,7 @@ public let WATCH_TOWER_DESCRIPTION = "|cffFFAC00Base Defense|r:|n" +
 
 @compiletime function watchTower()
 	new BuildingDefinition(WATCH_TOWER_ID, UnitIds.guardtower)
-		..setNormalParams("Watch Tower")
+		..presetBaseCFBuilding("Watch Tower")
 		..setNormalAbilities("A09A")
 		..setAcquisitionRange(1000)
 		..setBuildTime(20)

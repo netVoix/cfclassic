@@ -19,7 +19,7 @@ public let OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF0
 
 @compiletime function offensiveKodoRider()
   new UnitDefinition(OFFENSIVE_KODO_RIDER_ID, UnitIds.chaoskotobeast)
-    ..setNormalParams("Offensive Kodo Rider")
+    ..presetBaseCFUnit("Offensive Kodo Rider")
     ..setNormalAbilities(OFFENSIVE_KODO_AURA_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)
     

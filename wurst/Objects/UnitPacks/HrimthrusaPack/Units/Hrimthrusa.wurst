@@ -33,7 +33,7 @@ public let HRIMTHRUSA_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Hrimthrus
     ..setHitPointsMaximumBase(325)
     ..setAttack1ProjectileArc(0.1)
     ..setAttack1ProjectileSpeed(900)
-    ..setNormalParams("Hrimthrusa")
+    ..presetBaseCFUnit("Hrimthrusa")
     ..setAttack1Range(380)
     ..setTintingColorRed(160)
     ..setHitPointsRegenerationRate(0.75)

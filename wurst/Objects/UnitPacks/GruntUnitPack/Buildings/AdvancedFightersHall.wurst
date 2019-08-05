@@ -15,7 +15,7 @@ public let ADVANCED_FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_COST + ADVANCED_FIG
 @compiletime function advancedFightersHall()
   new BuildingDefinition(ADVANCED_FIGHTERS_HALL_ID, UnitIds.blacksmith)
     ..setNormalAbilities("")
-    ..setNormalParams("Advanced Fighters' Hall")
+    ..presetBaseCFBuilding("Advanced Fighters' Hall")
     ..setRequiredAnimationNames("upgrade,first")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNStronghold.blp")
     ..setGoldBountyReward(42)
