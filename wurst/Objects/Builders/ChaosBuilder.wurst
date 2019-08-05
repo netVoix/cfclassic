@@ -2,6 +2,7 @@ package ChaosBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let CHAOS_BUILDER_ID = 'h00O'
 
@@ -12,16 +13,9 @@ public let CHAOS_BUILDER_ID = 'h00O'
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h05I,h025,h01M,h01I,h01F,h01E,h01C,h01D,h009,h008,h007")
     ..setButtonPositionX(3)
-    ..setCollisionSize(0.0)
     ..setModelFile("units\\demon\\ChaosPeon\\ChaosPeon")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
-    ..setName("Chaos Builder")
+    ..presetBaseCfBuilder("Chaos Builder")
     ..setPointValue(2)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFFF00Choose Chaos Legion|r")
     ..setTooltipExtended("The Forces of Chaos summon horrible demons and use destructive magic to defeat their enemies. Chaos has no siege unit, but many strong units with chaos damage. Chaos has NO TOWER!")
     ..setUnitSoundSet("HeroPitLord")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)

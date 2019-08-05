@@ -1,6 +1,7 @@
 package UndeadBuilder
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let UNDEAD_BUILDER_ID = 'h018'
 
@@ -11,17 +12,10 @@ public let UNDEAD_BUILDER_ID = 'h018'
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h01K,h01O,h01Q,h01T,h01P,h01N,h01L,h01S,h008,h00A,h01R")
     ..setButtonPositionY(1)
-    ..setCollisionSize(0.0)
     ..setModelFile("units\\undead\\Acolyte\\Acolyte")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
-    ..setName("Undead Builder")
+    ..presetBaseCfBuilder("Undead Builder")
     ..setPointValue(4)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose the Undead Forces|r")
     ..setTooltipExtended("Undead Forces use necromantic magic to reanimate dead units. They bring death and disease to their enemies. An undead builder is able to construct a spirit tower to defend your base.")
     ..setUnitSoundSet("Acolyte")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
   

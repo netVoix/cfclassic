@@ -5449,22 +5449,6 @@ import ObjEditingNatives
 	..setLvlDataString("ata0", 0, 0, "chest")
 	..setLvlDataInt("atac", 0, 0, 1)
 
-
-@compiletime function create_w3a_A001()
-	createObjectDefinition("w3a", 'A001', 'AEbl')
-	..setLvlDataUnreal("acdn", 1, 0, 0.0)
-	..setLvlDataInt("amcs", 1, 0, 0)
-	..setLvlDataUnreal("Ebl1", 1, 1, 1200.0)
-	..setLvlDataUnreal("Ebl2", 1, 2, 100.0)
-	..setLvlDataUnreal("adur", 1, 0, 0.0)
-	..setLvlDataInt("aher", 0, 0, 0)
-	..setLvlDataString("ahky", 0, 0, "D")
-	..setLvlDataInt("alev", 0, 0, 1)
-	..setLvlDataString("arac", 0, 0, "naga")
-	..setLvlDataString("atp1", 1, 0, "Blink [|cffffcc00D|r]")
-	..setLvlDataString("aub1", 1, 0, "Teleports the worker a short distance")
-
-
 @compiletime function create_w3a_A000()
 	createObjectDefinition("w3a", 'A000', 'Apxf')
 	..setLvlDataUnreal("aare", 1, 0, 99999.0)

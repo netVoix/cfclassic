@@ -1,6 +1,7 @@
 package NorthernBuilder
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let NORTHERN_BUILDER_ID = 'h017'
 
@@ -12,20 +13,13 @@ public let NORTHERN_BUILDER_ID = 'h017'
     ..setStructuresBuilt("h047,h048,h03O,h049,h03T,h03S,h03K,h03Q,h008,h03U,h03I")
     ..setButtonPositionX(2)
     ..setButtonPositionY(1)
-    ..setCollisionSize(0.0)
     ..setModelFile("units\\critters\\VillagerMan1\\VillagerMan1")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
     ..setTintingColorGreen(150)
-    ..setName("Northern Builder")
+    ..presetBaseCfBuilder("Northern Builder")
     ..setPointValue(6)
     ..setTintingColorRed(150)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose Northern Realms|r")
     ..setTooltipExtended("The nordic creatures stand united against everyone who wants to invade their beloved icy plains and mountains. They use strong freezing and chilling magic. Nordics can defend their buildings with a chilling splash tower.")
     ..setUnitSoundSet("Bandit")
     ..setUpgradesUsed("")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
   

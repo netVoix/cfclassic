@@ -2,6 +2,7 @@ package HumanBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let HUMAN_BUILDER_ID = 'h00C'
 
@@ -10,15 +11,8 @@ public let HUMAN_BUILDER_ID = 'h00C'
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h05G,h037,h015,h010,h00K,h008,h006,h004,h003,h000,h001")
-    ..setCollisionSize(0.0)
-    ..setFoodCost(0)
-    ..setGoldCost(0)
-    ..setName("Human Builder")
+    ..presetBaseCfBuilder("Human Builder")
     ..setPointValue(0)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose Human Alliance|r")
     ..setTooltipExtended("Humans use many cheap units to overrun the enemy. They can use artillery to demolish the enemy base without having to attack it directly. This race has a basic defense tower.")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
   

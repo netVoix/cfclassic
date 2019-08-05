@@ -2,6 +2,7 @@ package NightElfBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let NIGHT_ELD_BUILDER_ID = 'h089'
 
@@ -12,18 +13,11 @@ public let NIGHT_ELD_BUILDER_ID = 'h089'
     ..setDefaultActiveAbility("A08G")
     ..setStructuresBuilt("h07H,h08P,h073,h07I,h088,h07M,h07O,h011,h00S,h008,h00B")
     ..setButtonPositionY(2)
-    ..setCollisionSize(0.0)
     ..setModelFile("units\\nightelf\\Runner\\Runner")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
     ..setScalingValue(0.85)
-    ..setName("Night Elf Builder")
+    ..presetBaseCfBuilder("Night Elf Builder")
     ..setPointValue(8)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose Night Elves|r")
     ..setTooltipExtended("Night Elfs have split from the Elven Union and fight on their own for their goddess Elune. They are fragile creatures but they know how to evade enemies blows and protect themselves from harmful magic. They have a tower with feedback.")
     ..setUnitSoundSet("Runner")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
   

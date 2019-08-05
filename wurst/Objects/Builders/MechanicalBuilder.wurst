@@ -2,6 +2,7 @@ package MechanicalBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let MECHANICAL_BUILDER_ID = 'h06P'
 
@@ -13,19 +14,12 @@ public let MECHANICAL_BUILDER_ID = 'h06P'
     ..setStructuresBuilt("h09T,h069,h06J,h05T,h05U,h05M,h05J,h05V,h05X,h008,h05L")
     ..setButtonPositionX(1)
     ..setButtonPositionY(2)
-    ..setCollisionSize(0.0)
     ..setModelFile("Units\\Creeps\\HeroTinker\\HeroTinker")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
     ..setScalingValue(0.5)
-    ..setName("Mechanical Builder")
+    ..presetBaseCfBuilder("Mechanical Builder")
     ..setPointValue(9)
     ..setScaleProjectiles(false)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose Mech Coalition|r")
     ..setTooltipExtended("Clever goblin tinkers and machinists have gathered to assemble their own army! Their units have a lot of splash damage and high armor but lack ranged and magic attacks. They have a good tower with a bouncing attack.")
     ..setUnitSoundSet("HeroTinker")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
   

@@ -1,0 +1,18 @@
+package BuilderBlink
+
+import AbilityObjEditing
+
+public let BUILDER_BLINK_ID = 'A001'
+
+@compiletime function builderBlink()
+  new AbilityDefinitionWardenBlink(BUILDER_BLINK_ID)
+    ..presetCooldown(lvl -> 0)
+    ..presetManaCost(lvl -> 0)
+    ..presetDurationNormal(lvl -> 0)
+    ..presetDurationHero(lvl -> 0)
+    ..presetTooltipNormal(lvl -> "Blink [|cffffcc00D|r]")
+    ..setLevels(1)
+    ..presetTooltipNormalExtended(lvl -> "Teleports the worker a short distance")
+    ..setHotkeyNormal("D")
+    ..presetMinimumRange(lvl -> 100)
+    ..presetMaximumRange(lvl -> 99999)

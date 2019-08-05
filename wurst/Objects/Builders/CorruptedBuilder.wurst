@@ -2,6 +2,7 @@ package CorruptedBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let CORRUPTED_BUILDER_ID = 'u006'
 
@@ -12,23 +13,17 @@ public let CORRUPTED_BUILDER_ID = 'u006'
     ..setStructuresBuilt("n01J,h04V,h04U,h008,h04T,h04S,h04R,h04Q,h04O,h04L,h04K")
     ..setButtonPositionX(3)
     ..setButtonPositionY(1)
-    ..setCollisionSize(0.0)
     ..setFormationRank(4)
-    ..setFoodCost(0)
     ..setScalingValue(0.8)
     ..setMovementHeightMinimum(5.0)
     ..setMovementHeight(10.0)
-    ..setName("Corrupted Builder")
+    ..presetBaseCfBuilder("Corrupted Builder")
     ..setSightRadiusNight(600)
     ..setPointValue(7)
     ..setHitPointsRegenerationType("always")
     ..setSightRadiusDay(800)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose Corrupted Ones Conglomerate|r")
     ..setUnitClassification("peon")
     ..setTooltipExtended("Corrupted by evil demons, these former friendly creatures have turned into minions of darkness. They use dark magic to influence their enemies and can build a tower with splash damage.")
     ..setUnitSoundSet("PitLord")
     ..setUpgradesUsed("")
-    ..setAnimationWalkSpeed(300.0)
-  

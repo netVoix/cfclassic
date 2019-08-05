@@ -2,6 +2,7 @@ package ElfBuilder
 
 import UnitObjEditing
 import UnitIds
+import ObjHelpers
 
 public let ELF_BUILDER_ID = 'h00P'
 
@@ -12,17 +13,9 @@ public let ELF_BUILDER_ID = 'h00P'
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h059,h00Z,h014,h09X,h00V,h00T,h008,h08X,h070,h06Y,h005")
     ..setButtonPositionX(2)
-    ..setCollisionSize(0.0)
     ..setModelFile("units\\critters\\HighElfPeasant\\HighElfPeasant")
-    ..setFoodCost(0)
-    ..setGoldCost(0)
-    ..setName("Elf Builder")
+    ..presetBaseCfBuilder("Elf Builder")
     ..setPointValue(3)
-    ..setSpeedBase(550)
-    ..setCategorizationSpecial(true)
     ..setTooltipBasic("|cffFFD900Choose the Elven Union|r")
     ..setTooltipExtended("The elven races have gathered to defend their realms. Elves use strong magic to weaken enemies and aid friendly units. They've got a pretty good siege weapon and a low ranged tower with multishot.")
     ..setUnitSoundSet("BloodElfWorker")
-    ..setAnimationWalkSpeed(300.0)
-    ..setAttacksEnabled(0)
-  
