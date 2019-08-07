@@ -23,6 +23,7 @@ public let HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_NECROMANCY_TOTAL_CO
     ..setModelFile("buildings\\undead\\Necropolis\\Necropolis")
     ..setFoodCost(1)
     ..setGoldCost(HIGH_CITADEL_OF_NECROMANCY_COST)
+    ..setTotalCost(HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST)
     ..setRequiredAnimationNames("upgrade,second")
     ..setHotkey("R")
     ..setHitPointsMaximumBase(1900)

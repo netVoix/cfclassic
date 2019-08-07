@@ -22,6 +22,7 @@ public let GRAVEYARD_TOTAL_COST = CRYPT_TOTAL_COST + GRAVEYARD_COST
     ..setDeathTimeseconds(0.1)
     ..setModelFile("buildings\\undead\\Graveyard\\Graveyard")
     ..setGoldCost(GRAVEYARD_COST)
+    ..setTotalCost(GRAVEYARD_TOTAL_COST)
     ..setHotkey("R")
     ..setHitPointsMaximumBase(1500)
     ..setMaximumPitchAngledegrees(0.0)

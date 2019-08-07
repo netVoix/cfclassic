@@ -20,6 +20,7 @@ public let MOON_ALTAR_TOTAL_COST = MOON_SHRINE_TOTAL_COST + MOON_ALTAR_COST
 		..setCollisionSize(72.0)
 		..setModelFile("buildings\\nightelf\\AltarOfElders\\AltarOfElders")
 		..setGoldCost(MOON_ALTAR_COST)
+		..setTotalCost(MOON_ALTAR_TOTAL_COST)
 		..setHotkey("R")
 		..setHitPointsMaximumBase(1500)
 		..setMaximumPitchAngledegrees(0.0)

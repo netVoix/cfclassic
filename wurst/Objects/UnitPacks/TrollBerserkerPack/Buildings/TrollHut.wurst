@@ -20,6 +20,7 @@ public let TROLL_HUT_TOTAL_COST = TROLL_HUT_COST
     ..setCollisionSize(72.0)
     ..setModelFile("buildings\\other\\ForestTrollHut1\\ForestTrollHut1")
     ..setGoldCost(TROLL_HUT_COST)
+    ..setTotalCost(TROLL_HUT_TOTAL_COST)
     ..setHotkey("E")
     ..setHitPointsMaximumBase(1300)
     ..setProjectileImpactZ(120.0)

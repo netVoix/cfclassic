@@ -22,6 +22,7 @@ public let HELLS_PORTAL_TOTAL_COST = HELLS_GATE_TOTAL_COST + HELLS_PORTAL_COST
 		..setDefenseUpgradeBonus(1)
 		..setModelFile("buildings\\other\\DarkPortal\\DarkPortal")
 		..setGoldCost(HELLS_PORTAL_COST)
+		..setTotalCost(HELLS_PORTAL_TOTAL_COST)
 		..setTintingColorGreen(30)
 		..setHotkey("R")
 		..setHitPointsMaximumBase(1500)

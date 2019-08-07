@@ -37,7 +37,6 @@ public function UnitDefinition.presetBaseCFUnit(string name)
       ..setManaMaximum(0)
       ..setLevel(1)
       ..setDefaultActiveAbility("")
-      ..setAttack1ProjectileArt("")
       ..setSightRadiusDay(800)
       ..setSightRadiusNight(800)
       ..setUnitClassification("sapper,ward")
@@ -67,6 +66,10 @@ public function UnitOrBuildingOrHeroDefinition.setGoldBountyReward(int reward)
 
 public function UnitDefinition.setValueByCost(int cost)
   this.setBuildTime(getBuildTime(cost))
+
+public function BuildingDefinition.setTotalCost(int cost)
+  this.setManaMaximum(getBuildTime(cost))
+  this.setManaInitialAmount(getBuildTime(cost))
 
 function getBuildTime(int cost) returns int
   return 15 + (cost / 20).toInt()

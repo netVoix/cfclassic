@@ -21,6 +21,7 @@ public let NAGA_SPRING_TOTAL_COST = NAGA_SPRING_COST
     ..setGoldBountyReward(70)
     ..setButtonPositionX(1)
     ..setGoldCost(NAGA_SPRING_COST)
+    ..setTotalCost(NAGA_SPRING_TOTAL_COST)
     ..setHotkey("S")
     ..setHitPointsMaximumBase(1400)
     ..setScalingValue(0.5)

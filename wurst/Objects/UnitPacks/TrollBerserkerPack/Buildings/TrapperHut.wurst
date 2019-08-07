@@ -24,6 +24,7 @@ public let TRAPPER_HUT_TOTAL_COST = TROLL_HUT_TOTAL_COST + TRAPPER_HUT_COST
     ..setCollisionSize(72.0)
     ..setModelFile(Buildings.forestTrollHut0)
     ..setGoldCost(TRAPPER_HUT_COST)
+    ..setTotalCost(TRAPPER_HUT_TOTAL_COST)
     ..setHotkey("R")
     ..setHitPointsMaximumBase(1300)
     ..setMaximumPitchAngledegrees(0.0)

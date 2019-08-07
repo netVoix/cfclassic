@@ -27,6 +27,7 @@ public let NECROMANCER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Necroman
     ..setAttack1DamageBase(54)
     ..setHitPointsMaximumBase(400)
     ..setManaInitialAmount(150)
+    ..setManaMaximum(200)
     ..setScalingValue(0.9)
     ..setPointValue(114)
     ..setAttack1Range(380)

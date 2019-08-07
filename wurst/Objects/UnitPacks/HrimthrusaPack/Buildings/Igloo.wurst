@@ -20,6 +20,7 @@ public let IGLOO_TOTAL_COST = IGLOO_COST
     ..setCollisionSize(72.0)
     ..setModelFile("Doodads\\Icecrown\\Structures\\Igloo\\Igloo")
     ..setGoldCost(IGLOO_COST)
+    ..setTotalCost(IGLOO_TOTAL_COST)
     ..setHotkey("W")
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)

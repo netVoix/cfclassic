@@ -24,6 +24,7 @@ public let TEMPLE_OF_BONE_TOTAL_COST = TEMPLE_OF_BONE_COST
     ..setCollisionSize(72)
     ..setModelFile(Buildings.crypt)
     ..setGoldCost(TEMPLE_OF_BONE_COST)
+    ..setTotalCost(TEMPLE_OF_BONE_TOTAL_COST)
     ..setHotkey("W")
     ..setHitPointsMaximumBase(1300)
     ..setMaximumPitchAngledegrees(0)

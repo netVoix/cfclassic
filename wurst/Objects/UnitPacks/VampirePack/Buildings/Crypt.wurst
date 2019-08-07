@@ -20,6 +20,7 @@ public let CRYPT_TOTAL_COST = CRYPT_COST
 		..setCollisionSize(72.0)
 		..setModelFile("Doodads\\Northrend\\Structures\\NorthrendCrypt\\NorthrendCrypt")
 		..setGoldCost(CRYPT_COST)
+		..setTotalCost(CRYPT_TOTAL_COST)
 		..setHotkey("E")
 		..setHitPointsMaximumBase(1300)
 		..setProjectileImpactZ(120.0)

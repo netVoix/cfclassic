@@ -22,6 +22,7 @@ public let DRAGON_CEMETERY_TOTAL_COST = DRAGON_CEMETERY_COST
     ..setButtonPositionX(1)
     ..setModelFile(Buildings.boneYard)
     ..setGoldCost(DRAGON_CEMETERY_COST)
+    ..setTotalCost(DRAGON_CEMETERY_TOTAL_COST)
     ..setHotkey("S")
     ..setHitPointsMaximumBase(1600)
     ..setMaximumPitchAngledegrees(0)

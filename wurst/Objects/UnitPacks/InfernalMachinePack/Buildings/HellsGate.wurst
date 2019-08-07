@@ -18,6 +18,7 @@ public let HELLS_GATE_TOTAL_COST = HELLS_GATE_COST
 		..setGoldBountyReward(60)
 		..setModelFile("buildings\\other\\DarkPortal2\\DarkPortal2")
 		..setGoldCost(HELLS_GATE_COST)
+		..setTotalCost(HELLS_GATE_TOTAL_COST)
 		..setTintingColorGreen(120)
 		..setHotkey("A")
 		..setHitPointsMaximumBase(1400)

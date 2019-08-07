@@ -6,8 +6,8 @@ import Icons
 import Buildings
 import UnitIds
 import ObjectIds
+import HallOfHonor
 import initlater ElderBlademaster
-import initlater HallOfHonor
 
 public let HALL_OF_THE_ELDEST_ID = 'h03F'
 public let HALL_OF_THE_ELDEST_COST = 200
@@ -22,6 +22,7 @@ public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_HONOR_TOTAL_COST + HALL_OF_TH
     ..setCollisionSize(72)
     ..setModelFile(Buildings.elvenVillageBuilding3)
     ..setGoldCost(HALL_OF_THE_ELDEST_COST)
+    ..setTotalCost(HALL_OF_THE_ELDEST_TOTAL_COST)
     ..setHotkey("R")
     ..setHitPointsMaximumBase(1500)
     ..setMaximumPitchAngledegrees(0)
