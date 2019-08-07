@@ -1,0 +1,41 @@
+package Druid
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater MoonShrine
+
+public let DRUID_ID = 'e007'
+public let DRUID_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF00375|r rng,|cffFFFF00 31|r dps)|n" + 
+																		"|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+																		"|cffFFFF80Abilities:|r|n|n|cff80FF00Entangle|r|nEntangles a ground unit for 5 seconds dealing 15 damage per second|n" + 
+																		"|cff8080FFCooldown: |r14|n|cff8080FFMana cost: |r30"
+public let DRUID_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Druid|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+																			"|cffFFAC00Druid:|r|n|cffFFFF80Attack:|r Chaos (|cffFFFF00375|r rng,|cffFFFF00 31|r dps)|n" + 
+																			"|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+																			"|cffFFFF80Abilities:|r|n-Entangle (|cffFFFF005sec, 15dps|r)"
+
+@compiletime function druid()
+	new UnitDefinition(DRUID_ID, UnitIds.druidofthetalon)
+		..setNormalAbilities("A07P")
+		..setAttack1AttackType(AttackType.Chaos)
+		..setDefaultActiveAbility("A07P")
+		..setValueByCost(MOON_SHRINE_COST)
+		..setGoldBountyReward(6)
+		..setButtonPositionX(0)
+		..setDefenseBase(1)
+		..setDependencyEquivalents("")
+		..setAttack1DamageBase(39)
+		..setHotkey("Q")
+		..setHitPointsMaximumBase(325)
+		..setManaInitialAmount(125)
+		..setAttack1ProjectileArt("Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl")
+		..setScalingValue(0.85)
+		..presetBaseCFUnit("Druid")
+		..setPointValue(126)
+		..setAttack1Range(375)
+		..setManaRegeneration(0.8)
+		..setAttack1DamageSidesperDie(21)
+		..setSpeedBase(285)
+		..setTooltipExtended(DRUID_FULL_DESCRIPTION)
+  

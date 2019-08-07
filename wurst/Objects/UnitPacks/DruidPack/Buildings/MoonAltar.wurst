@@ -1,0 +1,36 @@
+package MoonAltar
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import SageDruid
+import ObjectIds
+import initlater MoonShrine
+
+public let MOON_ALTAR_ID = 'h07D'
+public let MOON_ALTAR_COST = 190
+public let MOON_ALTAR_TOTAL_COST = MOON_SHRINE_TOTAL_COST + MOON_ALTAR_COST
+
+@compiletime function moonAlter()
+	new BuildingDefinition(MOON_ALTAR_ID, UnitIds.blacksmith)
+		..setNormalAbilities("A07E")
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNAltarOfElders.blp")
+		..setGoldBountyReward(90)
+		..setShadowTextureBuilding("ShadowHouse")
+		..setCollisionSize(72.0)
+		..setModelFile("buildings\\nightelf\\AltarOfElders\\AltarOfElders")
+		..setGoldCost(MOON_ALTAR_COST)
+		..setHotkey("R")
+		..setHitPointsMaximumBase(1500)
+		..setMaximumPitchAngledegrees(0.0)
+		..setMaximumRollAngledegrees(0.0)
+		..setScalingValue(0.5)
+		..presetBaseCFBuilding("Moon Altar")
+		..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+		..setPointValue(95)
+		..setHitPointsRegenerationRate(0.5)
+		..setRequirements("tec3")
+		..setRequirementsLevels("1")
+		..setSelectionScale(2.4)
+		..setUnitsTrained(SAGE_DRUID_ID.toRawCode())
+		..setTooltipExtended(SAGE_DRUID_SHORT_DESCRIPTION)  
