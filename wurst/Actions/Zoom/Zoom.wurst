@@ -7,7 +7,6 @@ function setZoom()
 
   if wishedZoom > 1000 and wishedZoom < 3000
     p.setCameraField(CAMERA_FIELD_TARGET_DISTANCE, wishedZoom, 0.20)
-
   else
     printTimedToPlayer("|c00ff0202Allowed zoom range is between 1000 and 3000.|r", 3, p)
 
