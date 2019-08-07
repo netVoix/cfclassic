@@ -1,0 +1,45 @@
+package HellsPortal
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import InfernalTank
+import ObjectIds
+import initlater HellsGate
+
+public let HELLS_PORTAL_ID = 'h04P'
+public let HELLS_PORTAL_COST = 200
+public let HELLS_PORTAL_TOTAL_COST = HELLS_GATE_TOTAL_COST + HELLS_PORTAL_COST
+
+@compiletime function hellsPortal()
+	new BuildingDefinition(HELLS_PORTAL_ID, UnitIds.powergenerator)
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
+		..setGoldBountyReward(89)
+		..setShadowTextureBuilding("ShadowHouse")
+		..setConstructionSound("BuildingConstructionLoop")
+		..setButtonPositionX(3)
+		..setDeathTimeseconds(2.34)
+		..setDefenseBase(5)
+		..setDefenseUpgradeBonus(1)
+		..setModelFile("buildings\\other\\DarkPortal\\DarkPortal")
+		..setGoldCost(HELLS_PORTAL_COST)
+		..setTintingColorGreen(30)
+		..setHotkey("R")
+		..setHitPointsMaximumBase(1500)
+		..setSoundLoopingFadeInRate(512)
+		..setSoundLoopingFadeOutRate(512)
+		..setScalingValue(0.22)
+		..presetBaseCFBuilding("Hell's Portal")
+		..setNeutralBuildingShowsMinimapIcon(false)
+		..setPointValue(52)
+		..setPlacementRequires("unbuildable")
+		..setPriority(4)
+		..setTintingColorRed(75)
+		..setHitPointsRegenerationRate(0.5)
+		..setRepairTime(70)
+		..setRequirements("tec3")
+		..setRequirementsLevels("1")
+		..setSelectionScale(1.5)
+		..setArtSpecial("Objects\\Spawnmodels\\Human\\HCancelDeath\\HCancelDeath.mdl")
+		..setAttack1MaximumNumberofTargets(0)
+		..setUnitsTrained(INFERNAL_TANK_ID.toRawCode())
+		..setTooltipExtended(INFERNAL_TANK_SHORT_DESCRIPTION)		

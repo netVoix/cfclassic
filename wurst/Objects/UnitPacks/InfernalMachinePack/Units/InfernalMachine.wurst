@@ -1,0 +1,55 @@
+package InfernalMachine
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater HellsGate
+
+public let INFERNAL_MACHINE_ID = 'n01F'
+public let INFERNAL_MACHINE_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
+																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+																								"|cffFFFF80Abilities:|r|n|n|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n" + 
+																								"|cff80FF00Detonate|r|nDeals 100 damage to nearby enemies in 225 range. Targets further away take less damage"
+public let INFERNAL_MACHINE_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Machine|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+																								"|cffFFAC00Infernal Machine:|r|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
+																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n|cffFFFF80Abilities:|r|n" + 
+																								"-Can't attack Air|n-Detonate (|cffFFFF00100dmg|r)"
+
+@compiletime function infernalMachinePack()
+	new UnitDefinition(INFERNAL_MACHINE_ID, UnitIds.infernalcontraption)
+		..setNormalAbilities("A04V")
+		..setAttack1AttackType(AttackType.Siege)
+		..setValueByCost(HELLS_GATE_TOTAL_COST)
+		..setGoldBountyReward(10)
+		..setCollisionSize(16.0)
+		..setDefenseBase(3)
+		..setAttack1DamageBase(69)
+		..setAttack1AreaofEffectFullDamage(0)
+		..setModelFile("units\\creeps\\InfernalCannonFlame\\InfernalCannonFlame")
+		..setFormationRank(0)
+		..setTintingColorGreen(90)
+		..setAttack1AreaofEffectMediumDamage(0)
+		..setProjectileImpactZ(90.0)
+		..setProjectileLaunchY(-45.0)
+		..setProjectileLaunchZ(10.0)
+		..setLevel(1)
+		..setLumberCost(0)
+		..setRepairLumberCost(0)
+		..setMinimumAttackRange(150)
+		..setAttack1ProjectileArt("Abilities\\Spells\\Undead\\OrbOfDeath\\OrbOfDeathMissile.mdl")
+		..presetBaseCFUnit("Infernal Machine")
+		..setSightRadiusNight(800)
+		..setPointValue(119)
+		..setAttack1AreaofEffectSmallDamage(0)
+		..setTintingColorRed(160)
+		..setHitPointsRegenerationRate(0.75)
+		..setSelectionScale(1.8)
+		..setSpeedBase(290)
+		..setAttack1AreaofEffectTargets("")
+		..setStockMaximum(1)
+		..setStockReplenishInterval(410)
+		..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+		..setUnitClassification("mechanical,sapper,ward")
+		..setTooltipExtended(INFERNAL_MACHINE_FULL_DESCRIPTION)
+		..setAttack1WeaponType(WeaponType.Missile)
+  

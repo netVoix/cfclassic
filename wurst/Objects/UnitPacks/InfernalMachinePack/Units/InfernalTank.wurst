@@ -1,0 +1,56 @@
+package InfernalTank
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import initlater HellsPortal
+
+public let INFERNAL_TANK_ID = 'n01E'
+public let INFERNAL_TANK_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
+																						"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n|n" + 
+																						"|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n|cff80FF00Line Damage|r|n" + 
+																						"Deals 60 additional spell damage on each attack to all enemies in a line |n|n|cff80FF00Detonate|r|n" + 
+																						"Deals up to 150 damage to enemies in 275 range. Targets farther away take less damage"
+public let INFERNAL_TANK_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Tank|n|n|cffFFAC00Infernal Tank:|r|n" + 
+																							"|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
+																							"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n" + 
+																							"|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n-Can't attack Air|n" + 
+																							"-Line Damage (|cffFFFF0060dmg|r)|n" + 
+																							"-Detonate (|cffFFFF00150dmg|r)|n|n|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+@compiletime function infernalTank()
+	new UnitDefinition(INFERNAL_TANK_ID, UnitIds.infernalcontraption)
+		..setNormalAbilities("A04W,A04Y")
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNInfernalFlameCannon.blp")
+		..setAttack1AttackType(AttackType.Siege)
+		..setValueByCost(HELLS_PORTAL_TOTAL_COST)
+		..setGoldBountyReward(14)
+		..setCollisionSize(16.0)
+		..setAttack1CooldownTime(1.4)
+		..setDefenseBase(4)
+		..setAttack1DamageBase(69)
+		..setAttack1AreaofEffectFullDamage(0)
+		..setFormationRank(0)
+		..setTintingColorGreen(75)
+		..setAttack1AreaofEffectMediumDamage(0)
+		..setHitPointsMaximumBase(850)
+		..setProjectileImpactZ(90.0)
+		..setProjectileLaunchY(-45.0)
+		..setProjectileLaunchZ(120.0)
+		..setMinimumAttackRange(150)
+		..setAttack1ProjectileArt("Abilities\\Spells\\Undead\\OrbOfDeath\\OrbOfDeathMissile.mdl")
+		..presetBaseCFUnit("Infernal Tank")
+		..setPointValue(119)
+		..setAttack1AreaofEffectSmallDamage(0)
+		..setTintingColorRed(120)
+		..setHitPointsRegenerationRate(1.13)
+		..setSelectionScale(1.8)
+		..setAttack1DamageSidesperDie(21)
+		..setSpeedBase(290)
+		..setAttack1AreaofEffectTargets("")
+		..setStockMaximum(1)
+		..setStockReplenishInterval(410)
+		..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+		..setUnitClassification("mechanical,sapper,ward")
+		..setAttack1WeaponType(WeaponType.Missile)		
+		..setTooltipExtended(INFERNAL_TANK_FULL_DESCRIPTION)

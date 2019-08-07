@@ -1,0 +1,40 @@
+package HellsGate
+
+import UnitObjEditing
+import UnitIds
+import ObjHelpers
+import HellsPortal
+import ObjectIds
+import InfernalMachine
+
+public let HELLS_GATE_ID = 'h04Q'
+public let HELLS_GATE_COST = 250
+public let HELLS_GATE_TOTAL_COST = HELLS_GATE_COST
+
+@compiletime function hellsGate()
+	new BuildingDefinition(HELLS_GATE_ID, UnitIds.farm)
+		..setNormalAbilities("")
+		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
+		..setGoldBountyReward(60)
+		..setModelFile("buildings\\other\\DarkPortal2\\DarkPortal2")
+		..setGoldCost(HELLS_GATE_COST)
+		..setTintingColorGreen(120)
+		..setHotkey("A")
+		..setHitPointsMaximumBase(1400)
+		..setMaximumPitchAngledegrees(0.0)
+		..setMaximumRollAngledegrees(0.0)
+		..setScalingValue(0.18)
+		..presetBaseCFBuilding("Hell's Gate")
+		..setPointValue(51)
+		..setPriority(4)
+		..setTintingColorRed(180)
+		..setHitPointsRegenerationRate(0.5)
+		..setRepairTime(70)
+		..setRequirements("tec2")
+		..setRequirementsLevels("1")
+		..setSelectionScale(1.5)
+		..setUnitsTrained(INFERNAL_MACHINE_ID.toRawCode())
+		..setUnitSoundSet("")
+		..setUpgradesTo(HELLS_PORTAL_ID.toRawCode())
+		..setTooltipExtended(INFERNAL_MACHINE_SHORT_DESCRIPTION)
+  
