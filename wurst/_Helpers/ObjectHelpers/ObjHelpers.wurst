@@ -57,6 +57,7 @@ public function UnitDefinition.presetBaseCfBuilder(string name)
       ..setAnimationWalkSpeed(300.0)
       ..setAttacksEnabled(0)
       ..setCollisionSize(0.0)
+      ..setRace(Race.Undead)
       ..setMovementType(MovementType.Fly)
 
 public function UnitOrBuildingOrHeroDefinition.setGoldBountyReward(int reward)
