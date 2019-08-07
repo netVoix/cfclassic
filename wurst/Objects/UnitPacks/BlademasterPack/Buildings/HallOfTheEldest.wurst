@@ -7,10 +7,11 @@ import Buildings
 import UnitIds
 import ObjectIds
 import initlater ElderBlademaster
+import initlater HallOfHonor
 
 public let HALL_OF_THE_ELDEST_ID = 'h03F'
 public let HALL_OF_THE_ELDEST_COST = 200
-public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_THE_ELDEST_COST
+public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_HONOR_TOTAL_COST + HALL_OF_THE_ELDEST_COST
 
 @compiletime function hallOfTheEldest()
   new BuildingDefinition(HALL_OF_THE_ELDEST_ID, UnitIds.blacksmith)
