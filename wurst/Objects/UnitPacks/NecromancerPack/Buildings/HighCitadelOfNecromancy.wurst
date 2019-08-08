@@ -1,15 +1,13 @@
 package HighCitadelOfNecromancy
+
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import LegendaryUnitFlag
 import ObjectIds
-import initlater LichKing
-import TempleOfNecromancy
+import NecromancerConstants
 
-public let HIGH_CITADEL_OF_NECROMANCY_ID = 'h055'
-public let HIGH_CITADEL_OF_NECROMANCY_COST = 370
-public let HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_NECROMANCY_TOTAL_COST + HIGH_CITADEL_OF_NECROMANCY_COST
+
 
 @compiletime function highCitadelOfNecromancy()
   new BuildingDefinition(HIGH_CITADEL_OF_NECROMANCY_ID, UnitIds.blacksmith)

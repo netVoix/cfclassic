@@ -64,7 +64,7 @@ public function UnitOrBuildingOrHeroDefinition.setGoldBountyReward(int reward)
       ..setGoldBountyAwardedSidesperDie(1)
       ..setGoldBountyAwardedBase(reward - 1)
 
-public function UnitDefinition.setValueByCost(int cost)
+public function UnitDefinition.setTotalCost(int cost)
   this.setBuildTime(getBuildTime(cost))
 
 public function BuildingDefinition.setTotalCost(int cost)

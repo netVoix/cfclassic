@@ -5,13 +5,10 @@ import UnitIds
 import ObjHelpers
 import Icons
 import Buildings
-import Necromancer
 import ObjectIds
-import TempleOfNecromancy
+import NecromancerConstants
 
-public let TEMPLE_OF_BONE_ID = 'h01K'
-public let TEMPLE_OF_BONE_COST = 210
-public let TEMPLE_OF_BONE_TOTAL_COST = TEMPLE_OF_BONE_COST
+
 
 @compiletime function templeOfBone()
   new BuildingDefinition(TEMPLE_OF_BONE_ID, UnitIds.blacksmith)

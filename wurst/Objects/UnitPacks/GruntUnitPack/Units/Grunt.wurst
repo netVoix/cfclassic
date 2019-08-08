@@ -3,14 +3,9 @@ package Grunt
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater FightersHall
+import GruntConstants
 
-public let GRUNT_ID = 'o002'
-public let GRUNT_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
-                                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"
-public let GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFFF80Upgrades: |cffFFFF002|n|n|cffFFAC00Grunt:|r|n" + 
-                                  "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
-                                  "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"
+
 
 
 
@@ -18,7 +13,7 @@ public let GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFF
   new UnitDefinition(GRUNT_ID, UnitIds.garthok)
     ..presetBaseCFUnit("Grunt")
     ..setNormalAbilities("")
-    ..setValueByCost(FIGHTERS_HALL_TOTAL_COST)
+    ..setTotalCost(FIGHTERS_HALL_TOTAL_COST)
     ..setGoldBountyReward(4)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.5)

@@ -3,12 +3,10 @@ package Igloo
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import Hrimthrusa
 import ObjectIds
+import HrimthrusaConstants
 
-public let IGLOO_ID = 'h03U'
-public let IGLOO_COST = 160
-public let IGLOO_TOTAL_COST = IGLOO_COST
+
 
 @compiletime function igloo()
   new BuildingDefinition(IGLOO_ID, UnitIds.blacksmith)

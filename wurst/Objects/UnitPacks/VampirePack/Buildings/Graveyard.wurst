@@ -4,12 +4,10 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import ObjectIds
-import initlater VampireLord
-import Crypt
+import VampireConstants
 
-public let GRAVEYARD_ID = 'h054'
-public let GRAVEYARD_COST = 210
-public let GRAVEYARD_TOTAL_COST = CRYPT_TOTAL_COST + GRAVEYARD_COST
+
+
 
 @compiletime function graveyard()
   new BuildingDefinition(GRAVEYARD_ID, UnitIds.blacksmith)

@@ -3,13 +3,9 @@ package MoonShrine
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import MoonAltar
 import ObjectIds
-import Druid
+import DruidConstants
 
-public let MOON_SHRINE_ID = 'h088'
-public let MOON_SHRINE_COST = 190
-public let MOON_SHRINE_TOTAL_COST = MOON_SHRINE_COST
 
 @compiletime function moonShrine()
 	new BuildingDefinition(MOON_SHRINE_ID, UnitIds.blacksmith)

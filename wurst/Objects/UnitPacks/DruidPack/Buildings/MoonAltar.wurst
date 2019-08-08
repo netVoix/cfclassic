@@ -3,13 +3,10 @@ package MoonAltar
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import SageDruid
 import ObjectIds
-import initlater MoonShrine
+import DruidConstants
 
-public let MOON_ALTAR_ID = 'h07D'
-public let MOON_ALTAR_COST = 190
-public let MOON_ALTAR_TOTAL_COST = MOON_SHRINE_TOTAL_COST + MOON_ALTAR_COST
+
 
 @compiletime function moonAlter()
 	new BuildingDefinition(MOON_ALTAR_ID, UnitIds.blacksmith)

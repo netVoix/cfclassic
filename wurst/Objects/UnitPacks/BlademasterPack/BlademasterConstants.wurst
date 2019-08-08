@@ -1,0 +1,45 @@
+package BlademasterConstants
+
+public let HALL_OF_HONOR_ID = 'h00T'
+public let BLADEMASTER_ID = 'n006'
+public let HALL_OF_THE_ELDEST_ID = 'h03F'
+public let ELDER_BLADEMASTER_ID = 'n00Y'
+
+public let HALL_OF_HONOR_COST = 200
+public let HALL_OF_THE_ELDEST_COST = 200
+public let HALL_OF_HONOR_TOTAL_COST = HALL_OF_HONOR_COST
+public let HALL_OF_THE_ELDEST_TOTAL_COST = HALL_OF_HONOR_TOTAL_COST + HALL_OF_THE_ELDEST_COST
+
+public let BLADEMASTER_FULL_DESCRIPTION =               "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
+                                                        "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Evade|r|n15% chance to evade an attack|n|n" + 
+                                                        "|cff80FF00Critical Strike|r|n25% chance on each attack to hit for 2.5 times of the normal damage|n|n" + 
+                                                        "|cff80FF00Spell Resistance|r|nSpell damage done to this unit is reduced by 15%"
+
+public let BLADEMASTER_SHORT_DESCRIPTION =              "|cffFFFF80Trains: |cffFFFF00Blademaster|n" + 
+                                                        "|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                                        "|cffFFAC00Blademaster:|r|n" + 
+                                                        "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 39|r dps)|n" + 
+                                                        "|cffFFFF80Armor:|r Heavy (|cffFFFF007|r)|n" + 
+                                                        "|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                                        "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF0015%|r)|n-Critical Strike (|cffFFFF0025%, 2.5x|r)|n" + 
+                                                        "-Spell Resist (|cffFFFF0015%|r)"
+
+public let ELDER_BLADEMASTER_FULL_DESCRIPTION =         "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 90|r dps)|n" + 
+                                                        "|cffFFFF80Armor:|r Heavy (|cffFFFF0010|r)|n" + 
+                                                        "|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                                                        "|cffFFFF80Abilities:|r|n|n" + 
+                                                        "|cff80FF00Critical Strike|r|n30% chance on each attack to hit for 3 times of the normal damage|n|n" + 
+                                                        "|cff80FF00Evade|r|n25% chance to evade an attack|n|n" + 
+                                                        "|cff80FF00Feedback|r|nEach attack burns up to 40 mana dealing the same amount of damage|n|n" + 
+                                                        "|cff80FF00Spell Resistance|r|nSpell damage done to this unit is reduced by 25%|n|n" + 
+                                                        "|cff80FF00Spell Steal|r|n Steals a positive buff from an enemy unit and applies it to a nearby friendly unit, " + 
+                                                        "or takes a negative buff from a friendly unit and applies it to a nearby enemy unit.|n|cff8080FFCooldown: |r10"
+
+public let ELDER_BLADEMASTER_SHORT_DESCRIPTION =        "|cffFFFF80Trains: |cffFFFF00Elder Blademaster|n|n|" + 
+                                                        "cffFFAC00Elder Blademaster:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 90|r dps)|n" + 
+                                                        "|cffFFFF80Armor:|r Heavy (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                                                        "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0030%, 3x|r)|n" + 
+                                                        "-Evade (|cffFFFF0025%|r)|n-Feedback (|cffFFFF0040 mana|r)|n" + 
+                                                        "-Spell Resist (|cffFFFF0025%|r)|n-Spell Steal|n|n" + 
+                                                        "|cffFF0000You must turn off unit production before you can upgrade!|r"

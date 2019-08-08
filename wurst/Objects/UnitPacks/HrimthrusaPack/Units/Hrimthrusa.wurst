@@ -3,26 +3,16 @@ package Hrimthrusa
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater Igloo
 import HrimthrusaSpellResist
 import ObjectIds
+import HrimthrusaConstants
 
-public let HRIMTHRUSA_ID = 'n011'
-public let HRIMTHRUSA_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
-                                          "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
-                                          "|cffFFFF80Abilities:|r|n|n" + 
-                                          "|cff80FF00Frost Attack|r|nEach attack against ground units has a " + 
-                                          "5% chance to freeze the target to the ground for 7 seconds, dealing 15 damage per second|n" +
-                                          "|cff80FF00Spell Resist|r|n50% spell damage reduction"
-public let HRIMTHRUSA_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Hrimthrusa|n|n|cffFFAC00Hrimthrusa:|r|n" + 
-                                          "|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
-                                          "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
-                                          "|cffFFFF80Abilities:|r|n-Frost Attack (|cffFFFF005%, 7sec, 15dps|r)|n-Spell Resist (|cffFFFF0050%|r)"
+
 
 @compiletime function hrimthrusa()
   new UnitDefinition(HRIMTHRUSA_ID, UnitIds.tuskarrspearman)
     ..setNormalAbilities("A03X," + HRIMTHRUSA_SPELL_RESIST_ID.toRawCode())
-    ..setValueByCost(IGLOO_TOTAL_COST)
+    ..setTotalCost(IGLOO_TOTAL_COST)
     ..setGoldBountyReward(5)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(0.65)

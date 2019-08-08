@@ -4,13 +4,8 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import ObjectIds
-import FightersHall
-import VeteranGrunt
-import SuperiorFightersHall
+import GruntConstants
 
-public let ADVANCED_FIGHTERS_HALL_ID = 'h02U'
-public let ADVANCED_FIGHTERS_HALL_COST = 100
-public let ADVANCED_FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_TOTAL_COST + ADVANCED_FIGHTERS_HALL_COST
 
 @compiletime function advancedFightersHall()
   new BuildingDefinition(ADVANCED_FIGHTERS_HALL_ID, UnitIds.blacksmith)

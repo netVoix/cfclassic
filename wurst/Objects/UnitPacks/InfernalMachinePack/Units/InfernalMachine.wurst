@@ -3,23 +3,15 @@ package InfernalMachine
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater HellsGate
+import InfernalMachineConstants
 
-public let INFERNAL_MACHINE_ID = 'n01F'
-public let INFERNAL_MACHINE_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
-																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
-																								"|cffFFFF80Abilities:|r|n|n|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n" + 
-																								"|cff80FF00Detonate|r|nDeals 100 damage to nearby enemies in 225 range. Targets further away take less damage"
-public let INFERNAL_MACHINE_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Machine|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
-																								"|cffFFAC00Infernal Machine:|r|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
-																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n|cffFFFF80Abilities:|r|n" + 
-																								"-Can't attack Air|n-Detonate (|cffFFFF00100dmg|r)"
+
 
 @compiletime function infernalMachinePack()
 	new UnitDefinition(INFERNAL_MACHINE_ID, UnitIds.infernalcontraption)
 		..setNormalAbilities("A04V")
 		..setAttack1AttackType(AttackType.Siege)
-		..setValueByCost(HELLS_GATE_TOTAL_COST)
+		..setTotalCost(HELLS_GATE_TOTAL_COST)
 		..setGoldBountyReward(10)
 		..setCollisionSize(16.0)
 		..setDefenseBase(3)

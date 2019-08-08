@@ -5,13 +5,10 @@ import UnitIds
 import ObjHelpers
 import Icons
 import Buildings
-import FrostWyrm
 import ObjectIds
 import Soundsets
+import FrostWyrmConstants
 
-public let DRAGON_CEMETERY_ID = 'h01S'
-public let DRAGON_CEMETERY_COST = 500
-public let DRAGON_CEMETERY_TOTAL_COST = DRAGON_CEMETERY_COST
 
 @compiletime function dragonCemetery()
   new BuildingDefinition(DRAGON_CEMETERY_ID, UnitIds.farm)

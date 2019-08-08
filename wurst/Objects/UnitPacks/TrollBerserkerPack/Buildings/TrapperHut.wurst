@@ -3,15 +3,12 @@ package TrapperHut
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater TrollTrapper
 import ObjectIds
 import Buildings
-import initlater TrollHut
+import TrollBerserkerConstants
 
 
-public let TRAPPER_HUT_ID = 'h05E'
-public let TRAPPER_HUT_COST = 80
-public let TRAPPER_HUT_TOTAL_COST = TROLL_HUT_TOTAL_COST + TRAPPER_HUT_COST
+
 
 
 @compiletime function trapperHut()

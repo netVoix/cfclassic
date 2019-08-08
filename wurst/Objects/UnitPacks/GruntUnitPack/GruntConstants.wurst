@@ -1,0 +1,44 @@
+package GruntConstants
+
+
+public let ADVANCED_FIGHTERS_HALL_ID = 'h02U'
+public let ADVANCED_FIGHTERS_HALL_COST = 100
+public let ADVANCED_FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_TOTAL_COST + ADVANCED_FIGHTERS_HALL_COST
+
+public let FIGHTERS_HALL_ID = 'h029'
+public let FIGHTERS_HALL_COST = 110
+public let FIGHTERS_HALL_TOTAL_COST = FIGHTERS_HALL_COST
+
+public let SUPERIOR_FIGHTERS_HALL_ID = 'h031'
+public let SUPERIOR_FIGHTERS_HALL_COST = 240
+public let SUPERIOR_FIGHTERS_HALL_TOTAL_COST = ADVANCED_FIGHTERS_HALL_TOTAL_COST + SUPERIOR_FIGHTERS_HALL_COST
+
+public let AXEMASTER_ID = 'o005'
+public let AXEMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 65|r dps)|n" + 
+                                        "|cffFFFF80Armor:|r Hero (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00670|r|n" + 
+                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Critical Strike|r|n" + 
+                                        "30% chance on each attack to hit for 3 times of the normal damage|n|n" + 
+                                        "|cff80FF00Pulverize|r|nGrants a 35% chance on each attack to hit all enemies in 200 range for 130 damage"
+public let AXEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Axemaster|n|n|cffFFAC00Axemaster:|r|n" + 
+                                          "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 65|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Hero (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00670|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0030%, 3x|r)|n-Pulverize (|cffFFFF0035%, 130 dmg|r)|n|n" + 
+                                          "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let VETERAN_GRUNT_ID = 'o004'
+public let VETERAN_GRUNT_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 30|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Hero (|cffFFFF006|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n|n|cff80FF00Critical Strike|r|n" + 
+                                            "25% chance on each attack to hit for 2 times of the normal damage"
+public let VETERAN_GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Veteran Grunt|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                              "|cffFFAC00Veteran Grunt:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 30|r dps)|n" + 
+                                              "|cffFFFF80Armor:|r Hero (|cffFFFF006|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                              "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0025%, 2x|r)|n|n" + 
+                                              "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let GRUNT_ID = 'o002'
+public let GRUNT_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"
+public let GRUNT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Grunt|n|cffFFFF80Upgrades: |cffFFFF002|n|n|cffFFAC00Grunt:|r|n" + 
+                                  "|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 18|r dps)|n" + 
+                                  "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00235|r"                                           

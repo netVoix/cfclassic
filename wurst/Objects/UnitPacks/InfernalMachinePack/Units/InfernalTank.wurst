@@ -3,27 +3,16 @@ package InfernalTank
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater HellsPortal
+import InfernalMachineConstants
 
-public let INFERNAL_TANK_ID = 'n01E'
-public let INFERNAL_TANK_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
-																						"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n|n" + 
-																						"|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n|cff80FF00Line Damage|r|n" + 
-																						"Deals 60 additional spell damage on each attack to all enemies in a line |n|n|cff80FF00Detonate|r|n" + 
-																						"Deals up to 150 damage to enemies in 275 range. Targets farther away take less damage"
-public let INFERNAL_TANK_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Tank|n|n|cffFFAC00Infernal Tank:|r|n" + 
-																							"|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
-																							"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n" + 
-																							"|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n-Can't attack Air|n" + 
-																							"-Line Damage (|cffFFFF0060dmg|r)|n" + 
-																							"-Detonate (|cffFFFF00150dmg|r)|n|n|cffFF0000You must turn off unit production before you can upgrade!|r"
+
 
 @compiletime function infernalTank()
 	new UnitDefinition(INFERNAL_TANK_ID, UnitIds.infernalcontraption)
 		..setNormalAbilities("A04W,A04Y")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNInfernalFlameCannon.blp")
 		..setAttack1AttackType(AttackType.Siege)
-		..setValueByCost(HELLS_PORTAL_TOTAL_COST)
+		..setTotalCost(HELLS_PORTAL_TOTAL_COST)
 		..setGoldBountyReward(14)
 		..setCollisionSize(16.0)
 		..setAttack1CooldownTime(1.4)

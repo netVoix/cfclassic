@@ -4,14 +4,12 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import Icons
-import Siren
 import ObjectIds
 import Soundsets
 import Buildings
+import SirenConstants
 
-public let NAGA_SPRING_ID = 'h01Z'
-public let NAGA_SPRING_COST = 350
-public let NAGA_SPRING_TOTAL_COST = NAGA_SPRING_COST
+
 
 @compiletime function nagaSpring()
   new BuildingDefinition(NAGA_SPRING_ID, UnitIds.farm)

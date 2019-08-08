@@ -3,13 +3,10 @@ package TempleOfNecromancy
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import MightyNecromancer
 import ObjectIds
-import initlater TempleOfBone
+import NecromancerConstants
 
-public let TEMPLE_OF_NECROMANCY_ID = 'h04B'
-public let TEMPLE_OF_NECROMANCY_COST = 170
-public let TEMPLE_OF_NECROMANCY_TOTAL_COST = TEMPLE_OF_BONE_TOTAL_COST + TEMPLE_OF_NECROMANCY_COST
+
 
 @compiletime function templeOfNecromancy()
   new BuildingDefinition(TEMPLE_OF_NECROMANCY_ID, UnitIds.blacksmith)

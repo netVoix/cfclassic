@@ -2,13 +2,10 @@ package HellsPortal
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import InfernalTank
 import ObjectIds
-import initlater HellsGate
+import InfernalMachineConstants
 
-public let HELLS_PORTAL_ID = 'h04P'
-public let HELLS_PORTAL_COST = 200
-public let HELLS_PORTAL_TOTAL_COST = HELLS_GATE_TOTAL_COST + HELLS_PORTAL_COST
+
 
 @compiletime function hellsPortal()
 	new BuildingDefinition(HELLS_PORTAL_ID, UnitIds.powergenerator)

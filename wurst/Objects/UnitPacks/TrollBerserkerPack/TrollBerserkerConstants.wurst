@@ -1,0 +1,36 @@
+package TrollBerserkerConstants
+
+public let TROLL_HUT_ID = 'h02H'
+public let TROLL_HUT_COST = 200
+public let TROLL_HUT_TOTAL_COST = TROLL_HUT_COST
+
+public let TRAPPER_HUT_ID = 'h05E'
+public let TRAPPER_HUT_COST = 80
+public let TRAPPER_HUT_TOTAL_COST = TROLL_HUT_TOTAL_COST + TRAPPER_HUT_COST
+
+
+
+public let TROLL_BERSERKER_ID = 'n00V'
+public let TROLL_BERSERKER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
+                                              "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
+                                              "|cffFFFF80Abilities:|r|n|n|cff80FF00Berserk|r|nWhenever this unit kills an enemy it goes into a " + 
+                                              "rampage, gaining 200% attack speed, 25% movement speed, but also takes 10% more damage. " + 
+                                              "Rampage lasts 6 seconds"
+public let TROLL_BERSERKER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll Berserker|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                                "|cffFFAC00Troll Berserker:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00300|r rng,|cffFFFF00 30|r dps)|n" + 
+                                                "|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n" + 
+                                                "|cffFFFF80Abilities:|r|n-Berserk (|cffFFFF00+200%|r)"
+
+
+public let TROLL_TRAPPER_ID = 'n01O'
+public let TROLL_TRAPPER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 38|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n|n|cff80FF00Ensnare|r|nEnsnares an enemy air unit, binding it to the ground " + 
+                                            "that it can be attacked by melee units. Lasts 16 seconds|n|cff8080FFCooldown: |r8|n|n" + 
+                                            "|cff80FF00Berserk|r|nWhenever this unit kills an enemy it goes into a rampage, gaining 200% attack speed, " + 
+                                            "25% movement speed, but also takes 10% more damage. Rampage lasts 6 seconds"
+public let TROLL_TRAPPER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll Trapper|n|n|cffFFAC00Troll Trapper:|r|n" + 
+                                              "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 38|r dps)|n" + 
+                                              "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+                                              "|cffFFFF80Abilities:|r|n-Ensnare|n-Berserk (|cffFFFF00+200%|r)|n|n" + 
+                                              "|cffFF0000You must turn off unit production before you can upgrade!|r"

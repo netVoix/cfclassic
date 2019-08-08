@@ -3,13 +3,10 @@ package HellsGate
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import HellsPortal
 import ObjectIds
-import InfernalMachine
+import InfernalMachineConstants
 
-public let HELLS_GATE_ID = 'h04Q'
-public let HELLS_GATE_COST = 250
-public let HELLS_GATE_TOTAL_COST = HELLS_GATE_COST
+
 
 @compiletime function hellsGate()
 	new BuildingDefinition(HELLS_GATE_ID, UnitIds.farm)

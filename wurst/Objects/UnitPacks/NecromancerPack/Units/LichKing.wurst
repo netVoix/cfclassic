@@ -2,23 +2,9 @@ package LichKing
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import HighCitadelOfNecromancy
+import NecromancerConstants
 
-public let LICH_KING_ID = 'u00D'
-public let LICH_KING_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
-																				"|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
-																				"|cffFFFF80Abilities:|r|n|n|cff80FF00Legendary Spell Resistance|r|nSpell damage done to this unit is " + 
-																				"reduced by 70%|n|n|cff80FF00Immune|r|nThis unit is immune to certain negative effects|n|n" + 
-																				"|cff80FF00Decaying Attack|r|nHas a 15% chance on attack to soul steal its target, killing it " + 
-																				"instantly and gaining 50% of its health or a 10% chance to cast Death and Decay onto a 300 AoE around its target. " + 
-																				"Death and Decay lasts 5 seconds, draining 8% of enemy's max life per second|n|n|cff80FF00Raise Ultimate Dead|r|n" + 
-																				"Raises 2 greater skeletons. Skeletons raised this way have 3 bonus armor and 12 bonus damage|n|cff8080FFCooldown: |r25|n" + 
-																				"|cff8080FFMana cost: |r100"
-public let LICH_KING_SHORT_DESCRIPTION = "|cffFF8204Legendary Building|r|n|cffFFFF80Trains: |cffFFFF00Lich King|n|n" + 
-																					"|cffFFAC00Lich King:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
-																					"|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
-																					"|cffFFFF80Abilities:|r|n-Legendary Spell Resistance (|cffFFFF0070%|r)|n-Immune|n-Decaying Attack|n-Raise Ultimate Dead|n|n" + 
-																					"|cffFF0000You must turn off unit production before you can upgrade!|r"
+
 
 @compiletime function lichKing()
 	new UnitDefinition(LICH_KING_ID, UnitIds.necromancer)
@@ -30,7 +16,7 @@ public let LICH_KING_SHORT_DESCRIPTION = "|cffFF8204Legendary Building|r|n|cffFF
 		..setHitPointsMaximumBase(1000)
 		..setHitPointsRegenerationRate(3.0)
 		..setDefaultActiveAbility("A085")
-		..setValueByCost(HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST)
+		..setTotalCost(HIGH_CITADEL_OF_NECROMANCY_TOTAL_COST)
 		..setDeathType(2)
 		..setDefenseBase(5)
 		..setAttack1DamageBase(119)

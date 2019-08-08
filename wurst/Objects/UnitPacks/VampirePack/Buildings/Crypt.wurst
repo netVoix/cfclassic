@@ -2,12 +2,10 @@ package Crypt
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import Vampire
 import ObjectIds
+import VampireConstants
 
-public let CRYPT_ID = 'h01N'
-public let CRYPT_COST = 230
-public let CRYPT_TOTAL_COST = CRYPT_COST
+
 
 @compiletime function crypt()
 	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)

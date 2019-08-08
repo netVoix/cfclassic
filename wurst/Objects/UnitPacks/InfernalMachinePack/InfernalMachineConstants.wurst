@@ -1,0 +1,33 @@
+package InfernalMachineConstants
+
+public let HELLS_GATE_ID = 'h04Q'
+public let HELLS_GATE_COST = 250
+public let HELLS_GATE_TOTAL_COST = HELLS_GATE_COST
+
+public let HELLS_PORTAL_ID = 'h04P'
+public let HELLS_PORTAL_COST = 200
+public let HELLS_PORTAL_TOTAL_COST = HELLS_GATE_TOTAL_COST + HELLS_PORTAL_COST
+
+public let INFERNAL_MACHINE_ID = 'n01F'
+public let INFERNAL_MACHINE_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
+																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+																								"|cffFFFF80Abilities:|r|n|n|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n" + 
+																								"|cff80FF00Detonate|r|nDeals 100 damage to nearby enemies in 225 range. Targets further away take less damage"
+public let INFERNAL_MACHINE_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Machine|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+																								"|cffFFAC00Infernal Machine:|r|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 45|r dps)|n" + 
+																								"|cffFFFF80Armor:|r Heavy (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n|cffFFFF80Abilities:|r|n" + 
+                                                "-Can't attack Air|n-Detonate (|cffFFFF00100dmg|r)"
+                                                
+
+public let INFERNAL_TANK_ID = 'n01E'
+public let INFERNAL_TANK_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
+																						"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n|n" + 
+																						"|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n|cff80FF00Line Damage|r|n" + 
+																						"Deals 60 additional spell damage on each attack to all enemies in a line |n|n|cff80FF00Detonate|r|n" + 
+																						"Deals up to 150 damage to enemies in 275 range. Targets farther away take less damage"
+public let INFERNAL_TANK_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Infernal Tank|n|n|cffFFAC00Infernal Tank:|r|n" + 
+																							"|cffFFFF80Attack:|r Siege (|cffFFFF00600|r rng,|cffFFFF00 57|r dps)|n" + 
+																							"|cffFFFF80Armor:|r Heavy (|cffFFFF004|r)|n" + 
+																							"|cffFFFF80Hitpoints: |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n-Can't attack Air|n" + 
+																							"-Line Damage (|cffFFFF0060dmg|r)|n" + 
+																							"-Detonate (|cffFFFF00150dmg|r)|n|n|cffFF0000You must turn off unit production before you can upgrade!|r"

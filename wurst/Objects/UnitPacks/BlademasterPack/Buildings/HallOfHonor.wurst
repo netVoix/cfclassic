@@ -6,12 +6,8 @@ import Icons
 import Buildings
 import UnitIds
 import ObjectIds
-import initlater HallOfTheEldest
-import initlater Blademaster
+import BlademasterConstants
 
-public let HALL_OF_HONOR_ID = 'h00T'
-public let HALL_OF_HONOR_COST = 200
-public let HALL_OF_HONOR_TOTAL_COST = HALL_OF_HONOR_COST
 
 @compiletime function hallOfHonor()
   new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)

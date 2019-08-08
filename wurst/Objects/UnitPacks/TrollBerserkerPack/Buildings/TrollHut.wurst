@@ -2,13 +2,10 @@ package TrollHut
 import UnitObjEditing
 import UnitIds
 import ObjHelpers
-import initlater TrollBerserker
 import ObjectIds
-import TrapperHut
+import TrollBerserkerConstants
 
-public let TROLL_HUT_ID = 'h02H'
-public let TROLL_HUT_COST = 200
-public let TROLL_HUT_TOTAL_COST = TROLL_HUT_COST
+
 
 @compiletime function trollHut()
   new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)

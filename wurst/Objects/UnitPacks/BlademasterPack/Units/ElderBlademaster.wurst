@@ -4,26 +4,7 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import Icons
-import HallOfTheEldest
-
-public let ELDER_BLADEMASTER_ID = 'n00Y'
-public let ELDER_BLADEMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 90|r dps)|n" + 
-                                                "|cffFFFF80Armor:|r Heavy (|cffFFFF0010|r)|n" + 
-                                                "|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
-                                                "|cffFFFF80Abilities:|r|n|n" + 
-                                                "|cff80FF00Critical Strike|r|n30% chance on each attack to hit for 3 times of the normal damage|n|n" + 
-                                                "|cff80FF00Evade|r|n25% chance to evade an attack|n|n" + 
-                                                "|cff80FF00Feedback|r|nEach attack burns up to 40 mana dealing the same amount of damage|n|n" + 
-                                                "|cff80FF00Spell Resistance|r|nSpell damage done to this unit is reduced by 25%|n|n" + 
-                                                "|cff80FF00Spell Steal|r|n Steals a positive buff from an enemy unit and applies it to a nearby friendly unit, " + 
-                                                "or takes a negative buff from a friendly unit and applies it to a nearby enemy unit.|n|cff8080FFCooldown: |r10"
-public let ELDER_BLADEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Elder Blademaster|n|n|" + 
-                                                "cffFFAC00Elder Blademaster:|r|n|cffFFFF80Attack:|r Normal (|cffFFFF00melee|r,|cffFFFF00 90|r dps)|n" + 
-                                                "|cffFFFF80Armor:|r Heavy (|cffFFFF0010|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
-                                                "|cffFFFF80Abilities:|r|n-Critical Strike (|cffFFFF0030%, 3x|r)|n" + 
-                                                "-Evade (|cffFFFF0025%|r)|n-Feedback (|cffFFFF0040 mana|r)|n" + 
-                                                "-Spell Resist (|cffFFFF0025%|r)|n-Spell Steal|n|n" + 
-                                                "|cffFF0000You must turn off unit production before you can upgrade!|r"
+import BlademasterConstants
 
 
 @compiletime function elderBladeMaster()
@@ -32,7 +13,7 @@ public let ELDER_BLADEMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00El
     ..setNormalAbilities("A0AN,A0A6,A05Y,A03P,A014")
     ..setIconGameInterface(Icons.bTNTheCaptain)
     ..setDefaultActiveAbility("A0A6")
-    ..setValueByCost(HALL_OF_THE_ELDEST_TOTAL_COST)
+    ..setTotalCost(HALL_OF_THE_ELDEST_TOTAL_COST)
     ..setTintingColorBlue(70)
     ..setGoldBountyReward(13)
     ..setCollisionSize(16)

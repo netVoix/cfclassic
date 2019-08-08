@@ -1,0 +1,32 @@
+package VampireConstants
+
+public let CRYPT_ID = 'h01N'
+public let CRYPT_COST = 230
+public let CRYPT_TOTAL_COST = CRYPT_COST
+
+public let GRAVEYARD_ID = 'h054'
+public let GRAVEYARD_COST = 210
+public let GRAVEYARD_TOTAL_COST = CRYPT_TOTAL_COST + GRAVEYARD_COST
+
+public let VAMPIRE_LORD_ID = 'h05H'
+public let VAMPIRE_LORD_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Vampire|r|nWhenever the Vampire Lord kills a living unit " + 
+                                            "it will spawn a Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee units in 900 range gain 30% " + 
+                                            "life steal|n|n|cff80FF00Vampire Attack|r|nRegains 100% of its attack damage"
+public let VAMPIRE_LORD_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Vampire Lord|n|n" + 
+                                            "|cffFFAC00Vampire Lord:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 80|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Hero (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n|cffFFFF80Abilities:|r|n" + 
+                                            "-Raise Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF00100%|r)|n|n" + 
+                                            "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let VAMPIRE_ID = 'h01U'
+public let VAMPIRE_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 35|r dps)|n" + 
+																			"|cffFFFF80Armor:|r Hero (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00425|r|n" + 
+																			"|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Lesser Vampire|r|nWhenever the Vampire kills " + 
+																			"a living unit it will spawn a Lesser Vampire from it.|n|n|cff80FF00Vampiric Aura|r|nAllied melee " + 
+																			"units in 900 range gain 30% life steal|n|n|cff80FF00Vampire Attack|r|nRegains 70% of its attack damage"
+public let VAMPIRE_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Vampire|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+																				"|cffFFAC00Vampire:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00melee|r,|cffFFFF00 35|r dps)|n" + 
+																				"|cffFFFF80Armor:|r Hero (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00425|r|n" + 
+																				"|cffFFFF80Abilities:|r|n-Raise Lesser Vampire|n-Vampiric Aura (|cffFFFF0030%|r)|n-Vampire Attack (|cffFFFF0070%|r)"

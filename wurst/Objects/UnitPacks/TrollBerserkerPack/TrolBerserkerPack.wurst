@@ -1,11 +1,9 @@
 package TrolBerserkerPack
 
 import UnitPack
-import TrollHut
-import TrollBerserker
 import LinkedList
-import TrapperHut
-import TrollTrapper
+import TrollBerserkerConstants
+
 
 public let trollTiers = asList(
   new UnitTier(TROLL_HUT_ID, TROLL_BERSERKER_ID, TROLL_HUT_COST),

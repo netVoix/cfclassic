@@ -1,0 +1,18 @@
+package HrimthrusaConstants
+
+public let IGLOO_ID = 'h03U'
+public let IGLOO_COST = 160
+public let IGLOO_TOTAL_COST = IGLOO_COST
+
+public let HRIMTHRUSA_ID = 'n011'
+public let HRIMTHRUSA_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n|n" + 
+                                          "|cff80FF00Frost Attack|r|nEach attack against ground units has a " + 
+                                          "5% chance to freeze the target to the ground for 7 seconds, dealing 15 damage per second|n" +
+                                          "|cff80FF00Spell Resist|r|n50% spell damage reduction"
+public let HRIMTHRUSA_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Hrimthrusa|n|n|cffFFAC00Hrimthrusa:|r|n" + 
+                                          "|cffFFFF80Attack:|r Pierce (|cffFFFF00380|r rng,|cffFFFF00 33|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Heavy (|cffFFFF002|r)|n|cffFFFF80Hitpoints: |cffFFFF00325|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n-Frost Attack (|cffFFFF005%, 7sec, 15dps|r)|n-Spell Resist (|cffFFFF0050%|r)"
+                                          

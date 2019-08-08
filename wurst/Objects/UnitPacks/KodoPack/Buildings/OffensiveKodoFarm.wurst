@@ -3,11 +3,9 @@ package OffensiveKodoFarm
 import ObjHelpers
 import UnitObjEditing
 import UnitIds
-import OffensiveKodoRider
 import ObjectIds
+import KodoConstants
 
-public let OFFENSIVE_KODO_FARM_ID = 'h035'
-public let OFFENSIVE_KODO_FARM_COST = 100
 
 @compiletime function offensiveKodoFarm()
   new BuildingDefinition(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
