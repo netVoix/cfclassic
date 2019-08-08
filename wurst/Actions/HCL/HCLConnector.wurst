@@ -3,6 +3,7 @@ package HCLConnector
 import HCLReader
 
 function setHCL()
+  // resolveMode("-pr2-fow-slt-ca-mp2-gld40-skip")
   let hclString = HCLReader.read()
   if hclString == "1"
     resolveMode("-rr2-fow-slt-ca-ban-mp2-gld40-skip")
