@@ -12,7 +12,7 @@ import GruntConstants
     ..presetBaseCFUnit("Veteran Grunt")
     ..setNormalAbilities("A02V")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp")
-    ..setTotalCost(FIGHTERS_HALL_TOTAL_COST)
+    ..setTotalCost(ADVANCED_FIGHTERS_HALL_TOTAL_COST)
     ..setGoldBountyReward(7)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.3)
