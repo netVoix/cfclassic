@@ -1,0 +1,46 @@
+package BaseCFUnit
+
+import UnitObjEditing
+
+public class BaseCFUnit
+  private UnitDefinition unitRef
+
+  construct(int uId, int baseId, string name, int cost)
+    unitRef = new UnitDefinition(uId, baseId)
+    initialize(name)
+    setBuildTime(cost)
+
+  function getUnitRef() returns UnitDefinition
+    return unitRef 
+
+  private function getBuildTime(int cost) returns int
+    return 15 + (cost / 20).toInt()
+
+  private function setBuildTime(int cost)
+    unitRef.setBuildTime(getBuildTime(cost))
+  
+  private function initialize(string name)
+    unitRef..setNormalAbilities("")
+          ..setAcquisitionRange(800)
+          ..setCategorizationCampaign(false)
+          ..setCategorizationSpecial(false)
+          ..setDisplayasNeutralHostile(false)
+          ..setFoodCost(0)
+          ..setGoldCost(0)
+          ..setLumberCost(0)
+          ..setRepairGoldCost(0)
+          ..setRepairLumberCost(0)
+          ..setManaInitialAmount(0)
+          ..setManaMaximum(0)
+          ..setLevel(1)
+          ..setDefaultActiveAbility("")
+          ..setSightRadiusDay(800)
+          ..setSightRadiusNight(800)
+          ..setUnitClassification("sapper,ward")
+          ..setName(name)
+          ..setTooltipBasic("Trains " + name)
+          ..setCasterUpgradeNames("")
+          ..setCasterUpgradeTips("")
+          ..setHotkey("Q")
+          ..setHitPointsRegenerationType("always")
+    

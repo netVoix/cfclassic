@@ -4,15 +4,15 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import DruidConstants
+import BaseCFUnit
 
 
 @compiletime function sageDruid()
-	new UnitDefinition(SAGE_DRUID_ID, UnitIds.druidofthetalon)
+	new BaseCFUnit(SAGE_DRUID_ID, UnitIds.druidofthetalon, "Sage Druid", MOON_ALTAR_TOTAL_COST).getUnitRef()
 		..setNormalAbilities("A07R")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNFurion.blp")
 		..setAttack1AttackType(AttackType.Chaos)
 		..setDefaultActiveAbility("A07R")
-		..setTotalCost(MOON_ALTAR_TOTAL_COST)
 		..setTintingColorBlue(180)
 		..setGoldBountyReward(14)
 		..setButtonPositionX(0)
@@ -27,7 +27,6 @@ import DruidConstants
 		..setManaMaximum(300)
 		..setAttack1ProjectileArt("Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl")
 		..setScalingValue(0.9)
-		..presetBaseCFUnit("Sage Druid")
 		..setPointValue(128)
 		..setAttack1Range(375)
 		..setTintingColorRed(180)

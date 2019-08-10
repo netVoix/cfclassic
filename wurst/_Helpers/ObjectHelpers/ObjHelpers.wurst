@@ -23,6 +23,8 @@ public function BuildingDefinition.presetBaseCFBuilding(string name)
       ..setHitPointsRegenerationType("always")
       ..setGroundTexture("OSMA")
 
+
+@deprecated("Use BaseCFUnit instead")
 public function UnitDefinition.presetBaseCFUnit(string name)
   this..setAcquisitionRange(800)
       ..setCategorizationCampaign(false)

@@ -32,6 +32,7 @@ public let SHRINE_OF_DESTRUCTION_ID = 'h01E'
     ..setLumberCost(1800)
     ..setManaInitialAmount(10)
     ..setManaMaximum(50)
+    ..setManaRegeneration(1)
     ..setMaximumPitchAngledegrees(0)
     ..setMaximumRollAngledegrees(0)
     ..setScalingValue(0.55)

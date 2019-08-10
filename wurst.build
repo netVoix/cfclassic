@@ -5,8 +5,7 @@ buildMapData:
   fileName: cfclassic
   author: voix
   players:
-  - id: 0
-    name: Player 1
+  - name: Player 1
     race: HUMAN
     controller: USER
   - id: 1

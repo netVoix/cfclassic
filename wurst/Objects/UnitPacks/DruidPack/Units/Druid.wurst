@@ -4,15 +4,15 @@ import UnitObjEditing
 import UnitIds
 import ObjHelpers
 import DruidConstants
+import BaseCFUnit
 
 
 
 @compiletime function druid()
-	new UnitDefinition(DRUID_ID, UnitIds.druidofthetalon)
+	new BaseCFUnit(DRUID_ID, UnitIds.druidofthetalon, "Druid", MOON_SHRINE_TOTAL_COST).getUnitRef()
 		..setNormalAbilities("A07P")
 		..setAttack1AttackType(AttackType.Chaos)
 		..setDefaultActiveAbility("A07P")
-		..setTotalCost(MOON_SHRINE_COST)
 		..setGoldBountyReward(6)
 		..setButtonPositionX(0)
 		..setDefenseBase(1)
@@ -24,7 +24,6 @@ import DruidConstants
 		..setManaMaximum(175)
 		..setAttack1ProjectileArt("Abilities\\Weapons\\KeeperGroveMissile\\KeeperGroveMissile.mdl")
 		..setScalingValue(0.85)
-		..presetBaseCFUnit("Druid")
 		..setPointValue(126)
 		..setAttack1Range(375)
 		..setManaRegeneration(0.8)
