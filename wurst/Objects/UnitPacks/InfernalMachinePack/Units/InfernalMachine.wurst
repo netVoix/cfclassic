@@ -2,13 +2,14 @@ package InfernalMachine
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import InfernalMachineConstants
+import BaseCFUnit
 
 
 
 @compiletime function infernalMachinePack()
-	new UnitDefinition(INFERNAL_MACHINE_ID, UnitIds.infernalcontraption)
+	new BaseCFUnit(INFERNAL_MACHINE_ID, UnitIds.infernalcontraption)
+		..setFullName("Infernal Machine")
 		..setNormalAbilities("A04V")
 		..setAttack1AttackType(AttackType.Siege)
 		..setTotalCost(HELLS_GATE_TOTAL_COST)
@@ -29,7 +30,6 @@ import InfernalMachineConstants
 		..setRepairLumberCost(0)
 		..setMinimumAttackRange(150)
 		..setAttack1ProjectileArt("Abilities\\Spells\\Undead\\OrbOfDeath\\OrbOfDeathMissile.mdl")
-		..presetBaseCFUnit("Infernal Machine")
 		..setSightRadiusNight(800)
 		..setPointValue(119)
 		..setAttack1AreaofEffectSmallDamage(0)

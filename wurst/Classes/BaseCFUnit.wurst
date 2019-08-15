@@ -1,26 +1,25 @@
 package BaseCFUnit
 
 import UnitObjEditing
+import public ObjectExtension
 
-public class BaseCFUnit
-  private UnitDefinition unitRef
+public class BaseCFUnit extends UnitDefinition
+  construct(int uId, int baseId)
+    super(uId, baseId)
+    initialize()
 
-  construct(int uId, int baseId, string name, int cost)
-    unitRef = new UnitDefinition(uId, baseId)
-    initialize(name)
-    setBuildTime(cost)
+  function setFullName(string name)
+    this..setName(name)
+          ..setTooltipBasic("Trains " + name)
 
-  function getUnitRef() returns UnitDefinition
-    return unitRef 
+  function setTotalCost(int cost)
+    this.setBuildTime(getBuildTime(cost))
 
   private function getBuildTime(int cost) returns int
     return 15 + (cost / 20).toInt()
-
-  private function setBuildTime(int cost)
-    unitRef.setBuildTime(getBuildTime(cost))
   
-  private function initialize(string name)
-    unitRef..setNormalAbilities("")
+  private function initialize()
+    this..setNormalAbilities("")
           ..setAcquisitionRange(800)
           ..setCategorizationCampaign(false)
           ..setCategorizationSpecial(false)
@@ -28,19 +27,17 @@ public class BaseCFUnit
           ..setFoodCost(0)
           ..setGoldCost(0)
           ..setLumberCost(0)
+          ..setDependencyEquivalents("")
           ..setRepairGoldCost(0)
           ..setRepairLumberCost(0)
-          ..setManaInitialAmount(0)
-          ..setManaMaximum(0)
           ..setLevel(1)
           ..setDefaultActiveAbility("")
           ..setSightRadiusDay(800)
           ..setSightRadiusNight(800)
           ..setUnitClassification("sapper,ward")
-          ..setName(name)
-          ..setTooltipBasic("Trains " + name)
           ..setCasterUpgradeNames("")
           ..setCasterUpgradeTips("")
+          ..setUpgradesUsed("")
           ..setHotkey("Q")
           ..setHitPointsRegenerationType("always")
     

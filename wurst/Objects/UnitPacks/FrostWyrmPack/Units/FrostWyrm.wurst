@@ -2,18 +2,16 @@ package FrostWyrm
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import FrostWyrmConstants
-
-
+import BaseCFUnit
 
 
 @compiletime function frostWyrm()
-  new UnitDefinition(FROST_WYRM_ID, UnitIds.frostwyrm)
-    ..presetBaseCFUnit("Frost Wyrm")
+  new BaseCFUnit(FROST_WYRM_ID, UnitIds.frostwyrm)
+    ..setFullName("Frost Wyrm")
+    ..setTotalCost(DRAGON_CEMETERY_TOTAL_COST)
     ..setNormalAbilities("A064")
     ..setAttack1WeaponType(WeaponType.Normal)
-    ..setTotalCost(DRAGON_CEMETERY_TOTAL_COST)
     ..setGoldBountyReward(16)
     ..setAttack1CooldownTime(1.8)
     ..setDefenseBase(5)

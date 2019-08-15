@@ -2,13 +2,14 @@ package SageDruid
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import DruidConstants
 import BaseCFUnit
 
 
 @compiletime function sageDruid()
-	new BaseCFUnit(SAGE_DRUID_ID, UnitIds.druidofthetalon, "Sage Druid", MOON_ALTAR_TOTAL_COST).getUnitRef()
+	new BaseCFUnit(SAGE_DRUID_ID, UnitIds.druidofthetalon)
+		..setFullName("Sage Druid")
+		..setTotalCost(MOON_ALTAR_TOTAL_COST)
 		..setNormalAbilities("A07R")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNFurion.blp")
 		..setAttack1AttackType(AttackType.Chaos)
@@ -17,7 +18,6 @@ import BaseCFUnit
 		..setGoldBountyReward(14)
 		..setButtonPositionX(0)
 		..setDefenseBase(3)
-		..setDependencyEquivalents("")
 		..setAttack1DamageBase(59)
 		..setModelFile("units\\nightelf\\MalFurion\\MalFurionNoStag")
 		..setTintingColorGreen(180)

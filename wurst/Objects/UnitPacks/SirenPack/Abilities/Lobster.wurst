@@ -5,7 +5,7 @@ import Icons
 import AbilityObjEditing
 import Objects
 import ObjectIds
-import ObjHelpers
+import ObjectExtension
 
 public let SUMMON_LOBSTERS_ID = 'A02S'
 public let LOBSTER_ID = 'n00W'

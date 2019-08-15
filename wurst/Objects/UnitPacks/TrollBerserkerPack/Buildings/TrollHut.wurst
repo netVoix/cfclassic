@@ -1,15 +1,16 @@
 package TrollHut
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import TrollBerserkerConstants
+import BaseCFBuilding
 
 
 
 @compiletime function trollHut()
-  new BuildingDefinition(TROLL_HUT_ID, UnitIds.humanlumbermill)
-    ..presetBaseCFBuilding("Troll Hut")
+  new BaseCFBuilding(TROLL_HUT_ID, UnitIds.humanlumbermill)
+    ..setFullName("Troll Hut")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
     ..setGoldBountyReward(41)

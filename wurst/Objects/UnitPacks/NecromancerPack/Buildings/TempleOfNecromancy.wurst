@@ -2,15 +2,15 @@ package TempleOfNecromancy
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import NecromancerConstants
+import BaseCFBuilding
 
 
 
 @compiletime function templeOfNecromancy()
-  new BuildingDefinition(TEMPLE_OF_NECROMANCY_ID, UnitIds.blacksmith)
-  ..presetBaseCFBuilding("Temple of Necromancy")
+  new BaseCFBuilding(TEMPLE_OF_NECROMANCY_ID, UnitIds.blacksmith)
+  ..setFullName("Temple of Necromancy")
   ..setNormalAbilities("")
   ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNBlackCitadel.blp")
   ..setTintingColorBlue(150)

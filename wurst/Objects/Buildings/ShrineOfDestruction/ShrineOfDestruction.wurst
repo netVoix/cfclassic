@@ -6,15 +6,15 @@ import LegendaryUnitFlag
 import ObjectIds
 import HellsFist
 import Icons
-import ObjHelpers
 import Buildings
 import Soundsets
+import BaseCFBuilding
 
 public let SHRINE_OF_DESTRUCTION_ID = 'h01E'
 
 @compiletime function shrineOfDestruction()
-  new BuildingDefinition(SHRINE_OF_DESTRUCTION_ID, UnitIds.farm)
-    ..presetBaseCFBuilding("Shrine of Destruction")
+  new BaseCFBuilding(SHRINE_OF_DESTRUCTION_ID, UnitIds.farm)
+    ..setFullName("Shrine of Destruction")
     ..setNormalAbilities(commaList(LEGENDARY_UNIT_FLAG, HELLS_FIST_ID))
     ..setAcquisitionRange(99999)
     ..setIconGameInterface(Icons.bTNUndeadShrine)

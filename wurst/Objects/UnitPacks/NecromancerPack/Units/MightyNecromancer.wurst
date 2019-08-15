@@ -2,17 +2,17 @@ package MightyNecromancer
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Icons
 import Units
 import Soundsets
 import NecromancerConstants
+import BaseCFUnit
 
 
 
 @compiletime function mightyNecromancer()
-  new UnitDefinition(MIGHTY_NECROMANCER_ID, UnitIds.kelthuzadnecro)
-    ..presetBaseCFUnit("Mighty Necromancer")
+  new BaseCFUnit(MIGHTY_NECROMANCER_ID, UnitIds.kelthuzadnecro)
+    ..setFullName("Mighty Necromancer")
     ..setNormalAbilities("A05O,A05N,A05L")
     ..setIconGameInterface(Icons.bTNGhostOfKelThuzad)
     ..setAttack1AttackType(AttackType.Magic)

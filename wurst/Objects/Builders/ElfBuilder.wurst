@@ -2,19 +2,19 @@ package ElfBuilder
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let ELF_BUILDER_ID = 'h00P'
 
 @compiletime function elfBuilder()
-  new UnitDefinition(ELF_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(ELF_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNElfVillager.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h059,h00Z,h014,h09X,h00V,h00T,h008,h08X,h070,h06Y,h005")
     ..setButtonPositionX(2)
     ..setModelFile("units\\critters\\HighElfPeasant\\HighElfPeasant")
-    ..presetBaseCfBuilder("Elf Builder")
+    ..setFullName("Elf Builder")
     ..setPointValue(3)
     ..setTooltipBasic("|cffFFD900Choose the Elven Union|r")
     ..setTooltipExtended("The elven races have gathered to defend their realms. Elves use strong magic to weaken enemies and aid friendly units. They've got a pretty good siege weapon and a low ranged tower with multishot.")

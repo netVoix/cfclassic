@@ -2,17 +2,17 @@ package TempleOfBone
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Icons
 import Buildings
 import ObjectIds
 import NecromancerConstants
+import BaseCFBuilding
 
 
 
 @compiletime function templeOfBone()
-  new BuildingDefinition(TEMPLE_OF_BONE_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("Temple of Bone")
+  new BaseCFBuilding(TEMPLE_OF_BONE_ID, UnitIds.blacksmith)
+    ..setFullName("Temple of Bone")
     ..setNormalAbilities("")
     ..setIconGameInterface(Icons.bTNCrypt)
     ..setGoldBountyReward(42)

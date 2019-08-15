@@ -2,7 +2,7 @@ package WatchTower
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilding
 
 public let WATCH_TOWER_ID = 'h006'
 public let WATCH_TOWER_RANGE = 950
@@ -13,8 +13,8 @@ public let WATCH_TOWER_DESCRIPTION = "|cffFFAC00Base Defense|r:|n" +
 																			"|cffFFFF80Average DPS:|cffFFFF00 90|r"
 
 @compiletime function watchTower()
-	new BuildingDefinition(WATCH_TOWER_ID, UnitIds.guardtower)
-		..presetBaseCFBuilding("Watch Tower")
+	new BaseCFBuilding(WATCH_TOWER_ID, UnitIds.guardtower)
+		..setFullName("Watch Tower")
 		..setNormalAbilities("A09A")
 		..setAcquisitionRange(1000)
 		..setBuildTime(20)

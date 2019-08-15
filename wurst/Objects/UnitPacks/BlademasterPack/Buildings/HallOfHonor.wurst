@@ -1,17 +1,17 @@
 package HallOfHonor
 
 import UnitObjEditing
-import ObjHelpers
 import Icons
 import Buildings
 import UnitIds
 import ObjectIds
 import BlademasterConstants
+import BaseCFBuilding
 
 
 @compiletime function hallOfHonor()
-  new BuildingDefinition(HALL_OF_HONOR_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("Hall of Honor")
+  new BaseCFBuilding(HALL_OF_HONOR_ID, UnitIds.blacksmith)
+    ..setFullName("Hall of Honor")
     ..setIconGameInterface(Icons.bTNElvenFarm)
     ..setGoldBountyReward(41)
     ..setShadowTextureBuilding("ShadowHouse")

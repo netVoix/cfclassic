@@ -1,24 +1,25 @@
 package Blademaster
 
 import UnitObjEditing
-import ObjHelpers
 import UnitIds
 import Icons
 import BlademasterConstants
+import BaseCFUnit
 
 @compiletime function blademaster()
-  new UnitDefinition(BLADEMASTER_ID, UnitIds.bloodelflieutenant)
-    ..presetBaseCFUnit("Blademaster")
+  new BaseCFUnit(BLADEMASTER_ID, UnitIds.bloodelflieutenant)
+    ..setFullName("Blademaster")
+    ..setTotalCost(HALL_OF_HONOR_TOTAL_COST) 
+    ..setGoldBountyReward(7)
     ..setNormalAbilities("A0AL,A00U,A00V")
     ..setIconGameInterface(Icons.bTNTheCaptain)
-    ..setTotalCost(HALL_OF_HONOR_TOTAL_COST)
-    ..setGoldBountyReward(7)
     ..setCollisionSize(16)
     ..setAttack1CooldownTime(0.7)
     ..setDefenseBase(7)
     ..setAttack1DamageBase(19)
     ..setAttack1DamageNumberofDice(1)
     ..setAttack1DamageSidesperDie(16)
+    ..setAttack1ProjectileArt("")
     ..setHitPointsMaximumBase(400)
     ..setPointValue(110)
     ..setAttack1Range(100)

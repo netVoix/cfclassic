@@ -1,14 +1,15 @@
 package HellsPortal
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import InfernalMachineConstants
+import BaseCFBuilding
 
 
 
 @compiletime function hellsPortal()
-	new BuildingDefinition(HELLS_PORTAL_ID, UnitIds.powergenerator)
+	new BaseCFBuilding(HELLS_PORTAL_ID, UnitIds.powergenerator)
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
 		..setGoldBountyReward(89)
 		..setShadowTextureBuilding("ShadowHouse")
@@ -26,7 +27,7 @@ import InfernalMachineConstants
 		..setSoundLoopingFadeInRate(512)
 		..setSoundLoopingFadeOutRate(512)
 		..setScalingValue(0.22)
-		..presetBaseCFBuilding("Hell's Portal")
+		..setFullName("Hell's Portal")
 		..setNeutralBuildingShowsMinimapIcon(false)
 		..setPointValue(52)
 		..setPlacementRequires("unbuildable")

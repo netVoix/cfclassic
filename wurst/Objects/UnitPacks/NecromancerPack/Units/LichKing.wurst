@@ -1,14 +1,13 @@
 package LichKing
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import NecromancerConstants
-
-
+import BaseCFUnit
 
 @compiletime function lichKing()
-	new UnitDefinition(LICH_KING_ID, UnitIds.necromancer)
-		..presetBaseCFUnit("Lich King")
+	new BaseCFUnit(LICH_KING_ID, UnitIds.necromancer)
+		..setFullName("Lich King")
 		..setNormalAbilities("A06V,A0AH,A070,A086,A03Q,A08X,A07H,A085")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
 		..setGoldBountyReward(23)

@@ -2,13 +2,13 @@ package MoonShrine
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import DruidConstants
+import BaseCFBuilding
 
 
 @compiletime function moonShrine()
-	new BuildingDefinition(MOON_SHRINE_ID, UnitIds.blacksmith)
+	new BaseCFBuilding(MOON_SHRINE_ID, UnitIds.blacksmith)
 		..setNormalAbilities("A07E")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNMoonWell.blp")
 		..setGoldBountyReward(38)
@@ -22,7 +22,7 @@ import DruidConstants
 		..setMaximumPitchAngledegrees(0.0)
 		..setMaximumRollAngledegrees(0.0)
 		..setScalingValue(0.6)
-		..presetBaseCFBuilding("Moon Shrine")
+		..setFullName("Moon Shrine")
 		..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
 		..setPointValue(139)
 		..setHitPointsRegenerationRate(0.5)

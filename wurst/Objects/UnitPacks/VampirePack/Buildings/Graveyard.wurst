@@ -2,16 +2,16 @@ package Graveyard
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import VampireConstants
+import BaseCFBuilding
 
 
 
 
 @compiletime function graveyard()
-  new BuildingDefinition(GRAVEYARD_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("Graveyard")
+  new BaseCFBuilding(GRAVEYARD_ID, UnitIds.blacksmith)
+    ..setFullName("Graveyard")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")
     ..setGoldBountyReward(99)

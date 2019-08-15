@@ -1,0 +1,8 @@
+package ObjectExtension
+
+import UnitObjEditing
+
+public function UnitOrBuildingOrHeroDefinition.setGoldBountyReward(int reward)
+  this..setGoldBountyAwardedNumberofDice(1)
+      ..setGoldBountyAwardedSidesperDie(1)
+      ..setGoldBountyAwardedBase(reward - 1)

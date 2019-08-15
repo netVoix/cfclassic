@@ -2,13 +2,13 @@ package TrollBerserker
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import TrollBerserkerConstants
+import BaseCFUnit
 
 
 @compiletime function trollBerserker()
-  new UnitDefinition(TROLL_BERSERKER_ID, UnitIds.darktrollberserker)
-    ..presetBaseCFUnit("Troll Berserker")
+  new BaseCFUnit(TROLL_BERSERKER_ID, UnitIds.darktrollberserker)
+    ..setFullName("Troll Berserker")
     ..setNormalAbilities("A07K,A02I")
     ..setAttack1AttackType(AttackType.Normal)
     ..setTotalCost(TROLL_HUT_TOTAL_COST)

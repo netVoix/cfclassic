@@ -2,14 +2,14 @@ package SuperiorFightersHall
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import GruntConstants
+import BaseCFBuilding
 
 
 
 @compiletime function superiorFightersHall()
-  new BuildingDefinition(SUPERIOR_FIGHTERS_HALL_ID, UnitIds.blacksmith)
+  new BaseCFBuilding(SUPERIOR_FIGHTERS_HALL_ID, UnitIds.blacksmith)
     ..setNormalAbilities("")
     ..setRequiredAnimationNames("upgrade,second")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNFortress.blp")
@@ -24,7 +24,7 @@ import GruntConstants
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)
     ..setScalingValue(0.35)
-    ..presetBaseCFBuilding("Superior Fighters' Hall")
+    ..setFullName("Superior Fighters' Hall")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
     ..setPointValue(4)
     ..setHitPointsRegenerationRate(0.5)

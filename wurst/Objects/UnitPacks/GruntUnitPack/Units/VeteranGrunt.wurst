@@ -2,14 +2,14 @@ package VeteranGrunt
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import GruntConstants
+import BaseCFUnit
 
 
 
 @compiletime function veteranGrunt()
-  new UnitDefinition(VETERAN_GRUNT_ID, UnitIds.garthok)
-    ..presetBaseCFUnit("Veteran Grunt")
+  new BaseCFUnit(VETERAN_GRUNT_ID, UnitIds.garthok)
+    ..setFullName("Veteran Grunt")
     ..setNormalAbilities("A02V")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNChaosGrunt.blp")
     ..setTotalCost(ADVANCED_FIGHTERS_HALL_TOTAL_COST)

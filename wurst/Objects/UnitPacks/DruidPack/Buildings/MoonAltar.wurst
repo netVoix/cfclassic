@@ -2,14 +2,13 @@ package MoonAltar
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import DruidConstants
-
+import BaseCFBuilding
 
 
 @compiletime function moonAlter()
-	new BuildingDefinition(MOON_ALTAR_ID, UnitIds.blacksmith)
+	new BaseCFBuilding(MOON_ALTAR_ID, UnitIds.blacksmith)
 		..setNormalAbilities("A07E")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNAltarOfElders.blp")
 		..setGoldBountyReward(90)
@@ -23,7 +22,7 @@ import DruidConstants
 		..setMaximumPitchAngledegrees(0.0)
 		..setMaximumRollAngledegrees(0.0)
 		..setScalingValue(0.5)
-		..presetBaseCFBuilding("Moon Altar")
+		..setFullName("Moon Altar")
 		..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
 		..setPointValue(95)
 		..setHitPointsRegenerationRate(0.5)

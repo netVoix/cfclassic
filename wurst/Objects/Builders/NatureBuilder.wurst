@@ -2,12 +2,12 @@ package NatureBuilder
 
 import UnitIds
 import UnitObjEditing
-import ObjHelpers
+import BaseCFBuilder
 
 public let NATURE_BUILDER_ID = 'h01A'
 
 @compiletime function natureBuilder()
-  new UnitDefinition(NATURE_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(NATURE_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("A06E,Aeth,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNEnt.blp")
     ..setDefaultActiveAbility("Ahrp")
@@ -17,7 +17,7 @@ public let NATURE_BUILDER_ID = 'h01A'
     ..setModelFile("units\\nightelf\\Ent\\Ent")
     ..setFoodProduced(1)
     ..setScalingValue(0.7)
-    ..presetBaseCfBuilder("Nature Builder")
+    ..setFullName("Nature Builder")
     ..setTooltipBasic("|cffFFD900Choose Nature Force|r")
     ..setTooltipExtended("The forces of Nature itself are called to fight for their masters. Specializing in strong units and healing buffs, the Nature Race is slightly more expensive but better than the average race.")
     ..setUnitSoundSet("Ent")

@@ -1,12 +1,13 @@
 package OrcBuilder
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let ORC_BUILDER_ID = 'h019'
 
 @compiletime function orcBuilder()
-  new UnitDefinition(ORC_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(ORC_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPeon.blp")
     ..setDefaultActiveAbility("Ahrp")
@@ -14,7 +15,7 @@ public let ORC_BUILDER_ID = 'h019'
     ..setButtonPositionX(1)
     ..setButtonPositionY(1)
     ..setModelFile("units\\orc\\Peon\\Peon")
-    ..presetBaseCfBuilder("Orc Builder")
+    ..setFullName("Orc Builder")
     ..setPointValue(5)
     ..setTooltipBasic("|cffFFD900Choose the Orcish Horde|r")
     ..setTooltipExtended("The Orcish Horde trains tough fighters and supports them with shamanic magic. Their axe masters are feared all over the battlefield. An anti-air tower is available to Orcs.")

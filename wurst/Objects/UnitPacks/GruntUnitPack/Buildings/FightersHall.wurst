@@ -2,15 +2,15 @@ package FightersHall
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import GruntConstants
+import BaseCFBuilding
 
 
 
 @compiletime function fightersHall()
-  new BuildingDefinition(FIGHTERS_HALL_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("Fighters' Hall")
+  new BaseCFBuilding(FIGHTERS_HALL_ID, UnitIds.blacksmith)
+    ..setFullName("Fighters' Hall")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGreathall.blp")
     ..setGoldBountyReward(22)

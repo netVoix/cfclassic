@@ -2,16 +2,15 @@ package HighCitadelOfNecromancy
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import LegendaryUnitFlag
 import ObjectIds
 import NecromancerConstants
-
+import BaseCFBuilding
 
 
 @compiletime function highCitadelOfNecromancy()
-  new BuildingDefinition(HIGH_CITADEL_OF_NECROMANCY_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("High Citadel of Necromancy")
+  new BaseCFBuilding(HIGH_CITADEL_OF_NECROMANCY_ID, UnitIds.blacksmith)
+    ..setFullName("High Citadel of Necromancy")
     ..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode())
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHallOfTheDead.blp")
     ..setGoldBountyReward(150)

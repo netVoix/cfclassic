@@ -2,14 +2,14 @@ package Vampire
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import VampireConstants
+import BaseCFUnit
 
 
 
 @compiletime function vampire()
-	new UnitDefinition(VAMPIRE_ID, UnitIds.footman)
-		..presetBaseCFUnit("Vampire")
+	new BaseCFUnit(VAMPIRE_ID, UnitIds.footman)
+		..setFullName("Vampire")
 		..setNormalAbilities("A07K,A01O,A01P")
 		..setArmorSoundType(ArmorSoundType.Flesh)
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHeroDreadLord.blp")

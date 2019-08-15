@@ -2,14 +2,14 @@ package Necromancer
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import NecromancerConstants
+import BaseCFUnit
 
 
 
 @compiletime function necromancer()
-  new UnitDefinition(NECROMANCER_ID, UnitIds.necromancer)
-    ..presetBaseCFUnit("Necromancer")
+  new BaseCFUnit(NECROMANCER_ID, UnitIds.necromancer)
+    ..setFullName("Necromancer")
     ..setNormalAbilities("A01Y")
     ..setDefaultActiveAbility("A01Y")
     ..setTotalCost(TEMPLE_OF_BONE_TOTAL_COST)

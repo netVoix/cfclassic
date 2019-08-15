@@ -2,14 +2,14 @@ package TrollTrapper
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import TrollBerserkerConstants
+import BaseCFUnit
 
 
 
 @compiletime function trollTRapper()
-  new UnitDefinition(TROLL_TRAPPER_ID, UnitIds.darktrollberserker)
-    ..presetBaseCFUnit("Troll Trapper")
+  new BaseCFUnit(TROLL_TRAPPER_ID, UnitIds.darktrollberserker)
+    ..setFullName("Troll Trapper")
     ..setNormalAbilities("A07K,A06I,A02I")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkTrollTrapper.blp")
     ..setAttack1AttackType(AttackType.Normal)

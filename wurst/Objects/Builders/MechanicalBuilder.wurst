@@ -2,12 +2,12 @@ package MechanicalBuilder
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let MECHANICAL_BUILDER_ID = 'h06P'
 
 @compiletime function mechanicalBuilder()
-  new UnitDefinition(MECHANICAL_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(MECHANICAL_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,A071,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp")
     ..setDefaultActiveAbility("A071")
@@ -16,7 +16,7 @@ public let MECHANICAL_BUILDER_ID = 'h06P'
     ..setButtonPositionY(2)
     ..setModelFile("Units\\Creeps\\HeroTinker\\HeroTinker")
     ..setScalingValue(0.5)
-    ..presetBaseCfBuilder("Mechanical Builder")
+    ..setFullName("Mechanical Builder")
     ..setPointValue(9)
     ..setScaleProjectiles(false)
     ..setTooltipBasic("|cffFFD900Choose Mech Coalition|r")

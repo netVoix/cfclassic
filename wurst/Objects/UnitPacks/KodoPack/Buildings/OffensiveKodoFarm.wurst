@@ -1,15 +1,15 @@
 package OffensiveKodoFarm
 
-import ObjHelpers
 import UnitObjEditing
 import UnitIds
 import ObjectIds
 import KodoConstants
+import BaseCFBuilding
 
 
 @compiletime function offensiveKodoFarm()
-  new BuildingDefinition(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
-  ..presetBaseCFBuilding("Offensive Kodo Farm")
+  new BaseCFBuilding(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
+  ..setFullName("Offensive Kodo Farm")
   ..setNormalAbilities("A036")
   ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp")
   ..setGoldBountyReward(72)

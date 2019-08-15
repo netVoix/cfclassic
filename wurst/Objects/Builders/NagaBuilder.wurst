@@ -2,12 +2,12 @@ package NagaBuilder
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let NAGA_BUILDER_ID = 'h00E'
 
 @compiletime function create_w3u_h00E()
-  new UnitDefinition(NAGA_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(NAGA_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,A005,A001,Ahrp,Avul,AInv")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNMurgalSlave.blp")
     ..setDefaultActiveAbility("Ahrp")
@@ -15,7 +15,7 @@ public let NAGA_BUILDER_ID = 'h00E'
     ..setButtonPositionX(1)
     ..setModelFile("units\\creeps\\MurgulSlave\\MurgulSlave")
     ..setScalingValue(0.9)
-    ..presetBaseCfBuilder("Naga Builder")
+    ..setFullName("Naga Builder")
     ..setPointValue(1)
     ..setTooltipBasic("|cffFFD900Choose Naga Faction|r")
     ..setTooltipExtended("The Nagas have above average powerful units with a high hitpoint regeneration. In addition many expensive special buildings are available to them. But note that this race has NO TOWERS!")

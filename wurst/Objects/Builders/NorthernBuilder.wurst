@@ -1,12 +1,13 @@
 package NorthernBuilder
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let NORTHERN_BUILDER_ID = 'h017'
 
 @compiletime function northernBuilder()
-  new UnitDefinition(NORTHERN_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(NORTHERN_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.blp")
     ..setDefaultActiveAbility("Ahrp")
@@ -15,7 +16,7 @@ public let NORTHERN_BUILDER_ID = 'h017'
     ..setButtonPositionY(1)
     ..setModelFile("units\\critters\\VillagerMan1\\VillagerMan1")
     ..setTintingColorGreen(150)
-    ..presetBaseCfBuilder("Northern Builder")
+    ..setFullName("Northern Builder")
     ..setPointValue(6)
     ..setTintingColorRed(150)
     ..setTooltipBasic("|cffFFD900Choose Northern Realms|r")

@@ -2,14 +2,15 @@ package InfernalTank
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import InfernalMachineConstants
+import BaseCFUnit
 
 
 
 @compiletime function infernalTank()
-	new UnitDefinition(INFERNAL_TANK_ID, UnitIds.infernalcontraption)
+	new BaseCFUnit(INFERNAL_TANK_ID, UnitIds.infernalcontraption)
 		..setNormalAbilities("A04W,A04Y")
+		..setFullName("Infernal Tank")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNInfernalFlameCannon.blp")
 		..setAttack1AttackType(AttackType.Siege)
 		..setTotalCost(HELLS_PORTAL_TOTAL_COST)
@@ -28,7 +29,6 @@ import InfernalMachineConstants
 		..setProjectileLaunchZ(120.0)
 		..setMinimumAttackRange(150)
 		..setAttack1ProjectileArt("Abilities\\Spells\\Undead\\OrbOfDeath\\OrbOfDeathMissile.mdl")
-		..presetBaseCFUnit("Infernal Tank")
 		..setPointValue(119)
 		..setAttack1AreaofEffectSmallDamage(0)
 		..setTintingColorRed(120)

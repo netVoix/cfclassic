@@ -2,14 +2,14 @@ package VampireLord
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import VampireConstants
+import BaseCFUnit
 
 
 
 @compiletime function vampireLord()
-  new UnitDefinition(VAMPIRE_LORD_ID, UnitIds.footman)
-    ..presetBaseCFUnit("Vampire Lord")
+  new BaseCFUnit(VAMPIRE_LORD_ID, UnitIds.footman)
+    ..setFullName("Vampire Lord")
     ..setNormalAbilities("A07K,A06O,A01O,A06N")
     ..setArmorSoundType(ArmorSoundType.Flesh)
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNTichondrius.blp")

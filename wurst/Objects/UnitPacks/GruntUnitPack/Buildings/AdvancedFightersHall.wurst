@@ -2,15 +2,15 @@ package AdvancedFightersHall
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import GruntConstants
+import BaseCFBuilding
 
 
 @compiletime function advancedFightersHall()
-  new BuildingDefinition(ADVANCED_FIGHTERS_HALL_ID, UnitIds.blacksmith)
+  new BaseCFBuilding(ADVANCED_FIGHTERS_HALL_ID, UnitIds.blacksmith)
     ..setNormalAbilities("")
-    ..presetBaseCFBuilding("Advanced Fighters' Hall")
+    ..setFullName("Advanced Fighters' Hall")
     ..setRequiredAnimationNames("upgrade,first")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNStronghold.blp")
     ..setGoldBountyReward(42)

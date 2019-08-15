@@ -2,17 +2,17 @@ package DragonCemetery
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Icons
 import Buildings
 import ObjectIds
 import Soundsets
 import FrostWyrmConstants
+import BaseCFBuilding
 
 
 @compiletime function dragonCemetery()
-  new BuildingDefinition(DRAGON_CEMETERY_ID, UnitIds.farm)
-    ..presetBaseCFBuilding("Dragon Cemetery")
+  new BaseCFBuilding(DRAGON_CEMETERY_ID, UnitIds.farm)
+    ..setFullName("Dragon Cemetery")
     ..setNormalAbilities("")
     ..setIconGameInterface(Icons.bTNBoneYard)
     ..setGoldBountyReward(100)

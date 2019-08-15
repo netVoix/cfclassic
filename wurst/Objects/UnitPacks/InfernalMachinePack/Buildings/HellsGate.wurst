@@ -2,14 +2,14 @@ package HellsGate
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import InfernalMachineConstants
+import BaseCFBuilding
 
 
 
 @compiletime function hellsGate()
-	new BuildingDefinition(HELLS_GATE_ID, UnitIds.farm)
+	new BaseCFBuilding(HELLS_GATE_ID, UnitIds.farm)
 		..setNormalAbilities("")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNDarkPortal.blp")
 		..setGoldBountyReward(60)
@@ -22,7 +22,7 @@ import InfernalMachineConstants
 		..setMaximumPitchAngledegrees(0.0)
 		..setMaximumRollAngledegrees(0.0)
 		..setScalingValue(0.18)
-		..presetBaseCFBuilding("Hell's Gate")
+		..setFullName("Hell's Gate")
 		..setPointValue(51)
 		..setPriority(4)
 		..setTintingColorRed(180)

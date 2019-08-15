@@ -1,0 +1,40 @@
+package BaseCFBuilding
+
+import UnitObjEditing
+import public ObjectExtension
+
+
+public class BaseCFBuilding extends BuildingDefinition
+  construct(int uId, int baseId)
+    super(uId, baseId)
+    initialize()
+
+  function setFullName(string name)
+    this..setName(name)
+        ..setTooltipBasic("Trains " + name)
+
+  function setTotalCost(int cost)
+    this..setManaMaximum(getBuildTime(cost))
+        ..setManaInitialAmount(getBuildTime(cost))
+
+  private function getBuildTime(int cost) returns int
+    return 15 + (cost / 20).toInt()
+  
+  private function initialize()
+    this..setAcquisitionRange(800)
+        ..setNormalAbilities("")
+        ..setBuildTime(2)
+        ..setRepairGoldCost(0)
+        ..setLumberCost(0)
+        ..setRepairLumberCost(0)
+        ..setSightRadiusDay(1000)
+        ..setSightRadiusNight(1000)
+        ..setRequirements("")
+        ..setResearchesAvailable("")
+        ..setUpgradesUsed("")
+        ..setFoodProduced(0)
+        ..setManaInitialAmount(0)
+        ..setManaMaximum(0)
+        ..setPriority(4)
+        ..setHitPointsRegenerationType("always")
+        ..setGroundTexture("OSMA")

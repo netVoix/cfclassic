@@ -2,18 +2,16 @@ package TrapperHut
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import Buildings
 import TrollBerserkerConstants
-
-
+import BaseCFBuilding
 
 
 
 @compiletime function trapperHut()
-  new BuildingDefinition(TRAPPER_HUT_ID, UnitIds.blacksmith)
-    ..presetBaseCFBuilding("Trapper Hut")
+  new BaseCFBuilding(TRAPPER_HUT_ID, UnitIds.blacksmith)
+    ..setFullName("Trapper Hut")
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGenericCreepBuilding.blp")
     ..setGoldBountyReward(57)

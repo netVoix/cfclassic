@@ -1,19 +1,20 @@
 package UndeadBuilder
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let UNDEAD_BUILDER_ID = 'h018'
 
 @compiletime function undeadBuilder()
-  new UnitDefinition(UNDEAD_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(UNDEAD_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNAcolyte.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h01K,h01O,h01Q,h01T,h01P,h01N,h01L,h01S,h008,h00A,h01R")
     ..setButtonPositionY(1)
     ..setModelFile("units\\undead\\Acolyte\\Acolyte")
-    ..presetBaseCfBuilder("Undead Builder")
+    ..setFullName("Undead Builder")
     ..setPointValue(4)
     ..setTooltipBasic("|cffFFD900Choose the Undead Forces|r")
     ..setTooltipExtended("Undead Forces use necromantic magic to reanimate dead units. They bring death and disease to their enemies. An undead builder is able to construct a spirit tower to defend your base.")

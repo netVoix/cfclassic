@@ -1,15 +1,16 @@
 package Crypt
+
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import VampireConstants
+import BaseCFBuilding
 
 
 
 @compiletime function crypt()
-	new BuildingDefinition(CRYPT_ID, UnitIds.humanlumbermill)
-		..presetBaseCFBuilding("Crypt")
+	new BaseCFBuilding(CRYPT_ID, UnitIds.humanlumbermill)
+		..setFullName("Crypt")
 		..setNormalAbilities("")
 		..setRequiredAnimationNames("fifth")
 		..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNGraveyard.blp")

@@ -2,19 +2,19 @@ package ChaosBuilder
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let CHAOS_BUILDER_ID = 'h00O'
 
 @compiletime function chaosBuilder()
-  new UnitDefinition(CHAOS_BUILDER_ID, UnitIds.peasant)
+  new BaseCFBuilder(CHAOS_BUILDER_ID, UnitIds.peasant)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNChaosGrom.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h05I,h025,h01M,h01I,h01F,h01E,h01C,h01D,h009,h008,h007")
     ..setButtonPositionX(3)
     ..setModelFile("units\\demon\\ChaosPeon\\ChaosPeon")
-    ..presetBaseCfBuilder("Chaos Builder")
+    ..setFullName("Chaos Builder")
     ..setPointValue(2)
     ..setTooltipBasic("|cffFFFF00Choose Chaos Legion|r")
     ..setTooltipExtended("The Forces of Chaos summon horrible demons and use destructive magic to defeat their enemies. Chaos has no siege unit, but many strong units with chaos damage. Chaos has NO TOWER!")

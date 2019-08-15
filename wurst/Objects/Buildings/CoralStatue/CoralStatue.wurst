@@ -4,15 +4,15 @@ import Icons
 import Buildings
 import Soundsets
 import AbilityObjEditing
-import ObjHelpers
 import ObjectIds
 import CoralStatueRegenAuraInfoIcon
+import BaseCFBuilding
 
 public let CORAL_STATUE_ID = 'h00G'
 
 @compiletime function coralStatue()
-	new BuildingDefinition(CORAL_STATUE_ID, 'hhou')
-		..presetBaseCFBuilding("Coral Statue")
+	new BaseCFBuilding(CORAL_STATUE_ID, 'hhou')
+		..setFullName("Coral Statue")
 		..setNormalAbilities(CORAL_STATUE_REGEN_AURA_INFO_ICON_ID.toRawCode() + ",A09A")
 		..setIconGameInterface(Icons.bTNCoralBed)
 		..setGoldBountyReward(50)

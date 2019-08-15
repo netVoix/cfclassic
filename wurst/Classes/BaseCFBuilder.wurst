@@ -1,0 +1,22 @@
+package BaseCFBuilder
+
+import UnitObjEditing
+
+public class BaseCFBuilder extends UnitDefinition
+  construct(int uId, int baseId)
+    super(uId, baseId)
+    initialize()
+
+  function setFullName(string name)
+    this..setName(name)
+  
+  private function initialize()
+    this..setCategorizationSpecial(true)
+        ..setFoodCost(0)
+        ..setGoldCost(0)
+        ..setSpeedBase(550)
+        ..setAnimationWalkSpeed(300.0)
+        ..setAttacksEnabled(0)
+        ..setCollisionSize(0.0)
+        ..setRace(Race.Undead)
+        ..setMovementType(MovementType.Fly)

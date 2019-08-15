@@ -2,12 +2,12 @@ package CorruptedBuilder
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
+import BaseCFBuilder
 
 public let CORRUPTED_BUILDER_ID = 'u006'
 
 @compiletime function corruptedBuilder()
-  new UnitDefinition(CORRUPTED_BUILDER_ID, UnitIds.shade)
+  new BaseCFBuilder(CORRUPTED_BUILDER_ID, UnitIds.shade)
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("n01J,h04V,h04U,h008,h04T,h04S,h04R,h04Q,h04O,h04L,h04K")
@@ -17,7 +17,7 @@ public let CORRUPTED_BUILDER_ID = 'u006'
     ..setScalingValue(0.8)
     ..setMovementHeightMinimum(5.0)
     ..setMovementHeight(10.0)
-    ..presetBaseCfBuilder("Corrupted Builder")
+    ..setFullName("Corrupted Builder")
     ..setSightRadiusNight(600)
     ..setPointValue(7)
     ..setHitPointsRegenerationType("always")

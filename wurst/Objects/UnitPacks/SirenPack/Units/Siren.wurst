@@ -2,18 +2,18 @@ package Siren
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Abilities
 import ObjectIds
 import Purge
 import Lobster
 import SirenConstants
+import BaseCFUnit
 
 
 
 @compiletime function siren()
-  new UnitDefinition(SIREN_ID, UnitIds.summoner)
-    ..presetBaseCFUnit("Naga Siren")
+  new BaseCFUnit(SIREN_ID, UnitIds.summoner)
+    ..setFullName("Naga Siren")
     ..setNormalAbilities(commaList(PURGE_ID, SUMMON_LOBSTERS_ID))
     ..setDefaultActiveAbility(PURGE_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)

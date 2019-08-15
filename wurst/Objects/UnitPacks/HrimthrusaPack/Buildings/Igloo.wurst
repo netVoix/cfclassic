@@ -2,14 +2,14 @@ package Igloo
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import ObjectIds
 import HrimthrusaConstants
+import BaseCFBuilding
 
 
 
 @compiletime function igloo()
-  new BuildingDefinition(IGLOO_ID, UnitIds.blacksmith)
+  new BaseCFBuilding(IGLOO_ID, UnitIds.blacksmith)
     ..setNormalAbilities("")
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPebble.blp")
     ..setGoldBountyReward(32)
@@ -23,7 +23,7 @@ import HrimthrusaConstants
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)
     ..setScalingValue(0.6)
-    ..presetBaseCFBuilding("Igloo")
+    ..setFullName("Igloo")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
     ..setPointValue(78)
     ..setHitPointsRegenerationRate(0.5)

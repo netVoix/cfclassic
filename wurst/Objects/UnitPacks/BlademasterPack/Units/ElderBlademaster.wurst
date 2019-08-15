@@ -2,20 +2,20 @@ package ElderBlademaster
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Icons
 import BlademasterConstants
+import BaseCFUnit
 
 
 @compiletime function elderBladeMaster()
-  new UnitDefinition(ELDER_BLADEMASTER_ID, UnitIds.bloodelflieutenant)
-    ..presetBaseCFUnit("Elder Blademaster")
+  new BaseCFUnit(ELDER_BLADEMASTER_ID, UnitIds.bloodelflieutenant)
+    ..setFullName("Elder Blademaster")
+    ..setTotalCost(HALL_OF_THE_ELDEST_TOTAL_COST)
     ..setNormalAbilities("A0AN,A0A6,A05Y,A03P,A014")
     ..setIconGameInterface(Icons.bTNTheCaptain)
     ..setDefaultActiveAbility("A0A6")
-    ..setTotalCost(HALL_OF_THE_ELDEST_TOTAL_COST)
     ..setTintingColorBlue(70)
-    ..setGoldBountyReward(13)
+    ..setGoldBountyReward(14)
     ..setCollisionSize(16)
     ..setAttack1CooldownTime(0.5)
     ..setDefenseBase(10)
@@ -24,6 +24,7 @@ import BlademasterConstants
     ..setAttack1DamageBase(39)
     ..setAttack1WeaponType(WeaponType.Normal)
     ..setAttack1WeaponSound(WeaponSound.MetalLightSlice)
+    ..setAttack1ProjectileArt("")
     ..setHitPointsMaximumBase(900)
     ..setScalingValue(1.07)
     ..setPointValue(110)

@@ -2,18 +2,18 @@ package NagaSpring
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import Icons
 import ObjectIds
 import Soundsets
 import Buildings
 import SirenConstants
+import BaseCFBuilding
 
 
 
 @compiletime function nagaSpring()
-  new BuildingDefinition(NAGA_SPRING_ID, UnitIds.farm)
-    ..presetBaseCFBuilding("Naga Spring")
+  new BaseCFBuilding(NAGA_SPRING_ID, UnitIds.farm)
+    ..setFullName("Naga Spring")
     ..setIconGameInterface(Icons.bTNFountainOfLifeDefiled)
     ..setModelFile(Buildings.fountainOfLifeDefiled1)
     ..setGoldBountyReward(70)

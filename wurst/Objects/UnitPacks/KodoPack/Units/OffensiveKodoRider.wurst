@@ -2,16 +2,16 @@ package OffensiveKodoRider
 
 import UnitObjEditing
 import UnitIds
-import ObjHelpers
 import OffensiveKodoAura
 import ObjectIds
 import KodoConstants
+import BaseCFUnit
 
 
 
 @compiletime function offensiveKodoRider()
-  new UnitDefinition(OFFENSIVE_KODO_RIDER_ID, UnitIds.chaoskotobeast)
-    ..presetBaseCFUnit("Offensive Kodo Rider")
+  new BaseCFUnit(OFFENSIVE_KODO_RIDER_ID, UnitIds.chaoskotobeast)
+    ..setFullName("Offensive Kodo Rider")
     ..setNormalAbilities(OFFENSIVE_KODO_AURA_ID.toRawCode())
     ..setAttack1AttackType(AttackType.Chaos)
     

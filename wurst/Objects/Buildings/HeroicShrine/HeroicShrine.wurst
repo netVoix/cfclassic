@@ -5,15 +5,15 @@ import UnitObjEditing
 import UnitIds
 import Icons
 import Buildings
-import ObjHelpers
 import LegendaryUnitFlag
 import ObjectIds
+import BaseCFBuilding
 
 public let HEROIC_SHRINE_ID = 'h05G'
 
 @compiletime function humanShrine()
-	new BuildingDefinition(HEROIC_SHRINE_ID, UnitIds.farm)
-		..presetBaseCFBuilding("Heroic Shrine")
+	new BaseCFBuilding(HEROIC_SHRINE_ID, UnitIds.farm)
+		..setFullName("Heroic Shrine")
 		..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode() + ",A06M")
 		..setAcquisitionRange(99999)
 		..setRequiredAnimationNames("work")
