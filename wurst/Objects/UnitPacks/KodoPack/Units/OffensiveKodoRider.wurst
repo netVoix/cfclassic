@@ -1,6 +1,5 @@
 package OffensiveKodoRider
 
-import UnitObjEditing
 import UnitIds
 import OffensiveKodoAura
 import ObjectIds

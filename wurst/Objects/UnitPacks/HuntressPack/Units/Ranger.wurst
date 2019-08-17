@@ -1,0 +1,27 @@
+package Ranger
+import BaseCFUnit
+import HuntressConstants
+import UnitIds
+
+@compiletime function ranger()
+	new BaseCFUnit(RANGER_ID, UnitIds.archer)
+	..setNormalAbilities("A03N,A00U")
+	..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNShandris.blp")
+	..setTotalCost(RANGERS_HALL_TOTAL_COST)
+	..setGoldBountyReward(11)
+	..setCollisionSize(16.0)
+	..setAttack1CooldownTime(1.3)
+	..setDefenseBase(3)
+	..setArmorType(ArmorType.Small)
+	..setAttack1DamageBase(49)
+	..setModelFile("units\\nightelf\\Shandris\\Shandris")
+	..setHitPointsMaximumBase(500)
+	..setAttack1ProjectileArc(0.1)
+	..setAttack1ProjectileSpeed(1000)
+	..setFullName("Ranger")
+	..setPointValue(109)
+	..setAttack1Range(425)
+	..setAttack1DamageSidesperDie(31)
+	..setSpeedBase(300)
+	..setTooltipExtended(RANGER_FULL_DESCRIPTION)
+  

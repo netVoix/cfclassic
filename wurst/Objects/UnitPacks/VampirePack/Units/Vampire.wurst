@@ -1,6 +1,5 @@
 package Vampire
 
-import UnitObjEditing
 import UnitIds
 import VampireConstants
 import BaseCFUnit

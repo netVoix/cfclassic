@@ -1,6 +1,5 @@
 package TrollTrapper
 
-import UnitObjEditing
 import UnitIds
 import TrollBerserkerConstants
 import BaseCFUnit

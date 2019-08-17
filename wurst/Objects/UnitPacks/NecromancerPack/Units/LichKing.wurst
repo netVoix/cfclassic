@@ -1,6 +1,5 @@
 package LichKing
 
-import UnitObjEditing
 import UnitIds
 import NecromancerConstants
 import BaseCFUnit

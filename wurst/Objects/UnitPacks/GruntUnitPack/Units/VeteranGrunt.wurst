@@ -1,6 +1,5 @@
 package VeteranGrunt
 
-import UnitObjEditing
 import UnitIds
 import GruntConstants
 import BaseCFUnit

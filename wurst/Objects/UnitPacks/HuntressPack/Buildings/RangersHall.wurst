@@ -1,0 +1,31 @@
+package RangersHall
+
+import HuntressConstants
+import UnitIds
+import BaseCFBuilding
+import ObjectIds
+
+@compiletime function rangersHall()
+	new BaseCFBuilding(RANGERS_HALL_ID, UnitIds.blacksmith)
+	..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHuntersHall.blp")
+	..setGoldBountyReward(70)
+	..setShadowTextureBuilding("ShadowHouse")
+	..setCollisionSize(72.0)
+	..setModelFile("buildings\\nightelf\\HuntersHall\\HuntersHall")
+	..setTotalCost(200)
+	..setHotkey("R")
+	..setHitPointsMaximumBase(1400)
+	..setMaximumPitchAngledegrees(0.0)
+	..setMaximumRollAngledegrees(0.0)
+	..setScalingValue(0.52)
+	..setFullName("Ranger's Hall")
+	..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+	..setPointValue(20)
+	..setHitPointsRegenerationRate(0.5)
+	..setRequirements("tec2")
+	..setRequirementsLevels("1")
+	..setSelectionScale(2.4)
+	..setUnitsTrained(RANGER_ID.toRawCode())
+	..setUpgradesTo(AMAZONS_HALL_ID.toRawCode())
+	..setTooltipExtended(RANGER_SHORT_DESCRIPTION)
+  

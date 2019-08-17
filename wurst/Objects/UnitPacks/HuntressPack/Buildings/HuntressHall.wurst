@@ -1,0 +1,29 @@
+package HuntressHall
+
+import HuntressConstants
+import UnitIds
+import BaseCFBuilding
+import ObjectIds
+
+@compiletime function create_w3u_h00S()
+  new BaseCFBuilding(HUNTRESS_HALL_ID, UnitIds.blacksmith)
+    ..setFullName("Huntress Hall")
+    ..setNormalAbilities("")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNNightElfFishingVillage.blp")
+    ..setGoldBountyReward(30)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(0)
+    ..setCollisionSize(72.0)
+    ..setModelFile("buildings\\other\\ElvenFishVillageBuilding2\\ElvenFishVillageBuilding2")
+    ..setTotalCost(HUNTRESS_HALL_COST)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.6)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(119)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(HUNTRESS_ID.toRawCode())
+    ..setUpgradesTo(RANGERS_HALL_ID.toRawCode())
+    ..setTooltipExtended(HUNTRESS_SHORT_DESCRIPTION)
+  

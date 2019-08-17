@@ -1,6 +1,5 @@
 package ElderBlademaster
 
-import UnitObjEditing
 import UnitIds
 import Icons
 import BlademasterConstants

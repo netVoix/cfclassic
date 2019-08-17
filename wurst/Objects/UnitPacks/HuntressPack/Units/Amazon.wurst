@@ -1,0 +1,30 @@
+package Amazon
+import BaseCFUnit
+import HuntressConstants
+import UnitIds
+
+@compiletime function amazon()
+	new BaseCFUnit(AMAZON_ID, UnitIds.archer)
+	..setNormalAbilities("A07H,A06V,A070,A0AH,A03O,A03P")
+	..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNBansheeRanger.blp")
+	..setTotalCost(AMAZONS_HALL_TOTAL_COST)
+	..setGoldBountyReward(23)
+	..setCollisionSize(16.0)
+	..setAttack1CooldownTime(1.0)
+	..setDeathType(2)
+	..setDefenseBase(5)
+	..setArmorType(ArmorType.Small)
+	..setAttack1DamageBase(69)
+	..setModelFile("Units\\Undead\\EvilSylvanas\\EvilSylvanas")
+	..setHitPointsMaximumBase(900)
+	..setLevel(6)
+	..setAttack1ProjectileArc(0.05)
+	..setAttack1ProjectileSpeed(1100)
+	..setFullName("Amazon")
+	..setAttack1Range(460)
+	..setHitPointsRegenerationRate(3.0)
+	..setAttack1DamageSidesperDie(61)
+	..setSpeedBase(300)
+	..setUnitSoundSet("Sylvanus")
+	..setTooltipExtended(AMAZON_FULL_DESCRIPTION)
+  

@@ -1,6 +1,6 @@
 package BaseCFUnit
 
-import UnitObjEditing
+import public UnitObjEditing
 import public ObjectExtension
 
 public class BaseCFUnit extends UnitDefinition

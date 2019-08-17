@@ -1,6 +1,5 @@
 package FrostWyrm
 
-import UnitObjEditing
 import UnitIds
 import FrostWyrmConstants
 import BaseCFUnit

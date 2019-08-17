@@ -1,6 +1,5 @@
 package InfernalTank
 
-import UnitObjEditing
 import UnitIds
 import InfernalMachineConstants
 import BaseCFUnit

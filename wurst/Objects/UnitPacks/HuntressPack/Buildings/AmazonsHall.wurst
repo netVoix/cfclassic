@@ -1,0 +1,33 @@
+package AmazonsHall
+
+import HuntressConstants
+import UnitIds
+import BaseCFBuilding
+import ObjectIds
+
+@compiletime function amazonsHall()
+	new BaseCFBuilding(AMAZONS_HALL_ID, UnitIds.blacksmith)
+	..setNormalAbilities("A06V")
+	..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNBearDen.blp")
+	..setGoldBountyReward(150)
+	..setShadowTextureBuilding("ShadowHouse")
+	..setCollisionSize(72.0)
+	..setModelFile("buildings\\other\\BarrowDens\\BarrowDens")
+	..setFoodCost(1)
+	..setTotalCost(AMAZONS_HALL_COST)
+	..setHotkey("R")
+	..setHitPointsMaximumBase(1900)
+	..setLumberCost(375)
+	..setMaximumPitchAngledegrees(0.0)
+	..setMaximumRollAngledegrees(0.0)
+	..setScalingValue(0.55)
+	..setFullName("Amazon's Hall")
+	..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+	..setPointValue(21)
+	..setHitPointsRegenerationRate(4.0)
+	..setRequirements("tec3")
+	..setRequirementsLevels("1")
+	..setSelectionScale(2.4)
+	..setUnitsTrained(AMAZON_ID.toRawCode())
+	..setTooltipExtended(AMAZON_SHORT_DESCRIPTION)
+  

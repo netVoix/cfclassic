@@ -1,6 +1,5 @@
 package Siren
 
-import UnitObjEditing
 import UnitIds
 import Abilities
 import ObjectIds

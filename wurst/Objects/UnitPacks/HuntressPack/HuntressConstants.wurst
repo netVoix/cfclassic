@@ -1,0 +1,49 @@
+package HuntressConstants
+
+public let HUNTRESS_ID = 'e001'
+public let RANGER_ID = 'e003'
+public let AMAZON_ID = 'e004'
+public let HUNTRESS_HALL_ID = 'h00S'
+public let RANGERS_HALL_ID = 'h03D'
+public let AMAZONS_HALL_ID = 'h03E'
+
+public let HUNTRESS_HALL_COST = 150
+public let RANGERS_HALL_COST = 200
+public let AMAZONS_HALL_COST = 400
+public let HUNTRESS_HALL_TOTAL_COST = HUNTRESS_HALL_COST
+public let RANGERS_HALL_TOTAL_COST = HUNTRESS_HALL_COST + RANGERS_HALL_COST
+public let AMAZONS_HALL_TOTAL_COST = HUNTRESS_HALL_COST + RANGERS_HALL_COST + AMAZONS_HALL_COST
+
+
+public let HUNTRESS_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00400|r rng,|cffFFFF00 27|r dps)|n" + 
+                                        "|cffFFFF80Armor:|r Light (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
+                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Evade|r|n8% chance to evade an attack"
+
+public let HUNTRESS_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Huntress|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
+                                        "|cffFFAC00Huntress:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00400|r rng,|cffFFFF00 27|r dps)|n" + 
+                                        "|cffFFFF80Armor:|r Light (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
+                                        "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF008%|r)"
+
+public let RANGER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n|n|cff80FF00Multi Shot|r|nShoots at 3 targets simultaneously|n|n" + 
+                                      "|cff80FF00Evade|r|n15% chance to evade an attack"
+
+public let RANGER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Ranger|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                      "|cffFFAC00Ranger:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF003 targets|r)|n-Evade (|cffFFFF0015%|r)|n|n" + 
+                                      "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let AMAZON_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00460|r rng,|cffFFFF00 100|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n|n|cff80FF00Immune|r|nThis unit is immune to certain negative effects|n|n" + 
+                                      "|cff80FF00Legendary Spell Resistance|r|nSpell damage done to this unit is reduced by 70%|n|n" + 
+                                      "|cff80FF00Multi Shot|r|nShoots at 7 targets simultaneously|n|n|cff80FF00Evade|r|n25% chance to evade an attack"                                      
+
+public let AMAZON_SHORT_DESCRIPTION = "|cffFF8204Legendary Building|r|n|cffFFFF80Trains: |cffFFFF00Amazon|n|n|cffFFAC00Amazon:|r|n" + 
+                                      "|cffFFFF80Attack:|r Pierce (|cffFFFF00460|r rng,|cffFFFF00 100|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Light (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF00900|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Immune|n-Legendary Spell Resistance (|cffFFFF0070%|r)|n" + 
+                                      "-Multi Shot (|cffFFFF007 targets|r)|n-Evade (|cffFFFF0025%|r)|n|n" + 
+                                      "|cffFF0000You must turn off unit production before you can upgrade!|r"

@@ -1,6 +1,5 @@
 package Hrimthrusa
 
-import UnitObjEditing
 import UnitIds
 import HrimthrusaSpellResist
 import ObjectIds

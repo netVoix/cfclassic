@@ -1,6 +1,5 @@
 package MightyNecromancer
 
-import UnitObjEditing
 import UnitIds
 import Icons
 import Units
