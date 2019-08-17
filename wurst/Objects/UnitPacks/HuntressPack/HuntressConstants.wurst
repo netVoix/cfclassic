@@ -1,11 +1,16 @@
 package HuntressConstants
 
+import ObjectIdGenerator
+
 public let HUNTRESS_ID = 'e001'
 public let RANGER_ID = 'e003'
 public let AMAZON_ID = 'e004'
 public let HUNTRESS_HALL_ID = 'h00S'
 public let RANGERS_HALL_ID = 'h03D'
 public let AMAZONS_HALL_ID = 'h03E'
+
+public let RANGER_MULTISHOT_ID = 'A03N'
+public let HUNTRESS_MULTISHOT_ID = compiletime(ABIL_ID_GEN.next())
 
 public let HUNTRESS_HALL_COST = 150
 public let RANGERS_HALL_COST = 200
@@ -17,22 +22,23 @@ public let AMAZONS_HALL_TOTAL_COST = HUNTRESS_HALL_COST + RANGERS_HALL_COST + AM
 
 public let HUNTRESS_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00400|r rng,|cffFFFF00 27|r dps)|n" + 
                                         "|cffFFFF80Armor:|r Light (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
-                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Evade|r|n8% chance to evade an attack"
+                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Multi Shot|r|nShoots at 3 targets simultaneously|n|n" + 
+                                        "|cff80FF00Evade|r|n8% chance to evade an attack"
 
 public let HUNTRESS_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Huntress|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
                                         "|cffFFAC00Huntress:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00400|r rng,|cffFFFF00 27|r dps)|n" + 
                                         "|cffFFFF80Armor:|r Light (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
-                                        "|cffFFFF80Abilities:|r|n-Evade (|cffFFFF008%|r)"
+                                        "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF003 targets|r)|n-Evade (|cffFFFF008%|r)"
 
 public let RANGER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
                                       "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
-                                      "|cffFFFF80Abilities:|r|n|n|cff80FF00Multi Shot|r|nShoots at 3 targets simultaneously|n|n" + 
+                                      "|cffFFFF80Abilities:|r|n|n|cff80FF00Multi Shot|r|nShoots at 5 targets simultaneously|n|n" + 
                                       "|cff80FF00Evade|r|n15% chance to evade an attack"
 
 public let RANGER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Ranger|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
                                       "|cffFFAC00Ranger:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
                                       "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
-                                      "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF003 targets|r)|n-Evade (|cffFFFF0015%|r)|n|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF005 targets|r)|n-Evade (|cffFFFF0015%|r)|n|n" + 
                                       "|cffFF0000You must turn off unit production before you can upgrade!|r"
 
 public let AMAZON_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00460|r rng,|cffFFFF00 100|r dps)|n" + 

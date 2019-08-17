@@ -14,6 +14,7 @@ import ObjectIds
     ..setShadowTextureBuilding("ShadowHouse")
     ..setButtonPositionX(0)
     ..setCollisionSize(72.0)
+    ..setHotkey("Q")
     ..setModelFile("buildings\\other\\ElvenFishVillageBuilding2\\ElvenFishVillageBuilding2")
     ..setTotalCost(HUNTRESS_HALL_COST)
     ..setMaximumPitchAngledegrees(0.0)

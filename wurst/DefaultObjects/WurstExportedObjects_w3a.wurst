@@ -3918,20 +3918,6 @@ import ObjEditingNatives
 	..setLvlDataString("atar", 1, 0, "air,enemies,ground")
 
 
-@compiletime function create_w3a_A03N()
-	createObjectDefinition("w3a", 'A03N', 'Aroc')
-	..setLvlDataUnreal("aare", 1, 0, 600.0)
-	..setLvlDataUnreal("acdn", 1, 0, 0.0)
-	..setLvlDataUnreal("Efk1", 1, 1, 0.0)
-	..setLvlDataUnreal("Efk2", 1, 2, 99999.0)
-	..setLvlDataInt("Efk3", 1, 3, 1)
-	..setLvlDataUnreal("amac", 0, 0, 0.0)
-	..setLvlDataString("amat", 0, 0, "Abilities\\Weapons\\Arrow\\ArrowMissile.mdl")
-	..setLvlDataInt("amsp", 0, 0, 1000)
-	..setLvlDataString("areq", 0, 0, "")
-	..setLvlDataString("atar", 1, 0, "air,enemies,ground")
-
-
 @compiletime function create_w3a_A03M()
 	createObjectDefinition("w3a", 'A03M', 'Ainf')
 	..setLvlDataString("abuf", 1, 0, "B00J")

@@ -3,13 +3,14 @@ package Huntress
 import BaseCFUnit
 import HuntressConstants
 import UnitIds
+import ObjectIds
 
 
 
 @compiletime function huntress()
 	new BaseCFUnit(HUNTRESS_ID, UnitIds.archer)
 	..setFullName("Huntress")
-	..setNormalAbilities("A00T")
+	..setNormalAbilities("A00T," + HUNTRESS_MULTISHOT_ID.toRawCode())
 	..setTotalCost(HUNTRESS_HALL_TOTAL_COST)
 	..setGoldBountyReward(5)
 	..setCollisionSize(16.0)
