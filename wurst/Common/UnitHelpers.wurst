@@ -1,0 +1,4 @@
+package UnitHelpers
+
+public function unit.isVulnerable() returns bool
+  return this.getAbilityLevel('Avul') <= 0

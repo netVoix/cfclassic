@@ -9353,58 +9353,6 @@ endif
 endif
 set u=null
 endfunction
-function Ks takes unit u,real tx,real ty returns nothing
-local player p=GetOwningPlayer(u)
-local unit c=CreateUnit(p,'h04X',tx,ty,.0)
-local real Ls=.0
-local integer Xg=0
-local unit j
-local integer xh
-call SetUnitVertexColor(c,0,0,0,0)
-call UnitRemoveAbility(u,'A005')
-call UnitRemoveAbility(u,'A06E')
-call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl",u,"origin"))
-call DestroyEffect(AddSpecialEffectTarget("Units\\NightElf\\Wisp\\WispExplode.mdl",c,"origin"))
-call DestroyEffect(AddSpecialEffectTarget("Units\\NightElf\\Wisp\\WispExplode.mdl",c,"origin"))
-call DestroyEffect(AddSpecialEffectTarget("Units\\NightElf\\Wisp\\WispExplode.mdl",c,"origin"))
-call TriggerSleepAction(.35)
-set g4=p
-call GroupEnumUnitsInRange(f4,tx,ty,700.,null)
-loop
-set j=FirstOfGroup(f4)
-exitwhen j==null
-call GroupRemoveUnit(f4,j)
-if(IsUnitEnemy(j,p)and GetWidgetLife(j)>.405 and GetUnitAbilityLevel(j,'Avul')<=0)then
-set Xg=Xg+1
-set Ls=Ls+(GetWidgetLife(j))
-call UnitDamageTarget(u,j,4444.,true,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_DEATH,WEAPON_TYPE_WHOKNOWS)
-call UnitDamageTarget(u,j,4444.,true,false,ATTACK_TYPE_MAGIC,DAMAGE_TYPE_DEATH,WEAPON_TYPE_WHOKNOWS)
-endif
-endloop
-call IssueImmediateOrderById(c,$D022E)
-call TriggerSleepAction(1.5)
-call RemoveUnit(c)
-set c=null
-set xh=GetPlayerId(p)
-set C8[xh]=R2I(Ls)
-set c8[xh]=Xg
-set u8[N8[xh]]=u8[N8[xh]]-1
-if(u8[N8[xh]]==0)then
-call dj(1,N8[xh]+1,"|cffFF00000|r")
-else
-call dj(1,N8[xh]+1,I2S(u8[N8[xh]]))
-endif
-call ej(z7[xh],N8[xh]*6+1," ")
-if(Xg==0)then
-call DisplayTextToForce(bj_FORCE_ALL_PLAYERS,Q8[xh]+" wasted his Rescue Strike, killing no unit! Epic Fail!")
-elseif(Xg==1)then
-call DisplayTextToForce(bj_FORCE_ALL_PLAYERS,Q8[xh]+" wasted his Rescue Strike, killing only one unit!")
-elseif(Xg<5)then
-call DisplayTextToForce(bj_FORCE_ALL_PLAYERS,Q8[xh]+" wasted his Rescue Strike, dealing only |cffFFFF00"+I2S(C8[xh])+"|r damage and killing only |cffFFFF00"+I2S(Xg)+"|r units!")
-else
-call DisplayTextToForce(bj_FORCE_ALL_PLAYERS,Q8[xh]+" dealt |cffFFFF00"+I2S(C8[xh])+"|r damage with his Rescue Strike, killing |cffFFFF00"+I2S(Xg)+"|r units!")
-endif
-endfunction
 function Ms takes unit u,real tx,real ty returns nothing
 local unit c=CreateUnit(GetOwningPlayer(u),'e008',tx,ty,.0)
 call UnitAddAbility(c,'A02G')
@@ -9444,8 +9392,6 @@ call Di(u,(p4[GetUnitPointValue((u))]))
 else
 call ih(u)
 endif
-elseif(Qs=='A005')then
-call Ks(u,GetSpellTargetX(),GetSpellTargetY())
 elseif(Qs=='A08Y')then
 call Ms(u,GetSpellTargetX(),GetSpellTargetY())
 elseif(Qs>='IBA0' and Qs<='IBA8')then

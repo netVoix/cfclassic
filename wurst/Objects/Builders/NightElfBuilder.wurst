@@ -3,12 +3,14 @@ package NightElfBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import ObjectIds
+import BuilderBlink
 
 public let NIGHT_ELD_BUILDER_ID = 'h089'
 
 @compiletime function nightElfBuilder()
   new BaseCFBuilder(NIGHT_ELD_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,A08G,Avul")
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,A08G,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNNightElfRunner.blp")
     ..setDefaultActiveAbility("A08G")
     ..setStructuresBuilt("h07H,h08P,h073,h07I,h088,h07M,h07O,h011,h00S,h008,h00B")

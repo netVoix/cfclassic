@@ -3,12 +3,14 @@ package ChaosBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import BuilderBlink
+import ObjectIds
 
 public let CHAOS_BUILDER_ID = 'h00O'
 
 @compiletime function chaosBuilder()
   new BaseCFBuilder(CHAOS_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + BUILDER_BLINK_ID.toRawCode())
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNChaosGrom.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h05I,h025,h01M,h01I,h01F,h01E,h01C,h01D,h009,h008,h007")

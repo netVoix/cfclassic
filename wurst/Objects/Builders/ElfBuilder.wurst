@@ -3,12 +3,14 @@ package ElfBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import ObjectIds
+import BuilderBlink
 
 public let ELF_BUILDER_ID = 'h00P'
 
 @compiletime function elfBuilder()
   new BaseCFBuilder(ELF_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNElfVillager.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h059,h00Z,h014,h09X,h00V,h00T,h008,h08X,h070,h06Y,h005")

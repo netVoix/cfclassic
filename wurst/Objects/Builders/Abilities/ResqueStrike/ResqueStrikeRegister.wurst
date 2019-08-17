@@ -1,0 +1,36 @@
+package ResqueStrikeRegister
+
+import RegisterEvents
+import ResqueStrikeObjects
+import EventHelper
+import ResqueStrike
+import ClosureTimers
+import ResqueStrikeNotifier
+  
+
+function saveData(int pid, resqueStrikeData data)
+  C8[pid] = data.damage.toInt()
+  c8[pid] = data.killed
+  u8[N8[pid]]--
+
+function updatePlayerData(int pid)
+  if(u8[N8[pid]] == 0)
+    dj(1, N8[pid] + 1, "|cffFF00000|r")
+  else
+    dj(1, N8[pid] + 1, I2S(u8[N8[pid]]))
+  ej(z7[pid], N8[pid] * 6 + 1, " ")
+
+init
+  registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
+    let u = GetTriggerUnit()
+    let p = u.getOwner()
+    let pid = p.getId()
+    let pos = getSpellTargetPos()
+    if GetSpellAbilityId() == RESQUE_STRIKE_ID
+      let rs = new ResqueStrike(u, pos)
+      doPeriodicallyCounted(0.35, 3) c ->
+        rs.cast()
+      doAfter(1.5) ->
+        saveData(pid, rs.getData())
+        updatePlayerData(pid)
+        ResqueStrikeNotifier.printMessage(p, rs.getData())

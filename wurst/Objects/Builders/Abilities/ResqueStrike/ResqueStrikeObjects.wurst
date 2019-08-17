@@ -1,0 +1,67 @@
+package ResqueStrikeObjects
+import AbilityObjEditing
+import UnitIds
+
+public let RESQUE_STRIKE_ID = 'A005'
+public let RESQUE_STRIKE_CASTER_EFFECT_ID = 'A06E'
+public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
+
+@compiletime function resqueStrike()
+  new AbilityDefinitionFlameStrikeCreep(RESQUE_STRIKE_ID)
+    ..presetAreaofEffect(lvl -> 700)
+    ..presetIcon("ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp")
+    ..setButtonPositionNormalX(3)
+    ..presetCastingTime(lvl -> 0)
+    ..presetCooldown(lvl -> 60)
+    ..presetManaCost(lvl -> 0)
+    ..presetFullDamageDealt(lvl -> 0)
+    ..presetHalfDamageDealt(lvl -> 0)
+    ..presetBuildingReduction(lvl -> 1)
+    ..presetDurationNormal(lvl -> 1)
+    ..presetDurationHero(lvl -> 1)
+    ..setArtEffect("")
+    ..presetHotkey("V")
+    ..setName("Rescue Strike")
+    ..presetCastRange(lvl -> 1000)
+    ..setArtSpecial("")
+    ..presetTargetsAllowed(lvl -> "air,enemies,ground,sapper")
+    ..presetTooltipNormal(lvl -> "Rescue Strike [|cffffcc00V|r]")
+    ..presetTooltipNormalExtended(lvl -> "Kills all enemies in the target area and reveals stealthed enemies in a larger area.|n|n"
+                                        + "|cffFF0000WARNING: You can use this spell only once per round. Use it wisely, it decides most matches!|r")
+
+
+@compiletime function resqueStrikeEffect()
+  new AbilityDefinition(RESQUE_STRIKE_CASTER_EFFECT_ID, 'Asp1')
+    ..setMissileArt("Units\\Human\\HeroBloodElf\\BloodElfBall.mdl")
+    ..setMissileSpeed(900)
+    ..setName("Rescue Strike Effect")
+    ..setArtTarget("Abilities\\Spells\\Items\\AIfb\\AIfbTarget.mdl")
+    ..setTargetAttachmentPoint("hand,right")
+    ..setTargetAttachmentPoint1("hand,left")
+    ..setTargetAttachments(2)
+
+@compiletime function resqueStrikeEffectUnit()
+  new UnitDefinition(RESQUE_STRIKE_EFFECT_DUMMY_ID, UnitIds.priest)
+    ..setNormalAbilities("Aloc,Avul")
+    ..setIconGameInterface("ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp")
+    ..setDefaultActiveAbility("")
+    ..setAnimationCastBackswing(0.01)
+    ..setAnimationCastPoint(1.0)
+    ..setDeathTimeseconds(0.1)
+    ..setDeathType(1)
+    ..setModelFile("units\\human\\HeroMountainKing\\HeroMountainKing")
+    ..setFoodCost(0)
+    ..setHitPointsMaximumBase(4444)
+    ..setProjectileLaunchZ(150.0)
+    ..setLevel(1)
+    ..setScalingValue(3.0)
+    ..setMovementHeight(10.0)
+    ..setMovementType(MovementType.Fly)
+    ..setName("RescueDummy")
+    ..setPointValue(0)
+    ..setUnitClassification("tauren,ward")
+    ..setShadowImageUnit("")
+    ..setUnitSoundSet("")
+    ..setUpgradesUsed("")
+    ..setAttacksEnabled(0)
+    

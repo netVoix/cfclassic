@@ -1,0 +1,6 @@
+package PlayerHelpers
+
+import Colorizer
+
+public function player.getNameColorized() returns string
+  return Colorizer.colorizeByPlayerId(this.getName(), this.getId())

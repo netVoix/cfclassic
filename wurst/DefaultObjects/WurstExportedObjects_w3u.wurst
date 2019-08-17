@@ -7601,30 +7601,7 @@ import ObjEditingNatives
 	..setString("upgr", "")
 
 
-@compiletime function create_w3u_h04X()
-	createObjectDefinition("w3u", 'h04X', 'hmpr')
-	..setString("uabi", "Aloc,Avul")
-	..setString("uico", "ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp")
-	..setString("udaa", "")
-	..setUnreal("ucbs", 0.01)
-	..setUnreal("ucpt", 1.0)
-	..setUnreal("udtm", 0.1)
-	..setInt("udea", 1)
-	..setString("umdl", "units\\human\\HeroMountainKing\\HeroMountainKing")
-	..setInt("ufoo", 0)
-	..setInt("uhpm", 4444)
-	..setUnreal("ulpz", 150.0)
-	..setInt("ulev", 1)
-	..setReal("usca", 3.0)
-	..setUnreal("umvh", 10.0)
-	..setString("umvt", "fly")
-	..setString("unam", "RescueDummy")
-	..setInt("upoi", 0)
-	..setString("utyp", "tauren,ward")
-	..setString("ushu", "")
-	..setString("usnd", "")
-	..setString("upgr", "")
-	..setInt("uaen", 0)
+
 
 
 @compiletime function create_w3u_h04W()

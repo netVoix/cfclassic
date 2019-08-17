@@ -3,12 +3,14 @@ package NatureBuilder
 import UnitIds
 import UnitObjEditing
 import BaseCFBuilder
+import ObjectIds
+import BuilderBlink
 
 public let NATURE_BUILDER_ID = 'h01A'
 
 @compiletime function natureBuilder()
   new BaseCFBuilder(NATURE_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("A06E,Aeth,AInv,A005,A001,Ahrp,Avul")
+    ..setNormalAbilities("A06E,Aeth,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNEnt.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h002,h00Y,h013,h023,h027,h028,n02D,h02A,h02C,h02D,h008")

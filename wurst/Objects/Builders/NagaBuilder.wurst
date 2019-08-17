@@ -3,12 +3,14 @@ package NagaBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import ObjectIds
+import BuilderBlink
 
 public let NAGA_BUILDER_ID = 'h00E'
 
 @compiletime function create_w3u_h00E()
   new BaseCFBuilder(NAGA_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,A005,A001,Ahrp,Avul,AInv")
+    ..setNormalAbilities("Aeth,A06E,A005,Ahrp,Avul,AInv," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNMurgalSlave.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h01Z,h00N,h00M,h00J,h01B,h00I,h00G,h020,h008,h01Y,h00F")

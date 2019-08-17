@@ -3,12 +3,14 @@ package NorthernBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import BuilderBlink
+import ObjectIds
 
 public let NORTHERN_BUILDER_ID = 'h017'
 
 @compiletime function northernBuilder()
   new BaseCFBuilder(NORTHERN_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNVillagerMan1.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h047,h048,h03O,h049,h03T,h03S,h03K,h03Q,h008,h03U,h03I")

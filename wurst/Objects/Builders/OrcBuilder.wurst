@@ -3,12 +3,14 @@ package OrcBuilder
 import UnitObjEditing
 import UnitIds
 import BaseCFBuilder
+import ObjectIds
+import BuilderBlink
 
 public let ORC_BUILDER_ID = 'h019'
 
 @compiletime function orcBuilder()
   new BaseCFBuilder(ORC_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,A001,Ahrp,Avul")
+    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPeon.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h02R,h02P,h02K,h02O,h02N,h029,h02B,h02I,o000,h008,h02H")
