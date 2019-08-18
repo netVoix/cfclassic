@@ -5310,7 +5310,7 @@ set c=null
 endfunction
 function go takes nothing returns boolean
 local unit u=GetFilterUnit()
-local boolean fl=GetWidgetLife(u)>=.405 and IsUnitType(u,UNIT_TYPE_STRUCTURE)and GetUnitTypeId(u)!='h09T' and(GetUnitAbilityLevel(u,'Bfrz')>0 or GetUnitAbilityLevel(u,'B00M')>0)and GetRandomInt(0,99)<50
+local boolean fl=GetWidgetLife(u)>=.405 and IsUnitType(u,UNIT_TYPE_STRUCTURE)and GetUnitTypeId(u)!='h09T' and(GetUnitAbilityLevel(u,'Bfrz')>0 or GetUnitAbilityLevel(u,'B00M')>0)
 set u=null
 return fl
 endfunction
@@ -5506,7 +5506,7 @@ call yo()
 set fd=Filter(function Zn)
 set ed=Filter(function Xn)
 set gd=Filter(function go)
-call TimerStart(CreateTimer(),4.,true,function jo)
+call TimerStart(CreateTimer(),2.,true,function jo)
 endfunction
 function Ao takes nothing returns nothing
 local unit c

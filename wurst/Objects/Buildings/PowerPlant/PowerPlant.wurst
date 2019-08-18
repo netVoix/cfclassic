@@ -1,0 +1,39 @@
+package PowerPlant
+
+import BaseCFBuilding
+import UnitIds
+
+public let POWER_PLANT_ID = 'h09T'
+ 
+@compiletime function powerPlant()
+	new BaseCFBuilding(POWER_PLANT_ID, UnitIds.farm)
+	..setNormalAbilities("A07E,A09A")
+	..setRequiredAnimationNames("First")
+	..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNControlMagic.blp")
+	..setGoldBountyReward(68)
+	..setButtonPositionX(2)
+	..setDeathTimeseconds(0.1)
+	..setModelFile("Doodads\\Cityscape\\Props\\City_Oblisk\\City_Oblisk")
+	..setGoldCost(340)
+	..setTintingColorGreen(170)
+	..setHotkey("D")
+	..setHitPointsMaximumBase(1100)
+	..setLumberCost(900)
+	..setMaximumPitchAngledegrees(0.0)
+	..setMaximumRollAngledegrees(0.0)
+	..setScalingValue(0.7)
+	..setFullName("Power Plant")
+	..setPointValue(14)
+	..setPriority(4)
+	..setTintingColorRed(200)
+	..setHitPointsRegenerationRate(0.5)
+	..setRepairTime(70)
+	..setRequirements("tec2")
+	..setRequirementsLevels("1")
+	..setSelectionScale(2.4)
+	..setUnitSoundSet("Blacksmith")
+  ..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Power Buildings|r|nPowers all buildings in 180 range giving " + 
+                        "them +2 armor. Empowered buildings have a chance to get negative buffs removed from them. " + 
+                        "In addition, towers gain +25% damage and special buildings gain +0.25 mana/sec. " + 
+                        "Creep producing strucutres train stronger creeps:|n-100 bonus HP|n-2 bonus armor|n-20% bonus damage")
+  
