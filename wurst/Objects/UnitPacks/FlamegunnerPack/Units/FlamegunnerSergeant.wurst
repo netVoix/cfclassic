@@ -1,0 +1,33 @@
+package FlamegunnerSergeant
+import BaseCFUnit
+import FlamegunnerConstants
+import UnitIds
+
+@compiletime function flamegunnerSergeant()
+	new BaseCFUnit(FLAMEGUNNER_SERGEANT_ID, UnitIds.chaosspaceorc)
+	..setNormalAbilities("A09D")
+	..setAttack1AttackType(AttackType.Chaos)
+	..setDefaultActiveAbility("A09D")
+	..setTotalCost(ARSENAL_TOTAL_COST)
+	..setTintingColorBlue(150)
+	..setGoldBountyReward(11)
+	..setCollisionSize(16.0)
+	..setDefenseBase(7)
+	..setArmorType(ArmorType.Small)
+	..setAttack1DamageNumberofDice(1)
+	..setAttack1DamageBase(59)
+	..setTintingColorGreen(150)
+	..setHitPointsMaximumBase(700)
+	..setAttack1ProjectileSpeed(20000)
+	..setScalingValue(0.8)
+	..setFullName("Flamegunner Sergeant")
+	..setPointValue(133)
+	..setAttack1Range(70)
+	..setAttack1DamageSidesperDie(1)
+	..setAttack1DamageSpillDistance(150.0)
+	..setAttack1DamageSpillRadius(90.0)
+	..setAttack1AreaofEffectTargets("debris,enemies,ground,structure,tree,wall")
+	..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+  ..setAttack1WeaponType(WeaponType.MissileLine)
+	..setTooltipExtended(FLAMEGUNNER_SERGEANT_FULL_DESCRIPTION)
+  

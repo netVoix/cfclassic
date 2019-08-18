@@ -1,0 +1,30 @@
+package Flamegunner
+
+import BaseCFUnit
+import UnitIds
+import FlamegunnerConstants
+
+@compiletime function flamegunner()
+	new BaseCFUnit(FLAMEGUNNER_ID, UnitIds.chaosspaceorc)
+	..setAttack1AttackType(AttackType.Chaos)
+	..setGoldBountyReward(7)
+  ..setCollisionSize(16.0)
+	..setTotalCost(GUNSMITH_TOTAL_COST)  
+	..setDefenseBase(4)
+	..setArmorType(ArmorType.Small)
+	..setAttack1DamageNumberofDice(1)
+	..setAttack1DamageBase(33)
+	..setHitPointsMaximumBase(500)
+	..setAttack1ProjectileSpeed(20000)
+	..setScalingValue(0.7)
+	..setFullName("Flamegunner")
+	..setPointValue(133)
+	..setAttack1Range(70)
+	..setAttack1DamageSidesperDie(1)
+	..setAttack1DamageSpillDistance(150.0)
+	..setAttack1DamageSpillRadius(90.0)
+	..setAttack1AreaofEffectTargets("debris,enemies,ground,structure,tree,wall")
+	..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+  ..setAttack1WeaponType(WeaponType.MissileLine)
+	..setTooltipExtended(FLAMEGUNNER_FULL_DESCRIPTION)
+  

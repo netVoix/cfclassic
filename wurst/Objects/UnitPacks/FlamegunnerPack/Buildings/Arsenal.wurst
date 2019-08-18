@@ -1,0 +1,29 @@
+package Arsenal
+import BaseCFBuilding
+import FlamegunnerConstants
+import UnitIds
+import ObjectIds
+
+@compiletime function arsenal()
+	new BaseCFBuilding(ARSENAL_ID, UnitIds.blacksmith)
+	..setNormalAbilities("A07E")
+	..setRequiredAnimationNames("First")
+	..setGoldBountyReward(72)
+	..setShadowTextureBuilding("ShadowHouse")
+	..setCollisionSize(72.0)
+	..setHotkey("R")
+  ..setHitPointsMaximumBase(1400)
+  ..setTotalCost(ARSENAL_COST)
+	..setMaximumPitchAngledegrees(0.0)
+	..setMaximumRollAngledegrees(0.0)
+	..setScalingValue(0.5)
+	..setFullName("Arsenal")
+	..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+	..setPointValue(126)
+	..setHitPointsRegenerationRate(0.5)
+	..setRequirements("tec2")
+	..setRequirementsLevels("1")
+	..setSelectionScale(2.4)
+	..setUnitsTrained(FLAMEGUNNER_SERGEANT_ID.toRawCode())
+	..setTooltipExtended(FLAMEGUNNER_SERGEANT_SHORT_DESCRIPTION)
+  

@@ -10,7 +10,7 @@ import BaseCFUnit
     ..setFullName("Frost Wyrm")
     ..setTotalCost(DRAGON_CEMETERY_TOTAL_COST)
     ..setNormalAbilities("A064")
-    ..setAttack1WeaponType(WeaponType.Normal)
+    ..setAttack1AttackType(AttackType.Normal)
     ..setGoldBountyReward(16)
     ..setAttack1CooldownTime(1.8)
     ..setDefenseBase(5)

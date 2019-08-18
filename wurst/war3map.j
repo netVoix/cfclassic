@@ -5423,12 +5423,12 @@ endfunction
 function xo takes nothing returns nothing
 local integer id
 set id=GetUnitPointValueByType('h05T')
-set h4[id]=$DC
-set i4[id]=$DC*.2/100.
+set h4[id]=200
+set i4[id]=200*.2/100.
 set j4[id]=true
 set id=GetUnitPointValueByType('h09P')
-set h4[id]=$8C
-set i4[id]=$8C*.2/100.
+set h4[id]=160
+set i4[id]=160*.2/100.
 set j4[id]=true
 set id=GetUnitPointValueByType('h05U')
 set h4[id]=375

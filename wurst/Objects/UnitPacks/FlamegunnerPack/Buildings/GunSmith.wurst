@@ -1,0 +1,30 @@
+package GunSmith
+
+import BaseCFBuilding
+import UnitIds
+import FlamegunnerConstants
+import ObjectIds
+
+@compiletime function gunSmith()
+	new BaseCFBuilding(GUNSMITH_ID, UnitIds.blacksmith)
+	..setNormalAbilities("A07E")
+	..setRequiredAnimationNames("First")
+	..setGoldBountyReward(44)
+	..setShadowTextureBuilding("ShadowHouse")
+	..setCollisionSize(72.0)
+	..setTotalCost(GUNSMITH_COST)
+	..setHotkey("R")
+	..setHitPointsMaximumBase(1300)
+	..setMaximumPitchAngledegrees(0.0)
+	..setMaximumRollAngledegrees(0.0)
+	..setScalingValue(0.5)
+	..setFullName("Gun Smith")
+	..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+	..setHitPointsRegenerationRate(0.5)
+	..setRequirements("tec1")
+	..setRequirementsLevels("1")
+	..setSelectionScale(2.4)
+	..setUnitsTrained(FLAMEGUNNER_ID.toRawCode())
+	..setUpgradesTo(ARSENAL_ID.toRawCode())
+	..setTooltipExtended(FLAMEGUNNER_SHORT_DESCRIPTION)
+  

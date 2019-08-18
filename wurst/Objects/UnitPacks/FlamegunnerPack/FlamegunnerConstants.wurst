@@ -1,0 +1,35 @@
+package FlamegunnerConstants
+
+public let FLAMEGUNNER_ID = 'z002'
+public let FLAMEGUNNER_SERGEANT_ID = 'z003'
+public let GUNSMITH_ID = 'h05T'
+public let ARSENAL_ID = 'h09P'
+public let ARSENAL_COST = 160
+public let GUNSMITH_COST = 200
+public let GUNSMITH_TOTAL_COST = GUNSMITH_COST
+public let ARSENAL_TOTAL_COST = GUNSMITH_COST + ARSENAL_COST
+
+
+public let FLAMEGUNNER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF0070|r rng,|cffFFFF00 37|r dps)|n" + 
+                                        "|cffFFFF80Armor:|r Light (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
+                                        "|cffFFFF80Abilities:|r|n|n|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n" + 
+                                        "|cff80FF00Line Damage|r|nThis unit's attacks hit all units in 150.0 range behind its target"
+
+public let FLAMEGUNNER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Flamegunner|n|cffFFFF80Upgrades: |cffFFFF001|n|n" + 
+                                          "|cffFFAC00Flamegunner:|r|n|cffFFFF80Attack:|r Chaos (|cffFFFF0070|r rng,|cffFFFF00 37|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Light (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n-Can't attack Air|n-Line Damage"
+
+public let FLAMEGUNNER_SERGEANT_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF0070|r rng,|cffFFFF00 66|r dps)|n" + 
+                                                   "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF00700|r|n" + 
+                                                   "|cffFFFF80Abilities:|r|n|n|cff80FF00Ground Only|r|nThis unit can't attack flying enemies|n|n" + 
+                                                   "|cff80FF00Line Damage|r|nThis unit's attacks hit all units in 150.0 range behind its target|n|n" + 
+                                                   "|cff80FF00Astral Grenade|r|nLaunches a grenade that deals 30 damage and burns up to " + 
+                                                   "100 mana dealing the same amount of damage. In addition it slows units by 50% for 3 seconds. " + 
+                                                   "Area of Effect: 300"
+public let FLAMEGUNNER_SERGEANT_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Flamegunner Sergeant|n|n" + 
+                                                    "|cffFFAC00Flamegunner Sergeant:|r|n|cffFFFF80Attack:|r Chaos (|cffFFFF0070|r rng," + 
+                                                    "|cffFFFF00 66|r dps)|n|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n" + 
+                                                    "|cffFFFF80Hitpoints: |cffFFFF00700|r|n|cffFFFF80Abilities:|r|n" + 
+                                                    "-Can't attack Air|n-Line Damage|n-Astral Grenade|n|n|cffFF0000You must turn off " + 
+                                                    "unit production before you can upgrade!|r"
