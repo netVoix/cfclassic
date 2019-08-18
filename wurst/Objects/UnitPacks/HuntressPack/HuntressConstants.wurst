@@ -1,7 +1,5 @@
 package HuntressConstants
 
-import ObjectIdGenerator
-
 public let HUNTRESS_ID = 'e001'
 public let RANGER_ID = 'e003'
 public let AMAZON_ID = 'e004'
@@ -10,7 +8,6 @@ public let RANGERS_HALL_ID = 'h03D'
 public let AMAZONS_HALL_ID = 'h03E'
 
 public let RANGER_MULTISHOT_ID = 'A03N'
-public let HUNTRESS_MULTISHOT_ID = compiletime(ABIL_ID_GEN.next())
 
 public let HUNTRESS_HALL_COST = 150
 public let RANGERS_HALL_COST = 200

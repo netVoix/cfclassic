@@ -12,7 +12,7 @@ import ObjectIds
 	..setTotalCost(RANGERS_HALL_TOTAL_COST)
 	..setGoldBountyReward(11)
 	..setCollisionSize(16.0)
-	..setAttack1CooldownTime(1.3)
+	..setAttack1CooldownTime(1.04)
 	..setDefenseBase(3)
 	..setArmorType(ArmorType.Small)
 	..setAttack1DamageBase(49)

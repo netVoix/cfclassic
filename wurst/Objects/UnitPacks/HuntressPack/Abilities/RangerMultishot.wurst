@@ -14,5 +14,5 @@ import HuntressConstants
     ..presetTargetsAllowed(lvl -> "{0},{1},{2}".format(TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground))
     ..presetDamagePerTarget(lvl -> 0)
     ..presetMaximumTotalDamage(lvl -> 99999)
-    ..presetMaximumNumberofTargets(lvl -> 3)
+    ..presetMaximumNumberofTargets(lvl -> 2)
   
