@@ -4097,6 +4097,12 @@ call DestroyEffect(AddSpecialEffectTarget("Abilities\\Spells\\Items\\AIil\\AIilT
 call UnitDamageTarget(r4,u,100500.,true,false,ATTACK_TYPE_CHAOS,DAMAGE_TYPE_DEATH,WEAPON_TYPE_WHOKNOWS)
 set u=null
 endfunction
+function selectRandomNotLegendUnit takes nothing returns boolean
+  local unit u = GetFilterUnit()
+  local boolean res = GetWidgetLife(u) > .405 and IsUnitEnemy(u, g4) and IsUnitType(u,UNIT_TYPE_SAPPER) and GetUnitAbilityLevel(u, 'Avul') <=0 and GetUnitAbilityLevel(u,'A08H') <= 0 and GetUnitAbilityLevel(u, 'A06V') <= 0
+  set u = null
+  return res
+endfunction
 function cm takes nothing returns nothing
 set g4=GetOwningPlayer(r4)
 call GroupEnumUnitsInRect(f4,bj_mapInitialPlayableArea,n7)
