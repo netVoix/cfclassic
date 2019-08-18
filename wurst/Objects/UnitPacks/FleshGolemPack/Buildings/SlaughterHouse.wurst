@@ -1,0 +1,32 @@
+package SlaughterHouse
+
+import BaseCFBuilding
+import FleshGolemConstants
+import UnitIds
+import ObjectIds
+
+@compiletime function slaughterHouse()
+  new BaseCFBuilding(SLAUGHTER_HOUSE_ID, UnitIds.farm)
+    ..setRequiredAnimationNames("upgrade,second")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNSlaughterhouse.blp")
+    ..setGoldBountyReward(74)
+    ..setModelFile("buildings\\undead\\Slaughterhouse\\Slaughterhouse")
+    ..setGoldCost(SLAUGHTER_HOUSE_COST)
+    ..setTotalCost(SLAUGHTER_HOUSE_TOTAL_COST)
+    ..setHotkey("A")
+    ..setHitPointsMaximumBase(1400)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.45)
+    ..setFullName("Slaughter House")
+    ..setPointValue(36)
+    ..setPriority(4)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec2")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(FLESH_GOLEM_ID.toRawCode())
+    ..setUnitSoundSet("Blacksmith")
+    ..setTooltipExtended(FLESH_GOLEM_SHORT_DESCRIPTION)
+  

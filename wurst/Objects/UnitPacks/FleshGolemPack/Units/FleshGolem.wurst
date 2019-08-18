@@ -1,0 +1,33 @@
+package FleshGolem
+
+import BaseCFUnit
+import FleshGolemConstants
+import UnitIds
+
+@compiletime function fleshGolem()
+	new BaseCFUnit(FLESH_GOLEM_ID, UnitIds.fleshgolem)
+	..setNormalAbilities("A01R,A01S")
+	..setAttack1AttackType(AttackType.Siege)
+	..setTotalCost(SLAUGHTER_HOUSE_TOTAL_COST)
+	..setGoldBountyReward(12)
+	..setCollisionSize(16.0)
+	..setAttack1CooldownTime(1.75)
+	..setDefenseBase(9)
+	..setAttack1DamageNumberofDice(1)
+	..setAttack1DamageBase(124)
+	..setHitPointsMaximumBase(1200)
+	..setManaMaximum(0)
+	..setScalingValue(0.82)
+	..setFullName("Flesh Golem")
+	..setAttack1Range(120)
+	..setManaRegeneration(0.0)
+	..setAnimationRunSpeed(300.0)
+	..setAnimationWalkSpeed(300.0)
+	..setSelectionScale(1.75)
+	..setArmorType(ArmorType.Large)
+	..setAttack1DamageSidesperDie(26)
+	..setSpeedBase(320)
+	..setUnitClassification("sapper,undead,ward")
+  ..setAttack1WeaponSound(WeaponSound.WoodHeavyBash)
+	..setTooltipExtended(FLESH_GOLEM_FULL_DESCRIPTION)
+  
