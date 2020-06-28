@@ -25,7 +25,7 @@ init
     let u = GetTriggerUnit()
     let p = u.getOwner()
     let pid = p.getId()
-    let pos = getSpellTargetPos()
+    let pos = EventData.getSpellTargetPos()
     if GetSpellAbilityId() == RESQUE_STRIKE_ID
       let rs = new ResqueStrike(u, pos)
       doPeriodicallyCounted(0.35, 3) c ->

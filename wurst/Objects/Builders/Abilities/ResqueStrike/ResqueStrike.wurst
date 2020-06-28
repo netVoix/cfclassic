@@ -39,7 +39,7 @@ public class ResqueStrike
           ..removeAbility(RESQUE_STRIKE_CASTER_EFFECT_ID)
 
   private function makeCasterEffect(unit caster)
-    addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", caster, "origin").destr()
+    caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
 
   private function makeLocationEffect(player owner, vec2 pos)
     let effectUnit = createUnit(owner, RESQUE_STRIKE_EFFECT_DUMMY_ID, pos, angle(0))

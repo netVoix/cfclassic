@@ -19,7 +19,7 @@ public let CEREMONIAL_TOTEM_BUFF_ID = 'A039'
     ..presetUnitType(lvl -> "nfbr")
     ..presetSummonedUnitDuration(lvl -> 0.01)
     ..presetDamageperSecond(lvl -> 0)
-    ..presetStackingType(lvl -> "0")
+    ..presetStackingTypes(lvl -> 0)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
       TargetsAllowed.enemies, TargetsAllowed.ground, TargetsAllowed.invulnerable,
       TargetsAllowed.mechanical, TargetsAllowed.neutral, TargetsAllowed.structure

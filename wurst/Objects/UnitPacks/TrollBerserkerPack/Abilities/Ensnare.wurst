@@ -14,7 +14,7 @@ public let ENSNARE_DUMMY_ID = 'A06H'
 		..presetCooldown(lvl -> 8)
 		..presetManaCost(lvl -> 0)
 		..presetDamageperSecond(lvl -> 0)
-		..presetStackingType(lvl -> "0")
+		..presetStackingTypes(lvl -> 0)
 		..presetDurationNormal(lvl -> 0.01)
 		..presetDurationHero(lvl -> 0.01)
 		..setMissileArt("")

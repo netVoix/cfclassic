@@ -21,7 +21,7 @@ public let PURGE_DUMMY_ID = 'A02T'
     ..presetUnitType(lvl -> "nfbr")
     ..presetSummonedUnitDuration(lvl -> 0.01)
     ..presetDamageperSecond(lvl -> 0)
-    ..presetStackingType(lvl -> "0")
+    ..presetStackingTypes(lvl -> 0)
 
 @compiletime function purgeDummy()
   new AbilityDefinitionPurgeCreep(PURGE_DUMMY_ID)

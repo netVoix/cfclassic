@@ -29,6 +29,6 @@ public let HELLS_FIST_SHORT_DESCRIPTION = HELLS_FIST_FULL_DESCRIPTION
     ..presetUnitType(lvl -> "nfbr")
     ..presetSummonedUnitDuration(lvl -> 0.01)
     ..presetDamageperSecond(lvl -> 0)
-    ..presetStackingType(lvl -> "0")
+    ..presetStackingTypes(lvl -> 0)
     ..presetTooltipNormal(lvl -> "Hell's Fist")
     ..presetTooltipNormalExtended(lvl -> HELLS_FIST_FULL_DESCRIPTION)

@@ -1,4 +1,5 @@
 package ResqueStrikeObjects
+
 import AbilityObjEditing
 import UnitIds
 

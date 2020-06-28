@@ -11,10 +11,10 @@ function setHCL()
     resolveMode("-rr2-fow-slt-ca-ban-gld40-skip")
 
 function resolveMode(string xr)
-  string s = StringCase(xr,false)
+  let s = StringCase(xr,false)
   integer yr = 0
   integer zr = 0
-  integer id = GetPlayerId(GetTriggerPlayer())
+  let id = GetPlayerId(GetTriggerPlayer())
   string ch
   oh("CE: "+xr)
   rh()
