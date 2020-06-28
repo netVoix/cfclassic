@@ -26,7 +26,7 @@ public class Results
         if senderOne == GetLocalPlayer()
             cache.syncInt("EOG", "Win1")
         if senderTwo == GetLocalPlayer()
-            cache.syncInt("EOG", "Win2")
+            cache.syncInt("EOG", "Win1")
 
     private static function findSenders()
         player p
