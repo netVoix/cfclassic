@@ -1,23 +1,23 @@
 package ResqueStrikeObjects
 
-import AbilityObjEditing
 import UnitIds
+import ChannelAbilityPreset
 
 public let RESQUE_STRIKE_ID = 'A005'
 public let RESQUE_STRIKE_CASTER_EFFECT_ID = 'A06E'
 public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
 
 @compiletime function resqueStrike()
-  new AbilityDefinitionFlameStrikeCreep(RESQUE_STRIKE_ID)
+  new ChannelAbilityPreset(RESQUE_STRIKE_ID, 1, true)
     ..presetAreaofEffect(lvl -> 700)
     ..presetIcon("ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp")
     ..setButtonPositionNormalX(3)
     ..presetCastingTime(lvl -> 0)
     ..presetCooldown(lvl -> 60)
     ..presetManaCost(lvl -> 0)
-    ..presetFullDamageDealt(lvl -> 0)
-    ..presetHalfDamageDealt(lvl -> 0)
-    ..presetBuildingReduction(lvl -> 1)
+    ..presetArtDuration(lvl -> 0)
+    ..presetTargetTypes(Targettype.POINT)
+    ..presetOption(Option.TARGETIMAGE, true)
     ..presetDurationNormal(lvl -> 1)
     ..presetDurationHero(lvl -> 1)
     ..setArtEffect("")
