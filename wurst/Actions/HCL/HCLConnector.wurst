@@ -8,6 +8,8 @@ function setHCL()
     resolveMode("-rr2-fow-slt-ca-ban-mp2-gld40-skip")
   else if hclString == "2"
     resolveMode("-rr2-fow-slt-ca-ban-gld40-skip")
+  else if hclString == "3"
+    resolveMode("-pr2-fow-slt-ban2-ca-gld40-mp2-skip")
 
 function resolveMode(string xr)
   let s = StringCase(xr,false)
