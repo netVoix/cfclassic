@@ -3,17 +3,11 @@ package ResultsConnector
 import Results
 
 function sendResults()
-  for i = 0 to 12
-    let p = Player(i)
-    if p.isIngame()
-      if p.getTeam() == Gd - 1
-        Results.setByExp(p.getId())
-  Results.send()   
+  Results.setDataManually(Gd mod 2)
+  Results.send()
 
 init
   InitGameCache("dr.x").flush()
   Results.setCache(InitGameCache("dr.x"))
-
-  print(GetLocalPlayer().getTeam())
 
   gameEndTrigger..addCondition(Condition(function sendResults))
