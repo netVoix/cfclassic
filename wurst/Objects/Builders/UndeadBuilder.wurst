@@ -5,12 +5,13 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
+import UndeadRsObjects
 
 public let UNDEAD_BUILDER_ID = 'h018'
 
 @compiletime function undeadBuilder()
   new BaseCFBuilder(UNDEAD_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
+    ..setNormalAbilities("Aeth,A06E,AInv,Ahrp,Avul," + commaList(BUILDER_BLINK_ID, UNDEAD_RS_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNAcolyte.blp")
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h01K,h01O,h01Q,h01T,h01P,h01N,h01L,h01S,h008,h00A,h01R")

@@ -1,0 +1,53 @@
+package UndeadRsObjects
+
+import ChannelAbilityPreset
+import Icons
+import UnitIds
+import BaseCFBuilder
+import Units
+import Soundsets
+import initlater UndeadBuilder
+
+public let UNDEAD_RS_ID = compiletime(ABIL_ID_GEN.next())
+public let UNDEAD_RS_COIL_ID = compiletime(ABIL_ID_GEN.next())
+public let UNDEAD_RS_META_FORM_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function undeadRs()
+    new AbilityDefinitionDemonHunterMetamorphosis(UNDEAD_RS_ID)
+    ..presetManaCost(lvl -> 0)
+    ..presetCastingTime(lvl -> 0)
+    ..presetAlternateFormHitPointBonus(lvl -> 0)
+    ..presetMorphingFlags(lvl -> MorphingFlag.UNINTERRUPTABLE castTo int)
+    ..presetAlternateFormUnit(lvl -> UNDEAD_RS_META_FORM_ID.toRawCode())
+    ..presetNormalFormUnit(lvl -> UNDEAD_BUILDER_ID.toRawCode())
+    ..presetDurationHero(lvl -> 3)
+    ..presetDurationNormal(lvl -> 0)
+    ..presetCooldown(lvl -> 0)
+    ..presetIcon(Icons.bTNDeathCoil)     
+    ..presetTooltipNormal(lvl -> "Death coil pulse [|cffffcc00V|r]")
+    ..presetTooltipNormalExtended(lvl -> "Kills all enemies around your builder and reveals stealthed enemies in a larger area.|n|n"
+                                        + "|cffFF0000WARNING: You can use this spell only once per round. Use it wisely, it decides most matches!|r")
+    ..presetHotkey("V")
+
+@compiletime function undeadRsAbility()
+    new AbilityDefinitionDeathKnightDeathCoil(UNDEAD_RS_COIL_ID)
+    ..setDummyAbility()
+    ..presetAmountHealedDamaged(lvl -> 9999)  
+    ..presetTargetsAllowed(lvl -> "air,enemies,ground,sapper")
+    ..presetAreaofEffect(lvl -> 0)
+    ..setMissileSpeed(750)
+
+@compiletime function undeadRsMeta()
+    new BaseCFBuilder(UNDEAD_RS_META_FORM_ID, UnitIds.peasant)
+    ..setModelFile(Units.heroDeathKnight)
+    ..setIconGameInterface(Icons.bTNHeroDeathKnight)
+    ..setSpeedBase(125)
+    ..setUnitSoundSet(Soundsets.heroDeathKnight)
+    ..setNormalAbilities("Aeth,A06E,AInv,Avul," + commaList(UNDEAD_RS_ID))
+    ..setStructuresBuilt("h01K,h01O,h01Q,h01T,h01P,h01N,h01L,h01S,h008,h00A,h01R")
+    ..setFullName("Undead Builder")
+    ..setPointValue(4)
+    ..setTooltipBasic("|cffFFD900Choose the Undead Forces|r")
+    ..setTooltipExtended("Undead Forces use necromantic magic to reanimate dead units. They bring death and disease to their enemies. An undead builder is able to construct a spirit tower to defend your base.")
+
+    

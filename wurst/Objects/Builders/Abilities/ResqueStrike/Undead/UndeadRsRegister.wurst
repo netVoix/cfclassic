@@ -1,0 +1,22 @@
+package UndeadRsRegister
+
+import UndeadRsObjects
+import ClosureTimers
+import InstantDummyCaster
+import Orders
+import ClosureForGroups
+    
+function activateDeathCoil() 
+    let u = GetEnteringUnit()
+    if u.getTypeId() == UNDEAD_RS_META_FORM_ID
+        doPeriodically(0.5) cb -> 
+            if u.isAlive()
+                forUnitsInRange(u.getPos(), 600) un ->
+                    InstantDummyCaster.castTarget(u.getOwner(), UNDEAD_RS_COIL_ID, 1, OrderIds.deathcoil, un, u.getPos())
+            else
+                destroy cb
+                 
+init
+    let t = CreateTrigger()
+    TriggerRegisterEnterRectSimple(t, bj_mapInitialPlayableArea)
+    t.addCondition(Condition(function activateDeathCoil))

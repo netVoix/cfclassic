@@ -4,6 +4,7 @@ import HCLReader
 
 function setHCL()
   let hclString = HCLReader.read()
+  resolveMode("-pr2-fow-slt-ca-gld40-mp2-skip")
   if hclString == "1"
     resolveMode("-rr2-fow-slt-ca-ban-mp2-gld40-skip")
   else if hclString == "2"
