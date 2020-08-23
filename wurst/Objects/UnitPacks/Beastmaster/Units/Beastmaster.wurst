@@ -1,0 +1,38 @@
+package Beastmaster
+
+import UnitIds
+import BeastmasterConstants
+import BaseCFUnit
+import Hawk
+import ObjectIds
+import Units
+import Icons
+
+@compiletime function beastmaster()
+    new BaseCFUnit(BEASTMASTER_ID, UnitIds.summoner)
+        ..setFullName("Beastmaster")
+        ..setSpeedBase(295)
+        ..setModelFile(Units.beastmaster)
+        ..setIconGameInterface(Icons.bTNBeastMaster)
+        ..setNormalAbilities(HAWK_ID.toRawCode())
+        ..setDefaultActiveAbility(HAWK_ID.toRawCode())
+        ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
+        ..setGoldBountyReward(15)
+        ..setAnimationCastBackswing(0.26)
+        ..setAnimationCastPoint(0.25)
+        ..setCasterUpgradeNames("")
+        ..setDefenseBase(1)
+        ..setAttack1AttackType(AttackType.Normal)
+        ..setAttack1DamageBase(100)
+        ..setAttack1CooldownTime(1.6)
+        ..setHitPointsMaximumBase(400)
+        ..setManaInitialAmount(80)
+        ..setManaMaximum(200)
+        ..setScalingValue(0.9)
+        ..setPointValue(114)
+        ..setAttack1Range(60)
+        ..setHitPointsRegenerationRate(1)
+        ..setManaRegeneration(1.35)
+        ..setAttack1DamageSidesperDie(1)
+        ..setUnitClassification("sapper,orc,ward")
+        ..setTooltipExtended(BEASTMASTER_FULL_DESCRIPTION)

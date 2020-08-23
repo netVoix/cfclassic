@@ -1,0 +1,62 @@
+package Hawk
+
+import UnitIds
+import Icons
+import AbilityObjEditing
+import Objects
+import ObjectIds
+import ObjectExtension
+import ObjectIdGenerator
+import Abilities
+
+
+public let SUMMON_HAWK_ID = compiletime(ABIL_ID_GEN.next())
+public let HAWK_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function summonHawk()
+    new AbilityDefinitionFarseerSpiritWolf(SUMMON_HAWK_ID)
+        ..presetCooldown(lvl -> 50)
+        ..presetManaCost(lvl -> 50)
+        ..presetDurationNormal(lvl -> 35)
+        ..presetDurationHero(lvl -> 35)
+        ..setHeroAbility(false)
+        ..setLevels(1)
+        ..setArtSpecial(Objects.nagaDeath)
+        ..presetSummonedUnit(lvl -> HAWK_ID.toRawCode())
+        ..presetNumberofSummonedUnits(lvl -> 1)
+
+@compiletime function hawk()
+    new UnitDefinition(HAWK_ID, UnitIds.dragonhawk)
+        ..setNormalAbilities("")
+        ..setAcquisitionRange(800)
+        ..setIconGameInterface(Icons.bTNDragonHawk)
+        ..setDefaultActiveAbility("")
+        ..setGoldBountyReward(3)//izmenit
+        ..setCollisionSize(16)//razmer fakticheskiy
+        ..setAttack1CooldownTime(1.8)
+        ..setArmorType(ArmorType.Unarmored)
+        ..setAttack1DamageBase(50)//def ataka
+        // ..setAttack1DamageNumberofDice(20)//razbros
+        // ..setAttack1DamageSidesperDie(0)//razbros
+        ..setFoodCost(0)
+        ..setGoldCost(0)
+        ..setHitPointsMaximumBase(300)//izmenit
+        ..setLevel(1)
+        ..setAttack1ProjectileArt(Abilities.murgulMagicMissile)//tyt
+        ..setAttack1ProjectileSpeed(1200)//tyt
+        ..setScalingValue(0.4)//tyt
+        ..setName("Summoned Hawk")
+        ..setSightRadiusDay(600)
+        ..setSightRadiusNight(600)
+        ..setRace(Race.Orc)
+        ..setAttack1Range(350)//izmenit
+        ..setSelectionScale(1)
+        ..setSpeedBase(300)
+        ..setCategorizationSpecial(true)
+        ..setAttack1TargetsAllowed("{0},{1},{2},{3},{4},{5}".format(
+        	TargetsAllowed.debris, TargetsAllowed.ground,TargetsAllowed.item_t, TargetsAllowed.structure, TargetsAllowed.ward, TargetsAllowed.air
+        ))
+        ..setUnitClassification("{0},{1}".format(TargetsAllowed.sapper, TargetsAllowed.ward))
+        ..setTooltipExtended("Melee unit with damage absorption and critical strike.")
+        ..setAttack1WeaponType(WeaponType.Normal)
+        ..setAttack1WeaponSound(WeaponSound.MetalHeavyChop)

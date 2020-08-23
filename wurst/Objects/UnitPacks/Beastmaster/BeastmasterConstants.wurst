@@ -1,0 +1,35 @@
+package BeastmasterConstants
+
+
+
+public let BEASTMASTER_HUT_ID = 'h21Z'
+public let BEASTMASTER_HUT_COST = 100
+public let BEASTMASTER_HUT_TOTAL_COST = BEASTMASTER_HUT_COST
+
+public let SUPREME_BEASTMATER_PALACE_ID = 'h31Z'
+public let SUPREME_BEASTMATER_PALACE_COST = 150
+public let SUPREME_BEASTMATER_PALACE_TOTAL_COST = BEASTMASTER_HUT_COST + SUPREME_BEASTMATER_PALACE_COST
+
+public let BEASTMASTER_ID = 'h41Z'
+public let BEASTMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Dead|r|nRaises a skeleton|n|cff8080FFCooldown: |r45|n" + 
+                                          "|cff8080FFMana cost: |r75"
+public let BEASTMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Necromancer|n|cffFFFF80Upgrades: |cffFFFF002|n|n" + 
+                                            "|cffFFAC00Necromancer:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n-Raise Dead"
+
+public let SUPREME_BEASTMASTER_ID = 'h51Z'
+public let SUPREME_BEASTMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                                                  "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                                  "|cffFFFF80Abilities:|r|n|n|cff80FF00Carrion Swarm|r|nGrants a 25% chance on each attack to release a " + 
+                                                  "carrion swarm that deals 70 damage to all enemies in a cone|n|n|cff80FF00Raise Greater Dead|r|n" + 
+                                                  "Raises a skeleton. Can also raise greater skeletons and Heros but no Generals|n|cff8080FFCooldown: |r30|n" + 
+                                                  "|cff8080FFMana cost: |r75"
+public let SUPREME_BEASTMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Mighty Necromancer|n" + 
+                                                  "|cffFFFF80Upgrades: |cffFFFF001|n|n|cffFFAC00Mighty Necromancer:|r|n" + 
+                                                  "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                                                  "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                                  "|cffFFFF80Abilities:|r|n-Carrion Swarm (|cffFFFF0025%, 70dmg|r)|n-Raise Greater Dead|n|n" + 
+                                                  "|cffFF0000You must turn off unit production before you can upgrade!|r"
