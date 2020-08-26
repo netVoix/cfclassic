@@ -6,7 +6,20 @@ import EventHelper
 import ResqueStrike
 import ClosureTimers
 import ResqueStrikeNotifier
+import Orders
   
+function standartRsCasterEffect(unit caster)
+  caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
+
+function standartRsLocationEffect(player owner, vec2 pos)
+  let effectUnit = createUnit(owner, RESQUE_STRIKE_EFFECT_DUMMY_ID, pos, angle(0))
+      ..setVertexColor(colorA(0, 0, 0, 0))
+      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+      ..issueImmediateOrderById(OrderIds.fanofknives)
+  doAfter(1.5) () ->
+    effectUnit.remove()
 
 function saveData(int pid, resqueStrikeData data)
   C8[pid] = data.damage.toInt()
@@ -27,9 +40,9 @@ init
     let pid = p.getId()
     let pos = EventData.getSpellTargetPos()
     if GetSpellAbilityId() == RESQUE_STRIKE_ID
-      let rs = new ResqueStrike(u, pos)
+      let rs = new ResqueStrike(u, (owner, pos) -> standartRsLocationEffect(owner, pos), (caster) ->  standartRsCasterEffect(caster))
       doPeriodicallyCounted(0.35, 3) c ->
-        rs.cast()
+        rs.cast(pos)
       doAfter(1.5) ->
         saveData(pid, rs.getData())
         updatePlayerData(pid)

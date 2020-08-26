@@ -1,27 +1,33 @@
 package ResqueStrike
 
 import ResqueStrikeObjects
-import Orders
 import ClosureTimers
 import UnitHelpers
+
+public interface LocationEffect
+  function make(player owner, vec2 pos)
+
+public interface CasterEffect
+  function make(unit u)
 
 public tuple resqueStrikeData(int killed, real damage)
 
 public class ResqueStrike
   private var data = resqueStrikeData(0, 0)
   private unit caster
-  private vec2 pos
+  private LocationEffect locationEffect
+  private CasterEffect casterEffect
 
-
-  construct(unit unitCaster, vec2 targetPos)
+  construct(unit unitCaster, LocationEffect locEffect, CasterEffect castEffect)
     caster = unitCaster
-    pos = targetPos
+    locationEffect = locEffect
+    casterEffect = castEffect
 
-  function cast()
+  function cast(vec2 pos) 
     let owner = caster.getOwner()
     removeAbility(caster)
-    makeLocationEffect(owner, pos)
-    makeCasterEffect(caster)
+    locationEffect.make(owner, pos)
+    casterEffect.make(caster)
     saveOwner(owner)
     doAfter(0.35) ->
       let newData = makeAction(caster, pos)
@@ -37,19 +43,6 @@ public class ResqueStrike
   private function removeAbility(unit caster)
     caster..removeAbility(RESQUE_STRIKE_ID)
           ..removeAbility(RESQUE_STRIKE_CASTER_EFFECT_ID)
-
-  private function makeCasterEffect(unit caster)
-    caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
-
-  private function makeLocationEffect(player owner, vec2 pos)
-    let effectUnit = createUnit(owner, RESQUE_STRIKE_EFFECT_DUMMY_ID, pos, angle(0))
-      ..setVertexColor(colorA(0, 0, 0, 0))
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..issueImmediateOrderById(OrderIds.fanofknives)
-    doAfter(1.5) () ->
-      effectUnit.remove()
 
   private function makeAction(unit caster, vec2 pos) returns resqueStrikeData
     let owner = caster.getOwner()
