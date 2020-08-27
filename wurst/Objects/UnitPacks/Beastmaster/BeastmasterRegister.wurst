@@ -1,0 +1,15 @@
+package BeastmasterRegister
+
+import RegisterEvents
+import Quillbeast
+import InstantDummyCaster
+import Orders
+
+
+init
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
+        let sid = GetSpellAbilityId()
+        let p = GetTriggerPlayer()
+        let u = GetTriggerUnit()
+        if sid == SUMMON_QUILLBEAST_ID
+            InstantDummyCaster.castImmediate(p, SUMMON_QUILLBEAST_DUMMY_ID, 1, OrderIds.spiritwolf, u.getPos())

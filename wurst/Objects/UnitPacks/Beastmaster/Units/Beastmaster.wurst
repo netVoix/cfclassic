@@ -5,7 +5,6 @@ import Abilities
 import ObjectIds
 import Quillbeast
 import BeastmasterConstants
-import Purge
 import BaseCFUnit
 import Units
 import Soundsets
@@ -13,8 +12,8 @@ import Soundsets
 @compiletime function beastmater()
   new BaseCFUnit(BEASTMASTER_ID, UnitIds.summoner)
     ..setFullName("Beastmaster")
-    ..setNormalAbilities(commaList(PURGE_ID, SUMMON_QUILLBEAST_ID))
-    ..setDefaultActiveAbility(PURGE_ID.toRawCode())
+    ..setNormalAbilities(commaList(SUMMON_QUILLBEAST_ID))
+    ..setDefaultActiveAbility(commaList(SUMMON_QUILLBEAST_ID))
     ..setAttack1AttackType(AttackType.Normal)
     ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
     ..setModelFile(Units.beastmaster)
