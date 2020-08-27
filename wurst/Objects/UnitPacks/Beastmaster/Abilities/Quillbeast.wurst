@@ -1,0 +1,60 @@
+package Quillbeast
+
+import UnitIds
+import Icons
+import Objects
+import ObjectExtension
+import ChannelAbilityPreset
+
+public let SUMMON_QUILLBEAST_ID = compiletime(ABIL_ID_GEN.next())
+public let QUILLBEAST_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function summonQuillbeast()
+	new AbilityDefinitionFarseerSpiritWolf(SUMMON_QUILLBEAST_ID)
+		..presetBuffs(lvl -> "B00A")
+		..presetCooldown(lvl -> 60)//
+		..presetManaCost(lvl -> 70)//
+		..presetDurationNormal(lvl -> 45)//
+		..presetDurationHero(lvl -> 45)//
+		..setHeroAbility(false)
+		..setLevels(1)
+		..setArtSpecial(Objects.nagaDeath)//
+		..presetSummonedUnit(lvl -> QUILLBEAST_ID.toRawCode())
+		..presetNumberofSummonedUnits(lvl -> 1)
+
+@compiletime function quillbeast()
+	new UnitDefinition(QUILLBEAST_ID, UnitIds.quillbeast2)
+		..setNormalAbilities("A07G,A02R,A02Q")
+		..setAcquisitionRange(800)
+		..setIconGameInterface(Icons.bTNQuillBeast)
+		..setDefaultActiveAbility("")
+		..setGoldBountyReward(3)//
+		..setCategorizationCampaign(true)
+		..setCollisionSize(16)//
+		..setAttack1CooldownTime(1.4)//
+		..setArmorType(ArmorType.Large)
+		..setAttack1DamageBase(34)//
+		..setFoodCost(0)
+		..setGoldCost(0)
+		..setHitPointsMaximumBase(300)//
+		..setLevel(1)
+		..setAttack1ProjectileArt("")//
+		..setAttack1ProjectileSpeed(0)//
+		..setScalingValue(1.4)
+		..setName("Summoned Quillbeast")
+		..setSightRadiusDay(300)
+		..setSightRadiusNight(300)
+		..setRace(Race.Orc)//
+		..setAttack1Range(90)//
+		..setSelectionScale(1)
+		..setAttack1DamageSidesperDie(16)//
+		..setSpeedBase(300)//
+		..setCategorizationSpecial(true)
+		..setAttack1TargetsAllowed("{0},{1},{2},{3},{4},{5}".format(//
+			TargetsAllowed.debris, TargetsAllowed.ground,TargetsAllowed.item_t, TargetsAllowed.structure, TargetsAllowed.ward, TargetsAllowed.air
+		))
+		..setUnitClassification("{0},{1}".format(TargetsAllowed.sapper, TargetsAllowed.ward))
+		..setTooltipExtended("Melee unit with damage absorption and critical strike.")//
+		..setAttack1WeaponType(WeaponType.Missile)//
+		..setAttack1Range(300)
+		..setAttack1WeaponSound(WeaponSound.MetalHeavyChop)//

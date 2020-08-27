@@ -3,35 +3,36 @@ package BeastmasterHut
 import UnitObjEditing
 import UnitIds
 import Icons
-import Buildings
 import ObjectIds
+import Soundsets
+import Buildings
 import BeastmasterConstants
 import BaseCFBuilding
 
 
 
 @compiletime function beastmasterHut()
-  new BaseCFBuilding(BEASTMASTER_HUT_ID, UnitIds.blacksmith)
-    ..setFullName("Beastmaster hut")
-    ..setNormalAbilities("")
+  new BaseCFBuilding(BEASTMASTER_HUT_ID, UnitIds.farm)
+    ..setFullName("Beastmaster Hut")
     ..setIconGameInterface(Icons.bTNBeastiary)
-    ..setGoldBountyReward(42)
-    ..setShadowTextureBuilding("ShadowHouse")
-    ..setButtonPositionX(1)
-    ..setCollisionSize(72)
     ..setModelFile(Buildings.beastiary1)
+    ..setGoldBountyReward(70)//
+    ..setButtonPositionX(3)
+    //..setButtonPositionY(3)
     ..setGoldCost(BEASTMASTER_HUT_COST)
     ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
-    ..setHotkey("W")
-    ..setHitPointsMaximumBase(1425)
-    ..setMaximumPitchAngledegrees(0)
-    ..setMaximumRollAngledegrees(0)
-    ..setScalingValue(0.5)
-    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-    ..setPointValue(30)
+    ..setHotkey("V")
+    ..setHitPointsMaximumBase(1400)//
+    ..setScalingValue(0.5)//
+    ..setPointValue(43)
     ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setRepairTime(70)
+    ..setRequirements("tec2")//
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
     ..setUnitsTrained(BEASTMASTER_ID.toRawCode())
-    ..setSelectionScale(2.4)    
-    ..setUnitsTrained(BEASTMASTER_ID.toRawCode())
-    ..setUpgradesTo(BEASTMASTER_HUT_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setUnitSoundSet(Soundsets.blacksmith)
     ..setTooltipExtended(BEASTMASTER_SHORT_DESCRIPTION)
+    
