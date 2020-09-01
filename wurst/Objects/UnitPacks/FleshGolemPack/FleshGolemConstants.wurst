@@ -7,12 +7,12 @@ public let SLAUGHTER_HOUSE_COST = 370
 public let SLAUGHTER_HOUSE_TOTAL_COST = SLAUGHTER_HOUSE_COST
 
 public let FLESH_GOLEM_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Siege (|cffFFFF00melee|r,|cffFFFF00 78|r dps)|n" + 
-                                          "|cffFFFF80Armor:|r Medium (|cffFFFF009|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                                          "|cffFFFF80Armor:|r Heavy (|cffFFFF009|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
                                           "|cffFFFF80Abilities:|r|n|n|cff80FF00Demolish|r|nThis unit deals 150% damage against buildings|n|n" + 
                                           "|cff80FF00Pulverize|r|nGrants a 35% chance on each attack to hit all enemies in 150 range for 125 damage " + 
                                           "and all units in 250 for half of the damage"
 
 public let FLESH_GOLEM_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Flesh Golem |n|n|cffFFAC00Flesh Golem :|r|n" + 
                                             "|cffFFFF80Attack:|r Siege (|cffFFFF00melee|r,|cffFFFF00 78|r dps)|n" + 
-                                            "|cffFFFF80Armor:|r Medium (|cffFFFF009|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
+                                            "|cffFFFF80Armor:|r Heavy (|cffFFFF009|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
                                             "|cffFFFF80Abilities:|r|n-Demolish (|cffFFFF00x1.5|r)|n-Pulverize (|cffFFFF0035%, 125 dmg|r)"
