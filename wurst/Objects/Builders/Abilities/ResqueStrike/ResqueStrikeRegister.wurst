@@ -7,6 +7,7 @@ import ResqueStrike
 import ClosureTimers
 import ResqueStrikeNotifier
 import Orders
+import UnitHelpers
   
 function standartRsCasterEffect(unit caster)
   caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
@@ -20,6 +21,18 @@ function standartRsLocationEffect(player owner, vec2 pos)
       ..issueImmediateOrderById(OrderIds.fanofknives)
   doAfter(1.5) () ->
     effectUnit.remove()
+
+function standartAction(unit caster, vec2 pos) returns resqueStrikeData
+  let owner = caster.getOwner()
+  var killed = 0
+  var damage = 0.
+  for u from CreateGroup()..enumUnitsInRange(pos, 700)
+    if u.isEnemyOf(owner) and u.isAliveTrick() and u.isVulnerable()
+      damage = damage + u.getLife()
+      caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
+      caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
+      killed++
+  return resqueStrikeData(killed, damage)
 
 function saveData(int pid, resqueStrikeData data)
   C8[pid] = data.damage.toInt()
@@ -40,7 +53,11 @@ init
     let pid = p.getId()
     let pos = EventData.getSpellTargetPos()
     if GetSpellAbilityId() == RESQUE_STRIKE_ID
-      let rs = new ResqueStrike(u, (owner, pos) -> standartRsLocationEffect(owner, pos), (caster) ->  standartRsCasterEffect(caster))
+      let rs = new ResqueStrike(u,
+                                  (owner, pos) -> standartRsLocationEffect(owner, pos),
+                                  (caster) ->  standartRsCasterEffect(caster),
+                                  (caster, pos) -> standartAction(caster, pos))
+
       doPeriodicallyCounted(0.35, 3) c ->
         rs.cast(pos)
       doAfter(1.5) ->

@@ -10,6 +10,9 @@ public interface LocationEffect
 public interface CasterEffect
   function make(unit u)
 
+public interface RsAction
+  function make(unit caster, vec2 pos) returns resqueStrikeData
+
 public tuple resqueStrikeData(int killed, real damage)
 
 public class ResqueStrike
@@ -17,12 +20,14 @@ public class ResqueStrike
   private unit caster
   private LocationEffect locationEffect
   private CasterEffect casterEffect
+  private RsAction rsAction
 
-  construct(unit unitCaster, LocationEffect locEffect, CasterEffect castEffect)
+  construct(unit unitCaster, LocationEffect locEffect, CasterEffect castEffect, RsAction resqueAction)
     caster = unitCaster
     locationEffect = locEffect
     casterEffect = castEffect
-
+    rsAction = resqueAction
+  
   function cast(vec2 pos) 
     let owner = caster.getOwner()
     removeAbility(caster)
@@ -30,7 +35,7 @@ public class ResqueStrike
     casterEffect.make(caster)
     saveOwner(owner)
     doAfter(0.35) ->
-      let newData = makeAction(caster, pos)
+      let newData = rsAction.make(caster, pos)
       updateData(newData)
 
   function getData() returns resqueStrikeData
@@ -43,18 +48,6 @@ public class ResqueStrike
   private function removeAbility(unit caster)
     caster..removeAbility(RESQUE_STRIKE_ID)
           ..removeAbility(RESQUE_STRIKE_CASTER_EFFECT_ID)
-
-  private function makeAction(unit caster, vec2 pos) returns resqueStrikeData
-    let owner = caster.getOwner()
-    var killed = 0
-    var damage = 0.
-    for u from CreateGroup()..enumUnitsInRange(pos, 700)
-      if u.isEnemyOf(owner) and u.isAliveTrick() and u.isVulnerable()
-        damage = damage + u.getLife()
-        caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
-        caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
-        killed++
-    return resqueStrikeData(killed, damage)
 
   private function saveOwner(player owner)
     g4 = owner
