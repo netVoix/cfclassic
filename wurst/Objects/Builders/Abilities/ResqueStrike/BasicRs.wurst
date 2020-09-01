@@ -1,14 +1,48 @@
-package ResqueStrikeObjects
+package BasicRs
 
-import UnitIds
 import ChannelAbilityPreset
+import ResqueStrike
+import ClosureTimers
+import Orders
+import UnitHelpers
+import UnitIds
 
 public let RESQUE_STRIKE_ID = 'A005'
 public let RESQUE_STRIKE_CASTER_EFFECT_ID = 'A06E'
 public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
 
+public let basicRs = new ResqueStrike((owner, pos) -> basicRsLocationEffect(owner, pos),
+                                    (caster) ->  basicRsCasterEffect(caster),
+                                    (caster, pos) -> basicRsAction(caster, pos))
+
+function basicRsCasterEffect(unit caster)
+    caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
+                                    
+function basicRsLocationEffect(player owner, vec2 pos)
+    let effectUnit = createUnit(owner, RESQUE_STRIKE_EFFECT_DUMMY_ID, pos, angle(0))
+        ..setVertexColor(colorA(0, 0, 0, 0))
+        ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+        ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+        ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
+        ..issueImmediateOrderById(OrderIds.fanofknives)
+    doAfter(1.5) () ->
+        effectUnit.remove()
+                                    
+function basicRsAction(unit caster, vec2 pos) returns resqueStrikeData
+    let owner = caster.getOwner()
+    var killed = 0
+    var damage = 0.
+    for u from CreateGroup()..enumUnitsInRange(pos, 700)
+        if u.isEnemyOf(owner) and u.isAliveTrick() and u.isVulnerable()
+            damage = damage + u.getLife()
+            caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
+            caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
+            killed++
+    return resqueStrikeData(killed, damage)
+
+
 @compiletime function resqueStrike()
-  new ChannelAbilityPreset(RESQUE_STRIKE_ID, 1, true)
+    new ChannelAbilityPreset(RESQUE_STRIKE_ID, 1, true)
     ..presetAreaofEffect(lvl -> 700)
     ..presetIcon("ReplaceableTextures\\CommandButtons\\BTNHolyBolt.blp")
     ..setButtonPositionNormalX(3)
@@ -32,7 +66,7 @@ public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
 
 
 @compiletime function resqueStrikeEffect()
-  new AbilityDefinition(RESQUE_STRIKE_CASTER_EFFECT_ID, 'Asp1')
+    new AbilityDefinition(RESQUE_STRIKE_CASTER_EFFECT_ID, 'Asp1')
     ..setMissileArt("Units\\Human\\HeroBloodElf\\BloodElfBall.mdl")
     ..setMissileSpeed(900)
     ..setName("Rescue Strike Effect")
@@ -42,7 +76,7 @@ public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
     ..setTargetAttachments(2)
 
 @compiletime function resqueStrikeEffectUnit()
-  new UnitDefinition(RESQUE_STRIKE_EFFECT_DUMMY_ID, UnitIds.priest)
+    new UnitDefinition(RESQUE_STRIKE_EFFECT_DUMMY_ID, UnitIds.priest)
     ..setNormalAbilities("Aloc,Avul")
     ..setIconGameInterface("ReplaceableTextures\\WorldEditUI\\Editor-Random-Unit.blp")
     ..setDefaultActiveAbility("")
@@ -65,4 +99,3 @@ public let RESQUE_STRIKE_EFFECT_DUMMY_ID = 'h04X'
     ..setUnitSoundSet("")
     ..setUpgradesUsed("")
     ..setAttacksEnabled(0)
-    

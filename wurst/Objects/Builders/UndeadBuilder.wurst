@@ -5,7 +5,7 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
-import UndeadRsObjects
+import UndeadRs
 
 public let UNDEAD_BUILDER_ID = 'h018'
 

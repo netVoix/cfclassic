@@ -1,66 +1,41 @@
 package ResqueStrikeRegister
 
 import RegisterEvents
-import ResqueStrikeObjects
 import EventHelper
 import ResqueStrike
 import ClosureTimers
-import ResqueStrikeNotifier
-import Orders
-import UnitHelpers
-  
-function standartRsCasterEffect(unit caster)
-  caster.addEffect("Abilities\\Spells\\Items\\TomeOfRetraining\\TomeOfRetrainingCaster.mdl", "origin").destr()
+import HashMap
+import UndeadRs
+import BasicRs
 
-function standartRsLocationEffect(player owner, vec2 pos)
-  let effectUnit = createUnit(owner, RESQUE_STRIKE_EFFECT_DUMMY_ID, pos, angle(0))
-      ..setVertexColor(colorA(0, 0, 0, 0))
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..addEffect("Units\\NightElf\\Wisp\\WispExplode.mdl", "origin")
-      ..issueImmediateOrderById(OrderIds.fanofknives)
-  doAfter(1.5) () ->
-    effectUnit.remove()
-
-function standartAction(unit caster, vec2 pos) returns resqueStrikeData
-  let owner = caster.getOwner()
-  var killed = 0
-  var damage = 0.
-  for u from CreateGroup()..enumUnitsInRange(pos, 700)
-    if u.isEnemyOf(owner) and u.isAliveTrick() and u.isVulnerable()
-      damage = damage + u.getLife()
-      caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_CHAOS, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
-      caster.damageTarget(u, 4444., true, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_DEATH, WEAPON_TYPE_WHOKNOWS)
-      killed++
-  return resqueStrikeData(killed, damage)
+let rsMap = new HashMap<int, ResqueStrike>()..put(UNDEAD_RS_ID, undeadRs)
+                                            ..put(RESQUE_STRIKE_ID, basicRs)
 
 function saveData(int pid, resqueStrikeData data)
-  C8[pid] = data.damage.toInt()
-  c8[pid] = data.killed
-  u8[N8[pid]]--
+    C8[pid] = data.damage.toInt()
+    c8[pid] = data.killed
+    u8[N8[pid]]--
 
 function updatePlayerData(int pid)
-  if(u8[N8[pid]] == 0)
-    dj(1, N8[pid] + 1, "|cffFF00000|r")
-  else
-    dj(1, N8[pid] + 1, I2S(u8[N8[pid]]))
-  ej(z7[pid], N8[pid] * 6 + 1, " ")
+    if(u8[N8[pid]] == 0)
+        dj(1, N8[pid] + 1, "|cffFF00000|r")
+    else
+        dj(1, N8[pid] + 1, I2S(u8[N8[pid]]))
+    ej(z7[pid], N8[pid] * 6 + 1, " ")
 
 init
-  registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
-    let u = GetTriggerUnit()
-    let p = u.getOwner()
-    let pid = p.getId()
-    let pos = EventData.getSpellTargetPos()
-    if GetSpellAbilityId() == RESQUE_STRIKE_ID
-      let rs = new ResqueStrike(u,
-                                  (owner, pos) -> standartRsLocationEffect(owner, pos),
-                                  (caster) ->  standartRsCasterEffect(caster),
-                                  (caster, pos) -> standartAction(caster, pos))
-
-      doPeriodicallyCounted(0.35, 3) c ->
-        rs.cast(pos)
-      doAfter(1.5) ->
-        saveData(pid, rs.getData())
-        updatePlayerData(pid)
-        ResqueStrikeNotifier.printMessage(p, rs.getData())
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
+        let u = GetTriggerUnit()
+        let p = u.getOwner()
+        let pid = p.getId()
+        let pos = EventData.getSpellTargetPos()
+        let sid = GetSpellAbilityId()
+        if rsMap.has(sid)
+            let rs = rsMap.get(sid)
+            u..removeAbility(sid)
+            doPeriodicallyCounted(0.35, 3) c ->
+                rs.cast(pos, u)
+            doAfter(1.5) ->
+                saveData(pid, rs.getData())
+                updatePlayerData(pid)
+                rs.printMessage(p, rs.getData())

@@ -1,4 +1,4 @@
-package UndeadRsObjects
+package UndeadRs
 
 import ChannelAbilityPreset
 import Icons
@@ -7,10 +7,29 @@ import BaseCFBuilder
 import Units
 import Soundsets
 import initlater UndeadBuilder
+import ResqueStrike
+import ClosureTimers
+import ClosureForGroups
+import InstantDummyCaster
+import Orders
 
 public let UNDEAD_RS_ID = compiletime(ABIL_ID_GEN.next())
 public let UNDEAD_RS_COIL_ID = compiletime(ABIL_ID_GEN.next())
 public let UNDEAD_RS_META_FORM_ID = compiletime(UNIT_ID_GEN.next())
+
+public let undeadRs = new ResqueStrike((owner, pos) -> "",
+                                    (caster) ->  "",
+                                    (caster, pos) -> undeadRsAction(caster, pos))
+
+function undeadRsAction(unit caster, vec2 _pos) returns resqueStrikeData
+    let pos = caster.getPos()
+    doPeriodically(0.5) cb -> 
+        if caster.isAlive() and caster.getTypeId() == UNDEAD_RS_META_FORM_ID
+            forUnitsInRange(pos, 600) un ->
+                InstantDummyCaster.castTarget(caster.getOwner(), UNDEAD_RS_COIL_ID, 1, OrderIds.deathcoil, un, pos)
+        else
+            destroy cb
+    return resqueStrikeData(0, 0)
 
 @compiletime function undeadRs()
     new AbilityDefinitionDemonHunterMetamorphosis(UNDEAD_RS_ID)
