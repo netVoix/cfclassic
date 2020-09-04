@@ -12,6 +12,7 @@ import ClosureTimers
 import ClosureForGroups
 import InstantDummyCaster
 import Orders
+import Abilities
 
 public let UNDEAD_RS_ID = compiletime(ABIL_ID_GEN.next())
 public let UNDEAD_RS_COIL_ID = compiletime(ABIL_ID_GEN.next())
