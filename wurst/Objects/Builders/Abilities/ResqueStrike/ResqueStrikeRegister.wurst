@@ -7,9 +7,12 @@ import ClosureTimers
 import HashMap
 import UndeadRs
 import BasicRs
+import HumanRs
 
 let rsMap = new HashMap<int, ResqueStrike>()..put(UNDEAD_RS_ID, undeadRs)
                                             ..put(RESQUE_STRIKE_ID, basicRs)
+                                            ..put(HUMAN_RS_ID, humanRs)
+
 
 function saveData(int pid, resqueStrikeData data)
     C8[pid] = data.damage.toInt()
