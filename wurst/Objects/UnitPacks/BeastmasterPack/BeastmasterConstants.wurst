@@ -1,0 +1,38 @@
+package BeastmasterConstants
+
+import ObjectIdGenerator
+
+public let BEASTMASTER_HUT_ID = compiletime(UNIT_ID_GEN.next())
+public let BEASTMASTER_HUT_COST = 100
+public let BEASTMASTER_HUT_TOTAL_COST = BEASTMASTER_HUT_COST
+
+public let SUPREME_BEASTMASTER_GATEHOUSE_ID = compiletime(UNIT_ID_GEN.next())
+public let SUPREME_BEASTMASTER_GATEHOUSE_COST = 150
+public let SUPREME_BEASTMASTER_GATEHOUSE_TOTAL_COST = BEASTMASTER_HUT_TOTAL_COST + SUPREME_BEASTMASTER_GATEHOUSE_COST
+
+public let BEASTMASTER_ID = compiletime(UNIT_ID_GEN.next())
+
+public let BEASTMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                                    "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                    "|cffFFFF80Abilities:|r|n|n|cff80FF00Purge|r|nPurges an enemy removing all buffs from it and slowing it " + 
+                                    "down for some seconds|n|cff8080FFCooldown: |r25|n|cff8080FFMana cost: |r20|n|n|cff80FF00Summon Lobsters|r|n" + 
+                                    "Summons 2 Lobsters which last for 45 seconds. Lobsters have Critical Strike (10%, x3) and the Hard Shell ability " + 
+                                    "which grants a 50% chance to reduce incoming attack damage by 35|n|cff8080FFCooldown: |r60|n|cff8080FFMana cost: |r70"
+public let BEASTMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
+                                      "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters"
+
+public let SUPREME_BEASTMASTER_ID = compiletime(UNIT_ID_GEN.next())
+
+public let SUPREME_BEASTMASTER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 38|r dps)|n" + 
+                                            "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+                                            "|cffFFFF80Abilities:|r|n|n|cff80FF00Ensnare|r|nEnsnares an enemy air unit, binding it to the ground " + 
+                                            "that it can be attacked by melee units. Lasts 16 seconds|n|cff8080FFCooldown: |r8|n|n" + 
+                                            "|cff80FF00Berserk|r|nWhenever this unit kills an enemy it goes into a rampage, gaining 200% attack speed, " + 
+                                            "25% movement speed, but also takes 10% more damage. Rampage lasts 6 seconds"
+public let SUPREME_BEASTMASTER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll Trapper|n|n|cffFFAC00Troll Trapper:|r|n" + 
+                                              "|cffFFFF80Attack:|r Normal (|cffFFFF00325|r rng,|cffFFFF00 38|r dps)|n" + 
+                                              "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
+                                              "|cffFFFF80Abilities:|r|n-Ensnare|n-Berserk (|cffFFFF00+200%|r)|n|n" + 
+                                              "|cffFF0000You must turn off unit production before you can upgrade!|r"

@@ -1,0 +1,42 @@
+package BeastmasterHut
+
+import UnitObjEditing
+import UnitIds
+import Icons
+import ObjectIds
+import Soundsets
+import Buildings
+import BeastmasterConstants
+import BaseCFBuilding
+
+
+
+@compiletime function beastmasterHut()
+  new BaseCFBuilding(BEASTMASTER_HUT_ID, UnitIds.farm)
+    ..setFullName("Beastmaster Hut")
+    ..setIconGameInterface(Icons.bTNBeastiary)
+    ..setModelFile(Buildings.beastiary1)
+    ..setGoldBountyReward(70)//
+    ..setButtonPositionX(2)
+    ..setButtonPositionY(2)
+    ..setGoldCost(BEASTMASTER_HUT_COST)
+    ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
+    ..setHotkey("V")
+    ..setHitPointsMaximumBase(1400)//
+    ..setScalingValue(0.5)//
+    ..setPointValue(43)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setRepairTime(70)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setRequirements("tec1")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setAnimationCastBackswing(0.2)
+    ..setAnimationCastPoint(0.2)
+    ..setUnitsTrained(BEASTMASTER_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setUpgradesTo(SUPREME_BEASTMASTER_GATEHOUSE_ID.toRawCode())
+    ..setUnitSoundSet(Soundsets.beastiary)
+    ..setTooltipExtended(BEASTMASTER_SHORT_DESCRIPTION)
+    

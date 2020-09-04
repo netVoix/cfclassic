@@ -1,0 +1,77 @@
+package Hawk
+
+import UnitIds
+import Icons
+import ObjectExtension
+import ChannelAbilityPreset
+import Abilities
+
+public let SUMMON_HAWK_ID = compiletime(ABIL_ID_GEN.next())
+public let SUMMON_HAWK_DUMMY_ID = compiletime(ABIL_ID_GEN.next())
+public let HAWK_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function summonHawk()
+    new AbilityDefinitionParasite(SUMMON_HAWK_ID)
+    ..presetCooldown(lvl -> 35)
+    ..presetManaCost(lvl -> 25)
+    ..presetDurationNormal(lvl -> 0.01)
+    ..presetDurationHero(lvl -> 0.01)
+    ..setMissileArt("")
+    ..setArtTarget("")
+    ..presetCastRange(lvl -> 210)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format( 	TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
+      TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
+    ))
+    ..presetUnitType(lvl -> "nfbr")
+    ..presetSummonedUnitDuration(lvl -> 0.01)
+    ..presetDamageperSecond(lvl -> 0)
+    ..presetStackingTypes(lvl -> 0)
+
+@compiletime function summonHawkDummy()
+    new AbilityDefinitionArchMageSummonWaterElemental(SUMMON_HAWK_DUMMY_ID)
+    ..presetBuffs(lvl -> "B00A")
+    ..setDummyAbility()
+    ..presetDurationNormal(lvl -> 65)
+    ..presetDurationHero(lvl -> 65)
+    ..presetSummonedUnitType(lvl -> HAWK_ID.toRawCode())
+
+@compiletime function hawk()
+    new UnitDefinition(HAWK_ID, UnitIds.wareagle3)
+    ..setNormalAbilities("A07G,A02R,A02Q")
+    ..setAcquisitionRange(800)
+    ..setIconGameInterface(Icons.bTNWarEagle)
+    ..setDefaultActiveAbility("")
+    ..setGoldBountyReward(3)//
+    ..setCategorizationCampaign(true)
+    ..setCollisionSize(16)
+    ..setAttack1CooldownTime(1.2)
+    ..setAttack1AreaofEffectFullDamage(50)
+    ..setAttack1AreaofEffectMediumDamage(100)
+    ..setAttack1DamageFactorMedium(0.5)
+    ..setAttack1AreaofEffectSmallDamage(195)
+    ..setAttack1DamageFactorSmall(0.25)
+    ..setArmorType(ArmorType.Unarmored)
+    ..setAttack1DamageBase(34)//
+    ..setFoodCost(0)
+    ..setGoldCost(0)
+    ..setHitPointsMaximumBase(500)//
+    ..setLevel(1)
+    ..setAttack1ProjectileArt(Abilities.farseerMissile)
+    ..setAttack1ProjectileSpeed(1700)
+    ..setScalingValue(1.15)
+    ..setName("Summoned Hawk")
+    ..setSightRadiusDay(1200)
+    ..setSightRadiusNight(1200)
+    ..setRace(Race.Orc)
+    ..setSelectionScale(1)
+    ..setAttack1DamageSidesperDie(16)//
+    ..setSpeedBase(345)//
+    ..setCategorizationSpecial(true)
+    ..setAttack1TargetsAllowed("{0},{1},{2},{3},{4},{5}".format(//
+    	TargetsAllowed.debris, TargetsAllowed.ground,TargetsAllowed.item_t, TargetsAllowed.structure, TargetsAllowed.ward, TargetsAllowed.air
+    ))
+    ..setUnitClassification("{0},{1}".format(TargetsAllowed.sapper, TargetsAllowed.ward))
+    ..setTooltipExtended("Melee unit with damage absorption and critical strike.")//
+    ..setAttack1WeaponType(WeaponType.MissileSplash)//
+    ..setAttack1Range(300)
+    ..setAttack1WeaponSound(WeaponSound.MetalHeavyChop)//

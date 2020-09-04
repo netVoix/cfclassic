@@ -1,0 +1,36 @@
+package SupremeBeastmasterGatehouse
+
+import BaseCFBuilding
+import BeastmasterConstants
+import UnitIds
+import ObjectIds
+
+@compiletime function arsenal()
+    new BaseCFBuilding(SUPREME_BEASTMASTER_GATEHOUSE_ID, UnitIds.slaughterhouse)
+    ..setNormalAbilities("A07E")
+    ..setRequiredAnimationNames("First")
+    ..setLumberCost(100)
+    ..setGoldBountyReward(72)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setModelFile("SlaughterHouse.mdx")
+    ..setHotkey("R")
+    ..setHitPointsMaximumBase(1400)
+    ..setGoldCost(SUPREME_BEASTMASTER_GATEHOUSE_COST)
+    ..setTotalCost(SUPREME_BEASTMASTER_GATEHOUSE_TOTAL_COST)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(0)
+    ..setScalingValue(0.8)
+    ..setFullName("Supreme Beastmaster Gatehouse")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(126)
+    ..setAnimationCastBackswing(0.2)
+    ..setAnimationCastPoint(0.2)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirements("tec2")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(SUPREME_BEASTMASTER_ID.toRawCode())
+    ..setTooltipExtended(SUPREME_BEASTMASTER_SHORT_DESCRIPTION)

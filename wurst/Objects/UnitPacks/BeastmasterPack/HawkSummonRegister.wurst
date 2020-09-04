@@ -1,0 +1,15 @@
+package HawkSummonRegister
+
+import RegisterEvents
+import Hawk
+import InstantDummyCaster
+import Orders
+
+
+init
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
+        let sid = GetSpellAbilityId()
+        let p = GetTriggerPlayer()
+        let u = GetTriggerUnit()
+        if sid == SUMMON_HAWK_ID
+            InstantDummyCaster.castImmediate(p, SUMMON_HAWK_DUMMY_ID, 1, OrderIds.waterelemental, u.getPos())

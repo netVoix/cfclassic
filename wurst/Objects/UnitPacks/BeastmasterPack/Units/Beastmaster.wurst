@@ -1,0 +1,43 @@
+package Beastmaster
+
+import UnitIds
+import ObjectIds
+import Quillbeast
+import BeastmasterConstants
+import BaseCFUnit
+import Units
+import Soundsets
+
+@compiletime function beastmater()
+  new BaseCFUnit(BEASTMASTER_ID, UnitIds.summoner)
+    ..setFullName("Beastmaster")
+    ..setNormalAbilities(commaList(SUMMON_QUILLBEAST_ID))
+    ..setDefaultActiveAbility(commaList(SUMMON_QUILLBEAST_ID))
+    ..setAttack1AttackType(AttackType.Normal)
+    ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
+    ..setModelFile(Units.beastmaster)
+    ..setGoldBountyReward(11)//
+    ..setUnitSoundSet(Soundsets.beastmaster)
+    ..setArmorType(ArmorType.Large)
+    ..setArtSpecial("")
+    ..setArtTarget("")
+    ..setAnimationCastBackswing(0.26)//
+    ..setAnimationCastPoint(0.25)//
+    ..setAttack1DamageBase(59)//
+    ..setAttack1DamageSidesperDie(41)//
+    ..setAttack1Range(95)//
+    ..setAttack1CooldownTime(1.6)//
+    ..setAttack1WeaponSound(WeaponSound.MetalLightChop)
+    ..setDefenseBase(3)//
+    ..setShadowImageUnit("")
+    ..setHitPointsMaximumBase(750)//
+    ..setManaMaximum(200)//
+    ..setManaInitialAmount(105)//
+    ..setAttack1ProjectileArt("")
+    ..setScalingValue(0.65)//
+    ..setMovementType(MovementType.Foot)//
+    ..setPointValue(99)//
+    ..setHitPointsRegenerationRate(2)//
+    ..setManaRegeneration(1.5)//
+    ..setSpeedBase(295)//
+    ..setTooltipExtended(BEASTMASTER_FULL_DESCRIPTION)

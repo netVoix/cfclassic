@@ -1,0 +1,49 @@
+package SupremeBeastmaster
+
+import UnitIds
+import ObjectIds
+import Hawk
+import BeastmasterConstants
+import BaseCFUnit
+import Soundsets
+import Bash
+
+@compiletime function beastmater()
+  new BaseCFUnit(SUPREME_BEASTMASTER_ID, UnitIds.summoner)
+    ..setFullName("Supreme Beastmaster")
+    ..setNormalAbilities(commaList(SUMMON_HAWK_ID, BASH_ID))
+    ..setDefaultActiveAbility(commaList(SUMMON_HAWK_ID))
+    ..setAttack1AttackType(AttackType.Normal)
+    ..setTotalCost(BEASTMASTER_HUT_TOTAL_COST)
+    ..setModelFile("AxeMaster.mdx")
+    ..setGoldBountyReward(11)//
+    ..setUnitSoundSet(Soundsets.beastmaster)
+    ..setAnimationCastBackswing(0.26)//
+    ..setAnimationCastPoint(0.25)//
+    ..setAttack1DamageBase(59)//
+    ..setAttack1DamageSidesperDie(41)//
+    ..setAttack1Range(105)//
+    ..setAttack1CooldownTime(1.6)//
+    ..setAttack1AreaofEffectMediumDamage(65)
+    ..setAttack1DamageFactorMedium(50)
+    ..setAttack1DamageFactorSmall(20)
+    ..setAttack1AreaofEffectSmallDamage(120)
+    ..setArmorType(ArmorType.Large)
+    ..setAttack1WeaponSound(WeaponSound.MetalHeavyChop)
+    ..setAttack2AttackType(AttackType.Normal)
+    ..setAttack2TargetsAllowed("{0}".format(
+    TargetsAllowed.air
+  ))
+    ..setAttack2ProjectileArt("Abilities\\Weapons\\Axe\\AxeMissile.mdx")
+    ..setDefenseBase(3)//
+    ..setHitPointsMaximumBase(550)//
+    ..setManaMaximum(250)//
+    ..setManaInitialAmount(125)//
+    ..setAttack1ProjectileArt("")
+    ..setScalingValue(1.1)//
+    ..setMovementType(MovementType.Foot)//
+    ..setPointValue(99)//
+    ..setHitPointsRegenerationRate(2)//
+    ..setManaRegeneration(1.5)//
+    ..setSpeedBase(295)//
+    ..setTooltipExtended(BEASTMASTER_FULL_DESCRIPTION)

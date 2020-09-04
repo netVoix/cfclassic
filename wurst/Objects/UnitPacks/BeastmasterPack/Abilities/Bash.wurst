@@ -1,0 +1,13 @@
+package Bash
+
+import AbilityObjEditing
+import ObjectIdGenerator
+
+public let BASH_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function headshot()
+    new AbilityDefinitionMountainKingBash(BASH_ID)
+    ..presetChancetoBash(lvl -> 15)
+    ..presetDamageBonus(lvl -> 35)
+    ..presetDurationHero(lvl -> 1.5)
+    ..presetDurationNormal(lvl -> 2.9)   
