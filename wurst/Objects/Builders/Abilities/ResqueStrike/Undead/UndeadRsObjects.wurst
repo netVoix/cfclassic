@@ -7,6 +7,7 @@ import BaseCFBuilder
 import Units
 import Soundsets
 import initlater UndeadBuilder
+import Abilities
 
 public let UNDEAD_RS_ID = compiletime(ABIL_ID_GEN.next())
 public let UNDEAD_RS_COIL_ID = compiletime(ABIL_ID_GEN.next())
@@ -15,7 +16,7 @@ public let UNDEAD_RS_META_FORM_ID = compiletime(UNIT_ID_GEN.next())
 @compiletime function undeadRs()
     new AbilityDefinitionDemonHunterMetamorphosis(UNDEAD_RS_ID)
     ..presetManaCost(lvl -> 0)
-    ..presetCastingTime(lvl -> 0)
+    ..presetCastingTime(lvl -> 0.35)
     ..presetAlternateFormHitPointBonus(lvl -> 0)
     ..presetMorphingFlags(lvl -> MorphingFlag.UNINTERRUPTABLE castTo int)
     ..presetAlternateFormUnit(lvl -> UNDEAD_RS_META_FORM_ID.toRawCode())
@@ -32,6 +33,7 @@ public let UNDEAD_RS_META_FORM_ID = compiletime(UNIT_ID_GEN.next())
 @compiletime function undeadRsAbility()
     new AbilityDefinitionDeathKnightDeathCoil(UNDEAD_RS_COIL_ID)
     ..setDummyAbility()
+    ..setEffectSound(Abilities.deathCoilMissile)
     ..presetAmountHealedDamaged(lvl -> 9999)  
     ..presetTargetsAllowed(lvl -> "air,enemies,ground,sapper")
     ..presetAreaofEffect(lvl -> 0)
@@ -42,6 +44,7 @@ public let UNDEAD_RS_META_FORM_ID = compiletime(UNIT_ID_GEN.next())
     ..setModelFile(Units.heroDeathKnight)
     ..setIconGameInterface(Icons.bTNHeroDeathKnight)
     ..setSpeedBase(125)
+    ..setScalingValue(1.25)
     ..setUnitSoundSet(Soundsets.heroDeathKnight)
     ..setNormalAbilities("Aeth,A06E,AInv,Avul," + commaList(UNDEAD_RS_ID))
     ..setStructuresBuilt("h01K,h01O,h01Q,h01T,h01P,h01N,h01L,h01S,h008,h00A,h01R")
