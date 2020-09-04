@@ -1,8 +1,6 @@
 package ResqueStrike
 
-import ResqueStrikeObjects
 import ClosureTimers
-import UnitHelpers
 
 public interface LocationEffect
   function make(player owner, vec2 pos)
@@ -17,20 +15,17 @@ public tuple resqueStrikeData(int killed, real damage)
 
 public class ResqueStrike
   private var data = resqueStrikeData(0, 0)
-  private unit caster
   private LocationEffect locationEffect
   private CasterEffect casterEffect
   private RsAction rsAction
 
-  construct(unit unitCaster, LocationEffect locEffect, CasterEffect castEffect, RsAction resqueAction)
-    caster = unitCaster
+  construct(LocationEffect locEffect, CasterEffect castEffect, RsAction resqueAction)
     locationEffect = locEffect
     casterEffect = castEffect
     rsAction = resqueAction
   
-  function cast(vec2 pos) 
+  function cast(vec2 pos, unit caster) 
     let owner = caster.getOwner()
-    removeAbility(caster)
     locationEffect.make(owner, pos)
     casterEffect.make(caster)
     saveOwner(owner)
@@ -41,13 +36,24 @@ public class ResqueStrike
   function getData() returns resqueStrikeData
     return data
 
+  function printMessage(player p, resqueStrikeData data)
+    var message = p.getNameColored() + " used his Rescue Strike, "
+    if data.killed == 0
+      message = message + "killing no unit! Epic Fail!"
+    else if data.killed == 1
+      message = message + "killing only one unit!"
+    else if data.killed < 5
+      message = message + "dealing only |cffFFFF00" + data.damage.toInt().toString()
+                        + "|r damage and killing only |cffFFFF00" + data.killed.toString() + "|r units!"
+    else
+      message = message + " dealing |cffFFFF00" + data.damage.toInt().toString()
+                        + "|r damage and killing |cffFFFF00" + data.killed.toString() + "|r units!"
+    printTimed(message, 7.)
+
   private function updateData(resqueStrikeData newData)
     data.damage = data.damage + newData.damage
     data.killed = data.killed + newData.killed
-
-  private function removeAbility(unit caster)
-    caster..removeAbility(RESQUE_STRIKE_ID)
-          ..removeAbility(RESQUE_STRIKE_CASTER_EFFECT_ID)
+    
 
   private function saveOwner(player owner)
     g4 = owner
