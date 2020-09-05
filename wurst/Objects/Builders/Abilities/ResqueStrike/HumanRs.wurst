@@ -1,0 +1,76 @@
+package HumanRs
+
+import Icons
+import ChannelAbilityPreset
+import ResqueStrike
+import ClosureForGroups
+
+public let HUMAN_RS_ID = compiletime(ABIL_ID_GEN.next())
+public let BUFF1_ID = compiletime(ABIL_ID_GEN.next())
+public let BUFF2_ID = compiletime(ABIL_ID_GEN.next())
+
+public let humanRs = new ResqueStrike((owner, pos) -> "",
+                                    (caster) ->  "",
+                                    (caster, pos) -> humanRsAction(caster, pos))
+
+function humanRsAction(unit caster, vec2 _pos) returns resqueStrikeData
+    let pos = caster.getPos()
+    forUnitsInRange(pos, 700) un ->
+        un.addHP(200)
+    return resqueStrikeData(0, 0) 
+        
+@compiletime function resqueStrike()
+    new ChannelAbilityPreset(HUMAN_RS_ID, 1, true)
+    ..presetAreaofEffect(lvl -> 700)
+    ..presetIcon(Icons.bTNResurrection)
+    ..setButtonPositionNormalX(3)
+    ..presetCastingTime(lvl -> 0)
+    ..presetCooldown(lvl -> 60)
+    ..presetManaCost(lvl -> 0)
+    ..presetArtDuration(lvl -> 0)
+    ..presetTargetTypes(Targettype.POINT)
+    ..presetOption(Option.TARGETIMAGE, true)
+    ..presetDurationNormal(lvl -> 1)
+    ..presetDurationHero(lvl -> 1)
+    ..setArtEffect("")
+    ..presetHotkey("V")
+    ..setName("Rescue Strike")
+    ..presetCastRange(lvl -> 1000)
+    ..setArtSpecial("")
+    ..presetTargetsAllowed(lvl -> "air,enemies,ground,sapper")
+    ..presetTooltipNormal(lvl -> "Rescue Strike [|cffffcc00V|r]")
+    ..presetTooltipNormalExtended(lvl -> "Kills all enemies in the target area and reveals stealthed enemies in a larger area.|n|n"
+                                        + "|cffFF0000WARNING: You can use this spell only once per round. Use it wisely, it decides mo st matches!|r")
+
+@compiletime function buff1()
+    new AbilityDefinitionInnerFire(BUFF1_ID)
+    ..presetCastingTime(lvl -> 0)
+    ..presetDamageIncrease(lvl -> 20)
+    ..presetDefenseIncrease(lvl -> 100)
+    ..presetLifeRegenRate(lvl -> 1000)
+    ..setRequirements("")
+    ..presetManaCost(lvl -> 0)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
+        TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground
+        ))
+
+@compiletime function buff2()
+    new AbilityDefinitionAntimagicShieldcreep(BUFF2_ID)
+    ..setName("Antimagic Shield")
+    ..setItemAbility(false)
+    ..presetAreaofEffect(lvl -> 0)
+    ..presetIcon("Abilities\\Spells\\Items\\SpellShieldAmulet\\SpellShieldCaster.mdx")
+    ..presetManaCost(lvl -> 0)
+    ..presetCooldown(lvl -> 0)
+    ..presetCastingTime(lvl -> 0)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5},{6},{7}".format(
+        TargetsAllowed.air, TargetsAllowed.friend, TargetsAllowed.ground
+        ))
+    
+
+      
+        
+        
+
+
+    
