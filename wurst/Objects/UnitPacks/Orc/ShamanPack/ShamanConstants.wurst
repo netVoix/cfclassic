@@ -1,0 +1,32 @@
+package ShamanConstants
+
+import ObjectIdGenerator
+
+public let SHAMAN_ID = compiletime(UNIT_ID_GEN.next())
+public let SPIRIT_SHAMAN_ID = compiletime(UNIT_ID_GEN.next())
+public let SHAMANIC_TENT_ID = compiletime(UNIT_ID_GEN.next())
+public let SPIRIT_LODGE_ID = compiletime(UNIT_ID_GEN.next())
+public let SHAMANIC_TENT_COST = 170
+public let SPIRIT_LODGE_COST = 205
+public let SHAMANIC_TENT_TOTAL_COST = SHAMANIC_TENT_COST
+public let SPIRIT_LODGE_TOTAL_COST = SHAMANIC_TENT_COST + SPIRIT_LODGE_COST
+
+public let SHAMAN_FULL_DESCRIPTION = "|cffFFFF00350|r rng,|cffFFFF00 26|r dps)|n|cffFFFF80Armor:|r Unarmored" + 
+                                     "(|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00340|r|n|cffFFFF80Abilities:|r|n|" + 
+                                     "n|cff80FF00Shaman Buff|r|nIncreases an allies armor by 4, its damage by 33% and its hitpoint" + 
+                                     "regeneration by 3 hitpoints per second. The buff lasts 60 seconds. Does not stack with Crusader's/Paladin's blessing." + 
+                                     "|n|cff8080FFCooldown: |r6|n|cff8080FFMana cost: |r35"
+public let SHAMAN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Shaman|n|n|cffFFAC00Shaman:|r|n" + 
+                                      "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 26|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Buff"
+
+public let SPIRIT_SHAMAN_FULL_DESCRIPTION = "|cffFFFF00350|r rng,|cffFFFF00 26|r dps)|n|cffFFFF80Armor:|r Unarmored" + 
+                                     "(|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00340|r|n|cffFFFF80Abilities:|r|n|" + 
+                                     "n|cff80FF00Shaman Buff|r|nIncreases an allies armor by 4, its damage by 33% and its hitpoint" + 
+                                     "regeneration by 3 hitpoints per second. The buff lasts 60 seconds. Does not stack with Crusader's/Paladin's blessing." + 
+                                     "|n|cff8080FFCooldown: |r6|n|cff8080FFMana cost: |r35"
+public let SPIRIT_SHAMAN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Shaman|n|n|cffFFAC00Shaman:|r|n" + 
+                                      "|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 26|r dps)|n" + 
+                                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
+                                      "|cffFFFF80Abilities:|r|n-Buff"

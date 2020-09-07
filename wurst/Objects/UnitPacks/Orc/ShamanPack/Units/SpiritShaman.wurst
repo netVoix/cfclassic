@@ -1,0 +1,45 @@
+package SpiritShaman
+
+import BaseCFUnit
+import UnitIds
+import ShamanConstants
+import SpiritLink
+import ObjectIds
+
+@compiletime function shaman()
+    new BaseCFUnit(SPIRIT_SHAMAN_ID, UnitIds.shaman)
+    ..setAcquisitionRange(800)
+    ..setNormalAbilities("A02M," + SPIRITLINK_ID.toRawCode())
+    ..setDefaultActiveAbility(SPIRITLINK_ID.toRawCode())
+    ..setTotalCost(SPIRIT_LODGE_TOTAL_COST)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(11)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setIconGameInterface("Orc Shaman_Portrait.mdx")
+    ..setCasterUpgradeNames("")
+    ..setCasterUpgradeTips("")
+    ..setAttack1CooldownTime(1.5)
+    ..setDefenseBase(1)
+    ..setAttack1DamageBase(59)
+    ..setFoodCost(0)
+    ..setModelFile("Orc Shaman.mdx")
+    ..setGoldCost(0)
+    ..setRepairGoldCost(0)
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(1340)
+    ..setLevel(1)
+    ..setScalingValue(1.15)
+    ..setLumberCost(0)
+    ..setRepairLumberCost(0)
+    ..setManaMaximum(666)
+    ..setManaInitialAmount(555)
+    ..setAttack1ProjectileArt( "Abilities\\Weapons\\AncestralGuardianMissile\\AncestralGuardianMissile.mdx")
+    ..setAttack1ProjectileSpeed(1000)
+    ..setAttack1Range(550)
+    ..setManaRegeneration(0.8)
+    ..setAttack1DamageSidesperDie(25)
+    ..setSightRadiusDay(800)
+    ..setTooltipBasic("Trains Shaman")
+    ..setUnitClassification("sapper,ward")
+    ..setTooltipExtended(SPIRIT_SHAMAN_FULL_DESCRIPTION)
+    ..setUpgradesUsed("")

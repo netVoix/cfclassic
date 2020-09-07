@@ -1,0 +1,46 @@
+package SpiritLodge
+
+import BaseCFBuilding
+import ShamanConstants
+import UnitIds
+import ObjectIds
+
+@compiletime function spiritLodge()
+    new BaseCFBuilding(SPIRIT_LODGE_ID, UnitIds.farm)
+    ..setNormalAbilities("")
+    ..setIconGameInterface("BTNRuinsSpiritLodge.blp")
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(75)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(0)
+    ..setCollisionSize(72.0)
+    ..setModelFile("SpiritLodgeGurubashiV1.01.mdx")
+    ..setGoldCost(SPIRIT_LODGE_COST)
+    ..setTotalCost(SPIRIT_LODGE_TOTAL_COST)
+    ..setRepairGoldCost(0)
+    ..setHotkey("R")
+    ..setLumberCost(0)
+    ..setRepairLumberCost(0)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.75)
+    ..setName("Spitit Lodge")
+    ..setSightRadiusNight(1000)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(46)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setRequirements("")
+    ..setResearchesAvailable("")
+    ..setUpgradesTo("")
+    ..setSelectionScale(2.4)
+    ..setSightRadiusDay(1000)
+    ..setTooltipBasic("Upgrade to Spirit Lodge [|cffffcc00W|r]")
+    ..setUnitsTrained(SPIRIT_SHAMAN_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setTooltipExtended(SPIRIT_SHAMAN_SHORT_DESCRIPTION)
+    ..setUpgradesUsed("")
+
+

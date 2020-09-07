@@ -1,0 +1,43 @@
+package ShamanicTent
+
+import BaseCFBuilding
+import ShamanConstants
+import UnitIds
+import ObjectIds
+
+@compiletime function shamanicTent()
+    new BaseCFBuilding(SHAMANIC_TENT_ID, UnitIds.farm)
+    ..setNormalAbilities("")
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNSpiritLodge.blp")
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(33)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setCollisionSize(72.0)
+    ..setModelFile("buildings\\orc\\SpiritLodge\\SpiritLodge")
+    ..setGoldCost(SHAMANIC_TENT_COST)
+    ..setTotalCost(SHAMANIC_TENT_TOTAL_COST)
+    ..setRepairGoldCost(0)
+    ..setHotkey("W")
+    ..setLumberCost(0)
+    ..setRepairLumberCost(0)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.6)
+    ..setName("Shamanic Tent")
+    ..setSightRadiusNight(1000)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(46)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setHitPointsRegenerationType("always")
+    ..setRequirements("")
+    ..setResearchesAvailable("")
+    ..setUpgradesTo(SPIRIT_LODGE_ID.toRawCode())
+    ..setSelectionScale(2.4)
+    ..setSightRadiusDay(1000)
+    ..setTooltipBasic("Build Shamanic Tent [|cffffcc00W|r]")
+    ..setUnitsTrained(SHAMAN_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setTooltipExtended(SHAMAN_SHORT_DESCRIPTION)
+    ..setUpgradesUsed("")
