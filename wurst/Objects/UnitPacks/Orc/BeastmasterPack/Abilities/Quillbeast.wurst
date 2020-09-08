@@ -13,6 +13,7 @@ public let QUILLBEAST_ID = compiletime(UNIT_ID_GEN.next())
 	new AbilityDefinitionParasite(SUMMON_QUILLBEAST_ID)
 	  ..presetCooldown(lvl -> 60)
 	  ..presetManaCost(lvl -> 45)
+	  ..presetBuffs(lvl -> "B019")
 	  ..presetDurationNormal(lvl -> 0.01)
 	  ..presetDurationHero(lvl -> 0.01)
 	  ..setMissileArt("")
@@ -24,7 +25,7 @@ public let QUILLBEAST_ID = compiletime(UNIT_ID_GEN.next())
 	  ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
 		TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
 	    TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
-	  ))
+	  	))
 	  ..presetUnitType(lvl -> "nfbr")
 	  ..presetSummonedUnitDuration(lvl -> 0.01)
 	  ..presetDamageperSecond(lvl -> 0)

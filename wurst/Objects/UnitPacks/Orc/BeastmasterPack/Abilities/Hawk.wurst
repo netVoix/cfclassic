@@ -12,16 +12,18 @@ public let HAWK_ID = compiletime(UNIT_ID_GEN.next())
 
 @compiletime function summonHawk()
     new AbilityDefinitionParasite(SUMMON_HAWK_ID)
+    ..presetBuffs(lvl -> "B019")
     ..presetCooldown(lvl -> 35)
     ..presetManaCost(lvl -> 25)
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
     ..setArtTarget("")
-    ..presetCastRange(lvl -> 210)
-    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format( 	TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
-      TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
-    ))
+    ..presetCastRange(lvl -> 180)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
+        TargetsAllowed.air, TargetsAllowed.enemies, TargetsAllowed.ground,
+        TargetsAllowed.neutral, TargetsAllowed.nonhero, TargetsAllowed.vulnerable
+        ))
     ..presetUnitType(lvl -> "nfbr")
     ..presetSummonedUnitDuration(lvl -> 0.01)
     ..presetDamageperSecond(lvl -> 0)
@@ -67,9 +69,9 @@ public let HAWK_ID = compiletime(UNIT_ID_GEN.next())
     ..setAttack1DamageSidesperDie(16)//
     ..setSpeedBase(345)//
     ..setCategorizationSpecial(true)
-    ..setAttack1TargetsAllowed("{0},{1},{2},{3},{4},{5}".format(//
+    ..setAttack1TargetsAllowed("{0},{1},{2},{3},{4},{5}".format(
     	TargetsAllowed.debris, TargetsAllowed.ground,TargetsAllowed.item_t, TargetsAllowed.structure, TargetsAllowed.ward, TargetsAllowed.air
-    ))
+        ))
     ..setUnitClassification("{0},{1}".format(TargetsAllowed.sapper, TargetsAllowed.ward))
     ..setTooltipExtended("Melee unit with damage absorption and critical strike.")//
     ..setAttack1WeaponType(WeaponType.MissileSplash)//
