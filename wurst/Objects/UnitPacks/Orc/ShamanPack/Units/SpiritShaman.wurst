@@ -15,7 +15,7 @@ import ObjectIds
     ..setGoldBountyAwardedNumberofDice(1)
     ..setGoldBountyAwardedBase(11)
     ..setGoldBountyAwardedSidesperDie(1)
-    ..setIconGameInterface("Orc Shaman_Portrait.mdx")
+    ..setIconGameInterface("BTNShaman.blp")
     ..setCasterUpgradeNames("")
     ..setCasterUpgradeTips("")
     ..setDefenseBase(4)
