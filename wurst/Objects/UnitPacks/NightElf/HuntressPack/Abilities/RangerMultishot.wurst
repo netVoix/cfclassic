@@ -5,7 +5,7 @@ import HuntressConstants
 
 @compiletime function rangerMultishot()
   new AbilityDefinitionRocketAttack(RANGER_MULTISHOT_ID)
-    ..presetAreaofEffect(lvl -> 600)
+    ..presetAreaofEffect(lvl -> 425)
     ..presetCooldown(lvl -> 0)
     ..setMissileArc(0)
     ..setMissileArt("Abilities\\Weapons\\Arrow\\ArrowMissile.mdl")
