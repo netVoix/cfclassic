@@ -5,6 +5,7 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
+import GuardianConstants
 
 public let NAGA_BUILDER_ID = 'h00E'
 
@@ -13,7 +14,7 @@ public let NAGA_BUILDER_ID = 'h00E'
     ..setNormalAbilities("Aeth,A06E,A005,Ahrp,Avul,AInv," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNMurgalSlave.blp")
     ..setDefaultActiveAbility("Ahrp")
-    ..setStructuresBuilt("h01Z,h00N,h00M,h00J,h01B,h00I,h00G,h020,h008,h01Y,h00F")
+    ..setStructuresBuilt("h01Z,h00N,h00M,h00J,h01B,h00I,h00G,h020,h008,h01Y," + commaList(SPAWNING_GROUNDS_ID))
     ..setButtonPositionX(1)
     ..setModelFile("units\\creeps\\MurgulSlave\\MurgulSlave")
     ..setScalingValue(0.9)
