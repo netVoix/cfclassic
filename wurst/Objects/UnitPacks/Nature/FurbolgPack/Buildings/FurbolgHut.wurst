@@ -1,0 +1,43 @@
+package FurbolgHut
+
+import UnitObjEditing
+import UnitIds
+import ObjectIds
+import Icons
+import Buildings
+import FurbolgConstants
+import BaseCFBuilding
+
+
+
+@compiletime function furbolgHut()
+  new BaseCFBuilding(FURBOLG_HUT_ID, UnitIds.blacksmith)
+    ..setFullName("Furbolg Hut")
+    ..setIconGameInterface(Icons.bTNGenericCreepBuilding)
+    ..setModelFile(Buildings.furbolgHut2)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(39)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(0)
+    ..setCollisionSize(72.0)
+    ..setGoldCost(FURBOLG_HUT_COST)
+    ..setTotalCost(FURBOLG_HUT_TOTAL_COST)
+    ..setHotkey("W")
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.5)
+    ..setName("Furbolg Hut")
+    ..setSightRadiusNight(1000)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(204)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setSightRadiusDay(1000)
+    ..setTooltipBasic("Build Furbolg Hut [|cffffcc00W|r]")
+    ..setUnitsTrained(FURBOLG_ID.toRawCode())
+    ..setGroundTexture("ESMB")
+    ..setTooltipExtended(FURBOLG_SHORT_DESCRIPTION)
+    ..setUpgradesTo(FURBOLG_ADOBE_ID.toRawCode())

@@ -1,0 +1,42 @@
+package FurbolgAdobe
+
+import UnitObjEditing
+import UnitIds
+import ObjectIds
+import Icons
+import Buildings
+import FurbolgConstants
+import BaseCFBuilding
+
+
+
+@compiletime function furbolgAdobe()
+  new BaseCFBuilding(FURBOLG_ADOBE_ID, UnitIds.blacksmith)
+    ..setFullName("Furbolg Abode")
+    ..setRequiredAnimationNames("alternate")
+    ..setIconGameInterface(Icons.bTNGenericCreepBuilding)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(79)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setModelFile(Buildings.furbolgHut)
+    ..setGoldCost(FURBOLG_ADOBE_COST)
+    ..setTotalCost(FURBOLG_ADOBE_TOTAL_COST)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setHotkey("R")
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.45)
+    ..setName("Furbolg Abode")
+    ..setSightRadiusNight(1000)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(205)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setSightRadiusDay(1000)
+    ..setTooltipBasic("Build Furbolg Abode [|cffffcc00R|r]")
+    ..setUnitsTrained(ELDER_FURBOLG_ID.toRawCode())
+    ..setGroundTexture("ESMB")
+    ..setTooltipExtended(ELDER_FURBOLG_SHORT_DESCRIPTION)
+    ..setUpgradesTo("")
