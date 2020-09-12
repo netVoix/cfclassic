@@ -21,6 +21,8 @@ import ObjectIds
     ..setMaximumPitchAngledegrees(0.0)
     ..setMaximumRollAngledegrees(0.0)
     ..setButtonPositionX(1)
+    ..setRepairLumberCost(0)
+    ..setRepairGoldCost(0)
     ..setButtonPositionY(0)
     ..setScalingValue(0.8)
     ..setFullName("Supreme Beastmaster Gatehouse")

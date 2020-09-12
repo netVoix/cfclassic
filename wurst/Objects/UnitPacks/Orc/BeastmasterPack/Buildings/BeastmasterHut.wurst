@@ -25,6 +25,8 @@ import BaseCFBuilding
     ..setHitPointsMaximumBase(1400)//
     ..setScalingValue(0.5)//
     ..setPointValue(43)
+    ..setRepairGoldCost(0)
+    ..setRepairLumberCost(0)
     ..setHitPointsRegenerationRate(0.5)
     ..setHitPointsRegenerationType("always")
     ..setRepairTime(70)
