@@ -4,13 +4,13 @@ import AbilityObjEditing
 import ObjectIdGenerator
 
 
-public let STUN_ID = compiletime(ABIL_ID_GEN.next())
-public let STUN_DUMMY_ID = compiletime(ABIL_ID_GEN.next())
+public let NAGA_STUN_ID = compiletime(ABIL_ID_GEN.next())
+public let NAGA_STUN_DUMMY_ID = compiletime(ABIL_ID_GEN.next())
 
 @compiletime function nagaStun()
-  new AbilityDefinitionParasite(STUN_ID)
+  new AbilityDefinitionParasite(NAGA_STUN_ID)
     ..presetBuffs(lvl -> "B019")
-    ..presetCooldown(lvl -> 35)
+    ..presetCooldown(lvl -> 30)
     ..presetManaCost(lvl -> 60)
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
@@ -26,13 +26,13 @@ public let STUN_DUMMY_ID = compiletime(ABIL_ID_GEN.next())
     ..presetStackingTypes(lvl -> 0)
 
 @compiletime function nagaStunDummy()
-  new AbilityDefinitionWarStomphydra(STUN_DUMMY_ID)
+  new AbilityDefinitionWarStomphydra(NAGA_STUN_DUMMY_ID)
     ..setDummyAbility()
-    ..presetDurationNormal(lvl -> 2.8)
-    ..presetDurationHero(lvl -> 1.2)
+    ..presetDurationNormal(lvl -> 3.15)
+    ..presetDurationHero(lvl -> 1.5)
     ..setEditorSuffix("")
-    ..setDamage(1, 120)
-    ..presetAreaofEffect(lvl -> 250)
+    ..setDamage(1, 100)
+    ..presetAreaofEffect(lvl -> 310)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4}".format(
       TargetsAllowed.ground, TargetsAllowed.tree,
       TargetsAllowed.vulnerable, TargetsAllowed.ward

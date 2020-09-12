@@ -8,8 +8,8 @@ import Stun
 
 @compiletime function nagaRoyalGuard()
     new BaseCFUnit(NAGA_ROYAL_GUARD_ID, UnitIds.nagaroyalguard)
-    ..setNormalAbilities("A00D,A02X," + commaList(STUN_ID))
-    ..setDefaultActiveAbility(STUN_ID.toRawCode())
+    ..setNormalAbilities("A00D,A02X," + commaList(NAGA_STUN_ID))
+    ..setDefaultActiveAbility(NAGA_STUN_ID.toRawCode())
     ..setAcquisitionRange(800)
     ..setAttack1AttackType(AttackType.Pierce)
     ..setTotalCost(ROYAL_SPAWNING_GROUNDS_TOTAL_COST)

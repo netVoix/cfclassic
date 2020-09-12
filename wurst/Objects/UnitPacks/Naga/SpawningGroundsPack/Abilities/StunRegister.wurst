@@ -11,6 +11,6 @@ init
         let sid = GetSpellAbilityId()
         let p = GetTriggerPlayer()
         let u = GetTriggerUnit()
-        if sid == STUN_ID
-        doAfter(0.45) ->
-            InstantDummyCaster.castImmediate(p, STUN_DUMMY_ID, 1, OrderIds.stomp, u.getPos())
+        if sid == NAGA_STUN_ID
+            doAfter(0.4) ->
+                InstantDummyCaster.castImmediate(p, NAGA_STUN_DUMMY_ID, 1, OrderIds.stomp, u.getPos())
