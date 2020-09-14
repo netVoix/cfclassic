@@ -9,9 +9,9 @@ import UndeadRs
 import BasicRs
 import HumanRs
 
-let rsMap = new HashMap<int, ResqueStrike>()..put(UNDEAD_RS_ID, undeadRs)
+let rsMap = new HashMap<int, ResqueStrike>()..put(UNDEAD_RS_ID, basicRs)
                                             ..put(RESQUE_STRIKE_ID, basicRs)
-                                            ..put(HUMAN_RS_ID, humanRs)
+                                            ..put(HUMAN_RS_ID, basicRs)
 
 
 function saveData(int pid, resqueStrikeData data)
