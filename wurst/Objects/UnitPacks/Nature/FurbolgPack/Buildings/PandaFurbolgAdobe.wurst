@@ -1,0 +1,39 @@
+package PandaFurbolgAdobe
+
+import UnitObjEditing
+import UnitIds
+import ObjectIds
+import FurbolgConstants
+import BaseCFBuilding
+
+
+
+@compiletime function pandaFurbolgAdobe()
+  new BaseCFBuilding(PANDA_FURBOLG_ADOBE_ID, UnitIds.blacksmith)
+    ..setFullName("Panda Furbolg Abode")
+    ..setRequiredAnimationNames("alternate")
+    ..setIconGameInterface("BTNGnollFleaMarket.blp")
+    ..setModelFile("FleaMarketGnollV2.00.mdx")
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(81)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setGoldCost(PANDA_FURBOLG_ADOBE_COST)
+    ..setTotalCost(PANDA_FURBOLG_ADOBE_TOTAL_COST)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setButtonPositionX(2)
+    ..setHotkey("E")
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.45)
+    ..setName("Panda Furbolg Abode")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(208)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Build Furbolg Abode [|cffffcc00E|r]")
+    ..setUnitsTrained(FURBOLG_PANDA_ID.toRawCode())
+    ..setGroundTexture("ESMB")
+    ..setTooltipExtended(FURBOLG_PANDA_SHORT_DESCRIPTION)
+    ..setUpgradesTo("")

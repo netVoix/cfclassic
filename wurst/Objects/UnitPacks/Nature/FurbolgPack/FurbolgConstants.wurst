@@ -10,13 +10,16 @@ public let FURBOLG_ADOBE_ID = compiletime(UNIT_ID_GEN.next())
 public let FURBOLG_ADOBE_COST = 200
 public let FURBOLG_ADOBE_TOTAL_COST = FURBOLG_HUT_TOTAL_COST + FURBOLG_ADOBE_COST
 
+public let PANDA_FURBOLG_ADOBE_ID = compiletime(UNIT_ID_GEN.next())
+public let PANDA_FURBOLG_ADOBE_COST = 240
+public let PANDA_FURBOLG_ADOBE_TOTAL_COST = FURBOLG_HUT_TOTAL_COST + PANDA_FURBOLG_ADOBE_COST
+
 public let FURBOLG_ID = compiletime(UNIT_ID_GEN.next())
 
-public let FURBOLG_FULL_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Furbolg Elder Shaman |n|n|cffFFAC00Furbolg Elder Shaman |r|n" + 
-                                      "|cffFFFF80Attack:|r Magic (|cffFFFF00450|r rng|r,|cffFFFF00 40|r dps)|" + 
-                                      "n|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
-                                      "|cffFFFF80Abilities:|r|n-Manaburn|n-Rejuvenation (|cffFFFF00400hp|r)|n|n" + 
-                                      "|cffFF0000You must turn off unit production before you can upgrade!|r"
+public let FURBOLG_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Light (" + 
+                                      "|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n|cffFFFF80Abilities:|r|n|n" + 
+                                      "|cff80FF00Rejuvenation|r|nHeals 200 hp over 10 seconds|n|cff8080FFCooldown: |r16|n" + 
+                                      "|cff8080FFMana cost: |r50"
 public let FURBOLG_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
                                       "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
                                       "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
@@ -34,3 +37,8 @@ public let ELDER_FURBOLG_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Troll 
                                               "|cffFFFF80Armor:|r Medium (|cffFFFF004|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n" + 
                                               "|cffFFFF80Abilities:|r|n-Ensnare|n-Berserk (|cffFFFF00+200%|r)|n|n" + 
                                               "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let FURBOLG_PANDA_ID = compiletime(UNIT_ID_GEN.next())
+
+public let FURBOLG_PANDA_FULL_DESCRIPTION = "1"
+public let FURBOLG_PANDA_SHORT_DESCRIPTION = "2"

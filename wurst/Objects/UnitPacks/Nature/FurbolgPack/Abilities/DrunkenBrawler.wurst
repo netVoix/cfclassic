@@ -1,0 +1,11 @@
+package DrunkenBrawler
+
+import ChannelAbilityPreset
+
+public let DRUNKEN_BRAWLER_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function furbolgRage()
+    new AbilityDefinitionBrewmasterDrunkenBrawler(DRUNKEN_BRAWLER_ID)
+    ..presetChancetoCriticalStrike(lvl -> 15)
+    ..presetChancetoEvade(lvl -> 0.15)
+    ..presetDamageMultiplier(lvl -> 1.8)

@@ -1,2 +1,36 @@
 package ElderFurbolg
 
+import UnitIds
+import FurbolgConstants
+import BaseCFUnit
+import Units
+import Icons
+
+@compiletime function elderFurbolg()
+  new BaseCFUnit(ELDER_FURBOLG_ID, UnitIds.furbolgeldershaman)
+    ..setFullName("Furbolg Elder Shaman")
+    ..setNormalAbilities("A0C2,A0C1")
+    ..setDefaultActiveAbility("A0C0")
+    ..setAttack1AttackType(AttackType.Magic)
+    ..setIconGameInterface(Icons.bTNFurbolgElder)
+    ..setTotalCost(FURBOLG_HUT_TOTAL_COST)
+    ..setModelFile(Units.furbolgElder)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(12)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setArmorType(ArmorType.Small)
+    ..setCollisionSize(16.0)
+    ..setAttack1DamageBase(66)
+    ..setAttack1DamageSidesperDie(26)
+    ..setHitPointsMaximumBase(650)
+    ..setManaInitialAmount(170)
+    ..setManaMaximum(250)
+    ..setScalingValue(0.95)
+    ..setPointValue(207)
+    ..setRace(Race.Naga)
+    ..setAttack1Range(450)
+    ..setHitPointsRegenerationRate(2.0)
+    ..setManaRegeneration(2.0)
+    ..setSpeedBase(280)
+    ..setTooltipBasic("Trains Furbolg Elder Shaman")
+    ..setTooltipExtended(ELDER_FURBOLG_FULL_DESCRIPTION)

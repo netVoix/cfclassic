@@ -1,2 +1,39 @@
 package Furbolg
 
+import UnitIds
+import FurbolgConstants
+import BaseCFUnit
+import Units
+import Abilities
+
+@compiletime function furbolg()
+  new BaseCFUnit(FURBOLG_ID, UnitIds.furbolgshaman)
+    ..setFullName("Furbolg Shaman")
+    ..setNormalAbilities("A0C0")
+    ..setDefaultActiveAbility("A0C0")
+    ..setAttack1AttackType(AttackType.Magic)
+    ..setTotalCost(FURBOLG_HUT_TOTAL_COST)
+    ..setModelFile(Units.beastmaster)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(6)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setArmorType(ArmorType.Small)
+    ..setCollisionSize(16.0)
+    ..setAttack1CooldownTime(1.4)
+    ..setDefenseBase(1)
+    ..setAttack1DamageBase(53)
+    ..setAttack1DamageSidesperDie(6)
+    ..setHitPointsMaximumBase(450)
+    ..setManaInitialAmount(130)
+    ..setManaMaximum(200)
+    ..setAttack1ProjectileArt(Abilities.vengeanceMissile)
+    ..setScalingValue(0.8)
+    ..setPointValue(206)
+    ..setRace(Race.Naga)
+    ..setAttack1Range(400)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setManaRegeneration(1.0)
+    ..setSelectionScale(1.3)
+    ..setSpeedBase(280)
+    ..setTooltipBasic("Trains Furbolg Shaman")
+    ..setTooltipExtended(FURBOLG_FULL_DESCRIPTION)

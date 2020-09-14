@@ -1,0 +1,41 @@
+package FurbolgPanda
+
+import UnitIds
+import FurbolgConstants
+import BaseCFUnit
+import Units
+import Abilities
+import ObjectIds
+import DrunkenBrawler
+
+@compiletime function furbolgPanda()
+  new BaseCFUnit(FURBOLG_PANDA_ID, UnitIds.furbolgpanda)
+    ..setFullName("Furbolg Panda")
+    ..setNormalAbilities(DRUNKEN_BRAWLER_ID.toRawCode())
+    ..setDefaultActiveAbility("")
+    ..setAttack1AttackType(AttackType.Magic)
+    ..setTotalCost(PANDA_FURBOLG_ADOBE_TOTAL_COST)
+    ..setModelFile(Units.furbolgPanda)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(13)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setArmorType(ArmorType.Large)
+    ..setCollisionSize(16.0)
+    ..setAttack1CooldownTime(1.3)
+    ..setDefenseBase(7)
+    ..setAttack1DamageBase(54)
+    ..setAttack1DamageSidesperDie(26)
+    ..setHitPointsMaximumBase(1050)
+    ..setManaInitialAmount(100)
+    ..setManaMaximum(200)
+    ..setAttack1ProjectileArt(Abilities.brewmasterMissile1)
+    ..setScalingValue(1.1)
+    ..setPointValue(206)
+    ..setRace(Race.Naga)
+    ..setAttack1Range(50)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setManaRegeneration(1.0)
+    ..setSelectionScale(1.3)
+    ..setSpeedBase(295)
+    ..setTooltipBasic("Trains Furbolg Panda")
+    ..setTooltipExtended(FURBOLG_PANDA_FULL_DESCRIPTION)

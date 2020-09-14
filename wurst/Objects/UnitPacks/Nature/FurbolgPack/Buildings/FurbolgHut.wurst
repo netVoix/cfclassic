@@ -20,7 +20,6 @@ import BaseCFBuilding
     ..setGoldBountyAwardedSidesperDie(1)
     ..setShadowTextureBuilding("ShadowHouse")
     ..setButtonPositionX(1)
-    ..setButtonPositionY(0)
     ..setCollisionSize(72.0)
     ..setGoldCost(FURBOLG_HUT_COST)
     ..setTotalCost(FURBOLG_HUT_TOTAL_COST)
@@ -40,4 +39,4 @@ import BaseCFBuilding
     ..setUnitsTrained(FURBOLG_ID.toRawCode())
     ..setGroundTexture("ESMB")
     ..setTooltipExtended(FURBOLG_SHORT_DESCRIPTION)
-    ..setUpgradesTo(FURBOLG_ADOBE_ID.toRawCode())
+    ..setUpgradesTo(commaList(FURBOLG_ADOBE_ID.toRawCode(), PANDA_FURBOLG_ADOBE_ID.toRawCode()))
