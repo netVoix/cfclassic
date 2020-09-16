@@ -23,7 +23,6 @@ import Stun
     ..setAttack1DamageNumberofDice(1)
     ..setAttack1DamageBase(99)
     ..setModelFile("NyalothaNaga.mdx")
-    ..setIconGameInterface("NyalothaNaga.blp")
     ..setFoodCost(0)
     ..setGoldCost(0)
     ..setRepairGoldCost(0)
