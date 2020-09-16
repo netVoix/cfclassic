@@ -6,8 +6,10 @@ public let SHAMAN_ID = compiletime(UNIT_ID_GEN.next())
 public let SPIRIT_SHAMAN_ID = compiletime(UNIT_ID_GEN.next())
 public let SHAMANIC_TENT_ID = compiletime(UNIT_ID_GEN.next())
 public let SPIRIT_LODGE_ID = compiletime(UNIT_ID_GEN.next())
+
 public let SHAMANIC_TENT_COST = 170
 public let SPIRIT_LODGE_COST = 205
+
 public let SHAMANIC_TENT_TOTAL_COST = SHAMANIC_TENT_COST
 public let SPIRIT_LODGE_TOTAL_COST = SHAMANIC_TENT_COST + SPIRIT_LODGE_COST
 
