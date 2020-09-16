@@ -1,0 +1,46 @@
+package AncientOfFlowers
+
+import UnitObjEditing
+import UnitIds
+import Icons
+import DryadConstants
+import BaseCFBuilding
+import ObjectIds
+
+@compiletime function ancientOfFlowers()
+  new BaseCFBuilding(ANCIENT_OF_FLOWERS_ID, UnitIds.humanlumbermill)
+    ..setNormalAbilities("Atol")
+    ..setRequiredAnimationNames("Alternate,Stand")
+    ..setIconGameInterface(Icons.bTNTreeOfLife)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(45)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setConstructionSound("NightElfGrowingLoop")
+    ..setCollisionSize(72.0)
+    ..setModelFile("buildings\\nightelf\\TreeofLife\\TreeofLife")
+    ..setGoldCost(ANCIENT_OF_FLOWERS_COST)
+    ..setTotalCost(ANCIENT_OF_FLOWERS_TOTAL_COST)
+    ..setHotkey("E")
+    ..setHitPointsMaximumBase(1300)
+    ..setProjectileImpactZ(120.0)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.45)
+    ..setName("Ancient of Flowers")
+    ..setSightRadiusNight(1000)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(206)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec1")
+    ..setRequirementsLevels("1")
+    ..setResearchesAvailable("")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Build Ancient of Growth [|cffffcc00E|r]")
+    ..setUnitsTrained(FLOWER_DRYAD_ID.toRawCode())
+    ..setGroundTexture("ESMB")
+    ..setTooltipExtended("|cffFFFF80Trains: |cffFFFF00Dryad|n|cffFFFF80Upgrades: |cffFFFF002|n|n|cffFFAC00Dryad |r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00500|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n|cffFFFF80Abilities:|r|n-Abolish Magic|n-Spell Resist (|cffFFFF0015%|r)|n-Natures Touch (|cffFFFF0075hp, 2armor|r)")
+    ..setUnitSoundSet("TreeofLife")
+    ..setUpgradesTo("")
+    ..setUpgradesUsed("")

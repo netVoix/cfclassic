@@ -1,0 +1,37 @@
+package Dryad
+
+import UnitIds
+import BaseCFUnit
+import Icons
+import DryadConstants
+
+@compiletime function dryad()
+  new BaseCFUnit(DRYAD_ID, UnitIds.dryad)
+    ..setFullName("Dryad")
+    ..setNormalAbilities("A03Q,A004,A0AY")
+    ..setDefaultActiveAbility("A004")
+    ..setAttack1AttackType(AttackType.Pierce)
+    ..setIconGameInterface(Icons.bTNDryad)
+    ..setTotalCost(ANCIENT_OF_GROWTH_TOTAL_COST)
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(7)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setDefenseBase(3)
+    ..setArmorType(ArmorType.Medium)
+    ..setCollisionSize(16.0)
+    ..setAttack1DamageBase(49)
+    ..setAttack1DamageSidesperDie(21)
+    ..setHotkey("Q")
+    ..setAttack1CooldownTime(1.6)
+    ..setHitPointsMaximumBase(500)
+    ..setManaInitialAmount(90)
+    ..setManaMaximum(150)
+    ..setScalingValue(0.9)
+    ..setPointValue(202)
+    ..setRace(Race.Naga)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setManaRegeneration(1.0)
+    ..setSelectionScale(1.35)
+    ..setSpeedBase(310)
+    ..setTooltipBasic("Trains Dryad")
+    ..setTooltipExtended(DRYAD_FULL_DESCRIPTION)
