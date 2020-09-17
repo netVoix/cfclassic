@@ -7,6 +7,7 @@ import ObjectIds
 import BuilderBlink
 import BeastmasterConstants
 import ShamanConstants
+import SerpentRock
 
 public let ORC_BUILDER_ID = 'h019'
 
@@ -15,7 +16,7 @@ public let ORC_BUILDER_ID = 'h019'
     ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNPeon.blp")
     ..setDefaultActiveAbility("Ahrp")
-    ..setStructuresBuilt("h02R,h02P,h02K,h02O,h02N,h029,h02I,h02H,o000," + commaList(BEASTMASTER_HUT_ID, SHAMANIC_TENT_ID))
+    ..setStructuresBuilt("h02R,h02P,h02K,h02O,h029,h02I,h02H,o000," + commaList(BEASTMASTER_HUT_ID, SHAMANIC_TENT_ID, SERPENT_ROCK_ID))
     ..setButtonPositionX(1)
     ..setButtonPositionY(1)
     ..setModelFile("units\\orc\\Peon\\Peon")

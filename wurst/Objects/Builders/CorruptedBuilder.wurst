@@ -5,12 +5,13 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
+import BasicRs
 
 public let CORRUPTED_BUILDER_ID = 'u006'
 
 @compiletime function corruptedBuilder()
   new BaseCFBuilder(CORRUPTED_BUILDER_ID, UnitIds.shade)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
+    ..setNormalAbilities("Aeth,A06E,AInv,Ahrp,Avul," + commaList(BUILDER_BLINK_ID, RESQUE_STRIKE_ID))
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("n01J,h04V,h04U,h008,h04T,h04S,h04R,h04Q,h04O,h04L,h04K")
     ..setButtonPositionX(3)

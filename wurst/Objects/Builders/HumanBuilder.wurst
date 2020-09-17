@@ -5,12 +5,13 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
+import BasicRs
 
 public let HUMAN_BUILDER_ID = 'h00C'
 
 @compiletime function humanBuilder()
   new BaseCFBuilder(HUMAN_BUILDER_ID, UnitIds.peasant)
-    ..setNormalAbilities("Aeth,A06E,AInv,A005,Ahrp,Avul," + commaList(BUILDER_BLINK_ID))
+    ..setNormalAbilities("Aeth,A06E,AInv,Ahrp,Avul," + commaList(BUILDER_BLINK_ID, RESQUE_STRIKE_ID))
     ..setDefaultActiveAbility("Ahrp")
     ..setStructuresBuilt("h05G,h037,h015,h010,h00K,h008,h006,h004,h003,h000,h001")
     ..setFullName("Human Builder")
