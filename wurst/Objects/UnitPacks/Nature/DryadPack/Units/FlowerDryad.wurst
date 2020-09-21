@@ -4,12 +4,14 @@ import UnitIds
 import BaseCFUnit
 import Icons
 import DryadConstants
+import ObjectIds
+import DriadSeed
 
 @compiletime function dryad()
   new BaseCFUnit(FLOWER_DRYAD_ID, UnitIds.dryad)
     ..setFullName("Dryad")
-    ..setNormalAbilities("A03Q,A004,A0AY")
-    ..setDefaultActiveAbility("A004")
+    ..setNormalAbilities(commaList(SEED_ID))
+    ..setDefaultActiveAbility(commaList(SEED_ID))
     ..setAttack1AttackType(AttackType.Pierce)
     ..setIconGameInterface(Icons.bTNDryadDispelMagic)
     ..setTotalCost(ANCIENT_OF_GROWTH_TOTAL_COST)
@@ -26,9 +28,9 @@ import DryadConstants
     ..setHotkey("Q")
     ..setAttack1CooldownTime(1.6)
     ..setHitPointsMaximumBase(500)
-    ..setManaInitialAmount(90)
-    ..setManaMaximum(150)
-    ..setScalingValue(0.9)
+    ..setManaInitialAmount(125)
+    ..setManaMaximum(250)
+    ..setScalingValue(0.85)
     ..setPointValue(202)
     ..setRace(Race.Naga)
     ..setHitPointsRegenerationRate(1.0)
