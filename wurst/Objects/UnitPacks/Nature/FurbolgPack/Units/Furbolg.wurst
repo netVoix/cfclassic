@@ -21,6 +21,7 @@ import Abilities
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.4)
     ..setDefenseBase(1)
+    ..setHotkey("Q")
     ..setAttack1DamageBase(53)
     ..setAttack1DamageSidesperDie(6)
     ..setHitPointsMaximumBase(450)

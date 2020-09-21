@@ -4,14 +4,14 @@ import UnitIds
 import FurbolgConstants
 import BaseCFUnit
 import Units
-import Abilities
 import ObjectIds
 import DrunkenBrawler
+import FurbolgRage
 
 @compiletime function furbolgPanda()
   new BaseCFUnit(FURBOLG_PANDA_ID, UnitIds.furbolgpanda)
     ..setFullName("Furbolg Panda")
-    ..setNormalAbilities(DRUNKEN_BRAWLER_ID.toRawCode())
+    ..setNormalAbilities(commaList(DRUNKEN_BRAWLER_ID, FURBOLG_RAGE_ID, FURBOLG_RAGE_ACTION_ID))
     ..setDefaultActiveAbility("")
     ..setAttack1AttackType(AttackType.Magic)
     ..setTotalCost(PANDA_FURBOLG_ADOBE_TOTAL_COST)
@@ -22,14 +22,13 @@ import DrunkenBrawler
     ..setArmorType(ArmorType.Large)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.3)
-    ..setDefenseBase(7)
+    ..setDefenseBase(6)
+    ..setHotkey("Q")
     ..setAttack1DamageBase(54)
-    ..setAttack1DamageSidesperDie(26)
-    ..setHitPointsMaximumBase(1050)
-    ..setManaInitialAmount(100)
-    ..setManaMaximum(200)
-    ..setAttack1ProjectileArt(Abilities.brewmasterMissile1)
-    ..setScalingValue(1.1)
+    ..setAttack1DamageSidesperDie(24)
+    ..setHitPointsMaximumBase(950)
+    ..setManaMaximum(0)
+    ..setScalingValue(0.9)
     ..setPointValue(206)
     ..setRace(Race.Naga)
     ..setAttack1Range(50)

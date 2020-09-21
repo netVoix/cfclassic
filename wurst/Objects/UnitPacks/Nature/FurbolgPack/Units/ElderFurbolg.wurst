@@ -21,6 +21,7 @@ import Icons
     ..setArmorType(ArmorType.Small)
     ..setCollisionSize(16.0)
     ..setAttack1DamageBase(66)
+    ..setHotkey("Q")
     ..setAttack1DamageSidesperDie(26)
     ..setHitPointsMaximumBase(650)
     ..setManaInitialAmount(170)
