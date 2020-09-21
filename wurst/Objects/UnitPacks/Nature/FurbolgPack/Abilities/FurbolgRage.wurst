@@ -35,16 +35,22 @@ function createRageBuff()
 class Rage extends AbilityDefinitionInnerFire
 	construct(int newAbilityId)
 		super(newAbilityId)
+		this.setDummyAbility()
 		this.setLevels(1)
 		this.setName("Rage")
+		this.setDurationHero(1, RAGE_DURATION)
+		this.setDurationNormal(1, RAGE_DURATION)
 		this.presetTooltipNormal(lvl -> "Inceases armor, damage and HP regen")
 		this.setBuffs(1, toRawCode(FURBOLG_RAGE_ID))
 		this.setAreaofEffect(1, 1)
-		this.setArtTarget("")
 		this.presetLifeRegenRate(lvl -> 20)
 		this.presetDefenseIncrease(lvl -> 50)
 		this.presetDamageIncrease(lvl -> 0.20)
-		this.presetTargetsAllowed(lvl -> "self")
+		this..presetTargetsAllowed(lvl -> "{0},{1},{2},{3}".format(
+			TargetsAllowed.air,
+			TargetsAllowed.ground,
+			TargetsAllowed.friend
+		  ))
 
 @compiletime function createRage()
 	new Rage(FURBOLG_RAGE_ACTION_ID)

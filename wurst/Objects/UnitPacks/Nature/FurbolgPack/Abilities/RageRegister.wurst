@@ -10,7 +10,7 @@ import ClosureEvents
 init
     addOnDamageFunc() ->
         let u = GetTriggerUnit()
-        if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * 15
+        if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * 20
             u.issueImmediateOrderById(OrderIds.berserk)
 
     registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
