@@ -3,13 +3,13 @@ package SpiritShaman
 import BaseCFUnit
 import UnitIds
 import ShamanConstants
-import SpiritLink
+import SpiritBuff
 import ObjectIds
 
 @compiletime function shaman()
     new BaseCFUnit(SPIRIT_SHAMAN_ID, UnitIds.shaman)
-    ..setNormalAbilities("A02M," + SPIRITLINK_ID.toRawCode())
-    ..setDefaultActiveAbility(SPIRITLINK_ID.toRawCode())
+    ..setNormalAbilities("A02M," + SPIRITBUFF_ID.toRawCode())
+    ..setDefaultActiveAbility(SPIRITBUFF_ID.toRawCode())
     ..setTotalCost(SPIRIT_LODGE_TOTAL_COST)
     ..setGoldBountyAwardedNumberofDice(1)
     ..setGoldBountyAwardedBase(11)

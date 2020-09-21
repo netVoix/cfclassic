@@ -1,0 +1,54 @@
+package SpiritBuff
+
+import AbilityObjEditing
+import ObjectIdGenerator
+import BuffObjEditing
+import Icons
+import HashMap
+import ClosureTimers
+import ClosureEvents
+import Abilities
+import AttachmentPoints
+
+public let SPIRITBUFF_ID = compiletime(UNIT_ID_GEN.next())
+public let SPIRITBUFF_DUMMY_ID = compiletime(UNIT_ID_GEN.next())
+public let BUFF_OBJ = compiletime(createDummyBuffObject("Spirit buff", "This unit is affected by Spirit Buff",	Icons.bTNArcaniteArmor, "EmpathicBond.mdx", "chest"))
+
+let spiritBuffMap = new HashMap<unit, CallbackSingle>()
+let spiritBuffId = BUFF_OBJ.abilId
+
+@configurable public let BUFF_DURATION = 5.
+
+@compiletime function spiritBuff()
+  new AbilityDefinitionInnerFire(SPIRITBUFF_ID)
+  ..presetBuffs(lvl -> "B00T")
+  ..presetCooldown(lvl -> 5)
+  ..presetManaCost(lvl -> 75)
+  ..presetDurationNormal(lvl -> 0.01)
+  ..presetDurationHero(lvl -> 0.01)
+  ..setMissileArt("")
+  ..presetCastRange(lvl -> 600)
+  ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3}".format(
+    TargetsAllowed.air,
+    TargetsAllowed.ground,
+    TargetsAllowed.friend,
+    TargetsAllowed.self
+    ))
+  ..setRequirements("")
+
+init
+  EventListener.onTargetCast(SPIRITBUFF_ID) (caster, tpos) ->
+    let t = GetSpellTargetUnit()
+    AddSpecialEffectTarget(Abilities.ancestralSpiritCaster, tpos, AttachmentPoints.origin)
+    if GetSpellAbilityId() == SPIRITBUFF_ID
+      doAfter(0.35) -> 
+        t.addAbility(spiritBuffId)
+
+    if spiritBuffMap.has(t)
+      destroy spiritBuffMap.get(t)
+      
+    let cb = doAfter(BUFF_DURATION) ->
+      if spiritBuffMap.has(t)
+        spiritBuffMap.remove(t)
+        t.removeAbility(spiritBuffId)
+    spiritBuffMap.put(t, cb)
