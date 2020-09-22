@@ -1,0 +1,22 @@
+package DrumNBassGenerator
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+
+public let DRUM_N_BASS_GENERATOR_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let DRUM_N_BASS_GENERATOR_NAME = "Drum'n'Bass Bassline Generator"
+@configurable public let DRUM_N_BASS_GENERATOR_DESCRIPTION = "Increases the movementspeed of all friendly units by 15% and their attackspeed by 30%."
+
+@compiletime function drumNBassGeneratorItem()
+    new ItemDefinition(DRUM_N_BASS_GENERATOR_ID, 'ward')
+    ..setAbilities("A03T")
+    ..setInterfaceIcon(Icons.bTNHornOfFog)
+    ..setDescription(DRUM_N_BASS_GENERATOR_DESCRIPTION)
+    ..setName(DRUM_N_BASS_GENERATOR_NAME)
+    ..setGoldCost(600)
+    ..setStockReplenishInterval(900)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + DRUM_N_BASS_GENERATOR_NAME)
+    ..setTooltipExtended(DRUM_N_BASS_GENERATOR_DESCRIPTION + " |cffFF0000Does not stack, dont buy twice!|r")

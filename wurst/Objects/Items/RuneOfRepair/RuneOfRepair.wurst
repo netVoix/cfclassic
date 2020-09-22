@@ -1,0 +1,22 @@
+package RuneOfRepair
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+
+public let RUNE_OF_REPAIR_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let RUNE_OF_REPAIR_NAME = "Rune of Repair"
+@configurable public let RUNE_OF_REPAIR_DESCRIPTION = "Repairs buildings near the worker. Stacks with other Runes and Coral Statues."
+
+@compiletime function runeOfRepairItem()
+    new ItemDefinition(RUNE_OF_REPAIR_ID, 'bgst')
+    ..setAbilities("A008")
+    ..setInterfaceIcon(Icons.bTNRune)
+    ..setDescription(RUNE_OF_REPAIR_DESCRIPTION)
+    ..setName(RUNE_OF_REPAIR_NAME)
+    ..setGoldCost(500)
+    ..setStockReplenishInterval(180)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + RUNE_OF_REPAIR_NAME)
+    ..setTooltipExtended(RUNE_OF_REPAIR_DESCRIPTION)

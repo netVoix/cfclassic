@@ -1,0 +1,25 @@
+package QuadDamage
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+import Objects
+
+public let QUAD_DAMAGE_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let QUAD_DAMAGE_NAME = "Quad Damage"
+@configurable public let QUAD_DAMAGE_DESCRIPTION = "Increases the damage of all allied units by 300% for 30 seconds."
+
+@compiletime function quadDamageItem()
+    new ItemDefinition(QUAD_DAMAGE_ID, 'sror')
+    ..setAbilities("A03E")
+    ..setCooldownGroup("A02G")
+    ..setInterfaceIcon(Icons.bTNHeartOfSearinox)
+    ..setDescription(QUAD_DAMAGE_DESCRIPTION)
+    ..setName(QUAD_DAMAGE_NAME)
+    ..setGoldCost(1400)
+    ..setStockStartDelay(600)
+    ..setTooltipBasic("Buy " + QUAD_DAMAGE_NAME)
+    ..setTooltipExtended(QUAD_DAMAGE_DESCRIPTION)
+    ..setModelUsed(Objects.crystalShard)
+    ..setUseAutomaticallyWhenAcquired(true)

@@ -1,0 +1,22 @@
+package DrumNBassDrums
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+
+public let DRUM_N_BASS_DRUMS_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let DRUM_N_BASS_DRUMS_NAME = "Drum'n'Bass Bass Drums"
+@configurable public let DRUM_N_BASS_DRUMS_DESCRIPTION = "Gives all allied units +33% damage."
+
+@compiletime function drumNBassDrumsItem()
+    new ItemDefinition(DRUM_N_BASS_DRUMS_ID, 'ajen')
+    ..setAbilities("A02F")
+    ..setInterfaceIcon(Icons.bTNDrum)
+    ..setDescription(DRUM_N_BASS_DRUMS_DESCRIPTION)
+    ..setName(DRUM_N_BASS_DRUMS_NAME)
+    ..setGoldCost(650)
+    ..setStockReplenishInterval(900)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + DRUM_N_BASS_DRUMS_NAME)
+    ..setTooltipExtended(DRUM_N_BASS_DRUMS_DESCRIPTION + " |cffFF0000Does not stack, dont buy twice!|r")

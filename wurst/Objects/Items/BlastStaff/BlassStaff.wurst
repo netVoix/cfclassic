@@ -1,0 +1,23 @@
+package BlassStaff
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+
+public let BLAST_STAFF_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let BLAST_STAFF_NAME = "Blast Staff"
+@configurable public let BLAST_STAFF_DESCRIPTION = "Launches one magic projectile per second at a random nearby enemy. Projectiles deal 60 spell damage."
+
+@compiletime function blassStaffItem()
+    new ItemDefinition(BLAST_STAFF_ID, 'bgst')
+    ..setAbilities("A02D")
+    ..setInterfaceIcon(Icons.bTNWandOfManaSteal)
+    ..setDescription(BLAST_STAFF_DESCRIPTION)
+    ..setName(BLAST_STAFF_NAME)
+    ..setGoldCost(150)
+    ..setLumberCost(300)
+    ..setStockReplenishInterval(300)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + BLAST_STAFF_NAME)
+    ..setTooltipExtended(BLAST_STAFF_DESCRIPTION)

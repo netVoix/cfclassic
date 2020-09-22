@@ -1,0 +1,27 @@
+package Cheese
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+import Objects
+
+public let CHEESE_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let CHEESE_NAME = "Cheese"
+@configurable public let CHEESE_DESCRIPTION = "Allowing you to build one more legendary structure."
+
+@compiletime function cheeseItem()
+    new ItemDefinition(CHEESE_ID, 'lmbr')
+    ..setAbilities("A03F")
+    ..setCooldownGroup("A03F")
+    ..setClassification("Permanent")
+    ..setInterfaceIcon(Icons.bTNOrbOfVenom)
+    ..setModelUsed(Objects.treasurechest1)
+    ..setDescription(CHEESE_DESCRIPTION)
+    ..setName(CHEESE_NAME)
+    ..setGoldCost(1500)
+    ..setStockMaximum(2)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + CHEESE_NAME)
+    ..setTooltipExtended(CHEESE_DESCRIPTION)
+    ..setUseAutomaticallyWhenAcquired(true)

@@ -1,0 +1,26 @@
+package DoubleDamage
+
+import ItemObjEditing
+import ObjectIdGenerator
+import Icons
+import Objects
+
+public let DOUBLE_DAMAGE_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let DOUBLE_DAMAGE_NAME = "Double Damage"
+@configurable public let DOUBLE_DAMAGE_DESCRIPTION = "Increases the damage of all allied units by 100% for 30 seconds."
+
+@compiletime function doubleDamageItem()
+    new ItemDefinition(DOUBLE_DAMAGE_ID, 'sror')
+    ..setAbilities("A03F")
+    ..setCooldownGroup("A03F")
+    ..setInterfaceIcon(Icons.bTNOrbOfVenom)
+    ..setDescription(DOUBLE_DAMAGE_DESCRIPTION)
+    ..setName(DOUBLE_DAMAGE_NAME)
+    ..setGoldCost(600)
+    ..setStockReplenishInterval(1000)
+    ..setStockStartDelay(300)
+    ..setTooltipBasic("Buy " + DOUBLE_DAMAGE_NAME)
+    ..setTooltipExtended(DOUBLE_DAMAGE_DESCRIPTION)
+    ..setModelUsed(Objects.crystalShard)
+    ..setUseAutomaticallyWhenAcquired(true)

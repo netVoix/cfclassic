@@ -1,0 +1,21 @@
+package Castle
+
+import UnitObjEditing
+import BaseCFBuilding
+import UnitIds
+import ObjectIdGenerator
+
+public let CASTLE_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function mainCastle()
+    new BaseCFBuilding(CASTLE_ID, UnitIds.castle)
+    ..setNormalAbilities("Ane2,Aall,Apit")
+    ..setFoodProduced(0)
+    ..setHitPointsMaximumBase(5000)
+    ..setItemsMade("I009,I00A,I008,I007,I005,I001,I003,I004,I006")
+    ..setScalingValue(1.2)
+    ..setName("Main Castle")
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(700)
+    ..setUnitsTrained("")
+    ..setUnitClassification("mechanical,townhall")
