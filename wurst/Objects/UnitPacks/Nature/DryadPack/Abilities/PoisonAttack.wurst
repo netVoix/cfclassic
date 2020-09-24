@@ -1,0 +1,14 @@
+package PoisonAttack
+
+import AbilityObjEditing
+import ObjectIdGenerator
+
+public let POISONATTACK_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function createSeed()
+    new AbilityDefinitionPoisonArrows(POISONATTACK_ID)
+    ..setDamageperSecond(1, 5)
+    ..presetDurationHero(lvl -> 5)
+    ..presetDurationHero(lvl -> 5)
+    ..presetExtraDamage(lvl -> 0)
+        

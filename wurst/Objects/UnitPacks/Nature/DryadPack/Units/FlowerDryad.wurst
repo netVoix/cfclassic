@@ -6,13 +6,14 @@ import Icons
 import DryadConstants
 import ObjectIds
 import DriadSeed
+import PoisonAttack
 
 @compiletime function dryad()
   new BaseCFUnit(FLOWER_DRYAD_ID, UnitIds.dryad)
     ..setFullName("Dryad")
-    ..setNormalAbilities(commaList(SEED_ID))
+    ..setNormalAbilities(commaList(SEED_ID, POISONATTACK_ID))
     ..setDefaultActiveAbility(commaList(SEED_ID))
-    ..setAttack1AttackType(AttackType.Pierce)
+    ..setAttack1AttackType(AttackType.Magic)
     ..setIconGameInterface(Icons.bTNDryadDispelMagic)
     ..setTotalCost(ANCIENT_OF_GROWTH_TOTAL_COST)
     ..setGoldBountyAwardedNumberofDice(1)
@@ -22,11 +23,11 @@ import DriadSeed
     ..setModelFile("FlowerDryad.mdx")
     ..setArmorType(ArmorType.Medium)
     ..setCollisionSize(16.0)
-    ..setAttack1ProjectileArt("FlowerDryadMissile.mdx")
-    ..setAttack1DamageBase(49)
-    ..setAttack1DamageSidesperDie(21)
+    ..setAttack1ProjectileArt("BonefireArrow1.mdx")
+    ..setAttack1DamageBase(61)
+    ..setAttack1DamageSidesperDie(15)
     ..setHotkey("Q")
-    ..setAttack1CooldownTime(1.6)
+    ..setAttack1CooldownTime(1.5)
     ..setHitPointsMaximumBase(500)
     ..setManaInitialAmount(125)
     ..setManaMaximum(250)

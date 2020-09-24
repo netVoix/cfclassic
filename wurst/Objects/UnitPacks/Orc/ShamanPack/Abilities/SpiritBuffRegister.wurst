@@ -1,0 +1,32 @@
+package SpiritBuffRegister
+
+import ClosureEvents
+import SpiritBuff
+import Abilities
+import AttachmentPoints
+import ClosureTimers
+import HashMap
+import BuffObjEditing
+
+let spiritBuffMap = new HashMap<unit, CallbackSingle>()
+let spiritBuffId = BUFF_OBJ.abilId
+
+init
+  EventListener.onTargetCast(SPIRITBUFF_ID) (caster, tpos) ->
+    let t = GetSpellTargetUnit()
+    AddSpecialEffectTarget(Abilities.ancestralSpiritCaster, tpos, AttachmentPoints.origin)
+    if GetSpellAbilityId() == SPIRITBUFF_ID
+      doAfter(0.35) -> 
+        t.addAbility(spiritBuffId)
+        t.addHP(SPIRIT_BUFF_HEAL_AMOUNT)
+        t.addAbility(SPIRITBUFF_SPELL_RESIST_ID)
+
+    if spiritBuffMap.has(t)
+      destroy spiritBuffMap.get(t)
+      
+    let cb = doAfter(SPIRIT_BUFF_DURATION) ->
+      if spiritBuffMap.has(t)
+        spiritBuffMap.remove(t)
+        t.removeAbility(spiritBuffId)
+        t.removeAbility(SPIRITBUFF_SPELL_RESIST_ID)
+    spiritBuffMap.put(t, cb)

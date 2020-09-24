@@ -26,7 +26,7 @@ import FurbolgRage
     ..setHotkey("Q")
     ..setAttack1DamageBase(54)
     ..setAttack1DamageSidesperDie(24)
-    ..setHitPointsMaximumBase(950)
+    ..setHitPointsMaximumBase(850)
     ..setManaMaximum(0)
     ..setScalingValue(0.9)
     ..setPointValue(206)

@@ -4,7 +4,6 @@ import RegisterEvents
 import Stun
 import InstantDummyCaster
 import Orders
-// import ClosureTimers
 
 init
     registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_EFFECT) ->
@@ -12,5 +11,4 @@ init
         let p = GetTriggerPlayer()
         let u = GetTriggerUnit()
         if sid == NAGA_STUN_ID
-            // doAfter(0.4) ->
             InstantDummyCaster.castImmediate(p, NAGA_STUN_DUMMY_ID, 1, OrderIds.stomp, u.getPos())

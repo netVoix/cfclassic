@@ -8,13 +8,13 @@ import HashMap
 import ChannelAbilityPreset
 import AttachmentPoints
 
-public let SEED_ID = compiletime(UNIT_ID_GEN.next())
+public let SEED_ID = compiletime(ABIL_ID_GEN.next())
 
 public let TOOLTIP1 = "Seed"
-public let TOOLTIP2 = "This unit is losing health"
+public let TOOLTIP2 = "The seed sprouts in the unit, taking life from it"
 public let SEED_EFFECT_PATH = "Windwalk Necro Soul.mdx"
 
-public let SEED_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2, Icons.bTNNaturesBlessing, SEED_EFFECT_PATH, AttachmentPoints.origin))
+public let SEED_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2, Icons.pASBTNMagicImmunity, SEED_EFFECT_PATH, AttachmentPoints.origin))
 
 let seedBuffId = SEED_BUFF_OBJ.abilId
 let seedBuffMap = new HashMap<unit, CallbackSingle>()

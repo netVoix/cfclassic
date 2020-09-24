@@ -16,8 +16,8 @@ public let NAGA_STUN_DUMMY_ID = compiletime(ABIL_ID_GEN.next())
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
-    ..setArtCaster(Abilities.thunderclapCaster)
-    ..setArtTarget(Abilities.thunderclapTarget)
+    ..setArtCaster(Abilities.tauntCaster)
+    ..setArtTarget(Abilities.controlMagicTarget)
     ..presetCastRange(lvl -> 50)
     ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3},{4},{5}".format(
       TargetsAllowed.enemies, TargetsAllowed.ground,
