@@ -1,0 +1,48 @@
+package SerpentRock
+
+import UnitObjEditing
+import BaseCFBuilding
+import UnitIds
+import ObjectIdGenerator
+import WarDrummerLongue
+import ObjectIds
+
+public let SERPENT_ROCK_ID = compiletime(UNIT_ID_GEN.next())
+
+@compiletime function serpentRock()
+    new BaseCFBuilding(SERPENT_ROCK_ID, UnitIds.farm)
+    ..setNormalAbilities("A02O,A02Z")
+    ..setAcquisitionRange(25000.0)
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNSerpentWard.blp")
+    ..setDefaultActiveAbility("A02Z")
+    ..setGoldBountyAwardedNumberofDice(1)
+    ..setGoldBountyAwardedBase(53)
+    ..setGoldBountyAwardedSidesperDie(1)
+    ..setButtonPositionX(2)
+    ..setModelFile("units\\orc\\SerpentWard\\SerpentWard")
+    ..setFoodProduced(0)
+    ..setGoldCost(260)
+    ..setHotkey("D")
+    ..setHitPointsMaximumBase(1000)
+    ..setProjectileLaunchZ(150.0)
+    ..setLumberCost(625)
+    ..setManaMaximum(15)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.67)
+    ..setName("Serpent Rock")
+    ..setPointValue(2)
+    ..setPriority(4)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setManaRegeneration(1.0)
+    ..setRepairTime(70)
+    ..setRequirements("tec2")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Build Serpent Rock [|cffffcc00D|r]")
+    ..setTooltipExtended("|cffFFFF80Ability:|cffFFFF00 Poison Area|r|nSpits poison onto an area near a random enemy unit." + 
+                         " All units that get hit by this poison get their armor reduced by 5, their attack and movement speed reduced" + 
+                         " by 20% and take damage over time. The poison lasts 15 seconds.|n|n|cffFFFF80Cooldown:|cffFFFF00 12 |rseconds")
+    ..setUnitSoundSet("Blacksmith")
+    ..setUpgradesUsed("")
+    ..setUpgradesTo(WAR_DRUMMER_LOUNGE_ID.toRawCode())
