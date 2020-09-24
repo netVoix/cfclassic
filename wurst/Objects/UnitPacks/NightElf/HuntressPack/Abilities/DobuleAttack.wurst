@@ -1,0 +1,27 @@
+package DobuleAttack
+
+import HuntressConstants
+import AbilityObjEditing
+import ObjectIdGenerator
+import Orders
+import DamageDetection
+import Abilities
+import InstantDummyCaster
+
+public let DOUBLE_ATTACK_ID = compiletime(ABIL_ID_GEN.next())
+
+@compiletime function doubleAttack()
+    new AbilityDefinitionUnholyFrenzy(DOUBLE_ATTACK_ID)
+    ..setDummyAbility()
+    ..presetDurationHero(lvl -> 0.2)
+    ..presetDurationNormal(lvl -> 0.2)
+    ..presetAttackSpeedBonus(lvl -> 9999)
+    ..presetDamageperSecond(lvl -> 0)
+
+init
+    addOnDamageFunc() ->
+        let u = GetTriggerUnit()
+        let pos = u.getPos()
+        if u.getTypeId() == HUNTRESS_RIDER_ID and GetRandomInt(0,9) == 1
+            flashEffect(Abilities.speedTarget, pos)
+            InstantDummyCaster.castTarget(u.getOwner(), DOUBLE_ATTACK_ID, 1, Orders.unholyfrenzy, u, pos)

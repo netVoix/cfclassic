@@ -1,0 +1,35 @@
+package HuntressRaider
+
+import BaseCFUnit
+import HuntressConstants
+import UnitIds
+import Icons
+import Units
+
+@compiletime function huntressRaider()
+    new BaseCFUnit(HUNTRESS_RIDER_ID, UnitIds.huntress)
+    ..setNormalAbilities("A00U")
+    ..setIconGameInterface(Icons.bTNHuntress)
+    ..setTotalCost(HUNTRESS_RIDER_HALL_TOTAL_COST)
+    ..setGoldBountyReward(13)
+    ..setCollisionSize(16.0)
+    ..setAttack1CooldownTime(1.2)
+    ..setButtonPositionX(0)
+    ..setRequirements("")
+    ..setDefenseBase(5)
+    ..setArmorType(ArmorType.Unarmored)
+    ..setAttack1DamageBase(31)
+    ..setAttack1DamageSidesperDie(44)
+    ..setModelFile(Units.huntress)
+    ..setHitPointsMaximumBase(625)
+    ..setAttack1AttackType(AttackType.Normal)
+    ..setAttack1WeaponType(WeaponType.MissileBounce)
+    ..setAttack1MaximumNumberofTargets(2)
+    ..setAttack1TargetsAllowed("debris,ground,item,structure,ward")
+    ..setAttack1ProjectileSpeed(800)
+    ..setFullName("Huntress Raider")
+    ..setPointValue(109)
+    ..setAttack1Range(300)
+    ..setSpeedBase(300)
+    ..setTooltipExtended(HUNTRESS_RIDER_FULL_DESCRIPTION)
+  

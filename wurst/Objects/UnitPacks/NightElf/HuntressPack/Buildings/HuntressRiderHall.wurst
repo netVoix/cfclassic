@@ -1,0 +1,31 @@
+package HuntressRiderHall
+
+import HuntressConstants
+import UnitIds
+import BaseCFBuilding
+import ObjectIds
+
+@compiletime function huntressRiderHall()
+  new BaseCFBuilding(HUNTRESS_RIDER_HALL_ID, UnitIds.blacksmith)
+    ..setFullName("Huntress Rider Hall")
+    ..setNormalAbilities("")
+    ..setIconGameInterface("BTNForsakenHall.blp")
+    ..setGoldBountyReward(80)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setButtonPositionX(2)
+    ..setCollisionSize(72.0)
+    ..setHotkey("E")
+    ..setModelFile("HuntersHallBlueV1.00.mdx")
+    ..setGoldCost(HUNTRESS_RIDER_HALL_COST)
+    ..setTotalCost(HUNTRESS_RIDER_HALL_TOTAL_COST)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.6)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(119)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setSelectionScale(2.4)
+    ..setUnitsTrained(HUNTRESS_RIDER_ID.toRawCode())
+    ..setUpgradesTo("")
+    ..setTooltipExtended(HUNTRESS_RIDER_SHORT_DESCRIPTION)
+  

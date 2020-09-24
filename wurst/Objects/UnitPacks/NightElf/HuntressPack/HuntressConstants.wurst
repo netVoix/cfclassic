@@ -1,9 +1,13 @@
 package HuntressConstants
 
+import ObjectIdGenerator
+
 public let HUNTRESS_ID = 'e001'
+public let HUNTRESS_RIDER_ID = compiletime(UNIT_ID_GEN.next())
 public let RANGER_ID = 'e003'
 public let AMAZON_ID = 'e004'
 public let HUNTRESS_HALL_ID = 'h00S'
+public let HUNTRESS_RIDER_HALL_ID = compiletime(UNIT_ID_GEN.next())
 public let RANGERS_HALL_ID = 'h03D'
 public let AMAZONS_HALL_ID = 'h03E'
 
@@ -11,9 +15,11 @@ public let RANGER_MULTISHOT_ID = 'A03N'
 
 public let HUNTRESS_HALL_COST = 150
 public let RANGERS_HALL_COST = 200
+public let HUNTRESS_RIDER_HALL_COST = 250
 public let AMAZONS_HALL_COST = 400
 public let HUNTRESS_HALL_TOTAL_COST = HUNTRESS_HALL_COST
 public let RANGERS_HALL_TOTAL_COST = HUNTRESS_HALL_COST + RANGERS_HALL_COST
+public let HUNTRESS_RIDER_HALL_TOTAL_COST = HUNTRESS_HALL_COST + HUNTRESS_RIDER_HALL_COST
 public let AMAZONS_HALL_TOTAL_COST = HUNTRESS_HALL_COST + RANGERS_HALL_COST + AMAZONS_HALL_COST
 
 
@@ -26,6 +32,9 @@ public let HUNTRESS_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Huntress|n|
                                         "|cffFFAC00Huntress:|r|n|cffFFFF80Attack:|r Pierce (|cffFFFF00400|r rng,|cffFFFF00 27|r dps)|n" + 
                                         "|cffFFFF80Armor:|r Light (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00300|r|n" + 
                                         "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF003 targets|r)|n-Evade (|cffFFFF008%|r)"
+
+public let HUNTRESS_RIDER_FULL_DESCRIPTION = ""
+public let HUNTRESS_RIDER_SHORT_DESCRIPTION = ""                                        
 
 public let RANGER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
                                       "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 

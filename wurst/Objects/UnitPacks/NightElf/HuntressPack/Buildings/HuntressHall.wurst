@@ -26,6 +26,6 @@ import ObjectIds
     ..setHitPointsRegenerationRate(0.5)
     ..setSelectionScale(2.4)
     ..setUnitsTrained(HUNTRESS_ID.toRawCode())
-    ..setUpgradesTo(RANGERS_HALL_ID.toRawCode())
+    ..setUpgradesTo(commaList(RANGERS_HALL_ID, HUNTRESS_RIDER_HALL_ID))
     ..setTooltipExtended(HUNTRESS_SHORT_DESCRIPTION)
   
