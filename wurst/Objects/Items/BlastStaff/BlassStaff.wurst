@@ -2,7 +2,6 @@ package BlassStaff
 
 import ItemObjEditing
 import ObjectIdGenerator
-import Icons
 
 public let BLAST_STAFF_ID = compiletime(ITEM_ID_GEN.next())
 
@@ -12,7 +11,7 @@ public let BLAST_STAFF_ID = compiletime(ITEM_ID_GEN.next())
 @compiletime function blassStaffItem()
     new ItemDefinition(BLAST_STAFF_ID, 'bgst')
     ..setAbilities("A02D")
-    ..setInterfaceIcon(Icons.bTNWandOfManaSteal)
+    ..setInterfaceIcon("BTN Attack (futuristic).blp")
     ..setDescription(BLAST_STAFF_DESCRIPTION)
     ..setName(BLAST_STAFF_NAME)
     ..setGoldCost(150)

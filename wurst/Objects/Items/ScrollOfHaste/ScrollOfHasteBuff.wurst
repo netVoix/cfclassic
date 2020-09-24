@@ -1,0 +1,52 @@
+package ScrollOfHasteBuff
+
+import ChannelAbilityPreset
+import BuffObjEditing
+import Icons
+import AttachmentPoints
+import HashMap
+import ClosureTimers
+import ClosureEvents
+import ClosureForGroups
+import Abilities
+
+@configurable public let HASTE_BUFF = "Haste"
+@configurable public let HASTE_BUFF_TT = "This unit is moving faster"
+@configurable public let HASTE_BUFF_EFF = Abilities.speedTarget
+@configurable public let HASTE_AOE = 1000.
+@configurable public let HASTE_BUFF_DURATION = 5.
+
+
+public let SCROLL_OF_HASTE_ABIL_ID = compiletime(ABIL_ID_GEN.next())
+public let HASTE_BUFF_OBJ = compiletime(createDummyBuffObject(HASTE_BUFF, HASTE_BUFF_TT, Icons.bTNBootsOfSpeed, HASTE_BUFF_EFF, AttachmentPoints.overhead))
+
+@compiletime function haste()
+    new ChannelAbilityPreset(SCROLL_OF_HASTE_ABIL_ID, 1, true)
+    ..setHeroAbility(false)
+    ..presetTargetTypes(Targettype.POINT)
+    ..presetCooldown(lvl -> 0)
+    ..presetManaCost(lvl -> 0)
+    ..setLevelSkipRequirement(0)
+    ..presetAreaofEffect(lvl -> HASTE_AOE)
+    ..presetCastRange(lvl -> 9999)
+    ..presetOption(Option.TARGETIMAGE, true)
+
+let hasteBuffId = HASTE_BUFF_OBJ.abilId
+let hasteBuffMap = new HashMap<unit, CallbackSingle>()
+
+init
+    EventListener.onPointCast(SCROLL_OF_HASTE_ABIL_ID) (caster, tpos) ->
+        forUnitsInRange(tpos, HASTE_AOE) u ->
+            if u.isAllyOf(caster) and not u.isType(UNIT_TYPE_STRUCTURE)
+                u.addAbility(hasteBuffId)
+                u.setMoveSpeed(9999)
+            
+            if hasteBuffMap.has(u)
+                destroy hasteBuffMap.get(u)
+
+            let cb = doAfter(HASTE_BUFF_DURATION) ->
+                if hasteBuffMap.has(u)
+                    hasteBuffMap.remove(u)
+                    u.removeAbility(hasteBuffId)
+                    u.setMoveSpeed(u.getDefaultMovespeed())
+            hasteBuffMap.put(u, cb)

@@ -7,7 +7,7 @@ import Icons
 public let ORB_OF_LIGHTNING_ID = compiletime(ITEM_ID_GEN.next())
 
 @configurable public let ORB_OF_LIGHTNING_NAME = "Orb of Lightning"
-@configurable public let ORB_OF_LIGHTNING_DESCRIPTION = "Allows your worker to fire a chainlightning at target enemy unit once every minute. " + 
+@configurable public let ORB_OF_LIGHTNING_DESCRIPTION = "Allows your worker to fire a chainlightning at target enemy unit. " + 
                                                         "The chainlightning hits 10 targets, dealing 1000 damage to the first target."
 
 @compiletime function orfOfLightningItem()
@@ -15,11 +15,9 @@ public let ORB_OF_LIGHTNING_ID = compiletime(ITEM_ID_GEN.next())
     ..setAbilities("A02H")
     ..setInterfaceIcon(Icons.bTNOrbOfLightning)
     ..setDescription(ORB_OF_LIGHTNING_DESCRIPTION)
-    ..setClassification("Permanent")
     ..setName(ORB_OF_LIGHTNING_NAME)
-    ..setGoldCost(550)
-    ..setLumberCost(300)
-    ..setStockReplenishInterval(180)
+    ..setGoldCost(750)
+    ..setStockReplenishInterval(300)
     ..setStockStartDelay(30)
     ..setTooltipBasic("Buy " + ORB_OF_LIGHTNING_NAME)
     ..setTooltipExtended(ORB_OF_LIGHTNING_DESCRIPTION)

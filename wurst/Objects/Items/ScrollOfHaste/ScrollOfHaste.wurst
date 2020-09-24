@@ -1,0 +1,25 @@
+package ScrollOfHaste
+
+import ScrollOfHasteBuff
+import ItemObjEditing
+import ObjectIds
+import Icons
+import ObjectIdGenerator
+
+public let SCROLL_OF_HASTE_ID = compiletime(ITEM_ID_GEN.next())
+
+@configurable public let SCROLL_OF_HASTE_NAME = "Scroll of Haste"
+@configurable public let SCROLL_OF_HASTE_DESCRIPTION = "UNITI BEGUT VPERED"
+
+@compiletime function scrollOfHasteItem()
+    new ItemDefinition(SCROLL_OF_HASTE_ID, 'shas')
+    ..setAbilities(commaList(SCROLL_OF_HASTE_ABIL_ID))
+    ..setInterfaceIcon(Icons.bTNScrollOfHaste)
+    ..setName(SCROLL_OF_HASTE_NAME)
+    ..setDescription(SCROLL_OF_HASTE_DESCRIPTION)
+    ..setGoldCost(150)
+    ..setStockMaximum(2)
+    ..setStockReplenishInterval(150)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + SCROLL_OF_HASTE_NAME)
+    ..setTooltipExtended(SCROLL_OF_HASTE_DESCRIPTION)
