@@ -5,6 +5,7 @@ import UnitIds
 import BaseCFBuilder
 import ObjectIds
 import BuilderBlink
+import GoblinConstants
 
 public let MECHANICAL_BUILDER_ID = 'h06P'
 
@@ -13,7 +14,7 @@ public let MECHANICAL_BUILDER_ID = 'h06P'
     ..setNormalAbilities("Aeth,A06E,AInv,A005,A071,Avul," + commaList(BUILDER_BLINK_ID))
     ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNHeroTinker.blp")
     ..setDefaultActiveAbility("A071")
-    ..setStructuresBuilt("h09T,h069,h06J,h05T,h05U,h05M,h05J,h05V,h05X,h008,h05L")
+    ..setStructuresBuilt("h09T,h069,h06J,h05T,h05U,h05J,h05V,h05X,h008,h05L," + commaList(DEMOLITION_LAB_ID))
     ..setButtonPositionX(1)
     ..setButtonPositionY(2)
     ..setModelFile("Units\\Creeps\\HeroTinker\\HeroTinker")
