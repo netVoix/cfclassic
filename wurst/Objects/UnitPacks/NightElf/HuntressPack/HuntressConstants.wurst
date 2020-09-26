@@ -34,7 +34,7 @@ public let HUNTRESS_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Huntress|n|
                                         "|cffFFFF80Abilities:|r|n-Multi Shot (|cffFFFF003 targets|r)|n-Evade (|cffFFFF008%|r)"
 
 public let HUNTRESS_RIDER_FULL_DESCRIPTION = ""
-public let HUNTRESS_RIDER_SHORT_DESCRIPTION = ""                                        
+public let HUNTRESS_RIDER_SHORT_DESCRIPTION = ""                                      
 
 public let RANGER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00425|r rng,|cffFFFF00 50|r dps)|n" + 
                                       "|cffFFFF80Armor:|r Light (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n" + 

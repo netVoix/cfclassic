@@ -14,7 +14,7 @@ import Abilities
 @configurable public let HASTE_BUFF_TT = "This unit is moving faster"
 @configurable public let HASTE_BUFF_EFF = Abilities.speedTarget
 @configurable public let HASTE_AOE = 1000.
-@configurable public let HASTE_BUFF_DURATION = 5.
+@configurable public let HASTE_BUFF_DURATION = 12.
 
 
 public let SCROLL_OF_HASTE_ABIL_ID = compiletime(ABIL_ID_GEN.next())

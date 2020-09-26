@@ -8,7 +8,7 @@ import InstantDummyCaster
 import Orders
 
 public let DOUBLE_ATTACK_ID = compiletime(ABIL_ID_GEN.next())
-@configurable public let DOUBLE_ATTACK_CHANCE = 25
+@configurable public let DOUBLE_ATTACK_CHANCE = 17
 
 @compiletime function doubleAttack()
     new AbilityDefinitionBloodlustCreep(DOUBLE_ATTACK_ID)
