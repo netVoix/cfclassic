@@ -17,7 +17,7 @@ import ScrollOfHaste
 import ScrollOfStone
 
 
-public let CASTLE_ID = compiletime(UNIT_ID_GEN.next())
+public let CASTLE_ID = 'hcas'
 
 @compiletime function mainCastle()
     new BaseCFBuilding(CASTLE_ID, UnitIds.castle)
