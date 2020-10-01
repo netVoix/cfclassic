@@ -4,7 +4,6 @@ import UnitObjEditing
 import BaseCFBuilding
 import UnitIds
 import ObjectIds
-import ObjectIdGenerator
 import BlassStaff
 import Cheese
 import DoubleDamage
@@ -15,7 +14,6 @@ import QuadDamage
 import RuneOfRepair
 import ScrollOfHaste
 import ScrollOfStone
-
 
 public let CASTLE_ID = 'hcas'
 

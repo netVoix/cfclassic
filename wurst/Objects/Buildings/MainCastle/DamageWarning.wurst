@@ -1,0 +1,23 @@
+package DamageWarning
+
+import Castle
+import DamageDetection
+import ClosureTimers
+
+let warningTimers = [0, 0]
+
+public let msg = "|cffff0000DANGER!!! YOUR MAIN CASTLE IS UNDER 15% OF HP!!!"
+
+init
+    addOnDamageFunc() ->
+        let u = GetTriggerUnit()
+        let team = GetTriggerPlayer().getTeam()
+        if u.getTypeId() == CASTLE_ID and u.isAlive() and u.getHP() < u.getMaxHP() / 100 * 15 and warningTimers[team] < 1
+            warningTimers[team] = 45
+            for i = 0 to bj_MAX_PLAYER_SLOTS - 1
+                if players[i].getTeam() == team
+                    printTimedToPlayer(msg, 10, players[i])
+
+    doPeriodically(3) c ->
+        for i = 0 to 1
+            warningTimers[i] = warningTimers[i] - 3
