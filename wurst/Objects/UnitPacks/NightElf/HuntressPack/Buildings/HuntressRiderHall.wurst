@@ -28,4 +28,3 @@ import ObjectIds
     ..setUnitsTrained(HUNTRESS_RIDER_ID.toRawCode())
     ..setUpgradesTo("")
     ..setTooltipExtended(HUNTRESS_RIDER_SHORT_DESCRIPTION)
-  

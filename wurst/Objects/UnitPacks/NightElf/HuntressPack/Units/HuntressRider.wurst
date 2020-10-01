@@ -1,4 +1,4 @@
-package HuntressRaider
+package HuntressRider
 
 import BaseCFUnit
 import HuntressConstants
@@ -13,15 +13,15 @@ import Units
     ..setTotalCost(HUNTRESS_RIDER_HALL_TOTAL_COST)
     ..setGoldBountyReward(13)
     ..setCollisionSize(16.0)
-    ..setAttack1CooldownTime(1.4)
+    ..setAttack1CooldownTime(1.2)
     ..setButtonPositionX(0)
     ..setRequirements("")
     ..setDefenseBase(5)
     ..setArmorType(ArmorType.Unarmored)
-    ..setAttack1DamageBase(41)
-    ..setAttack1DamageSidesperDie(34)
+    ..setAttack1DamageBase(77)
+    ..setAttack1DamageSidesperDie(19)
     ..setModelFile(Units.huntress)
-    ..setHitPointsMaximumBase(625)
+    ..setHitPointsMaximumBase(715)
     ..setHitPointsRegenerationRate(2.7)
     ..setAttack1AttackType(AttackType.Normal)
     ..setAttack1WeaponType(WeaponType.MissileBounce)

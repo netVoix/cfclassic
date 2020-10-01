@@ -1,0 +1,41 @@
+package WarDrummerFarm
+
+import UnitObjEditing
+import UnitIds
+import ObjectIds
+import KodoConstants
+import BaseCFBuilding
+import LegendaryUnitFlag
+
+
+@compiletime function warDrummerFarm()
+  new BaseCFBuilding(WAR_DRUMMER_FARM_ID, UnitIds.blacksmith)
+  ..setFullName("War Drummer Farm")
+  ..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode())
+  ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp")
+  ..setGoldBountyReward(156)
+  ..setShadowTextureBuilding("ShadowHouse")
+  ..setButtonPositionX(3)
+  ..setButtonPositionY(0)
+  ..setCollisionSize(72.0)
+  ..setModelFile("buildings\\other\\PigFarm\\PigFarm")
+  ..setTintingColorBlue(150)
+  ..setTintingColorGreen(180)
+  ..setTintingColorRed(150)
+  ..setGoldCost(WAR_DRUMMER_FARM_COST)
+  ..setLumberCost(475)
+  ..setTotalCost(780)
+  ..setHotkey("R")
+  ..setHitPointsMaximumBase(1800)
+  ..setMaximumPitchAngledegrees(45.0)
+  ..setMaximumRollAngledegrees(45.0)
+  ..setScalingValue(0.81)
+  ..setSightRadiusNight(1000)
+  ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+  ..setPointValue(13)
+  ..setHitPointsRegenerationRate(0.5)
+  ..setRequirements("tec2")
+  ..setRequirementsLevels("1")
+  ..setSelectionScale(2.4)
+  ..setUnitsTrained(WAR_DRUMMER_ID.toRawCode())
+  ..setTooltipExtended(WAR_DRUMMER_SHORT_DESCRIPTION)

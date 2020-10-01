@@ -9,7 +9,7 @@ import HashMap
 import BuffObjEditing
 
 let spiritBuffMap = new HashMap<unit, CallbackSingle>()
-let spiritBuffId = BUFF_OBJ.abilId
+let spiritBuffId = SPIRITBUFF_OBJ.abilId
 
 init
   EventListener.onTargetCast(SPIRITBUFF_ID) (caster, tpos) ->
@@ -20,6 +20,7 @@ init
         t.addAbility(spiritBuffId)
         t.addHP(SPIRIT_BUFF_HEAL_AMOUNT)
         t.addAbility(SPIRITBUFF_SPELL_RESIST_ID)
+        t.addAbility(SPIRITBUFF_ARMOR_BONUS_ID)
 
     if spiritBuffMap.has(t)
       destroy spiritBuffMap.get(t)
@@ -29,4 +30,5 @@ init
         spiritBuffMap.remove(t)
         t.removeAbility(spiritBuffId)
         t.removeAbility(SPIRITBUFF_SPELL_RESIST_ID)
+        t.removeAbility(SPIRITBUFF_ARMOR_BONUS_ID)
     spiritBuffMap.put(t, cb)

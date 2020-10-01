@@ -1,7 +1,12 @@
 package KodoConstants
 
+import ObjectIdGenerator
+
 public let OFFENSIVE_KODO_FARM_ID = 'h035'
 public let OFFENSIVE_KODO_FARM_COST = 100
+public let WAR_DRUMMER_FARM_ID = compiletime(UNIT_ID_GEN.next())
+public let WAR_DRUMMER_FARM_COST = 420
+public let WAR_DRUMMER_FARM_TOTAL_COST = OFFENSIVE_KODO_FARM_COST + WAR_DRUMMER_FARM_COST
 
 public let OFFENSIVE_KODO_RIDER_ID = 'o008'
 public let OFFENSIVE_KODO_RIDER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Pierce (|cffFFFF00200|r rng,|cffFFFF00 33|r dps)|n" + 
@@ -13,3 +18,7 @@ public let OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF0
                                                     "|cffFFFF80Armor:|r Light (|cffFFFF007|r)|n|cffFFFF80Hitpoints: |cffFFFF001200|r|n" + 
                                                     "|cffFFFF80Abilities:|r|n-Melee Damage Aura (|cffFFFF00+30%|r)|n|n" + 
                                                     "|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+public let WAR_DRUMMER_ID = compiletime(UNIT_ID_GEN.next())
+public let WAR_DRUMMER_FULL_DESCRIPTION = ""
+public let WAR_DRUMMER_SHORT_DESCRIPTION = ""

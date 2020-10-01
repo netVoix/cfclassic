@@ -8,20 +8,22 @@ import AttachmentPoints
 
 public let SPIRITBUFF_ID = compiletime(ABIL_ID_GEN.next())
 public let SPIRITBUFF_SPELL_RESIST_ID = compiletime(ABIL_ID_GEN.next())
+public let SPIRITBUFF_ARMOR_BONUS_ID = compiletime(ABIL_ID_GEN.next())
 
 @configurable public let SPIRITBUFF_NAME = "Spirit buff"
-@configurable public let SPIRITBUFF_TT = "This unit is affected by Spirit Buff"
+@configurable public let SPIRITBUFF_TT = "This unit has more armor and magic resistance"
 
-@configurable public let SPIRIT_BUFF_DURATION = 5.
-@configurable public let SPIRIT_BUFF_HEAL_AMOUNT = 250.
-@configurable public let SPIRIT_BUFF_SPELL_RESIST = 0.5
+@configurable public let SPIRIT_BUFF_DURATION = 50.
+@configurable public let SPIRIT_BUFF_HEAL_AMOUNT = 150.
+@configurable public let SPIRIT_BUFF_SPELL_RESIST = 0.4
+@configurable public let SPIRIT_BUFF_ARMOR_BONUS = 6.
 
-public let BUFF_OBJ = compiletime(createDummyBuffObject(SPIRITBUFF_NAME, SPIRITBUFF_TT,	Icons.bTNArcaniteArmor, "EmpathicBond.mdx", AttachmentPoints.chest))
+public let SPIRITBUFF_OBJ = compiletime(createDummyBuffObject(SPIRITBUFF_NAME, SPIRITBUFF_TT,	Icons.bTNArcaniteArmor, "EmpathicBond.mdx", AttachmentPoints.chest))
 
 @compiletime function spiritBuff()
   new AbilityDefinitionInnerFire(SPIRITBUFF_ID)
   ..presetBuffs(lvl -> "B00T")
-  ..presetCooldown(lvl -> 3)
+  ..presetCooldown(lvl -> 15)
   ..presetManaCost(lvl -> 75)
   ..presetDurationNormal(lvl -> 0.01)
   ..presetDurationHero(lvl -> 0.01)
@@ -37,6 +39,11 @@ public let BUFF_OBJ = compiletime(createDummyBuffObject(SPIRITBUFF_NAME, SPIRITB
 
 @compiletime function spiritBuffSpellResist()
   new AbilityDefinitionRunedBracers(SPIRITBUFF_SPELL_RESIST_ID)
-    ..setItemAbility(false)
-    ..presetDamageReduction(lvl -> SPIRIT_BUFF_SPELL_RESIST)
-  
+  ..setItemAbility(false)
+  ..presetDamageReduction(lvl -> SPIRIT_BUFF_SPELL_RESIST)
+
+@compiletime function spiritBufASBonus()
+  new AbilityDefinitionItemAuraDevotion(SPIRITBUFF_ARMOR_BONUS_ID)
+  ..setItemAbility(false)
+  ..presetAreaofEffect(lvl -> 1)
+  ..presetArmorBonus(lvl -> SPIRIT_BUFF_ARMOR_BONUS)

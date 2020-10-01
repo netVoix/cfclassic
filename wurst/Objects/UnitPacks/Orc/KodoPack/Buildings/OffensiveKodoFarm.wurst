@@ -11,7 +11,7 @@ import BaseCFBuilding
   new BaseCFBuilding(OFFENSIVE_KODO_FARM_ID, UnitIds.blacksmith)
   ..setFullName("Offensive Kodo Farm")
   ..setNormalAbilities("A036")
-  ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpThree.blp")
+  ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNOrcMeleeUpTwo.blp")
   ..setGoldBountyReward(72)
   ..setShadowTextureBuilding("ShadowHouse")
   ..setButtonPositionX(1)
@@ -32,3 +32,4 @@ import BaseCFBuilding
   ..setSelectionScale(2.4)
   ..setUnitsTrained(OFFENSIVE_KODO_RIDER_ID.toRawCode())
   ..setTooltipExtended(OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION)
+  ..setUpgradesTo(WAR_DRUMMER_FARM_ID.toRawCode())

@@ -1,0 +1,37 @@
+package WarDrummer
+
+import BaseCFUnit
+import KodoConstants
+import UnitIds
+import Icons
+import Abilities
+
+@compiletime function amazon()
+    new BaseCFUnit(WAR_DRUMMER_ID, UnitIds.kotobeast)
+    ..setNormalAbilities("A07H,A06V,A0AH")
+    ..setDefaultActiveAbility("")
+    ..setIconGameInterface(Icons.bTNStampede)
+    ..setBuildTime(54)
+    ..setGoldBountyReward(24)
+    ..setCollisionSize(16.0)
+    ..setDefenseBase(12)
+    ..setArmorType(ArmorType.Small)
+    ..setAttack1DamageBase(115)
+    ..setAttack1DamageSidesperDie(25)
+    ..setAttack1CooldownTime(1.15)
+    ..setAttack1Range(420)
+    ..setAttack1AttackType(AttackType.Chaos)
+    ..setAttack1ProjectileArt(Abilities.ballistaMissile)
+    ..setButtonPositionX(0)
+    ..setButtonPositionY(0)
+    ..setModelFile("WarDrummerOrcMammothV1.00.mdx")
+    ..setHitPointsMaximumBase(1200)
+    ..setLevel(6)
+    ..setScalingValue(0.9)
+    ..setAttack1ProjectileArc(0.05)
+    ..setAttack1ProjectileSpeed(950)
+    ..setFullName("War Drummer")
+    ..setRequirements("")
+    ..setHitPointsRegenerationRate(6.0) 
+    ..setSpeedBase(310)
+    ..setTooltipExtended(WAR_DRUMMER_FULL_DESCRIPTION)
