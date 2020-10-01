@@ -5,6 +5,7 @@ import UnitIds
 import GuardianConstants
 import ObjectIds
 import Stun
+import Icons
 
 @compiletime function nagaRoyalGuard()
     new BaseCFUnit(NAGA_ROYAL_GUARD_ID, UnitIds.nagaroyalguard)
@@ -18,6 +19,7 @@ import Stun
     ..setGoldBountyAwardedSidesperDie(1)
     ..setCollisionSize(16.0)
     ..setAttack1CooldownTime(1.4)
+    ..setIconGameInterface(Icons.bTNNagaMyrmidon)
     ..setDefenseBase(9)
     ..setDependencyEquivalents("")
     ..setAttack1DamageNumberofDice(1)

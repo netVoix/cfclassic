@@ -19,15 +19,15 @@ public let SEED_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2,
 let seedBuffId = SEED_BUFF_OBJ.abilId
 let seedBuffMap = new HashMap<unit, CallbackSingle>()
 
-@configurable public let BUFF_DURATION = 6.5
+@configurable public let BUFF_DURATION = 7.01
 @configurable public let BASE_DAMAGE = 75.
-@configurable public let PREIODICAL_DAMAGE = 30.
+@configurable public let PREIODICAL_DAMAGE = 55.
 
 @compiletime function createSeed()
     new AbilityDefinitionParasite(SEED_ID)
     ..presetBuffs(lvl -> "B00A")
-    ..presetCooldown(lvl -> 12)
-    ..presetManaCost(lvl -> 75)
+    ..presetCooldown(lvl -> 16)
+    ..presetManaCost(lvl -> 70)
     ..presetDurationNormal(lvl -> 0.01)
     ..presetDurationHero(lvl -> 0.01)
     ..setMissileArt("")
@@ -56,8 +56,9 @@ init
                 t.removeAbility(seedBuffId)
         seedBuffMap.put(t, cb)
         
-        doPeriodically(0.5) cb1 ->
+        doPeriodically(1) cb1 ->
             if t.hasAbility(seedBuffId)
+                flashEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", t.getPos())
                 caster.damageTarget(t, PREIODICAL_DAMAGE, false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
             else
                 destroy cb1

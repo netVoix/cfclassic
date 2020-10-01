@@ -6,8 +6,6 @@ import ObjectIds
 import FurbolgConstants
 import BaseCFBuilding
 
-
-
 @compiletime function pandaFurbolgAdobe()
   new BaseCFBuilding(PANDA_FURBOLG_ADOBE_ID, UnitIds.blacksmith)
     ..setFullName("Panda Furbolg Abode")

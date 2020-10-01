@@ -3,10 +3,6 @@ package GoblinConstants
 public let DEMOLITION_LAB_ID = 'h05M'
 public let DEMOLITION_LAB_COST = 200
 public let DEMOLITION_LAB_TOTAL_COST = DEMOLITION_LAB_COST
-// public let MOON_ALTAR_ID = 'h07D'
-// public let MOON_ALTAR_COST = 190
-// public let MOON_ALTAR_TOTAL_COST = MOON_SHRINE_TOTAL_COST + MOON_ALTAR_COST
-
 
 public let LUNATIC_GOBLIN_ID = 'n01V'
 public let LUNATIC_GOBLIN_FULL_DESCRIPTION = "|n|cffFFFF80Armor:|r Unarmored (|cffFFFF000|r)|n|cffFFFF80Hitpoints: |cffFFFF00175|r|n" + 
@@ -17,17 +13,3 @@ public let LUNATIC_GOBLIN_FULL_DESCRIPTION = "|n|cffFFFF80Armor:|r Unarmored (|c
 public let LUNATIC_GOBLIN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Lunatic Goblin|n|n|cffFFAC00Lunatic Goblin:|r|n|cffFFFF80Armor:|r " + 
                                               "Unarmored (|cffFFFF000|r)|n|cffFFFF80Hitpoints: |cffFFFF00175|r|n|cffFFFF80Abilities:|r|n-Suicide " + 
                                               "(|cffFFFF00275 dmg|r)|n-Detonate (|cffFFFF00150dmg|r)"
-
-// public let SAGE_DRUID_ID = 'e00J'
-// public let SAGE_DRUID_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Chaos (|cffFFFF00375|r rng,|cffFFFF00 46|r dps)|n" + 
-//                                           "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
-//                                           "|cffFFFF80Abilities:|r|n|n|cff80FF00Mass Entangle|r|n" + 
-//                                           "Entangles up to 3 ground units for 6 seconds dealing 35 damage per second|n" + 
-//                                           "|cff8080FFCooldown: |r14|n|cff8080FFMana cost: |r35"
-// public let SAGE_DRUID_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Sage Druid|n|n|cffFFAC00Sage Druid:|r|n" + 
-//                                           "|cffFFFF80Attack:|r Chaos (|cffFFFF00375|r rng,|cffFFFF00 46|r dps)|n" + 
-//                                           "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
-//                                           "|cffFFFF80Abilities:|r|n-Mass Entangle (|cffFFFF006sec, 35dps|r)|n|n" + 
-//                                           "|cffFF0000You must turn off unit production before you can upgrade!|r"
-
-

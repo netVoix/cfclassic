@@ -4,8 +4,6 @@ import UnitObjEditing
 import BaseCFBuilding
 import UnitIds
 import ObjectIdGenerator
-import WarDrummerLongue
-import ObjectIds
 
 public let SERPENT_ROCK_ID = compiletime(UNIT_ID_GEN.next())
 
@@ -21,7 +19,7 @@ public let SERPENT_ROCK_ID = compiletime(UNIT_ID_GEN.next())
     ..setButtonPositionX(2)
     ..setModelFile("units\\orc\\SerpentWard\\SerpentWard")
     ..setFoodProduced(0)
-    ..setGoldCost(260)
+    ..setGoldCost(265)
     ..setHotkey("D")
     ..setHitPointsMaximumBase(1000)
     ..setProjectileLaunchZ(150.0)
@@ -45,4 +43,4 @@ public let SERPENT_ROCK_ID = compiletime(UNIT_ID_GEN.next())
                          " by 20% and take damage over time. The poison lasts 15 seconds.|n|n|cffFFFF80Cooldown:|cffFFFF00 12 |rseconds")
     ..setUnitSoundSet("Blacksmith")
     ..setUpgradesUsed("")
-    ..setUpgradesTo(WAR_DRUMMER_LOUNGE_ID.toRawCode())
+    ..setUpgradesTo("")
