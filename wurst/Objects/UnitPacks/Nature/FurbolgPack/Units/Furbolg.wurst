@@ -29,7 +29,7 @@ import Abilities
     ..setManaMaximum(200)
     ..setAttack1ProjectileArt(Abilities.vengeanceMissile)
     ..setScalingValue(0.8)
-    ..setPointValue(206)
+    ..setPointValue(212)
     ..setRace(Race.Naga)
     ..setAttack1Range(400)
     ..setHitPointsRegenerationRate(1.0)

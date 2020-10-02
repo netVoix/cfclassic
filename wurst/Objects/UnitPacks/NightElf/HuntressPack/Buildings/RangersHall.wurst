@@ -21,7 +21,7 @@ import ObjectIds
 	..setScalingValue(0.52)
 	..setFullName("Ranger's Hall")
 	..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-	..setPointValue(20)
+	..setPointValue(32)
 	..setHitPointsRegenerationRate(0.5)
 	..setRequirements("tec2")
 	..setRequirementsLevels("1")

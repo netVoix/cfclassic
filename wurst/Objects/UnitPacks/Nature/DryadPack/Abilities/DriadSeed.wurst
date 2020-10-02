@@ -38,27 +38,30 @@ let seedBuffMap = new HashMap<unit, CallbackSingle>()
     ..setRequirements("")
 
 init
-    EventListener.onTargetCast(SEED_ID) (caster, tpos) ->
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
         let t = GetSpellTargetUnit()
-        AddSpecialEffectTarget("Holy Light Nature.mdx", tpos, AttachmentPoints.origin)
-        caster.damageTarget(t, BASE_DAMAGE)
-        
-        if GetSpellAbilityId() == SEED_ID
-            doAfter(0.25) -> 
-                t.addAbility(seedBuffId)
+        let sid = GetSpellAbilityId()
+        let u = GetTriggerUnit()
+        if sid == SEED_ID and t.isAlive()
+            AddSpecialEffectTarget("Holy Light Nature.mdx", t, AttachmentPoints.origin)
+            u.damageTarget(t, BASE_DAMAGE)
+            
+            if GetSpellAbilityId() == SEED_ID
+                doAfter(0.25) -> 
+                    t.addAbility(seedBuffId)
 
-        if seedBuffMap.has(t)
-            destroy seedBuffMap.get(t)
-
-        let cb = doAfter(BUFF_DURATION) ->
             if seedBuffMap.has(t)
-                seedBuffMap.remove(t)
-                t.removeAbility(seedBuffId)
-        seedBuffMap.put(t, cb)
-        
-        doPeriodically(1) cb1 ->
-            if t.hasAbility(seedBuffId)
-                flashEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", t.getPos())
-                caster.damageTarget(t, PREIODICAL_DAMAGE, false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
-            else
-                destroy cb1
+                destroy seedBuffMap.get(t)
+
+            let cb = doAfter(BUFF_DURATION) ->
+                if seedBuffMap.has(t)
+                    seedBuffMap.remove(t)
+                    t.removeAbility(seedBuffId)
+            seedBuffMap.put(t, cb)
+            
+            doPeriodically(1) cb1 ->
+                if t.hasAbility(seedBuffId)
+                    flashEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", t.getPos())
+                    u.damageTarget(t, PREIODICAL_DAMAGE, false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
+                else
+                    destroy cb1

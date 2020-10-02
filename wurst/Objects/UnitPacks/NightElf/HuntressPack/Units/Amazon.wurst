@@ -18,6 +18,7 @@ import UnitIds
 	..setModelFile("Units\\Undead\\EvilSylvanas\\EvilSylvanas")
 	..setHitPointsMaximumBase(900)
 	..setLevel(6)
+	..setPointValue(221)
 	..setAttack1ProjectileArc(0.05)
 	..setAttack1ProjectileSpeed(1100)
 	..setFullName("Amazon")

@@ -10,7 +10,7 @@ public let ANCIENT_OF_FLOWERS_ID = compiletime(UNIT_ID_GEN.next())
 public let ANCIENT_OF_FLOWERS_COST = 260
 public let ANCIENT_OF_FLOWERS_TOTAL_COST = ANCIENT_OF_GROWTH_TOTAL_COST + ANCIENT_OF_FLOWERS_COST
 
-public let DRYAD_ID = compiletime(UNIT_ID_GEN.next())
+public let DRYAD_ID = 'e006'
 
 public let DRYAD_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Light (" + 
                                       "|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n|cffFFFF80Abilities:|r|n|n" + 

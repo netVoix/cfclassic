@@ -5,10 +5,12 @@ import KodoConstants
 import UnitIds
 import Icons
 import Abilities
+import ObjectIds
+import WarDrummerAura
 
 @compiletime function amazon()
     new BaseCFUnit(WAR_DRUMMER_ID, UnitIds.kotobeast)
-    ..setNormalAbilities("A07H,A06V,A0AH")
+    ..setNormalAbilities("A07H,A06V,A0AH," + commaList(WARDRUMMER_KODO_AURA_ID))
     ..setDefaultActiveAbility("")
     ..setIconGameInterface(Icons.bTNStampede)
     ..setBuildTime(54)

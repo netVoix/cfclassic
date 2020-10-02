@@ -11,7 +11,7 @@ import HashMap
 import ClosureTimers
 import ClosureEvents
 
-public let RAGE_DURATION = 6.5
+public let RAGE_DURATION = 7.
 public let HP_THRESHOLD = 20.
 public let FURBOLG_RAGE_ID = compiletime(ABIL_ID_GEN.next())
 public let FURBOLG_RAGE_BONUS1_ID = compiletime(ABIL_ID_GEN.next())
@@ -37,31 +37,35 @@ let rageBuffMap = new HashMap<unit, CallbackSingle>()
 	new AbilityDefinitionHardenedSkin(FURBOLG_RAGE_BONUS1_ID)
 	..presetManaCost(lvl -> 0)
 	..presetIgnoredDamage(lvl -> 2000)
+	..presetMinimumDamage(lvl -> 1)
 	..setRequirements("")
 
 @compiletime function furbolgRageBonus2()
 	new AbilityDefinitionRunedBracers(FURBOLG_RAGE_BONUS2_ID)
 	..setItemAbility(false)
-	..presetDamageReduction(lvl -> 0.9)
+	..presetDamageReduction(lvl -> 0.95)
 
 init
 	addOnDamageFunc() ->
 		let u = GetTriggerUnit()
 		if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * HP_THRESHOLD
 			u.issueImmediateOrderById(OrderIds.berserk)
-			
-	EventListener.onCast(FURBOLG_RAGE_ID) (caster) ->
-		caster.addAbility(rageBuffId)
-		caster.addAbility(FURBOLG_RAGE_BONUS1_ID)
-		caster.addAbility(FURBOLG_RAGE_BONUS2_ID)
 
-		if rageBuffMap.has(caster)
-			destroy rageBuffMap.get(caster)
+	registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
+		let sid = GetSpellAbilityId()
+		let u = GetTriggerUnit()
+		if sid == FURBOLG_RAGE_ID
+			u.addAbility(rageBuffId)
+			u.addAbility(FURBOLG_RAGE_BONUS1_ID)
+			u.addAbility(FURBOLG_RAGE_BONUS2_ID)
 
-		let cb = doAfter(RAGE_DURATION) ->
-			if rageBuffMap.has(caster)
-				rageBuffMap.remove(caster)
-				caster.removeAbility(rageBuffId)
-				caster.removeAbility(FURBOLG_RAGE_BONUS1_ID)
-				caster.removeAbility(FURBOLG_RAGE_BONUS2_ID)
-		rageBuffMap.put(caster, cb)
+			if rageBuffMap.has(u)
+				destroy rageBuffMap.get(u)
+
+			let cb = doAfter(RAGE_DURATION) ->
+				if rageBuffMap.has(u)
+					rageBuffMap.remove(u)
+					u.removeAbility(rageBuffId)
+					u.removeAbility(FURBOLG_RAGE_BONUS1_ID)
+					u.removeAbility(FURBOLG_RAGE_BONUS2_ID)
+			rageBuffMap.put(u, cb)

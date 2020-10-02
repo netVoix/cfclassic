@@ -26,7 +26,7 @@ import BaseCFBuilding
     ..setScalingValue(0.45)
     ..setName("Panda Furbolg Abode")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-    ..setPointValue(208)
+    ..setPointValue(214)
     ..setHitPointsRegenerationRate(0.5)
     ..setRequirementsLevels("1")
     ..setSelectionScale(2.4)

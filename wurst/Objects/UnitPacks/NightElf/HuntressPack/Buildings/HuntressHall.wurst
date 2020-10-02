@@ -22,7 +22,7 @@ import ObjectIds
     ..setMaximumRollAngledegrees(0.0)
     ..setScalingValue(0.6)
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-    ..setPointValue(119)
+    ..setPointValue(35)
     ..setHitPointsRegenerationRate(0.5)
     ..setSelectionScale(2.4)
     ..setUnitsTrained(HUNTRESS_ID.toRawCode())

@@ -24,6 +24,7 @@ import ShamanConstants
     ..setHotkey("Q")
     ..setHitPointsMaximumBase(340)
     ..setLevel(1)
+    ..setPointValue(225)
     ..setLumberCost(0)
     ..setRepairLumberCost(0)
     ..setManaInitialAmount(120)

@@ -1,0 +1,18 @@
+package WarDrummerAura
+
+import AbilityObjEditing
+import Icons
+import ObjectIdGenerator
+
+public let WARDRUMMER_KODO_AURA_ID =  compiletime(ABIL_ID_GEN.next())
+
+@compiletime function wardDrummerAura()
+  new AbilityDefinitionItemAuraTrueshot(WARDRUMMER_KODO_AURA_ID)
+    ..presetIcon(Icons.bTNJanggo)
+    ..presetBuffs(lvl -> "B00F")
+    ..presetAreaofEffect(lvl -> 950)
+    ..setItemAbility(false)
+    ..presetDamageBonus(lvl -> 0.25)
+    ..presetMeleeBonus(lvl -> true)
+    ..presetRangedBonus(lvl -> true)
+  

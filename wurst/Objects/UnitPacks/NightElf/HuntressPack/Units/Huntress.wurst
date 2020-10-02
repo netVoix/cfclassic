@@ -16,7 +16,7 @@ import UnitIds
 	..setArmorType(ArmorType.Small)
 	..setAttack1DamageBase(39)
 	..setHitPointsMaximumBase(300)
-	..setPointValue(109)
+	..setPointValue(34)
 	..setAttack1Range(400)
 	..setAttack1DamageSidesperDie(4)
 	..setSpeedBase(300)

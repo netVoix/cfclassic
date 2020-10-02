@@ -28,7 +28,7 @@ import ObjectIds
     ..setName("Shamanic Tent")
     ..setSightRadiusNight(1000)
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-    ..setPointValue(46)
+    ..setPointValue(48)
     ..setHitPointsRegenerationRate(0.5)
     ..setHitPointsRegenerationType("always")
     ..setRequirements("")

@@ -28,7 +28,7 @@ public let CASTLE_ID = 'hcas'
         DOUBLE_DAMAGE_ID,
         DRUM_N_BASS_DRUMS_ID,
         DRUM_N_BASS_GENERATOR_ID,
-        ORB_OF_LIGHTNING_ID,
+        // ORB_OF_LIGHTNING_ID,
         QUAD_DAMAGE_ID,
         RUNE_OF_REPAIR_ID,
         SCROLL_OF_HASTE_ID,
