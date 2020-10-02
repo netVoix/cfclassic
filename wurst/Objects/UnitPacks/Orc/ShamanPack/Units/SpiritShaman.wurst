@@ -36,9 +36,9 @@ import Abilities
     ..setManaInitialAmount(175)
 
     ..setAttack1WeaponType(WeaponType.Missile)
-    ..setAttack1DamageBase(31)
+    ..setAttack1DamageBase(59)
     ..setAttack1DamageNumberofDice(1)
-    ..setAttack1DamageSidesperDie(9)
+    ..setAttack1DamageSidesperDie(16)
     ..setAttack1CooldownTime(1.25)
     ..setAttack1AnimationBackswingPoint(0.7)
     ..setAttack1ProjectileArt(Abilities.witchDoctorMissile)

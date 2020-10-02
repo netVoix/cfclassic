@@ -12,23 +12,24 @@ let spiritBuffMap = new HashMap<unit, CallbackSingle>()
 let spiritBuffId = SPIRITBUFF_OBJ.abilId
 
 init
-  EventListener.onTargetCast(SPIRITBUFF_ID) (caster, tpos) ->
+  registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
     let t = GetSpellTargetUnit()
-    AddSpecialEffectTarget(Abilities.ancestralSpiritCaster, tpos, AttachmentPoints.origin)
-    if GetSpellAbilityId() == SPIRITBUFF_ID
+    let sid = GetSpellAbilityId()
+
+    if sid == SPIRITBUFF_ID and t.isAlive()
+      AddSpecialEffectTarget(Abilities.ancestralSpiritCaster, t, AttachmentPoints.origin)
       doAfter(0.35) -> 
         t.addAbility(spiritBuffId)
         t.addHP(SPIRIT_BUFF_HEAL_AMOUNT)
         t.addAbility(SPIRITBUFF_SPELL_RESIST_ID)
         t.addAbility(SPIRITBUFF_ARMOR_BONUS_ID)
-
-    if spiritBuffMap.has(t)
-      destroy spiritBuffMap.get(t)
-      
-    let cb = doAfter(SPIRIT_BUFF_DURATION) ->
       if spiritBuffMap.has(t)
-        spiritBuffMap.remove(t)
-        t.removeAbility(spiritBuffId)
-        t.removeAbility(SPIRITBUFF_SPELL_RESIST_ID)
-        t.removeAbility(SPIRITBUFF_ARMOR_BONUS_ID)
-    spiritBuffMap.put(t, cb)
+        destroy spiritBuffMap.get(t)
+
+      let cb = doAfter(SPIRIT_BUFF_DURATION) ->
+        if spiritBuffMap.has(t)
+          spiritBuffMap.remove(t)
+          t.removeAbility(spiritBuffId)
+          t.removeAbility(SPIRITBUFF_SPELL_RESIST_ID)
+          t.removeAbility(SPIRITBUFF_ARMOR_BONUS_ID)
+      spiritBuffMap.put(t, cb)
