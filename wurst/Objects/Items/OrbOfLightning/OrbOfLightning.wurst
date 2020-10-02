@@ -4,14 +4,32 @@ import ItemObjEditing
 import ObjectIdGenerator
 import Icons
 
-public let ORB_OF_LIGHTNING_ID = compiletime(ITEM_ID_GEN.next())
+public let ORB_OF_LIGHTNING_ID = 'I006'
+public let ORB_OF_LIGHTNING_USABLE_ID = compiletime(ITEM_ID_GEN.next())
 
 @configurable public let ORB_OF_LIGHTNING_NAME = "Orb of Lightning"
 @configurable public let ORB_OF_LIGHTNING_DESCRIPTION = "Allows your worker to fire a chainlightning at target enemy unit. " + 
-                                                        "The chainlightning hits 10 targets, dealing 1000 damage to the first target."
+                                                        "The chainlightning hits 10 targets, dealing 1000 damage to the first target." + 
+                                                        "Can be purchased after 15 minutes of round."
 
 @compiletime function orfOfLightningItem()
     new ItemDefinition(ORB_OF_LIGHTNING_ID, 'thdm')
+    ..setAbilities("A02H")
+    ..setInterfaceIcon(Icons.bTNOrbOfLightning)
+    ..setDescription(ORB_OF_LIGHTNING_DESCRIPTION)
+    ..setName(ORB_OF_LIGHTNING_NAME)
+    ..setButtonPositionX(1)
+    ..setButtonPositionY(0)
+    ..setStockStartDelay(900)
+    ..setStockMaximum(2)
+    ..setGoldCost(725)
+    ..setStockReplenishInterval(300)
+    ..setStockStartDelay(30)
+    ..setTooltipBasic("Buy " + ORB_OF_LIGHTNING_NAME)
+    ..setTooltipExtended(ORB_OF_LIGHTNING_DESCRIPTION)
+
+@compiletime function usableOrfOfLightningItem()
+    new ItemDefinition(ORB_OF_LIGHTNING_USABLE_ID, 'thdm')
     ..setAbilities("A02H")
     ..setInterfaceIcon(Icons.bTNOrbOfLightning)
     ..setDescription(ORB_OF_LIGHTNING_DESCRIPTION)

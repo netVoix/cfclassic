@@ -1,10 +1,9 @@
 package BlassStaff
 
 import ItemObjEditing
-import ObjectIdGenerator
 import Icons
 
-public let BLAST_STAFF_ID = compiletime(ITEM_ID_GEN.next())
+public let BLAST_STAFF_ID = 'I001'
 
 @configurable public let BLAST_STAFF_NAME = "Blast Staff"
 @configurable public let BLAST_STAFF_DESCRIPTION = "Launches one magic projectile per second at a random nearby enemy. Projectiles deal 60 spell damage."

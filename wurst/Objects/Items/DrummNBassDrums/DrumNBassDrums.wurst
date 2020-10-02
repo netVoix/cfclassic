@@ -1,10 +1,9 @@
 package DrumNBassDrums
 
 import ItemObjEditing
-import ObjectIdGenerator
 import Icons
 
-public let DRUM_N_BASS_DRUMS_ID = compiletime(ITEM_ID_GEN.next())
+public let DRUM_N_BASS_DRUMS_ID = 'I003'
 
 @configurable public let DRUM_N_BASS_DRUMS_NAME = "Drum'n'Bass Bass Drums"
 @configurable public let DRUM_N_BASS_DRUMS_DESCRIPTION = "Gives all allied units +33% damage."

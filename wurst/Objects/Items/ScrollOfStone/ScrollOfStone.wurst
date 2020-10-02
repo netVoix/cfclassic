@@ -1,9 +1,8 @@
 package ScrollOfStone
 
 import ItemObjEditing
-import ObjectIdGenerator
 
-public let SCROLL_OF_STONE_ID = compiletime(ITEM_ID_GEN.next())
+public let SCROLL_OF_STONE_ID = 'I005'
 
 @configurable public let SCROLL_OF_STONE_NAME = "Scroll of Stone"
 @configurable public let SCROLL_OF_STONE_DESCRIPTION = "When used, the scroll heals 400 hitpoints, 200 mana and gives 8 bonus armor " + 

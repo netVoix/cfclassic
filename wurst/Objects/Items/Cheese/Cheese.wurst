@@ -1,11 +1,10 @@
 package Cheese
 
 import ItemObjEditing
-import ObjectIdGenerator
 import Icons
 import Objects
 
-public let CHEESE_ID = compiletime(ITEM_ID_GEN.next())
+public let CHEESE_ID = 'I004'
 
 @configurable public let CHEESE_NAME = "Cheese"
 @configurable public let CHEESE_DESCRIPTION = "Allowing you to build one more legendary structure."

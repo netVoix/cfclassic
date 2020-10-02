@@ -1,10 +1,9 @@
 package RuneOfRepair
 
 import ItemObjEditing
-import ObjectIdGenerator
 import Icons
 
-public let RUNE_OF_REPAIR_ID = compiletime(ITEM_ID_GEN.next())
+public let RUNE_OF_REPAIR_ID = 'I009'
 
 @configurable public let RUNE_OF_REPAIR_NAME = "Rune of Repair"
 @configurable public let RUNE_OF_REPAIR_DESCRIPTION = "Repairs buildings near the worker. Stacks with other Runes and Coral Statues."

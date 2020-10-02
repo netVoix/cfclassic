@@ -4,9 +4,8 @@ import ScrollOfHasteBuff
 import ItemObjEditing
 import ObjectIds
 import Icons
-import ObjectIdGenerator
 
-public let SCROLL_OF_HASTE_ID = compiletime(ITEM_ID_GEN.next())
+public let SCROLL_OF_HASTE_ID = 'I00E'
 
 @configurable public let SCROLL_OF_HASTE_NAME = "Scroll of Haste"
 @configurable public let SCROLL_OF_HASTE_DESCRIPTION = "UNITI BEGUT VPERED"

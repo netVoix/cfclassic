@@ -1,11 +1,10 @@
 package QuadDamage
 
 import ItemObjEditing
-import ObjectIdGenerator
 import Icons
 import Objects
 
-public let QUAD_DAMAGE_ID = compiletime(ITEM_ID_GEN.next())
+public let QUAD_DAMAGE_ID = 'I007'
 
 @configurable public let QUAD_DAMAGE_NAME = "Quad Damage"
 @configurable public let QUAD_DAMAGE_DESCRIPTION = "Increases the damage of all allied units by 300% for 30 seconds."
