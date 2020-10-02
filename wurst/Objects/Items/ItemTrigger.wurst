@@ -6,16 +6,6 @@ function itemAdd()
     if D7 == 18
         for i = 0 to 1
             AddItemToStock(P8[i], ORB_OF_LIGHTNING_ID, 0, 0)
-            //(ORB_OF_LIGHTNING_ID, P8[0])
-
-
-            // P8[i].addItemById(ORB_OF_LIGHTNING_ID)
-
-            
-            // // for z = 0 to bj_MAX_PLAYER_SLOTS - 1
-            // //     let p = players[z]
-            // //     if p.isIngame()
-            // //         p.addGold(1488)
 
 
 
