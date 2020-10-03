@@ -3,7 +3,6 @@ package Furbolg
 import UnitIds
 import FurbolgConstants
 import BaseCFUnit
-import Units
 import Abilities
 
 @compiletime function furbolg()
@@ -13,7 +12,6 @@ import Abilities
     ..setDefaultActiveAbility("A0C0")
     ..setAttack1AttackType(AttackType.Magic)
     ..setTotalCost(FURBOLG_HUT_TOTAL_COST)
-    ..setModelFile(Units.beastmaster)
     ..setGoldBountyAwardedNumberofDice(1)
     ..setGoldBountyAwardedBase(6)
     ..setGoldBountyAwardedSidesperDie(1)

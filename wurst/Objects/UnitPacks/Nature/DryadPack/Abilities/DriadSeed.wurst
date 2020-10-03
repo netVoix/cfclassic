@@ -61,7 +61,7 @@ init
             
             doPeriodically(1) cb1 ->
                 if t.hasAbility(seedBuffId)
-                    flashEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", t.getPos())
+                    t.addEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", AttachmentPoints.origin)
                     u.damageTarget(t, PREIODICAL_DAMAGE, false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
                 else
                     destroy cb1

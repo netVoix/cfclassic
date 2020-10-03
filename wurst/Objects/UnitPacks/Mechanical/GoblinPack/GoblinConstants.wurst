@@ -1,0 +1,15 @@
+package GoblinConstants
+
+public let DEMOLITION_LAB_ID = 'h05M'
+public let DEMOLITION_LAB_COST = 200
+public let DEMOLITION_LAB_TOTAL_COST = DEMOLITION_LAB_COST
+
+public let LUNATIC_GOBLIN_ID = 'n01V'
+public let LUNATIC_GOBLIN_FULL_DESCRIPTION = "|n|cffFFFF80Armor:|r Unarmored (|cffFFFF000|r)|n|cffFFFF80Hitpoints: |cffFFFF00175|r|n" + 
+                                             "|cffFFFF80Abilities:|r|n|n|cff80FF00Suicide|r|nSuicides, dealing 275 damage to ground enemies" +
+                                             " in 150 range and 125 damage to enemies in 300 range. Buildings receive only 75% of the damage|n|n" + 
+                                             "|cff80FF00Detonate|r|nUpon death, Lunatic Goblin deals up to 150 damage to enemies in 280 range." + 
+                                             " Targets farther away take less damage. Stacks with the suicide damage."
+public let LUNATIC_GOBLIN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Lunatic Goblin|n|n|cffFFAC00Lunatic Goblin:|r|n|cffFFFF80Armor:|r " + 
+                                              "Unarmored (|cffFFFF000|r)|n|cffFFFF80Hitpoints: |cffFFFF00175|r|n|cffFFFF80Abilities:|r|n-Suicide " + 
+                                              "(|cffFFFF00275 dmg|r)|n-Detonate (|cffFFFF00150dmg|r)"

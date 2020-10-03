@@ -10,13 +10,13 @@ public let SPIRITBUFF_ID = compiletime(ABIL_ID_GEN.next())
 public let SPIRITBUFF_SPELL_RESIST_ID = compiletime(ABIL_ID_GEN.next())
 public let SPIRITBUFF_ARMOR_BONUS_ID = compiletime(ABIL_ID_GEN.next())
 
-@configurable public let SPIRITBUFF_NAME = "Spirit buff"
-@configurable public let SPIRITBUFF_TT = "This unit has more armor and magic resistance"
+public let SPIRITBUFF_NAME = "Spirit buff"
+public let SPIRITBUFF_TT = "This unit has more armor and magic resistance"
 
-@configurable public let SPIRIT_BUFF_DURATION = 50.
-@configurable public let SPIRIT_BUFF_HEAL_AMOUNT = 150.
-@configurable public let SPIRIT_BUFF_SPELL_RESIST = 0.4
-@configurable public let SPIRIT_BUFF_ARMOR_BONUS = 6.
+public let SPIRIT_BUFF_DURATION = 50.
+public let SPIRIT_BUFF_HEAL_AMOUNT = 150.
+public let SPIRIT_BUFF_SPELL_RESIST = 0.4
+public let SPIRIT_BUFF_ARMOR_BONUS = 6.
 
 public let SPIRITBUFF_OBJ = compiletime(createDummyBuffObject(SPIRITBUFF_NAME, SPIRITBUFF_TT,	Icons.bTNArcaniteArmor, "EmpathicBond.mdx", AttachmentPoints.chest))
 

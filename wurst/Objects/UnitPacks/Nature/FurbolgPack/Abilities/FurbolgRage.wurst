@@ -3,7 +3,6 @@ package FurbolgRage
 import ChannelAbilityPreset
 import BuffObjEditing
 import AttachmentPoints
-import DamageDetection
 import FurbolgConstants
 import Orders
 import Icons
@@ -12,7 +11,7 @@ import ClosureTimers
 import ClosureEvents
 
 public let RAGE_DURATION = 7.
-public let HP_THRESHOLD = 20.
+public let HP_THRESHOLD = 70.
 public let FURBOLG_RAGE_ID = compiletime(ABIL_ID_GEN.next())
 public let FURBOLG_RAGE_BONUS1_ID = compiletime(ABIL_ID_GEN.next())
 public let FURBOLG_RAGE_BONUS2_ID = compiletime(ABIL_ID_GEN.next())
@@ -46,10 +45,10 @@ let rageBuffMap = new HashMap<unit, CallbackSingle>()
 	..presetDamageReduction(lvl -> 0.95)
 
 init
-	addOnDamageFunc() ->
-		let u = GetTriggerUnit()
-		if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * HP_THRESHOLD
-			u.issueImmediateOrderById(OrderIds.berserk)
+	// registerPlayerUnitEvent(EVENT_PLAYER_UNIT_DAMAGED) ->
+	// 	let u = GetTriggerUnit()
+	// 	if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * HP_THRESHOLD
+	// 		u.issueImmediateOrderById(OrderIds.berserk)
 
 	registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
 		let sid = GetSpellAbilityId()
