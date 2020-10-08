@@ -1,0 +1,42 @@
+package Chapel
+
+
+import UnitObjEditing
+import UnitIds
+import Icons
+import Buildings
+import BaseCFBuilding
+import KnightConstants
+import ObjectIds
+
+
+@compiletime function chapel()
+    new BaseCFBuilding(CHAPEL_ID, UnitIds.blacksmith)
+    ..setNormalAbilities("")
+    ..setIconGameInterface(Icons.bTNTownHall)
+    ..setGoldBountyReward(49)
+    ..setModelFile(Buildings.townHall1)
+    ..setFoodProduced(0)
+    ..setGoldCost(CHAPEL_COST)
+    ..setTotalCost(CHAPEL_TOTAL_COST)
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setHotkey("A")
+    ..setHitPointsMaximumBase(1300)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.37)
+    ..setName("Chapel")
+    ..setPointValue(256)
+    ..setPriority(4)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec1")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Build Chapel [|cffffcc00A|r]")
+    ..setUnitsTrained("h03B")
+    ..setGroundTexture("OSMA")
+    ..setTooltipExtended(CRUSADER_SHORT_DESCRIPTION)
+    ..setUnitSoundSet("Blacksmith")
+    ..setUpgradesTo("h038," + commaList(CATHEDRAL_ID))
+    ..setUpgradesUsed("")

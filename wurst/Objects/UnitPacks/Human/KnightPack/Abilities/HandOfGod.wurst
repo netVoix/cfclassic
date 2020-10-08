@@ -1,0 +1,49 @@
+package HandOfGod
+
+import ObjectIdGenerator
+import AbilityObjEditing
+import Abilities
+
+
+public let HAND_OF_GOD_ID = compiletime(UNIT_ID_GEN.next())
+public let HAND_OF_GOD_RES_ID = compiletime(UNIT_ID_GEN.next())
+
+public let HAND_OF_GOD_CD = 20.
+public let HAND_OF_GOD_AOE = 300.
+public let HAND_OF_GOD_HEAL_AMOUNT = 150.
+public let HAND_OF_GOD_EFFECT = "Divine Edict.mdx"
+public let RESURRECTION_CD = 39.
+public let RESURRECTION_DURATION = 7.
+
+
+@compiletime function handOfGod()
+    new AbilityDefinitionInnerFire(HAND_OF_GOD_ID)
+    ..presetBuffs(lvl -> "B00T")
+    ..presetCooldown(lvl -> HAND_OF_GOD_CD)
+    ..presetManaCost(lvl -> 75)
+    ..setAnimationNames("stand,victory")
+    ..presetDurationNormal(lvl -> 0.01)
+    ..presetDurationHero(lvl -> 0.01)
+    ..setArtCaster(Abilities.purificationCaster)
+    ..setMissileArt("")
+    ..presetCastRange(lvl -> 600)
+    ..presetTargetsAllowed(lvl -> "{0},{1},{2},{3}".format(
+        TargetsAllowed.air,
+        TargetsAllowed.ground,
+        TargetsAllowed.friend,
+        TargetsAllowed.self
+        ))
+    ..setRequirements("")
+
+
+@compiletime function handOfGodRes()
+    new AbilityDefinitionWardenFanofKnives(HAND_OF_GOD_RES_ID)
+    ..presetCooldown(lvl -> RESURRECTION_CD)
+    ..setArtEffect("")
+    ..presetBuffs(lvl -> "B019")
+    ..presetDamagePerTarget(lvl -> 0)
+    ..presetManaCost(lvl -> 25)
+    ..presetCastingTime(lvl -> 0.01)
+    ..presetDurationNormal(lvl -> 0.01)
+    ..presetDurationHero(lvl -> 0.01)
+    ..presetTargetsAllowed(lvl -> TargetsAllowed.self)

@@ -1,0 +1,36 @@
+package Crusader
+
+import BaseCFUnit
+import KnightConstants
+import UnitIds
+
+@compiletime function crusader()
+    new BaseCFUnit(CRUSADER_ID, UnitIds.knight)
+    ..setNormalAbilities("A01F,A03K,A01A,A03M")
+    ..setDefaultActiveAbility("A03K")
+    ..setGoldBountyReward(8)
+    ..setCollisionSize(16.0)
+    ..setTotalCost(CHAPEL_TOTAL_COST)
+    ..setButtonPositionX(0)
+    ..setAttack1CooldownTime(1.4)
+    ..setArmorType(ArmorType.Large)
+    ..setDefenseBase(6)
+    ..setAttack1DamageNumberofDice(1)
+    ..setAttack1AttackType(AttackType.Hero)
+    ..setAttack1DamageBase(49)
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(600)
+    ..setLevel(1)
+    ..setManaInitialAmount(150)
+    ..setManaMaximum(200)
+    ..setScalingValue(0.9)
+    ..setFullName("Crusader")
+    ..setPointValue(355)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setManaRegeneration(2.0)
+    ..setRequirements("")
+    ..setAttack1DamageSidesperDie(21)
+    ..setSpeedBase(340)
+    ..setUnitClassification("sapper,ward")
+    ..setTooltipExtended(CRUSADER_SHORT_DESCRIPTION)
+    ..setUpgradesUsed("")

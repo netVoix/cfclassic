@@ -1,0 +1,62 @@
+package HandOfGodInit
+
+import RegisterEvents
+import HandOfGod
+import ClosureTimers
+import Orders
+import AttachmentPoints
+import Abilities
+import BuffObjEditing
+import Icons
+import ClosureForGroups
+
+let TOOLTIP1 = "Resurrection"
+let TOOLTIP2 = "Legion is resurrecting allies"
+let RESURRECTION_EFFECT_PATH = "Radiance Holy.mdx"
+
+let RES_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2, Icons.bTNResurrection, RESURRECTION_EFFECT_PATH, AttachmentPoints.head))
+let resBuffId = RES_BUFF_OBJ.abilId
+
+init
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
+        let t = GetSpellTargetUnit()
+        let sid = GetSpellAbilityId()
+        let caster = GetTriggerUnit()
+        let g = CreateGroup() 
+        if sid == HAND_OF_GOD_ID and t.isAlive()
+            doAfter(1) -> 
+                IssueImmediateOrderById(caster, OrderIds.fanofknives)
+                AddSpecialEffectTarget(HAND_OF_GOD_EFFECT, t, AttachmentPoints.origin)
+                for u from g..enumUnitsInRange(t.getPos(), HAND_OF_GOD_AOE)
+                    if u.isAllyOf(t.getOwner()) and u.isAlive() and not u.isType(UNIT_TYPE_STRUCTURE)
+                        u.addEffect(Abilities.healTarget, AttachmentPoints.overhead)
+                        u.addHP(HAND_OF_GOD_HEAL_AMOUNT)
+                        g.destr()
+
+init 
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
+        let sid = GetSpellAbilityId()
+        let caster = GetTriggerUnit()
+        
+        if sid == HAND_OF_GOD_RES_ID and caster.isAlive()
+            let g = CreateGroup()
+            AddSpecialEffectTarget(Abilities.resurrectcaster, caster, AttachmentPoints.origin)
+            if GetSpellAbilityId() == HAND_OF_GOD_RES_ID
+                doAfter(1.2) ->  
+                caster.addAbility(resBuffId)
+                
+            doAfter(RESURRECTION_DURATION) ->
+                caster.removeAbility(resBuffId)
+                
+            doPeriodicallyCounted(1, RESURRECTION_DURATION.toInt()) cb ->
+                g.clear()
+                forUnitsInRange(caster.getPos(), 600) u ->
+                    if u.isAllyOf(caster.getOwner()) and u.isType(UNIT_TYPE_DEAD) and not u.isType(UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, 'A07H') < 1 
+                        g.addUnit(u)
+                let un = g.getRandomUnit()
+                
+                createUnit(un.getOwner(), un.getTypeId(), un.getPos(), angle(0))
+                un.remove()
+                addEffect("Heal.mdx", un.getPos()).destr()
+                if cb.isLast()
+                    g.destr()

@@ -1,0 +1,55 @@
+package KnightConstants
+import ObjectIdGenerator
+
+
+public let CHAPEL_ID = 'h037'
+public let CHAPEL_COST = 265
+public let CHAPEL_TOTAL_COST = CHAPEL_COST
+
+public let CHURCH_ID = 'h038'
+public let CHURCH_COST = 260
+public let CHURCH_TOTAL_COST = CHAPEL_TOTAL_COST + CHURCH_COST
+
+public let CATHEDRAL_ID = compiletime(UNIT_ID_GEN.next())
+public let CATHEDRAL_COST = 515
+public let CATHEDRAL_TOTAL_COST = CHURCH_TOTAL_COST + CATHEDRAL_COST
+
+public let CRUSADER_ID = 'h03B'
+public let CRUSADER_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00380|r rng,|cffFFFF00 30|r dps)|n" + 
+                                          "|cffFFFF80Armor:|r Unarmored (|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00400|r|n" + 
+                                          "|cffFFFF80Abilities:|r|n|n|cff80FF00Raise Dead|r|nRaises a skeleton|n|cff8080FFCooldown: |r45|n" + 
+                                          "|cff8080FFMana cost: |r75"
+public let CRUSADER_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Crusader|n|cffFFFF80Upgrades: |cffFFFF001|n|n|cffFFAC00Crusader:" + 
+                                           "|r|n|cffFFFF80Attack:|r Hero (|cffFFFF00melee|r,|cffFFFF00 42|r dps)|n|cffFFFF80Armor:|r Heavy" + 
+                                           " (|cffFFFF006|r)|n|cffFFFF80Hitpoints: |cffFFFF00600|r|n|cffFFFF80Abilities:|r|n-Cleaving Attack" + 
+                                           " (|cffFFFF0025%|r)|n-Bash (|cffFFFF0020%, 25dmg, 2sec|r)|n-Blessing (|cffFFFF00+6 armor, +16 hp/sec|r)"
+
+public let PALADIN_ID = 'h03C'
+public let PALADIN_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng,|cffFFFF00 46|r dps)|n" + 
+                                                  "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00650|r|n" + 
+                                                  "|cffFFFF80Abilities:|r|n|n|cff80FF00Carrion Swarm|r|nGrants a 25% chance on each attack to release a " + 
+                                                  "carrion swarm that deals 70 damage to all enemies in a cone|n|n|cff80FF00Raise Greater Dead|r|n" + 
+                                                  "Raises a skeleton. Can also raise greater skeletons and Heros but no Generals|n|cff8080FFCooldown: |r30|n" + 
+                                                  "|cff8080FFMana cost: |r75"
+public let PALADIN_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Paladin|n|n|cffFFAC00Paladin:|r|n|cffFFFF80Attack:|r Hero " + 
+                                       "(|cffFFFF00melee|r,|cffFFFF00 67|r dps)|n|cffFFFF80Armor:|r Heavy (|cffFFFF009|r)|n|cffFFFF80Hitpoints:" + 
+                                       " |cffFFFF00850|r|n|cffFFFF80Abilities:|r|n-Cleaving Attack (|cffFFFF0025%|r)|n-Bash " + 
+                                       "(|cffFFFF0020%, 25dmg, 2sec|r)|n-Resurrection|n-Blessing (|cffFFFF00+9 armor, +24 hp/sec|r)|n-Armor Aura" + 
+                                       " (|cffFFFF00+3|r)|n|n|cffFF0000You must turn off unit production before you can upgrade!|r"
+
+
+public let LEGION_ID = compiletime(UNIT_ID_GEN.next())
+public let LEGION_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
+																				"|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
+																				"|cffFFFF80Abilities:|r|n|n|cff80FF00Legendary Spell Resistance|r|nSpell damage done to this unit is " + 
+																				"reduced by 70%|n|n|cff80FF00Immune|r|nThis unit is immune to certain negative effects|n|n" + 
+																				"|cff80FF00Decaying Attack|r|nHas a 15% chance on attack to soul steal its target, killing it " + 
+																				"instantly and gaining 50% of its health or a 10% chance to cast Death and Decay onto a 300 AoE around its target. " + 
+																				"Death and Decay lasts 5 seconds, draining 8% of enemy's max life per second|n|n|cff80FF00Raise Ultimate Dead|r|n" + 
+																				"Raises 2 greater skeletons. Skeletons raised this way have 3 bonus armor and 12 bonus damage|n|cff8080FFCooldown: |r25|n" + 
+																				"|cff8080FFMana cost: |r100"
+public let LEGION_SHORT_DESCRIPTION = "|cffFF8204Legendary Building|r|n|cffFFFF80Trains: |cffFFFF00Lich King|n|n" + 
+																					"|cffFFAC00Lich King:|r|n|cffFFFF80Attack:|r Magic (|cffFFFF00500|r rng,|cffFFFF00 66|r dps)|n" + 
+																					"|cffFFFF80Armor:|r Unarmored (|cffFFFF005|r)|n|cffFFFF80Hitpoints: |cffFFFF001000|r|n" + 
+																					"|cffFFFF80Abilities:|r|n-Legendary Spell Resistance (|cffFFFF0070%|r)|n-Immune|n-Decaying Attack|n-Raise Ultimate Dead|n|n" + 
+																					"|cffFF0000You must turn off unit production before you can upgrade!|r"

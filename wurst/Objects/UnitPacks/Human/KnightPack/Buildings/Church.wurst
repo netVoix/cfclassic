@@ -1,0 +1,41 @@
+package Church
+
+import UnitObjEditing
+import UnitIds
+import Icons
+import Buildings
+import BaseCFBuilding
+import KnightConstants
+
+
+@compiletime function church()
+    new BaseCFBuilding(CHURCH_ID, UnitIds.blacksmith)
+    ..setNormalAbilities("")
+    ..setRequiredAnimationNames("upgrade,first")
+    ..setIconGameInterface(Icons.bTNKeep)
+    ..setModelFile(Buildings.townHall)
+    ..setGoldBountyReward(104)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setFoodProduced(0)
+    ..setGoldCost(CHURCH_COST)
+    ..setTotalCost(CHURCH_TOTAL_COST)
+    ..setHotkey("R")
+    ..setHitPointsMaximumBase(1600)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.37)
+    ..setName("Church")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(255)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Upgrade to Church [|cffffcc00R|r]")
+    ..setUnitsTrained("h03C")
+    ..setGroundTexture("OSMA")
+    ..setTooltipExtended(PALADIN_SHORT_DESCRIPTION)
+    ..setUpgradesTo("")
+    ..setUpgradesUsed("")

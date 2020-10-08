@@ -1,0 +1,41 @@
+package Paladin
+
+import BaseCFUnit
+import KnightConstants
+import UnitIds
+import Icons
+import Units
+
+@compiletime function paladin()
+    new BaseCFUnit(PALADIN_ID, UnitIds.knight)
+    ..setNormalAbilities("A01F,A01A,A03H,A03K,A03I,A03J")
+    ..setDefaultActiveAbility("A03K")
+    ..setGoldBountyReward(15)
+    ..setCollisionSize(16.0)
+    ..setTotalCost(CHURCH_TOTAL_COST)
+    ..setIconGameInterface(Icons.bTNGarithos)
+    ..setButtonPositionX(0)
+    ..setAnimationCastBackswing(0.81)
+    ..setAnimationCastPoint(0.0)
+    ..setAttack1AttackType(AttackType.Hero)
+    ..setAttack1CooldownTime(1.4)
+    ..setDefenseBase(9)
+    ..setAttack1DamageNumberofDice(1)
+    ..setAttack1DamageBase(69)
+    ..setModelFile(Units.lordGarithos1)
+    ..setHotkey("Q")
+    ..setHitPointsMaximumBase(850)
+    ..setLevel(1)
+    ..setManaInitialAmount(200)
+    ..setManaMaximum(300)
+    ..setFullName("Paladin")
+    ..setPointValue(990)
+    ..setHitPointsRegenerationRate(1.0)
+    ..setManaRegeneration(2.5)
+    ..setRequirements("")
+    ..setAttack1DamageSidesperDie(51)
+    ..setSpeedBase(340)
+    ..setTooltipBasic("Trains Paladin")
+    ..setUnitClassification("sapper,ward")
+    ..setTooltipExtended(PALADIN_SHORT_DESCRIPTION)
+    ..setUpgradesUsed("")

@@ -1,0 +1,43 @@
+package Cathedral
+
+import UnitObjEditing
+import UnitIds
+import BaseCFBuilding
+import KnightConstants
+import LegendaryUnitFlag
+import ObjectIds
+
+
+@compiletime function cathedral()
+    new BaseCFBuilding(CATHEDRAL_ID, UnitIds.blacksmith)
+    ..setNormalAbilities(LEGENDARY_UNIT_FLAG.toRawCode())
+    ..setRequiredAnimationNames("upgrade,first")
+    ..setIconGameInterface("BTNConjuringTower.blp")
+    ..setModelFile("ConjuringTower.mdx")
+    ..setGoldBountyReward(104)
+    ..setShadowTextureBuilding("ShadowHouse")
+    ..setCollisionSize(72.0)
+    ..setFoodProduced(0)
+    ..setFoodCost(1)
+    ..setButtonPositionX(2)
+    ..setGoldCost(CATHEDRAL_COST)
+    ..setTotalCost(CATHEDRAL_TOTAL_COST)
+    ..setHotkey("E")
+    ..setHitPointsMaximumBase(1875)
+    ..setMaximumPitchAngledegrees(0.0)
+    ..setMaximumRollAngledegrees(0.0)
+    ..setScalingValue(0.81)
+    ..setName("Cathedral")
+    ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
+    ..setPointValue(7)
+    ..setHitPointsRegenerationRate(0.5)
+    ..setRepairTime(70)
+    ..setRequirements("tec3")
+    ..setRequirementsLevels("1")
+    ..setSelectionScale(2.4)
+    ..setTooltipBasic("Upgrade to Cathedral [|cffffcc00E|r]")
+    ..setUnitsTrained(LEGION_ID.toRawCode())
+    ..setGroundTexture("OSMA")
+    ..setTooltipExtended(PALADIN_SHORT_DESCRIPTION)
+    ..setUpgradesTo("")
+    ..setUpgradesUsed("")
