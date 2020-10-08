@@ -5,10 +5,12 @@ import HuntressConstants
 import UnitIds
 import Icons
 import Units
+import ObjectIds
+import DobuleAttack
 
 @compiletime function huntressRaider()
     new BaseCFUnit(HUNTRESS_RIDER_ID, UnitIds.huntress)
-    ..setNormalAbilities("A00U")
+    ..setNormalAbilities("A00U," + commaList(DOUBLE_ATTACK_ID))
     ..setIconGameInterface(Icons.bTNHuntress)
     ..setTotalCost(HUNTRESS_RIDER_HALL_TOTAL_COST)
     ..setGoldBountyReward(13)
@@ -16,13 +18,13 @@ import Units
     ..setAttack1CooldownTime(1.1)
     ..setButtonPositionX(0)
     ..setRequirements("")
-    ..setDefenseBase(7)
+    ..setDefenseBase(6)
     ..setArmorType(ArmorType.Unarmored)
     ..setAttack1DamageBase(77)
-    ..setAttack1DamageSidesperDie(27)
+    ..setAttack1DamageSidesperDie(33)
     ..setModelFile(Units.huntress)
-    ..setHitPointsMaximumBase(775)
-    ..setHitPointsRegenerationRate(2.7)
+    ..setHitPointsMaximumBase(755)
+    ..setHitPointsRegenerationRate(2.3)
     ..setAttack1AttackType(AttackType.Normal)
     ..setAttack1WeaponType(WeaponType.MissileBounce)
     ..setAttack1DamageLossFactor(0.34)
@@ -33,4 +35,3 @@ import Units
     ..setAttack1Range(300)
     ..setSpeedBase(300)
     ..setTooltipExtended(HUNTRESS_RIDER_FULL_DESCRIPTION)
-  

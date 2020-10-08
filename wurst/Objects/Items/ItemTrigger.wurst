@@ -1,13 +1,14 @@
 package ItemTrigger
 
 import OrbOfLightning
+import BlassStaff
 
 function itemAdd()
-    if D7 == 18
+    if D7 == 3
         for i = 0 to 1
-            AddItemToStock(P8[i], ORB_OF_LIGHTNING_ID, 0, 0)
-
-
+            AddItemToStock(P8[i], ORB_OF_LIGHTNING_ID, 1, 1)
+            print(P8[i].getName())
+            RemoveItemFromStock(P8[i], BLAST_STAFF_ID)
 
 init
     let t = CreateTrigger()

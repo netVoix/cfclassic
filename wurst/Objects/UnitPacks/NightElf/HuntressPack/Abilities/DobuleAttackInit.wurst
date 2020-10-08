@@ -1,0 +1,16 @@
+package DobuleAttackInit
+
+import HuntressConstants
+import InstantDummyCaster
+import DobuleAttack
+import Orders
+
+function dobuleAttackInit()
+    let u = GetTriggerUnit()
+    if u.getTypeId() == HUNTRESS_RIDER_ID //and 17 < GetRandomInt(0, 99)
+        InstantDummyCaster.castTarget(u.getOwner(), DOUBLE_ATTACK_ID, 1, Orders.bloodlust, u, u.getPos())
+
+init
+    let trig = CreateTrigger()
+    TriggerRegisterEnterRectSimple(trig,bj_mapInitialPlayableArea)
+    trig.addCondition(Condition(function dobuleAttackInit))

@@ -5,21 +5,29 @@ import FurbolgConstants
 import ShamanConstants
 import GuardianConstants
 import HuntressConstants
+import KnightConstants
 
 
 init
+  //nature
   Qg(ANCIENT_OF_GROWTH_ID, DRYAD_ID)
   Qg(ANCIENT_OF_FLOWERS_ID, FLOWER_DRYAD_ID)
-
+  
   Qg(FURBOLG_HUT_ID, FURBOLG_ID)
   Qg(FURBOLG_ADOBE_ID, ELDER_FURBOLG_ID)
   Qg(PANDA_FURBOLG_ADOBE_ID, FURBOLG_PANDA_ID)
 
+  //orc
   Qg(SHAMANIC_TENT_ID, SHAMAN_ID)
   Qg(SPIRIT_LODGE_ID, SPIRIT_SHAMAN_ID)
-  
+
+  //naga
   Qg(SPAWNING_GROUNDS_ID, NAGA_GUARDIAN_ID)
   Qg(ROYAL_SPAWNING_GROUNDS_ID, NAGA_ROYAL_GUARD_ID)
 
-  Qg('h00S','e001')
+  //nightelf
+  Qg(HUNTRESS_HALL_ID, HUNTRESS_ID)
   Qg(HUNTRESS_RIDER_HALL_ID, HUNTRESS_RIDER_ID)
+
+  //human
+  Qg(CATHEDRAL_ID, LEGION_ID)

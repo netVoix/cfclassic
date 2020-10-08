@@ -1,0 +1,44 @@
+package Legion
+
+import UnitIds
+import BaseCFUnit
+import ObjectIds
+import KnightConstants
+import HandOfGod
+
+
+@compiletime function legion()
+    new BaseCFUnit(LEGION_ID, UnitIds.knight)
+    ..setFullName("Legion")
+    ..setNormalAbilities("A07H,A06V,A0AH,A070,A01F," + commaList(HAND_OF_GOD_ID, HAND_OF_GOD_RES_ID))
+    ..setIconGameInterface("ReplaceableTextures\\CommandButtons\\BTNLichVersion2.blp")
+    ..setGoldBountyReward(24)
+    ..setModelFile("Knight_Kul-Tiras_HD_TC.mdx")
+    ..setIconGameInterface("BTNKnight_Kul_Tiras_HD.blp")
+    ..setHitPointsMaximumBase(1755)
+    ..setHitPointsRegenerationRate(3.5)
+    ..setDefaultActiveAbility(commaList(HAND_OF_GOD_ID))
+    ..setTotalCost(CATHEDRAL_TOTAL_COST)
+    ..setTintingColorBlue(200)
+    ..setButtonPositionX(3)
+    ..setHotkey("Q")
+    ..setAnimationCastBackswing(0.65)
+    ..setCollisionSize(29.0)
+    ..setScalingValue(1.18)
+    ..setRequirements("")
+    ..setAttack1AttackType(AttackType.Hero)
+    ..setDeathType(2)
+    ..setDefenseBase(12)
+    ..setAttack1DamageBase(118)
+    ..setAttack1DamageSidesperDie(32)
+    ..setLevel(6)
+    ..setRace(Race.Human)
+    ..setManaInitialAmount(250)
+    ..setManaMaximum(350)
+    ..setAttack1Range(195)
+    ..setPointValue(999)
+    ..setManaRegeneration(2.45)
+    ..setAttack1DamageSidesperDie(1)
+    ..setSpeedBase(335)
+    ..setUnitClassification("sapper,undead,ward")
+    ..setTooltipExtended(LEGION_FULL_DESCRIPTION)
