@@ -4,24 +4,21 @@ import BuffObjEditing
 import Icons
 import ClosureEvents
 import ClosureTimers
-import HashMap
 import ChannelAbilityPreset
 import AttachmentPoints
 
 public let SEED_ID = compiletime(ABIL_ID_GEN.next())
 
-public let TOOLTIP1 = "Seed"
-public let TOOLTIP2 = "The seed sprouts in the unit, taking life from it"
-public let SEED_EFFECT_PATH = "Windwalk Necro Soul.mdx"
+public let BUFF_DURATION = 7.01
+public let BASE_DAMAGE = 75.
+public let PREIODICAL_DAMAGE = 55.
 
+public let TOOLTIP1 = "Seed"
+public let TOOLTIP2 = "Seed sprouts inside unit, taking life from it"
+public let SEED_EFFECT_PATH = "Windwalk Necro Soul.mdx"
 public let SEED_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2, Icons.pASBTNMagicImmunity, SEED_EFFECT_PATH, AttachmentPoints.origin))
 
 let seedBuffId = SEED_BUFF_OBJ.abilId
-let seedBuffMap = new HashMap<unit, CallbackSingle>()
-
-@configurable public let BUFF_DURATION = 7.01
-@configurable public let BASE_DAMAGE = 75.
-@configurable public let PREIODICAL_DAMAGE = 55.
 
 @compiletime function createSeed()
     new AbilityDefinitionParasite(SEED_ID)
@@ -37,30 +34,25 @@ let seedBuffMap = new HashMap<unit, CallbackSingle>()
     ))
     ..setRequirements("")
 
+
 init
     registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
         let t = GetSpellTargetUnit()
         let sid = GetSpellAbilityId()
         let u = GetTriggerUnit()
         if sid == SEED_ID and t.isAlive()
-            AddSpecialEffectTarget("Holy Light Nature.mdx", t, AttachmentPoints.origin)
+            t.addEffect("Holy Light Nature.mdx", AttachmentPoints.origin)
             u.damageTarget(t, BASE_DAMAGE)
             
             if GetSpellAbilityId() == SEED_ID
                 doAfter(0.25) -> 
                     t.addAbility(seedBuffId)
 
-            if seedBuffMap.has(t)
-                destroy seedBuffMap.get(t)
-
-            let cb = doAfter(BUFF_DURATION) ->
-                if seedBuffMap.has(t)
-                    seedBuffMap.remove(t)
-                    t.removeAbility(seedBuffId)
-            seedBuffMap.put(t, cb)
+            doAfter(BUFF_DURATION) ->
+                t.removeAbility(seedBuffId)
             
             doPeriodically(1) cb1 ->
-                if t.hasAbility(seedBuffId)
+                if t.hasAbility(seedBuffId) and t.isAlive()
                     t.addEffect("Objects\\Spawnmodels\\NightElf\\EntBirthTarget\\EntBirthTarget.mdl", AttachmentPoints.origin)
                     u.damageTarget(t, PREIODICAL_DAMAGE, false, false, ATTACK_TYPE_MAGIC, DAMAGE_TYPE_MAGIC, null)
                 else

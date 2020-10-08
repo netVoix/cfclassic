@@ -23,7 +23,7 @@ import ObjectIds
     ..setScalingValue(0.75)
     ..setName("Spitit Lodge")
     ..setPathingMap("PathTextures\\4x4SimpleSolid.tga")
-    ..setPointValue(45)
+    ..setPointValue(301)
     ..setHitPointsRegenerationRate(0.5)
     ..setRequirements("")
     ..setResearchesAvailable("")

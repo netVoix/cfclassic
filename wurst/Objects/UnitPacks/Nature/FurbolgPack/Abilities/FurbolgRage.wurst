@@ -58,13 +58,9 @@ init
 			u.addAbility(FURBOLG_RAGE_BONUS1_ID)
 			u.addAbility(FURBOLG_RAGE_BONUS2_ID)
 
-			if rageBuffMap.has(u)
-				destroy rageBuffMap.get(u)
-
-			let cb = doAfter(RAGE_DURATION) ->
+			doAfter(RAGE_DURATION) ->
 				if rageBuffMap.has(u)
 					rageBuffMap.remove(u)
 					u.removeAbility(rageBuffId)
 					u.removeAbility(FURBOLG_RAGE_BONUS1_ID)
 					u.removeAbility(FURBOLG_RAGE_BONUS2_ID)
-			rageBuffMap.put(u, cb)

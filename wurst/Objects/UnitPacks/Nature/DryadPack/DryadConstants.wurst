@@ -23,13 +23,7 @@ public let DRYAD_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n
 
 public let FLOWER_DRYAD_ID = compiletime(UNIT_ID_GEN.next())
 
-public let FLOWER_DRYAD_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Light (" + 
-                                      "|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n|cffFFFF80Abilities:|r|n|n" + 
-                                      "|cff80FF00Rejuvenation|r|nHeals 200 hp over 10 seconds|n|cff8080FFCooldown: |r16|n" + 
-                                      "|cff8080FFMana cost: |r50"
-public let FLOWER_DRYAD_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n|n|cffFFAC00Naga Siren:|r|n" + 
-                                      "|cffFFFF80Attack:|r Chaos (|cffFFFF00400|r rng,|cffFFFF00 50|r dps)|n" + 
-                                      "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
-                                      "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters"
+public let FLOWER_DRYAD_FULL_DESCRIPTION = "DRYAD FULL DESCR"
+public let FLOWER_DRYAD_SHORT_DESCRIPTION = "DRYAD SHORT DESCR"
 
                                       //"|n|cffFFFF80Attack:|r Pierce (|cffFFFF00500|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Medium (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00500|r|n|cffFFFF80Abilities:|r|n|n|cff80FF00Abolish Magic|r|nHas 15% chance to dispell positive buff from target on hit|n|n|cff80FF00Spell Resist|r|nDryad receives 15% less damage from spells|n|n|cff80FF00Natures Touch|r|nHeals 75 hp and adds 2 armor to target|n|cff8080FFCooldown: |r10|n|cff8080FFMana cost: |r25"
