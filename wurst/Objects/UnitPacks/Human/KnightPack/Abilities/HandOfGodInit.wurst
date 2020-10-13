@@ -54,9 +54,9 @@ init
                     if u.isAllyOf(caster.getOwner()) and u.isType(UNIT_TYPE_DEAD) and not u.isType(UNIT_TYPE_STRUCTURE) and GetUnitAbilityLevel(u, 'A07H') < 1 
                         g.addUnit(u)
                 let un = g.getRandomUnit()
-                
-                createUnit(un.getOwner(), un.getTypeId(), un.getPos(), angle(0))
-                un.remove()
-                addEffect("Heal.mdx", un.getPos()).destr()
-                if cb.isLast()
-                    g.destr()
+                if un != null
+                    createUnit(un.getOwner(), un.getTypeId(), un.getPos(), angle(0))
+                    addEffect("Heal.mdx", un.getPos()).destr()
+                    un.remove()
+                    if cb.isLast()
+                        g.destr()

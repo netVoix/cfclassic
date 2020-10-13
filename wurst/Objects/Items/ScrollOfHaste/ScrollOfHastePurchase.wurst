@@ -1,0 +1,26 @@
+package ScrollOfHastePurchase
+
+import AbilityObjEditing
+import Icons
+
+public let HASTE_PURCHASE_ID = 'IBA9'
+
+@compiletime function hastePurchase()
+    new AbilityDefinitionIllidanChannel(HASTE_PURCHASE_ID)
+    ..setIconNormal(Icons.bTNScrollOfHaste)
+    ..setArtCaster("")
+    ..setCooldown(1, 1.0)
+    ..presetFollowThroughTime(lvl -> 0.01)
+    ..presetOptions(lvl -> 1)
+    ..presetArtDuration(lvl -> 0.01)
+    ..setBaseOrderID(1, "cloudoffog")
+    ..setArtEffect("")
+    ..setHeroAbility(false)
+    ..setHotkeyNormal("")
+    ..setLevels(1)
+    ..setOrderStringUseTurnOn("cloudoffog")
+    ..setRace(Race.Other)
+    ..setArtTarget("")
+    ..setTooltipNormal(1, "Scroll of Haste")
+    ..presetTooltipNormalExtended(lvl -> "When used, the scroll increases movespeed of all allied units in a huge area.")
+        

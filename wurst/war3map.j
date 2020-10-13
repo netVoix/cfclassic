@@ -40,6 +40,7 @@ boolean array j4
 boolean array k4
 integer array m4
 trigger array n4
+trigger DamageTriggerCreated = CreateTrigger()
 unit o4
 real array p4
 trigger array q4
@@ -6959,6 +6960,7 @@ call DestroyTrigger(bd)
 endif
 set bd=CreateTrigger()
 call TriggerAddAction(bd,function mq)
+call TriggerEvaluate(DamageTriggerCreated)
 endfunction
 function pq takes nothing returns nothing
 call CustomVictoryBJ(GetEnumPlayer(),true,true)
@@ -9384,6 +9386,8 @@ elseif(Os==7)then
 set Os='I001'
 elseif(Os==8)then
 set Os='I009'
+elseif(Os==9)then
+set Os='I00E'
 endif
 call IssueNeutralImmediateOrderById(p,P8[N8[GetPlayerId(p)]],Os)
 endfunction
@@ -9398,7 +9402,7 @@ call ih(u)
 endif
 elseif(Qs=='A08Y')then
 call Ms(u,GetSpellTargetX(),GetSpellTargetY())
-elseif(Qs>='IBA0' and Qs<='IBA8')then
+elseif(Qs>='IBA0' and Qs<='IBA9')then
 call Ns(u,Qs-'IBA0')
 else
 call mh(u,Qs,GetSpellTargetUnit())

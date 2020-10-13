@@ -1,0 +1,17 @@
+package ItemPurchase
+
+import AbilityObjEditing
+
+public let PURCHASE_ID = 'A0A5'
+
+@compiletime function purchaseItem()
+    new AbilityDefinitionSpellBook(PURCHASE_ID)
+    ..setIconNormal("ReplaceableTextures\\CommandButtons\\BTNDust.blp")
+    ..setButtonPositionNormalX(3)
+    ..presetSpellList(lvl -> "IBA7,IBA2,IBA5,IBA9,IBA5,IBA6,IBA3,IBA0,IBA1,IBA8,IBA4")//,AIsr
+    ..setSharedSpellCooldown(1, false)
+    ..setMinimumSpells(1, 11)
+    ..setMaximumSpells(1, 11)
+    ..setItemAbility(false)
+    ..setTooltipNormal(1, "Issue buy order")
+    ..setTooltipNormalExtended(1, "Order owning player to buy an item.")

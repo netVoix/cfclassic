@@ -4,7 +4,6 @@ import ChannelAbilityPreset
 import BuffObjEditing
 import Icons
 import AttachmentPoints
-import HashMap
 import ClosureTimers
 import ClosureEvents
 import Abilities
@@ -29,7 +28,6 @@ public let HASTE_BUFF_OBJ = compiletime(createDummyBuffObject(HASTE_BUFF_NAME, H
     ..presetOption(Option.TARGETIMAGE, true)
 
 let hasteBuffId = HASTE_BUFF_OBJ.abilId
-let hasteBuffMap = new HashMap<unit, CallbackSingle>()
 
 init
     registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
@@ -41,13 +39,7 @@ init
                 if u.isAllyOf(p) and not u.isType(UNIT_TYPE_STRUCTURE)
                     u.addAbility(hasteBuffId)
                     u.setMoveSpeed(9999)
-                
-                if hasteBuffMap.has(u)
-                    destroy hasteBuffMap.get(u)
 
-                let cb = doAfter(HASTE_BUFF_DURATION) ->
-                    if hasteBuffMap.has(u)
-                        hasteBuffMap.remove(u)
-                        u.removeAbility(hasteBuffId)
-                        u.setMoveSpeed(u.getDefaultMovespeed())
-                hasteBuffMap.put(u, cb)
+                doAfter(HASTE_BUFF_DURATION) ->
+                    u.removeAbility(hasteBuffId)
+                    u.setMoveSpeed(u.getDefaultMovespeed())

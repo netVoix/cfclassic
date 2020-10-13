@@ -14,7 +14,7 @@ public let PANDA_FURBOLG_ADOBE_ID = compiletime(UNIT_ID_GEN.next())
 public let PANDA_FURBOLG_ADOBE_COST = 240
 public let PANDA_FURBOLG_ADOBE_TOTAL_COST = FURBOLG_HUT_TOTAL_COST + PANDA_FURBOLG_ADOBE_COST
 
-public let FURBOLG_ID = compiletime(UNIT_ID_GEN.next())
+public let FURBOLG_ID = 'n026'
 
 public let FURBOLG_FULL_DESCRIPTION = "|n|cffFFFF80Attack:|r Magic (|cffFFFF00400|r rng|r,|cffFFFF00 37|r dps)|n|cffFFFF80Armor:|r Light (" + 
                                       "|cffFFFF001|r)|n|cffFFFF80Hitpoints: |cffFFFF00450|r|n|cffFFFF80Abilities:|r|n|n" + 
@@ -25,7 +25,7 @@ public let FURBOLG_SHORT_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Naga Siren|n
                                       "|cffFFFF80Armor:|r Unarmored (|cffFFFF003|r)|n|cffFFFF80Hitpoints: |cffFFFF00550|r|n" + 
                                       "|cffFFFF80Abilities:|r|n-Purge|n-Summon Lobsters"
 
-public let ELDER_FURBOLG_ID = compiletime(UNIT_ID_GEN.next())
+public let ELDER_FURBOLG_ID = 'n028'
 
 public let ELDER_FURBOLG_FULL_DESCRIPTION = "|cffFFFF80Trains: |cffFFFF00Furbolg Elder Shaman |n|n|cffFFAC00Furbolg Elder Shaman |r|n" + 
                                             "|cffFFFF80Attack:|r Magic (|cffFFFF00450|r rng|r,|cffFFFF00 40|r dps)|" + 

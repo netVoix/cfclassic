@@ -26,7 +26,7 @@ import Icons
     ..setHitPointsMaximumBase(650)
     ..setManaInitialAmount(170)
     ..setManaMaximum(250)
-    ..setScalingValue(0.95)
+    ..setScalingValue(1.15)
     ..setPointValue(207)
     ..setRace(Race.Naga)
     ..setAttack1Range(450)

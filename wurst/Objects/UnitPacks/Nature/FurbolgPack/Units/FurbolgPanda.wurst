@@ -28,7 +28,7 @@ import FurbolgRage
     ..setAttack1DamageSidesperDie(24)
     ..setHitPointsMaximumBase(1005)
     ..setManaMaximum(0)
-    ..setScalingValue(0.9)
+    ..setScalingValue(1.05)
     ..setPointValue(211)
     ..setRace(Race.Naga)
     ..setAttack1Range(50)

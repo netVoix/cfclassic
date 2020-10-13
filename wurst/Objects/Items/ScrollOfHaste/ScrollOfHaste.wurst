@@ -7,8 +7,8 @@ import Icons
 
 public let SCROLL_OF_HASTE_ID = 'I00E'
 
-@configurable public let SCROLL_OF_HASTE_NAME = "Scroll of Haste"
-@configurable public let SCROLL_OF_HASTE_DESCRIPTION = "UNITI BEGUT VPERED"
+public let SCROLL_OF_HASTE_NAME = "Scroll of Haste"
+public let SCROLL_OF_HASTE_DESCRIPTION = "When used, the scroll increases movespeed of all allied units in a huge area."
 
 @compiletime function scrollOfHasteItem()
     new ItemDefinition(SCROLL_OF_HASTE_ID, 'shas')

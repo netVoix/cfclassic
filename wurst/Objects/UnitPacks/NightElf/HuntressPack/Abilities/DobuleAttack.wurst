@@ -7,10 +7,10 @@ import ObjectIdGenerator
 public let DOUBLE_ATTACK_ID = compiletime(ABIL_ID_GEN.next())
 
 @compiletime function doubleAttackBuff()
-    new AbilityDefinitionBloodlustCreep(DOUBLE_ATTACK_ID)
+    new AbilityDefinitionAttackSpeedIncrease(DOUBLE_ATTACK_ID)
     ..setDummyAbility()
-    ..setAttackSpeedIncrease(1, 9999)
-    ..presetDurationHero(lvl -> 0.4)
-    ..presetDurationNormal(lvl -> 0.4)
-    ..presetAttackSpeedIncrease(lvl -> 9999)
+    ..setArtEffect("")
+    ..setArtTarget("")
     ..setEffectSound("")
+    ..presetAttackSpeedIncrease(lvl -> 2.5)
+        

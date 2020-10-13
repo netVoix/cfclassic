@@ -1,66 +1,67 @@
 package FurbolgRage
 
+
 import ChannelAbilityPreset
 import BuffObjEditing
 import AttachmentPoints
 import FurbolgConstants
 import Orders
 import Icons
-import HashMap
 import ClosureTimers
 import ClosureEvents
 
-public let RAGE_DURATION = 7.
-public let HP_THRESHOLD = 70.
+public let RAGE_DURATION = 8.5
+public let HP_THRESHOLD = 18.
 public let FURBOLG_RAGE_ID = compiletime(ABIL_ID_GEN.next())
 public let FURBOLG_RAGE_BONUS1_ID = compiletime(ABIL_ID_GEN.next())
 public let FURBOLG_RAGE_BONUS2_ID = compiletime(ABIL_ID_GEN.next())
 public let TOOLTIP1 = "Rage"
-public let TOOLTIP2 = "Inceases armor, damage, attackspeed and HP regen"
+public let TOOLTIP2 = "Reduces damage taken and increases attack speed."
 public let RAGE_EFFECT_PATH = "Blood Ritual.mdx"
 public let RAGE_BUFF_OBJ = compiletime(createDummyBuffObject(TOOLTIP1, TOOLTIP2, Icons.bTNBerserk, RAGE_EFFECT_PATH, AttachmentPoints.origin))
 
 let rageBuffId = RAGE_BUFF_OBJ.abilId
-let rageBuffMap = new HashMap<unit, CallbackSingle>()
 
 @compiletime function furbolgRage()
-	new AbilityDefinitionBeserk(FURBOLG_RAGE_ID)
-	  ..presetCooldown(lvl -> 30)
-	  ..presetManaCost(lvl -> 0)
-	  ..presetCastingTime(lvl -> 0.1)
-	  ..presetDurationNormal(lvl -> RAGE_DURATION)
-	  ..presetDurationHero(lvl -> RAGE_DURATION)
-	  ..presetAttackSpeedIncrease(lvl -> 2)
+    new AbilityDefinitionBeserk(FURBOLG_RAGE_ID)
+        ..presetCooldown(lvl -> 30)
+        ..presetManaCost(lvl -> 0)
+        ..presetCastingTime(lvl -> 0.1)
+        ..presetDurationNormal(lvl -> RAGE_DURATION)
+        ..presetDurationHero(lvl -> RAGE_DURATION)
+        ..presetAttackSpeedIncrease(lvl -> 2)
 
 @compiletime function furbolgRageBonus1()
-	new AbilityDefinitionHardenedSkin(FURBOLG_RAGE_BONUS1_ID)
-	..presetManaCost(lvl -> 0)
-	..presetIgnoredDamage(lvl -> 2000)
-	..presetMinimumDamage(lvl -> 1)
-	..setRequirements("")
+    new AbilityDefinitionHardenedSkin(FURBOLG_RAGE_BONUS1_ID)
+    ..presetManaCost(lvl -> 0)
+    ..presetIgnoredDamage(lvl -> 2000)
+    ..presetMinimumDamage(lvl -> 1)
+    ..setRequirements("")
 
 @compiletime function furbolgRageBonus2()
-	new AbilityDefinitionRunedBracers(FURBOLG_RAGE_BONUS2_ID)
-	..setItemAbility(false)
-	..presetDamageReduction(lvl -> 0.95)
+    new AbilityDefinitionRunedBracers(FURBOLG_RAGE_BONUS2_ID)
+    ..setItemAbility(false)
+    ..presetDamageReduction(lvl -> 0.95)
+
+function furbolgRageInit()
+    let u = GetTriggerUnit()
+    print(u.getName())
+    if u.getTypeId() == FURBOLG_PANDA_ID and u.isAlive() and u.getHP() < u.getMaxHP() / 100 * HP_THRESHOLD
+        u.issueImmediateOrderById(OrderIds.berserk)
 
 init
-	// registerPlayerUnitEvent(EVENT_PLAYER_UNIT_DAMAGED) ->
-	// 	let u = GetTriggerUnit()
-	// 	if u.getTypeId() == FURBOLG_PANDA_ID and u.getHP() < u.getMaxHP() / 100 * HP_THRESHOLD
-	// 		u.issueImmediateOrderById(OrderIds.berserk)
+    DamageTriggerCreated.addCondition(Condition(() -> bd.addCondition(Condition(function furbolgRageInit))))
 
-	registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
-		let sid = GetSpellAbilityId()
-		let u = GetTriggerUnit()
-		if sid == FURBOLG_RAGE_ID
-			u.addAbility(rageBuffId)
-			u.addAbility(FURBOLG_RAGE_BONUS1_ID)
-			u.addAbility(FURBOLG_RAGE_BONUS2_ID)
+init
+    registerPlayerUnitEvent(EVENT_PLAYER_UNIT_SPELL_CAST) ->
+        let sid = GetSpellAbilityId()
+        let u = GetTriggerUnit()
+        if sid == FURBOLG_RAGE_ID
+            u.addAbility(rageBuffId)
+            u.addAbility(FURBOLG_RAGE_BONUS1_ID)
+            u.addAbility(FURBOLG_RAGE_BONUS2_ID)
 
-			doAfter(RAGE_DURATION) ->
-				if rageBuffMap.has(u)
-					rageBuffMap.remove(u)
-					u.removeAbility(rageBuffId)
-					u.removeAbility(FURBOLG_RAGE_BONUS1_ID)
-					u.removeAbility(FURBOLG_RAGE_BONUS2_ID)
+            doAfter(RAGE_DURATION) ->
+                u.removeAbility(rageBuffId)
+                u.removeAbility(FURBOLG_RAGE_BONUS1_ID)
+                u.removeAbility(FURBOLG_RAGE_BONUS2_ID)
