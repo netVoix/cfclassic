@@ -32,4 +32,4 @@ import BaseCFBuilding
   ..setSelectionScale(2.4)
   ..setUnitsTrained(OFFENSIVE_KODO_RIDER_ID.toRawCode())
   ..setTooltipExtended(OFFENSIVE_KODO_RIDER_SHORT_DESCRIPTION)
-  ..setUpgradesTo(WAR_DRUMMER_FARM_ID.toRawCode())
+  ..setUpgradesTo("")

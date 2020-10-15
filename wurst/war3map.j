@@ -9183,6 +9183,9 @@ set H8[Ah]=H8[Ah]+($96)
 elseif(Ug=='I005')then
 set Ah=GetPlayerId(p)
 set H8[Ah]=H8[Ah]+($96)
+elseif(Ug=='I00E')then
+set Ah=GetPlayerId(p)
+set H8[Ah]=H8[Ah]+(100)
 elseif(Ug=='I003')then
 set Ah=GetPlayerId(p)
 set H8[Ah]=H8[Ah]+(650)

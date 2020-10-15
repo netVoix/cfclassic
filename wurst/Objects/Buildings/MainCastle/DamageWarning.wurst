@@ -8,10 +8,12 @@ let warningTimers = [0, 0]
 public let msg = "|cffff0000DANGER!!! YOUR MAIN CASTLE IS UNDER 20% OF HP!!!"
 
 function warningMessage()
+    print("1")
     let u = GetTriggerUnit()
     let team = GetTriggerPlayer().getTeam()
     if u.getTypeId() == CASTLE_ID and u.isAlive() and u.getHP() < u.getMaxHP() / 100 * 20 and warningTimers[team] < 1
         warningTimers[team] = 45
+        print("2")
         for i = 0 to bj_MAX_PLAYER_SLOTS - 1
             if players[i].getTeam() == team
                 printTimedToPlayer(msg, 6, players[i])
@@ -20,8 +22,5 @@ function warningMessage()
         for i = 0 to 1
             warningTimers[i] = warningTimers[i] - 3
 
-
 init
-    let trig = CreateTrigger()
-    TriggerRegisterEnterRectSimple(trig,bj_mapInitialPlayableArea)
-    trig.addCondition(Condition(function warningMessage))
+    DamageTriggerCreated.addCondition(Condition(() -> bd.addCondition(Condition(function warningMessage))))
